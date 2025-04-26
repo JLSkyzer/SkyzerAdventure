@@ -1,0 +1,12 @@
+{
+  "_fv": 47,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "RPG Mode",
+    "description": "Enable RPG mode from JLSkyzer Adventure's mod",
+    "category": "MISC",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "fr.eriniumgroup.skyzeradventure.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.skyzeradventure.refmap.json",
+  "mixins": [],
+  "client": [],
+  "minVersion": "0.8"
+}
