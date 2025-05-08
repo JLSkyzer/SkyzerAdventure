@@ -15,14 +15,10 @@
     {
       "name": "OnGetDamage",
       "type": "procedure",
-      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_get_damage",
       "metadata": {
-        "files": [
-          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OnGetDamageProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "damagesource",
@@ -43,25 +39,6 @@
         ]
       },
       "path": "~/RPG mode/HealthSystem/Damage"
-    },
-    {
-      "name": "PlayerTick",
-      "type": "procedure",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/PlayerTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [

@@ -68,6 +68,13 @@ public class OnGetDamageProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = 200;
+					entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.OnDamageTick = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 	}

@@ -11,6 +11,57 @@
         "type": "logic"
       },
       "path": "~/RPG mode"
+    },
+    {
+      "name": "OnGetDamage",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_get_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OnGetDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Damage"
+    },
+    {
+      "name": "PlayerTick",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/PlayerTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -18,13 +69,13 @@
       "name": "RPGHealth",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "20.0"
     },
     {
       "name": "RPGHealthMax",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "20.0"
     },
     {
       "name": "RPGLevel",
@@ -37,6 +88,24 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "OnDamage",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OnDamageTick",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "RPGMaxXp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "500.0"
     }
   ],
   "sound_elements": [],
@@ -60,6 +129,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Level",
+            "children": []
           }
         ]
       }
