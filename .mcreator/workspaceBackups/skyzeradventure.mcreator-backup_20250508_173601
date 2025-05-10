@@ -15,6 +15,7 @@
     {
       "name": "OnGetDamage",
       "type": "procedure",
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_get_damage",
@@ -42,6 +43,38 @@
         ]
       },
       "path": "~/RPG mode/HealthSystem/Damage"
+    },
+    {
+      "name": "PlayerTick",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/PlayerTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Earning",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earning",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/configuration/EarningConfiguration.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/Config"
     }
   ],
   "variable_elements": [
@@ -92,7 +125,8 @@
   "language_map": {
     "en_us": {
       "gamerule.rPGModeGamerule.description": "Enable RPG mode from JLSkyzer Adventure\u0027s mod",
-      "gamerule.rPGModeGamerule": "RPG Mode"
+      "gamerule.rPGModeGamerule": "RPG Mode",
+      "config.skyzeradventure.earning": "SkyzerAdventure/Rank/Earning"
     }
   },
   "foldersRoot": {
@@ -106,6 +140,23 @@
             "children": [
               {
                 "name": "Damage",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Level",
+            "children": [
+              {
+                "name": "Config",
+                "children": []
+              },
+              {
+                "name": "earning",
+                "children": []
+              },
+              {
+                "name": "Overlay",
                 "children": []
               }
             ]

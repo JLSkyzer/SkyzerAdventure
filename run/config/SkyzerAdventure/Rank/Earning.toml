@@ -1,0 +1,11 @@
+
+[Main]
+	#List on items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}, etc..." for JsonFormat see wiki
+	"Mining earning" = "modid:blockid:xpearn:minlevel:maxlevel:{}"
+	#List on items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}, etc..." for JsonFormat see wiki
+	"Crafting earning" = "modid:blockid:xpearn:minlevel:maxlevel:{}"
+	#List on items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}, etc..." for JsonFormat see wiki
+	"Smelting Earning" = "modid:blockid:xpearn:minlevel:maxlevel:{}"
+	#List on items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}, etc..." for JsonFormat see wiki
+	"Killing Earning" = "modid:blockid:xpearn:minlevel:maxlevel:{}"
+

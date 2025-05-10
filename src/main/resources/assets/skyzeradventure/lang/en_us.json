@@ -1,4 +1,5 @@
 {
   "gamerule.rPGModeGamerule.description": "Enable RPG mode from JLSkyzer Adventure\u0027s mod",
-  "gamerule.rPGModeGamerule": "RPG Mode"
+  "gamerule.rPGModeGamerule": "RPG Mode",
+  "config.skyzeradventure.earning": "SkyzerAdventure/Rank/Earning"
 }

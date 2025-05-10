@@ -132,7 +132,17 @@
           },
           {
             "name": "Level",
-            "children": []
+            "children": [
+              {
+                "name": "Config",
+                "children": [
+                  {
+                    "name": "Farming",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
       }

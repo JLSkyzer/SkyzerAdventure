@@ -1,0 +1,87 @@
+{
+  "_fv": 47,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "Main",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "modid:blockid:xpearn:minlevel:maxlevel:{}",
+            "comment": "List on items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}, etc...\\\" for JsonFormat see wiki",
+            "vardisplay": "Mining earning",
+            "varname": "mining",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "modid:blockid:xpearn:minlevel:maxlevel:{}",
+            "comment": "List on items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}, etc...\\\" for JsonFormat see wiki",
+            "vardisplay": "Crafting earning",
+            "varname": "crafting",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "modid:blockid:xpearn:minlevel:maxlevel:{}",
+            "comment": "List on items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}, etc...\\\" for JsonFormat see wiki",
+            "vardisplay": "Smelting Earning",
+            "varname": "smelting",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "modid:blockid:xpearn:minlevel:maxlevel:{}",
+            "comment": "List on items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}, etc...\\\" for JsonFormat see wiki",
+            "vardisplay": "Killing Earning",
+            "varname": "killing",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          }
+        ]
+      }
+    ],
+    "file": "SkyzerAdventure/Rank/Earning",
+    "configType": 0
+  }
+}
