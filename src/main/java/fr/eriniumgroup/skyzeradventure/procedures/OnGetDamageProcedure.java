@@ -9,11 +9,13 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.TextComponent;
 
 import javax.annotation.Nullable;
 
@@ -38,7 +40,7 @@ public class OnGetDamageProcedure {
 			return;
 		double FinalDamage = 0;
 		double damageReduction = 0;
-		if (entity instanceof ServerPlayer) {
+		if (entity instanceof ServerPlayer && entity.isAlive()) {
 			if (world.getLevelData().getGameRules().getBoolean(SkyzeradventureModGameRules.RPG_MODE_GAMERULE)) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.setHealth(20);
@@ -60,7 +62,13 @@ public class OnGetDamageProcedure {
 							+ EnchantmentHelper.getItemEnchantmentLevel(Enchantments.ALL_DAMAGE_PROTECTION, (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY))
 							+ EnchantmentHelper.getItemEnchantmentLevel(Enchantments.ALL_DAMAGE_PROTECTION, (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY))) * 0.08;
 				}
-				FinalDamage = FinalDamage / damageReduction;
+				if (damageReduction > 0) {
+					if (damageReduction > 1) {
+						FinalDamage = FinalDamage / damageReduction;
+					} else {
+						FinalDamage = FinalDamage * damageReduction;
+					}
+				}
 				{
 					double _setval = (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).RPGHealth - FinalDamage;
 					entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -68,6 +76,8 @@ public class OnGetDamageProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				if (entity instanceof Player _player && !_player.level.isClientSide())
+					_player.displayClientMessage(new TextComponent(("" + FinalDamage)), false);
 				{
 					double _setval = 200;
 					entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

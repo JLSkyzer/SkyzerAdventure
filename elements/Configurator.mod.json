@@ -1,0 +1,217 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "+",
+          "onClick": {
+            "name": "YPlus"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 206,
+          "y": 178
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_r",
+          "text": "R",
+          "onClick": {
+            "name": "ResetBtn"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 206,
+          "y": 198
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "-",
+          "onClick": {
+            "name": "YMinus"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 206,
+          "y": 218
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty2",
+          "text": "+",
+          "onClick": {
+            "name": "XPlus"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 226,
+          "y": 198
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty3",
+          "text": "-",
+          "onClick": {
+            "name": "XMinus"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 186,
+          "y": 198
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x",
+          "text": {
+            "fixedValue": "X : "
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 226,
+          "y": 188
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "xVal",
+          "width": 40,
+          "height": 20,
+          "x": 246,
+          "y": 178
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_y",
+          "text": {
+            "fixedValue": "y : "
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 226,
+          "y": 228
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "yVal",
+          "width": 40,
+          "height": 20,
+          "x": 246,
+          "y": 218
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_001",
+          "text": "0.01",
+          "onClick": {
+            "name": "Precision001"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 116,
+          "y": 218
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_01",
+          "text": "0.1",
+          "onClick": {
+            "name": "Precision01"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 146,
+          "y": 218
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "onClick": {
+            "name": "Precision1"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 166,
+          "y": 218
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_10",
+          "text": "10",
+          "onClick": {
+            "name": "Precision10"
+          },
+          "width": 20,
+          "height": 20,
+          "x": 186,
+          "y": 218
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_save",
+          "text": "Save",
+          "onClick": {
+            "name": "OverlaySave"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 246,
+          "y": 198
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "ConfiguratorThisGUIIsOpened"
+    },
+    "gridSettings": {
+      "sx": 20,
+      "sy": 20,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

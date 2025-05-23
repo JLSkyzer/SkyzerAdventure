@@ -72,6 +72,11 @@ public class SkyzeradventureModVariables {
 			clone.RPGXp = original.RPGXp;
 			clone.OnDamage = original.OnDamage;
 			clone.RPGMaxXp = original.RPGMaxXp;
+			clone.regentick = original.regentick;
+			clone.LevelOverlayX = original.LevelOverlayX;
+			clone.LevelOverlayY = original.LevelOverlayY;
+			clone.overlayConfigTarget = original.overlayConfigTarget;
+			clone.OverlayConfigPrecision = original.OverlayConfigPrecision;
 			if (!event.isWasDeath()) {
 				clone.OnDamageTick = original.OnDamageTick;
 			}
@@ -116,6 +121,11 @@ public class SkyzeradventureModVariables {
 		public boolean OnDamage = false;
 		public double OnDamageTick = 0;
 		public double RPGMaxXp = 500.0;
+		public double regentick = 0;
+		public double LevelOverlayX = 0;
+		public double LevelOverlayY = 0;
+		public String overlayConfigTarget = "\"\"";
+		public double OverlayConfigPrecision = 0.01;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -131,6 +141,11 @@ public class SkyzeradventureModVariables {
 			nbt.putBoolean("OnDamage", OnDamage);
 			nbt.putDouble("OnDamageTick", OnDamageTick);
 			nbt.putDouble("RPGMaxXp", RPGMaxXp);
+			nbt.putDouble("regentick", regentick);
+			nbt.putDouble("LevelOverlayX", LevelOverlayX);
+			nbt.putDouble("LevelOverlayY", LevelOverlayY);
+			nbt.putString("overlayConfigTarget", overlayConfigTarget);
+			nbt.putDouble("OverlayConfigPrecision", OverlayConfigPrecision);
 			return nbt;
 		}
 
@@ -143,6 +158,11 @@ public class SkyzeradventureModVariables {
 			OnDamage = nbt.getBoolean("OnDamage");
 			OnDamageTick = nbt.getDouble("OnDamageTick");
 			RPGMaxXp = nbt.getDouble("RPGMaxXp");
+			regentick = nbt.getDouble("regentick");
+			LevelOverlayX = nbt.getDouble("LevelOverlayX");
+			LevelOverlayY = nbt.getDouble("LevelOverlayY");
+			overlayConfigTarget = nbt.getString("overlayConfigTarget");
+			OverlayConfigPrecision = nbt.getDouble("OverlayConfigPrecision");
 		}
 	}
 
@@ -174,6 +194,11 @@ public class SkyzeradventureModVariables {
 					variables.OnDamage = message.data.OnDamage;
 					variables.OnDamageTick = message.data.OnDamageTick;
 					variables.RPGMaxXp = message.data.RPGMaxXp;
+					variables.regentick = message.data.regentick;
+					variables.LevelOverlayX = message.data.LevelOverlayX;
+					variables.LevelOverlayY = message.data.LevelOverlayY;
+					variables.overlayConfigTarget = message.data.overlayConfigTarget;
+					variables.OverlayConfigPrecision = message.data.OverlayConfigPrecision;
 				}
 			});
 			context.setPacketHandled(true);

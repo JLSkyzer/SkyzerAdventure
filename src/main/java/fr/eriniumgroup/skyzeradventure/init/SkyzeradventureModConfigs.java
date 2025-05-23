@@ -6,6 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
+import fr.eriniumgroup.skyzeradventure.configuration.MiscConfiguration;
 import fr.eriniumgroup.skyzeradventure.configuration.EarningConfiguration;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
@@ -14,6 +15,7 @@ public class SkyzeradventureModConfigs {
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
 		event.enqueueWork(() -> {
+			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MiscConfiguration.SPEC, "SkyzerAdventure/Rank/Misc.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EarningConfiguration.SPEC, "SkyzerAdventure/Rank/Earning.toml");
 		});
 	}

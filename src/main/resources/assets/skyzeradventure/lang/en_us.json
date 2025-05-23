@@ -1,5 +1,20 @@
 {
+  "gui.skyzeradventure.configurator.label_y": "y : ",
+  "gui.skyzeradventure.configurator.button_001": "0.01",
+  "gui.skyzeradventure.configurator.yVal": "",
   "gamerule.rPGModeGamerule.description": "Enable RPG mode from JLSkyzer Adventure\u0027s mod",
+  "gui.skyzeradventure.configurator.xVal": "",
+  "gui.skyzeradventure.configurator.label_x": "X : ",
+  "config.skyzeradventure.misc": "SkyzerAdventure/Rank/Misc",
+  "gui.skyzeradventure.configurator.button_save": "Save",
+  "gui.skyzeradventure.configurator.button_empty1": "-",
+  "config.skyzeradventure.earning": "SkyzerAdventure/Rank/Earning",
+  "gui.skyzeradventure.configurator.button_empty2": "+",
+  "gui.skyzeradventure.configurator.button_empty3": "-",
+  "gui.skyzeradventure.configurator.button_r": "R",
+  "gui.skyzeradventure.configurator.button_1": "1",
+  "gui.skyzeradventure.configurator.button_10": "10",
   "gamerule.rPGModeGamerule": "RPG Mode",
-  "config.skyzeradventure.earning": "SkyzerAdventure/Rank/Earning"
+  "gui.skyzeradventure.configurator.button_empty": "+",
+  "gui.skyzeradventure.configurator.button_01": "0.1"
 }
