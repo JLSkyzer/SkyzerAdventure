@@ -29,7 +29,7 @@ public class TempcmdCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					CmdTempProcedure.execute(entity);
+					CmdTempProcedure.execute(world, x, y, z, entity);
 					return 0;
 				}));
 	}

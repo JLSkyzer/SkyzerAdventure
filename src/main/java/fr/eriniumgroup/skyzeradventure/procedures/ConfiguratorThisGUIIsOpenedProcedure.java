@@ -20,6 +20,13 @@ public class ConfiguratorThisGUIIsOpenedProcedure {
 			if (entity instanceof ServerPlayer _player && !world.isClientSide())
 				SkyzeradventureMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> _player), new SkyzeradventureMod.TextboxSetMessage("yVal",
 						(new java.text.DecimalFormat("##.##").format((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).LevelOverlayY))));
+		} else if (((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).overlayConfigTarget).equals("earning")) {
+			if (entity instanceof ServerPlayer _player && !world.isClientSide())
+				SkyzeradventureMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> _player), new SkyzeradventureMod.TextboxSetMessage("xVal",
+						(new java.text.DecimalFormat("##.##").format((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).earningNotifX))));
+			if (entity instanceof ServerPlayer _player && !world.isClientSide())
+				SkyzeradventureMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> _player), new SkyzeradventureMod.TextboxSetMessage("yVal",
+						(new java.text.DecimalFormat("##.##").format((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).earningNotifY))));
 		}
 	}
 }

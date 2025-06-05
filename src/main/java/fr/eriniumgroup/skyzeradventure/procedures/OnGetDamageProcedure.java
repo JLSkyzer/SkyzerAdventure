@@ -63,11 +63,7 @@ public class OnGetDamageProcedure {
 							+ EnchantmentHelper.getItemEnchantmentLevel(Enchantments.ALL_DAMAGE_PROTECTION, (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY))) * 0.08;
 				}
 				if (damageReduction > 0) {
-					if (damageReduction > 1) {
-						FinalDamage = FinalDamage / damageReduction;
-					} else {
-						FinalDamage = FinalDamage * damageReduction;
-					}
+					FinalDamage = FinalDamage / (1 + damageReduction);
 				}
 				{
 					double _setval = (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).RPGHealth - FinalDamage;

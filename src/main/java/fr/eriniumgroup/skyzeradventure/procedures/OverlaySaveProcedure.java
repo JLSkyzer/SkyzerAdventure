@@ -44,6 +44,37 @@ public class OverlaySaveProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+		} else if (((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).overlayConfigTarget).equals("earning")) {
+			{
+				double _setval = new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(guistate.containsKey("textin:xVal") ? (String) guistate.get("textin:xVal") : "");
+				entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.earningNotifX = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = new Object() {
+					double convert(String s) {
+						try {
+							return Double.parseDouble(s.trim());
+						} catch (Exception e) {
+						}
+						return 0;
+					}
+				}.convert(guistate.containsKey("textin:yVal") ? (String) guistate.get("textin:yVal") : "");
+				entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.earningNotifY = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 		ConfiguratorThisGUIIsOpenedProcedure.execute(world, entity);
 	}

@@ -18,6 +18,15 @@ public class XMinusProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+		} else if (((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).overlayConfigTarget).equals("earning")) {
+			{
+				double _setval = (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).earningNotifX
+						- (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).OverlayConfigPrecision;
+				entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.earningNotifX = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 		ConfiguratorThisGUIIsOpenedProcedure.execute(world, entity);
 	}

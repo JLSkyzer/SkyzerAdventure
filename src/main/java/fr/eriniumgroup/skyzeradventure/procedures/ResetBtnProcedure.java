@@ -24,6 +24,21 @@ public class ResetBtnProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+		} else if (((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).overlayConfigTarget).equals("earning")) {
+			{
+				double _setval = 1;
+				entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.earningNotifX = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = 0;
+				entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.earningNotifY = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 		ConfiguratorThisGUIIsOpenedProcedure.execute(world, entity);
 	}

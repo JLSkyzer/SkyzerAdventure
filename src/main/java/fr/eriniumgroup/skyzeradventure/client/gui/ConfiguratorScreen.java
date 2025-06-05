@@ -1,6 +1,7 @@
 
 package fr.eriniumgroup.skyzeradventure.client.gui;
 
+import fr.eriniumgroup.skyzeradventure.procedures.OverlayConfigTickProcedure;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;

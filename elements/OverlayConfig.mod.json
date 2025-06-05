@@ -4,6 +4,6 @@
   "definition": {
     "commandName": "overlayconfig",
     "permissionLevel": "No requirement",
-    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">Level</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">OverlayConfigLevel</field></block></statement></block></next></block></xml>"
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">Level</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">OverlayConfigLevel</field></block></statement><next><block type=\"literal\"><field name=\"name\">Earning</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">OverlayConfigEarning</field></block></statement><next><block type=\"literal\"><field name=\"name\">stats</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">OpenStatsScale</field></block></statement></block></next></block></next></block></next></block></xml>"
   }
 }
