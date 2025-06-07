@@ -19,4 +19,10 @@ authors="killi, MCreator"
 
 
 
+[[dependencies.skyzeradventure]]
+    modId="smoothboot"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

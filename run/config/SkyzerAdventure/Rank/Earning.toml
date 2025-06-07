@@ -1,11 +1,11 @@
 
 [Main]
-	#List of items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc..." put 0 for maxlevel to disable limit, for JsonFormat see wiki
-	"Mining earning" = "minecraft:grass_block:120:0:0:{}; minecraft:dirt:142:0:0:{}; minecraft:gold_block:1:0:0:{}; minecraft:diamond_block:2:0:0:{}; minecraft:iron_block:3:0:0:{}; minecraft:chest:4:0:0:{}; minecraft:furnace:5:0:0:{}; minecraft:redstone_block:6:0:0:{}; minecraft:stone:7:15:0:{}; minecraft:cobblestone:8:0:0:{}; minecraft:end_stone:9:10:0:{}; minecraft:glass:10:5:0:{}; minecraft:emerald_block:11:14:0:{}"
-	#List of items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc..." put 0 for maxlevel to disable limit, for JsonFormat see wiki
-	"Crafting earning" = "minecraft:bread:60:0:0:{}"
-	#List of items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc..." put 0 for maxlevel to disable limit, for JsonFormat see wiki
-	"Smelting Earning" = "minecraft:diamond:100:0:0:{}"
-	#List of items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc..." put 0 for maxlevel to disable limit, for JsonFormat see wiki
-	"Killing Earning" = "minecraft:pig:200:0:0:{}"
+	#List of items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc..." put 0 for maxlevel to disable limit
+	"Mining earning" = "minecraft:grass_block:120:0:0; minecraft:dirt:142:0:0; minecraft:gold_block:1:0:0; minecraft:diamond_block:2:0:0; minecraft:iron_block:3:0:0; minecraft:chest:4:0:0; minecraft:furnace:5:0:0; minecraft:redstone_block:6:0:0; minecraft:stone:7:15:0; minecraft:cobblestone:8:0:0; minecraft:end_stone:9:10:0; minecraft:glass:10:5:0; minecraft:emerald_block:11:14:0"
+	#List of items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc..." put 0 for maxlevel to disable limit
+	"Crafting earning" = "minecraft:bread:60:0:0; minecraft:stick:125:1:0; minecraft:diamond_helmet:50:5:0"
+	#List of items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc..." put 0 for maxlevel to disable limit
+	"Smelting Earning" = "minecraft:diamond:100:0:0"
+	#List of items to won xp with mining ex : "modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc..." put 0 for maxlevel to disable limit
+	"Killing Earning" = "minecraft:pig:200:0:0; minecraft:player:1500:0:0"
 

@@ -1,0 +1,12 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "O",
+    "keyBindingName": "Open Earning Wiki",
+    "keyBindingCategoryKey": "skyzeradventure",
+    "onKeyPressed": {
+      "name": "OpenEarningWikiMainPage"
+    }
+  }
+}

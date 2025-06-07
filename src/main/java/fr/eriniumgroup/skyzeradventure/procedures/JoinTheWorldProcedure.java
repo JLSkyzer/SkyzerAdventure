@@ -6,8 +6,10 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.TextComponent;
 
 import javax.annotation.Nullable;
 
@@ -67,5 +69,9 @@ public class JoinTheWorldProcedure {
 				}
 			}
 		}
+		if (entity instanceof Player _player && !_player.level.isClientSide())
+			_player.displayClientMessage(new TextComponent("\u00A76=====[ Skyze Adventure ]====="), false);
+		if (entity instanceof Player _player && !_player.level.isClientSide())
+			_player.displayClientMessage(new TextComponent("\u00A7e/level \u00A7r| To know about /level command \u00A7avery usefull !"), false);
 	}
 }

@@ -13,6 +13,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 
 import fr.eriniumgroup.skyzeradventure.client.gui.StatsScaleConfigScreen;
 import fr.eriniumgroup.skyzeradventure.client.gui.EarningWikiScreen;
+import fr.eriniumgroup.skyzeradventure.client.gui.EarningWikiHomePageScreen;
 import fr.eriniumgroup.skyzeradventure.client.gui.ConfiguratorScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -23,6 +24,7 @@ public class SkyzeradventureModScreens {
 			MenuScreens.register(SkyzeradventureModMenus.STATS_SCALE_CONFIG, StatsScaleConfigScreen::new);
 			MenuScreens.register(SkyzeradventureModMenus.CONFIGURATOR, ConfiguratorScreen::new);
 			MenuScreens.register(SkyzeradventureModMenus.EARNING_WIKI, EarningWikiScreen::new);
+			MenuScreens.register(SkyzeradventureModMenus.EARNING_WIKI_HOME_PAGE, EarningWikiHomePageScreen::new);
 		});
 	}
 }

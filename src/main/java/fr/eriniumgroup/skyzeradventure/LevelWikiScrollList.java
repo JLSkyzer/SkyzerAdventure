@@ -22,13 +22,19 @@ import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.AbstractSelectionList;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.FormattedText;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.swing.text.html.parser.Entity;
+import java.text.DecimalFormat;
 import java.util.*;
 
 // Déclaration de la classe pour la liste scrollable
@@ -211,6 +217,30 @@ public class LevelWikiScrollList extends AbstractSelectionList<LevelWikiScrollLi
 
 			String temp = this.text;
 			int text = 0;
+			Boolean cant = false;
+			String id = (new Object() {
+				private String returnValue(String string, int Index, String sep) {
+					try {
+						return ((string).split(sep)[Index]);
+						// Utilisez account ici
+					} catch (ArrayIndexOutOfBoundsException e) {
+						// Gérer l'erreur ici, par exemple :
+						System.out.println("Valeur null !");
+						return "";
+					}
+				}
+			}.returnValue(temp, 0, ":") + ":" + new Object() {
+				private String returnValue(String string, int Index, String sep) {
+					try {
+						return ((string).split(sep)[Index]);
+						// Utilisez account ici
+					} catch (ArrayIndexOutOfBoundsException e) {
+						// Gérer l'erreur ici, par exemple :
+						System.out.println("Valeur null !");
+						return "";
+					}
+				}
+			}.returnValue(temp, 1, ":")).replace(" ", "");
 
 			if (new Object() {
 				double convert(String s) {
@@ -294,9 +324,11 @@ public class LevelWikiScrollList extends AbstractSelectionList<LevelWikiScrollLi
 						text = ARGBToInt.ARGBToInt(255, 101, 216, 78);
 					} else {
 						text = ARGBToInt.ARGBToInt(255, 214, 45, 36);
+						cant = true;
 					}
 				} else {
 					text = ARGBToInt.ARGBToInt(255, 214, 45, 36);
+					cant = true;
 				}
 			}
 
@@ -384,15 +416,58 @@ public class LevelWikiScrollList extends AbstractSelectionList<LevelWikiScrollLi
 				}
 			}.returnValue(temp, 4, ":"));
 
+			SkyzeradventureModVariables.PlayerVariables playercap = entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables());
+
 			fill(poseStack, x + 1, y + 1, x + getRowWidth() - 1, y + 1 + 20, ARGBToInt.ARGBToInt(255, 61, 61, 61));
 
 			// Juste avant le render d’item
-			RenderSystem.enableDepthTest();
-			minecraft.getItemRenderer().renderAndDecorateItem(item, x + 3, y + 3);
-			RenderSystem.disableDepthTest();
+			if (!playercap.EarningWikiTarget.contains("killing")){
+				RenderSystem.enableDepthTest();
+				minecraft.getItemRenderer().renderAndDecorateItem(item, x + 3, y + 3);
+				RenderSystem.disableDepthTest();
+			}else {
+				if (id.contains("minecraft:player")){
+					item = Items.PLAYER_HEAD.getDefaultInstance();
+				}else{
+					EntityType<?> type = ForgeRegistries.ENTITIES.getValue(new ResourceLocation(id));
+					if (type == null) item = Items.BARRIER.getDefaultInstance();
 
-			// Dessine le texte, avec un léger décalage vers la droite
-			Minecraft.getInstance().font.draw(poseStack, this.text, x + 24, y + 5, text);
+					for (Item items : ForgeRegistries.ITEMS) {
+						if (items instanceof SpawnEggItem egg && egg.getType(null) == type) {
+							item = egg.getDefaultInstance();
+						}
+					}
+				}
+
+				RenderSystem.enableDepthTest();
+				minecraft.getItemRenderer().renderAndDecorateItem(item, x + 3, y + 3);
+				RenderSystem.disableDepthTest();
+			}
+
+
+
+			// Min level
+			Minecraft.getInstance().font.draw(poseStack, new TextComponent(new DecimalFormat("##").format(minLevel)), x + 24 + 60, y + 1 + 10 - 3, text);
+			// Max level
+			Minecraft.getInstance().font.draw(poseStack, new TextComponent(new DecimalFormat("##").format(maxLevel)), x + 24 + 120, y + 1 + 10 - 3, text);
+			// XP amount
+			int XpAmountX = x + 1 + getRowWidth() - 1 - Minecraft.getInstance().font.width(new DecimalFormat("#,###.##").format(xp) + " XP") - 5;
+			Minecraft.getInstance().font.draw(poseStack, new TextComponent(new DecimalFormat("#,###.##").format(xp) + " XP"), XpAmountX, y + 1 + 10 - 3, text);
+
+			if (cant){
+				fill(poseStack, x + 1, y + 1, x + getRowWidth() - 1, y + 1 + 20, ARGBToInt.ARGBToInt(125, 0, 0, 0));
+			}
+
+			// ----- Tooltip au hover -----
+			// On veut le tooltip si la souris est dans le carré de l'item (16x16 px)
+			Screen gui = Minecraft.getInstance().screen;
+			if (gui != null && mouseX >= x + 3 && mouseX <= x + 3 + 16 && mouseY >= y + 3 && mouseY <= y + 3 + 16) {
+				List<Component> tooltipLines = item.getTooltipLines(
+						Minecraft.getInstance().player,
+						Minecraft.getInstance().options.advancedItemTooltips ? TooltipFlag.Default.ADVANCED : TooltipFlag.Default.NORMAL
+				);
+				gui.renderTooltip(poseStack, tooltipLines, Optional.empty(), mouseX, mouseY, item);
+			}
 		}
 
 		@Override

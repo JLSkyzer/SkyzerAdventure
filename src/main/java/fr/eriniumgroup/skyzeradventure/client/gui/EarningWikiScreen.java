@@ -1,7 +1,10 @@
 
 package fr.eriniumgroup.skyzeradventure.client.gui;
 
+import fr.eriniumgroup.skyzeradventure.ARGBToInt;
 import fr.eriniumgroup.skyzeradventure.LevelWikiScrollList;
+import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -25,6 +28,8 @@ public class EarningWikiScreen extends AbstractContainerScreen<EarningWikiMenu> 
 	private final int x, y, z;
 	private final Player entity;
 
+	private SkyzeradventureModVariables.PlayerVariables playercap;
+
 	public EarningWikiScreen(EarningWikiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
@@ -34,6 +39,7 @@ public class EarningWikiScreen extends AbstractContainerScreen<EarningWikiMenu> 
 		this.entity = container.entity;
 		this.imageWidth = 428;
 		this.imageHeight = 240;
+		this.playercap = entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables());
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("skyzeradventure:textures/screens/earning_wiki.png");
@@ -75,6 +81,27 @@ public class EarningWikiScreen extends AbstractContainerScreen<EarningWikiMenu> 
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
+		/*
+		// Juste avant le render d’item
+			RenderSystem.enableDepthTest();
+			minecraft.getItemRenderer().renderAndDecorateItem(item, x + 3, y + 3);
+			RenderSystem.disableDepthTest();
+
+			// Min level
+			Minecraft.getInstance().font.draw(poseStack, new TextComponent(new DecimalFormat("##").format(minLevel)), x + 24 + 60, y + 1 + 10 - 3, text);
+			// Max level
+			Minecraft.getInstance().font.draw(poseStack, new TextComponent(new DecimalFormat("##").format(maxLevel)), x + 24 + 120, y + 1 + 10 - 3, text);
+			// XP amount
+			int XpAmountX = x + 1 + getRowWidth() - 1 - Minecraft.getInstance().font.width(new DecimalFormat("#,###.##").format(xp) + " XP") - 5;
+			Minecraft.getInstance().font.draw(poseStack, new TextComponent(new DecimalFormat("#,###.##").format(xp) + " XP"), XpAmountX, y + 1 + 10 - 3, text);
+		 */
+		this.font.draw(poseStack, new TextComponent("Item / Block"), 90 + 3, 36 - 8, ARGBToInt.ARGBToInt(255, 255, 255, 255));
+		this.font.draw(poseStack, new TextComponent("Min Level"), 90 + 3 + 80, 36 - 8, ARGBToInt.ARGBToInt(255, 255, 255, 255));
+		this.font.draw(poseStack, new TextComponent("Max Level"), 90 + 3 + 145, 36 - 8, ARGBToInt.ARGBToInt(255, 255, 255, 255));
+		this.font.draw(poseStack, new TextComponent("Xp amount"), 90 + 334 - this.font.width(new TextComponent("Xp amount")) - 10, 36 - 8, ARGBToInt.ARGBToInt(255, 255, 255, 255));
+
+		// TITLE
+		this.font.draw(poseStack, new TextComponent("How to gain xp : §e" + playercap.EarningWikiTarget), (428 / 2) - (this.font.width(new TextComponent("How to gain xp : §e" + playercap.EarningWikiTarget)) / 2), 4, ARGBToInt.ARGBToInt(255, 255, 255, 255));
 	}
 
 	@Override

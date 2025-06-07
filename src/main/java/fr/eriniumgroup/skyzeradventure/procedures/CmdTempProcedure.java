@@ -33,7 +33,7 @@ public class CmdTempProcedure {
 		com.google.gson.JsonObject JsonObject = new com.google.gson.JsonObject();
 		java.util.Map<String, Double> hashmap = new HashMap<>();
 		{
-			String _setval = "mining";
+			String _setval = "killing";
 			entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.EarningWikiTarget = _setval;
 				capability.syncPlayerVariables(entity);

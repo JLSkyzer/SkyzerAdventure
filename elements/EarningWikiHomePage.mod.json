@@ -1,0 +1,98 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 428,
+    "height": 240,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui_background.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_crafting",
+          "image": "crafting.png",
+          "hoveredImage": "crafting_hover.png",
+          "onClick": {
+            "name": "OpenCrafting"
+          },
+          "x": 6,
+          "y": 17
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_choose_type",
+          "text": {
+            "fixedValue": "Choose type"
+          },
+          "color": {
+            "value": -3407872,
+            "falpha": 0.0
+          },
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_smelting",
+          "image": "smelting.png",
+          "hoveredImage": "smelting_hover.png",
+          "onClick": {
+            "name": "OpenSmelting"
+          },
+          "x": 78,
+          "y": 17
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sword",
+          "image": "sword.png",
+          "hoveredImage": "sword_hover.png",
+          "onClick": {
+            "name": "OpenKilling"
+          },
+          "x": 150,
+          "y": 17
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_pickaxe",
+          "image": "pickaxe.png",
+          "hoveredImage": "pickaxe_hover.png",
+          "onClick": {
+            "name": "OpenMining"
+          },
+          "x": 222,
+          "y": 17
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

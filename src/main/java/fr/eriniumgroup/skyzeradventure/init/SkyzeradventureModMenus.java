@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import fr.eriniumgroup.skyzeradventure.world.inventory.StatsScaleConfigMenu;
 import fr.eriniumgroup.skyzeradventure.world.inventory.EarningWikiMenu;
+import fr.eriniumgroup.skyzeradventure.world.inventory.EarningWikiHomePageMenu;
 import fr.eriniumgroup.skyzeradventure.world.inventory.ConfiguratorMenu;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -25,6 +26,7 @@ public class SkyzeradventureModMenus {
 	public static final MenuType<StatsScaleConfigMenu> STATS_SCALE_CONFIG = register("stats_scale_config", (id, inv, extraData) -> new StatsScaleConfigMenu(id, inv, extraData));
 	public static final MenuType<ConfiguratorMenu> CONFIGURATOR = register("configurator", (id, inv, extraData) -> new ConfiguratorMenu(id, inv, extraData));
 	public static final MenuType<EarningWikiMenu> EARNING_WIKI = register("earning_wiki", (id, inv, extraData) -> new EarningWikiMenu(id, inv, extraData));
+	public static final MenuType<EarningWikiHomePageMenu> EARNING_WIKI_HOME_PAGE = register("earning_wiki_home_page", (id, inv, extraData) -> new EarningWikiHomePageMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

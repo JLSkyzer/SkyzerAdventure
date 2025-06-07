@@ -12,7 +12,9 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
+import fr.eriniumgroup.skyzeradventure.procedures.ShowPossibleCommandProcedure;
 import fr.eriniumgroup.skyzeradventure.procedures.SetLevelCmdProcedure;
+import fr.eriniumgroup.skyzeradventure.procedures.OpenEarningWikiMainPageProcedure;
 import fr.eriniumgroup.skyzeradventure.procedures.LevelResetCmdProcedure;
 
 import com.mojang.brigadier.arguments.DoubleArgumentType;
@@ -47,6 +49,30 @@ public class LevelCommand {
 
 					LevelResetCmdProcedure.execute(arguments, entity);
 					return 0;
-				}))));
+				}))).then(Commands.literal("Earning").executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					OpenEarningWikiMainPageProcedure.execute(world, x, y, z, entity);
+					return 0;
+				})).executes(arguments -> {
+					ServerLevel world = arguments.getSource().getLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null)
+						entity = FakePlayerFactory.getMinecraft(world);
+					Direction direction = entity.getDirection();
+
+					ShowPossibleCommandProcedure.execute(entity);
+					return 0;
+				}));
 	}
 }
