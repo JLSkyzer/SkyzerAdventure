@@ -1306,26 +1306,6 @@
       }
     },
     {
-      "name": "Ff",
-      "type": "procedure",
-      "sortid": 65,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ff",
-      "metadata": {
-        "files": [
-          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/FfProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/RPG mode/Level/Level Wiki"
-    },
-    {
       "name": "EarningWiki",
       "type": "gui",
       "sortid": 66,
@@ -1350,7 +1330,8 @@
       "metadata": {
         "files": [
           "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/EarningWikiHomePageMenu.java",
-          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/EarningWikiHomePageScreen.java"
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/EarningWikiHomePageScreen.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/EarningWikiHomePageButtonMessage.java"
         ]
       },
       "path": "~/RPG mode/Level/Level Wiki"
@@ -1439,6 +1420,147 @@
           "src/main/java/fr/eriniumgroup/skyzeradventure/FloatScaller.java"
         ]
       }
+    },
+    {
+      "name": "OpenSmelting",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_smelting",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenSmeltingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "OpenKilling",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_killing",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenKillingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "OpenEarningWiki",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_earning_wiki",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/OpenEarningWikiMessage.java"
+        ]
+      },
+      "path": "~/KeyBinding"
+    },
+    {
+      "name": "OpenEarningWikiMainPage",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_earning_wiki_main_page",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenEarningWikiMainPageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "ShowPossibleCommand",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_possible_command",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ShowPossibleCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Command"
     }
   ],
   "variable_elements": [
@@ -1584,28 +1706,31 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gui.skyzeradventure.configurator.label_y": "y : ",
       "gui.skyzeradventure.stats_scale_config.button_empty1": "-",
       "gui.skyzeradventure.configurator.button_001": "0.01",
-      "gamerule.rPGModeGamerule.description": "Enable RPG mode from JLSkyzer Adventure\u0027s mod",
-      "gui.skyzeradventure.configurator.yVal": "",
       "gui.skyzeradventure.configurator.xVal": "",
-      "gui.skyzeradventure.configurator.label_x": "X : ",
       "config.skyzeradventure.misc": "SkyzerAdventure/Rank/Misc",
       "gui.skyzeradventure.configurator.button_save": "Save",
+      "gui.skyzeradventure.stats_scale_config.button_empty": "+",
+      "gui.skyzeradventure.configurator.button_r": "R",
+      "gui.skyzeradventure.configurator.button_1": "1",
+      "gui.skyzeradventure.configurator.button_01": "0.1",
+      "key.skyzeradventure.open_earning_wiki": "Open Earning Wiki",
+      "gui.skyzeradventure.configurator.label_y": "y : ",
+      "gui.skyzeradventure.configurator.yVal": "",
+      "gamerule.rPGModeGamerule.description": "Enable RPG mode from JLSkyzer Adventure\u0027s mod",
+      "gui.skyzeradventure.configurator.label_x": "X : ",
       "gui.skyzeradventure.configurator.button_empty1": "-",
       "config.skyzeradventure.earning": "SkyzerAdventure/Rank/Earning",
       "gui.skyzeradventure.configurator.button_empty2": "+",
-      "gui.skyzeradventure.stats_scale_config.button_empty": "+",
       "gui.skyzeradventure.configurator.button_empty3": "-",
-      "gui.skyzeradventure.configurator.button_r": "R",
       "gui.skyzeradventure.multiplier_overlay.label_ff": "ff",
-      "gui.skyzeradventure.configurator.button_1": "1",
       "gui.skyzeradventure.configurator.button_10": "10",
       "gamerule.rPGModeGamerule": "RPG Mode",
+      "key.categories.skyzeradventure": "§aSkyzer Adventure mod",
       "gui.skyzeradventure.stats_scale_config.button_r": "R",
       "gui.skyzeradventure.configurator.button_empty": "+",
-      "gui.skyzeradventure.configurator.button_01": "0.1"
+      "gui.skyzeradventure.earning_wiki_home_page.label_choose_type": "Choose type"
     }
   },
   "foldersRoot": {
@@ -1673,6 +1798,14 @@
       },
       {
         "name": "Return",
+        "children": []
+      },
+      {
+        "name": "KeyBinding",
+        "children": []
+      },
+      {
+        "name": "Gameplay",
         "children": []
       }
     ]

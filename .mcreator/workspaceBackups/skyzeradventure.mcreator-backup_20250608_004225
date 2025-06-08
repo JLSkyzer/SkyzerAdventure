@@ -1541,6 +1541,26 @@
         ]
       },
       "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "ShowPossibleCommand",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_possible_command",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ShowPossibleCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Command"
     }
   ],
   "variable_elements": [
@@ -1782,6 +1802,10 @@
       },
       {
         "name": "KeyBinding",
+        "children": []
+      },
+      {
+        "name": "Gameplay",
         "children": []
       }
     ]

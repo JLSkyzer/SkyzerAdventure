@@ -1803,6 +1803,10 @@
       {
         "name": "KeyBinding",
         "children": []
+      },
+      {
+        "name": "Gameplay",
+        "children": []
       }
     ]
   },
