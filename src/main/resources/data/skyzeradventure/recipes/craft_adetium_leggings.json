@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "1": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "2": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "3": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "5": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "6": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "8": {
+      "item": "skyzeradventure:adetium_ingot"
+    }
+  },
+  "result": {
+    "item": "skyzeradventure:adetium_armor_leggings",
+    "count": 1
+  }
+}

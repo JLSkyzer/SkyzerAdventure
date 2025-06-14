@@ -1,0 +1,125 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_how_much_you_want_to_sell",
+          "text": {
+            "fixedValue": "How much you want to sell ? "
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 141,
+          "y": 44
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Put amount like : 10",
+          "name": "amount",
+          "width": 144,
+          "height": 20,
+          "x": 141,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_sell",
+          "text": "Sell",
+          "onClick": {
+            "name": "SellingSell"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 186,
+          "y": 125
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_back",
+          "text": "Back",
+          "onClick": {
+            "name": "SellSearch"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 186,
+          "y": 179
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_sell_all",
+          "text": "Sell All",
+          "onClick": {
+            "name": "SellingSellAll"
+          },
+          "width": 63,
+          "height": 20,
+          "x": 177,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_item_and_price",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnItemAndPrice"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_money_text",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnMoneyText"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 80
+        }
+      }
+    ],
+    "onTick": {
+      "name": "SellingPageWhileThisGUIIsOpenTick"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

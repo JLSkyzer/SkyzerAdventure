@@ -1,0 +1,11 @@
+{
+  "_fv": 47,
+  "_type": "tab",
+  "definition": {
+    "name": "Skyzer's Adventure Armors",
+    "icon": {
+      "value": "CUSTOM:AdetiumArmor.helmet"
+    },
+    "showSearch": false
+  }
+}

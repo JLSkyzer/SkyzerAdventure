@@ -1,0 +1,11 @@
+{
+  "_fv": 47,
+  "_type": "tab",
+  "definition": {
+    "name": "Skyzer's Adventure Tools",
+    "icon": {
+      "value": "CUSTOM:AdetiumSword"
+    },
+    "showSearch": false
+  }
+}

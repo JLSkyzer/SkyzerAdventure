@@ -155,7 +155,6 @@ public class LevelWikiScrollList extends AbstractSelectionList<LevelWikiScrollLi
 		setRenderTopAndBottom(false);
 	}
 
-
 	// To make content dont exit the scroll list's area
 	@Override
 	public void render(PoseStack poseStack, int mouseX, int mouseY, float partialTick) {

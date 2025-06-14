@@ -16,7 +16,10 @@ package fr.eriniumgroup.skyzeradventure;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Direction;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -126,9 +129,13 @@ new Thread(() -> {
 			}
 		}.parsePattern("${input$pattern}", "${input$String}");
 
-// Retour au thread principal (client)
-Minecraft.getInstance().tell(() -> {
-
-});
+		int test = (int) new Object(){
+			public float getArmorToughness(ItemStack stack) {
+				if (stack.getItem() instanceof ArmorItem armorItem) {
+					return armorItem.getToughness();
+				}
+				return 0.0F; // ou autre valeur si ce n'est pas une armure
+			}
+		}.getArmorToughness(Items.DIAMOND_CHESTPLATE.getDefaultInstance());
 	}
 }

@@ -1,0 +1,33 @@
+{
+  "_fv": 47,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "Global Config",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0012,
+            "textDefault": "",
+            "comment": "The price for 1 FE into the energy seller",
+            "vardisplay": "One FE price",
+            "varname": "feprice",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          }
+        ]
+      }
+    ],
+    "file": "SkyzerAdventure/Shop/ShopConfig",
+    "configType": 1
+  }
+}

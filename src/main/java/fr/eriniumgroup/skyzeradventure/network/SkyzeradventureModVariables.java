@@ -19,6 +19,7 @@ import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -92,9 +93,15 @@ public class SkyzeradventureModVariables {
 			clone.stats_scale = original.stats_scale;
 			clone.earning_lastvalue = original.earning_lastvalue;
 			clone.playerxpmultiplier = original.playerxpmultiplier;
+			clone.buysearch = original.buysearch;
+			clone.sellsearch = original.sellsearch;
+			clone.shop_money = original.shop_money;
 			if (!event.isWasDeath()) {
 				clone.OnDamageTick = original.OnDamageTick;
 				clone.EarningWikiTarget = original.EarningWikiTarget;
+				clone.tempitem = original.tempitem;
+				clone.tempitemprice = original.tempitemprice;
+				clone.tempshopactiontype = original.tempshopactiontype;
 			}
 		}
 
@@ -281,6 +288,12 @@ public class SkyzeradventureModVariables {
 		public double earning_lastvalue = 0;
 		public double playerxpmultiplier = 1.0;
 		public String EarningWikiTarget = "";
+		public String buysearch = "\"\"";
+		public String sellsearch = "\"\"";
+		public double shop_money = 1500.0;
+		public ItemStack tempitem = ItemStack.EMPTY;
+		public double tempitemprice = 0;
+		public String tempshopactiontype = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -311,6 +324,12 @@ public class SkyzeradventureModVariables {
 			nbt.putDouble("earning_lastvalue", earning_lastvalue);
 			nbt.putDouble("playerxpmultiplier", playerxpmultiplier);
 			nbt.putString("EarningWikiTarget", EarningWikiTarget);
+			nbt.putString("buysearch", buysearch);
+			nbt.putString("sellsearch", sellsearch);
+			nbt.putDouble("shop_money", shop_money);
+			nbt.put("tempitem", tempitem.save(new CompoundTag()));
+			nbt.putDouble("tempitemprice", tempitemprice);
+			nbt.putString("tempshopactiontype", tempshopactiontype);
 			return nbt;
 		}
 
@@ -338,6 +357,12 @@ public class SkyzeradventureModVariables {
 			earning_lastvalue = nbt.getDouble("earning_lastvalue");
 			playerxpmultiplier = nbt.getDouble("playerxpmultiplier");
 			EarningWikiTarget = nbt.getString("EarningWikiTarget");
+			buysearch = nbt.getString("buysearch");
+			sellsearch = nbt.getString("sellsearch");
+			shop_money = nbt.getDouble("shop_money");
+			tempitem = ItemStack.of(nbt.getCompound("tempitem"));
+			tempitemprice = nbt.getDouble("tempitemprice");
+			tempshopactiontype = nbt.getString("tempshopactiontype");
 		}
 	}
 
@@ -384,6 +409,12 @@ public class SkyzeradventureModVariables {
 					variables.earning_lastvalue = message.data.earning_lastvalue;
 					variables.playerxpmultiplier = message.data.playerxpmultiplier;
 					variables.EarningWikiTarget = message.data.EarningWikiTarget;
+					variables.buysearch = message.data.buysearch;
+					variables.sellsearch = message.data.sellsearch;
+					variables.shop_money = message.data.shop_money;
+					variables.tempitem = message.data.tempitem;
+					variables.tempitemprice = message.data.tempitemprice;
+					variables.tempshopactiontype = message.data.tempshopactiontype;
 				}
 			});
 			context.setPacketHandled(true);

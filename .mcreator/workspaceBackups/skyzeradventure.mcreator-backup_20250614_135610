@@ -1,0 +1,2902 @@
+{
+  "mod_elements": [
+    {
+      "name": "RPGModeGamerule",
+      "type": "gamerule",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rpg_mode_gamerule",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/RPG mode"
+    },
+    {
+      "name": "OnGetDamage",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_get_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OnGetDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Damage"
+    },
+    {
+      "name": "PlayerTick",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/PlayerTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Earning",
+      "type": "config",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earning",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/configuration/EarningConfiguration.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/Config"
+    },
+    {
+      "name": "PourMesCodesDeTest",
+      "type": "code",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pour_mes_codes_de_test",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/PourMesCodesDeTest.java"
+        ]
+      }
+    },
+    {
+      "name": "HealthOverlay",
+      "type": "overlay",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "health_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/HealthOverlayOverlay.java"
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Overlay"
+    },
+    {
+      "name": "IsRPGModeEnabled",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_rpg_mode_enabled",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/IsRPGModeEnabledProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode"
+    },
+    {
+      "name": "RemoveBars",
+      "type": "overlay",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "remove_bars",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/RemoveBarsOverlay.java"
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Overlay"
+    },
+    {
+      "name": "ReturnXpText",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_xp_text",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnXpTextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Return"
+    },
+    {
+      "name": "ARGBToInt",
+      "type": "code",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "argb_to_int",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/ARGBToInt.java"
+        ]
+      }
+    },
+    {
+      "name": "ReturnArmorValue",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_armor_value",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnArmorValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Return"
+    },
+    {
+      "name": "ReturnArmorText",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_armor_text",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnArmorTextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Return"
+    },
+    {
+      "name": "ReturnFoodValue",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_food_value",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnFoodValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Return"
+    },
+    {
+      "name": "ReturnFoodValueText",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_food_value_text",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnFoodValueTextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Return"
+    },
+    {
+      "name": "ReturnHealthValue",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_health_value",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnHealthValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Return"
+    },
+    {
+      "name": "ReturnHealthValueText",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_health_value_text",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnHealthValueTextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/HealthSystem/Return"
+    },
+    {
+      "name": "JoinTheWorld",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "join_the_world",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/JoinTheWorldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LevelOverlay",
+      "type": "overlay",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "level_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/LevelOverlayOverlay.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/Overlay"
+    },
+    {
+      "name": "ReturnXpForBar",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_xp_for_bar",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnXpForBarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Return"
+    },
+    {
+      "name": "Tempcmd",
+      "type": "command",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tempcmd",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/command/TempcmdCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "CmdTemp",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cmd_temp",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/CmdTempProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ReturnXpLabelBar",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_xp_label_bar",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnXpLabelBarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Return"
+    },
+    {
+      "name": "ReturnLevelLabel",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_level_label",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnLevelLabelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Return"
+    },
+    {
+      "name": "UpdateRpgStats",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "update_rpg_stats",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/UpdateRpgStatsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level"
+    },
+    {
+      "name": "Misc",
+      "type": "config",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "misc",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/configuration/MiscConfiguration.java"
+        ]
+      }
+    },
+    {
+      "name": "HaveStaffPerm",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "have_staff_perm",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/HaveStaffPermProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Return"
+    },
+    {
+      "name": "Level",
+      "type": "command",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/command/LevelCommand.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/Command"
+    },
+    {
+      "name": "UpdateRpgStatsPlayerCommand",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "update_rpg_stats_player_command",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/UpdateRpgStatsPlayerCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level"
+    },
+    {
+      "name": "SetLevelCmd",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_level_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/SetLevelCmdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Command"
+    },
+    {
+      "name": "LevelResetCmd",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_reset_cmd",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/LevelResetCmdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Command"
+    },
+    {
+      "name": "EarningOverlay",
+      "type": "overlay",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "earning_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/EarningOverlayOverlay.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/Overlay"
+    },
+    {
+      "name": "Configurator",
+      "type": "gui",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "configurator",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/ConfiguratorMenu.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/ConfiguratorScreen.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/ConfiguratorButtonMessage.java"
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "OverlayConfig",
+      "type": "command",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overlay_config",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/command/OverlayConfigCommand.java"
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "OverlayConfigLevel",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overlay_config_level",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OverlayConfigLevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "ConfiguratorThisGUIIsOpened",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "configurator_this_gui_is_opened",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ConfiguratorThisGUIIsOpenedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "OverlaySave",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overlay_save",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OverlaySaveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig/Btn"
+    },
+    {
+      "name": "XPlus",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "x_plus",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/XPlusProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig/Btn"
+    },
+    {
+      "name": "XMinus",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "x_minus",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/XMinusProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig/Btn"
+    },
+    {
+      "name": "YPlus",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "y_plus",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/YPlusProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig/Btn"
+    },
+    {
+      "name": "YMinus",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "y_minus",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/YMinusProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig/Btn"
+    },
+    {
+      "name": "ResetBtn",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_btn",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ResetBtnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig/Btn"
+    },
+    {
+      "name": "Precision001",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "precision_001",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/Precision001Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig/Btn"
+    },
+    {
+      "name": "Precision01",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "precision_01",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/Precision01Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig/Btn"
+    },
+    {
+      "name": "Precision1",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "precision_1",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/Precision1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig/Btn"
+    },
+    {
+      "name": "Precision10",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "precision_10",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/Precision10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig/Btn"
+    },
+    {
+      "name": "ReturnEarningTickIsAboveZero",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_earning_tick_is_above_zero",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnEarningTickIsAboveZeroProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Return"
+    },
+    {
+      "name": "OverlayConfigEarning",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overlay_config_earning",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OverlayConfigEarningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "OverlayConfigTick",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overlay_config_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OverlayConfigTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "ReturnOverlayConfigOpen",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_overlay_config_open",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnOverlayConfigOpenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "OnMining",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_mining",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OnMiningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/earning"
+    },
+    {
+      "name": "ReturnScaleValue",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_scale_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnScaleValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "StatsScaleConfig",
+      "type": "gui",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stats_scale_config",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/StatsScaleConfigScreen.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/StatsScaleConfigMenu.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/StatsScaleConfigButtonMessage.java"
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "StatsScaleMinus",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stats_scale_minus",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/StatsScaleMinusProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "StatsScalePlus",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stats_scale_plus",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/StatsScalePlusProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "StatsScaleReset",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stats_scale_reset",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/StatsScaleResetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "OpenStatsScale",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_stats_scale",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenStatsScaleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/OverlayConfig"
+    },
+    {
+      "name": "OnCrafting",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_crafting",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OnCraftingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/earning"
+    },
+    {
+      "name": "OnSmelting",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_smelting",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OnSmeltingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/earning"
+    },
+    {
+      "name": "OnKilling",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_killing",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OnKillingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/earning"
+    },
+    {
+      "name": "MultiplierOverlay",
+      "type": "overlay",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "multiplier_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/MultiplierOverlayOverlay.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/Overlay"
+    },
+    {
+      "name": "LevelWikiScrollList",
+      "type": "code",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "level_wiki_scroll_list",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/LevelWikiScrollList.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "EarningWiki",
+      "type": "gui",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "earning_wiki",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/EarningWikiMenu.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/EarningWikiScreen.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "EarningWikiHomePage",
+      "type": "gui",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earning_wiki_home_page",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/EarningWikiHomePageMenu.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/EarningWikiHomePageScreen.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/EarningWikiHomePageButtonMessage.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "OpenMining",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_mining",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenMiningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "OpenCrafting",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_crafting",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenCraftingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "FloatScaller",
+      "type": "code",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "float_scaller",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/FloatScaller.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenSmelting",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_smelting",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenSmeltingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "OpenKilling",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_killing",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenKillingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "OpenEarningWiki",
+      "type": "keybind",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_earning_wiki",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/OpenEarningWikiMessage.java"
+        ]
+      },
+      "path": "~/KeyBinding"
+    },
+    {
+      "name": "OpenEarningWikiMainPage",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_earning_wiki_main_page",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenEarningWikiMainPageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Level Wiki"
+    },
+    {
+      "name": "ShowPossibleCommand",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_possible_command",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ShowPossibleCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Command"
+    },
+    {
+      "name": "AdetiumOre",
+      "type": "block",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adetium_ore",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/features/ores/AdetiumOreFeature.java",
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_ore.json",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/block/AdetiumOreBlock.java",
+          "src/main/resources/assets/skyzeradventure/models/block/adetium_ore.json",
+          "src/main/resources/assets/skyzeradventure/blockstates/adetium_ore.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "OreTab",
+      "type": "tab",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ore_tab",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Gameplay/Creative Tab"
+    },
+    {
+      "name": "AdetiumIngot",
+      "type": "item",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adetium_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/AdetiumIngotItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_ingot.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "IngotsTab",
+      "type": "tab",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ingots_tab",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Gameplay/Creative Tab"
+    },
+    {
+      "name": "RecipeAdetiumIngot",
+      "type": "recipe",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recipe_adetium_ingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/skyzeradventure/recipes/recipe_adetium_ingot.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "AdetiumArmorHelmetTickEvent",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adetium_armor_helmet_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/AdetiumArmorHelmetTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "AdetiumArmorChestplateTickEvent",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adetium_armor_chestplate_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/AdetiumArmorChestplateTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "AdetiumArmor",
+      "type": "armor",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adetium_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_armor_helmet.json",
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_armor_chestplate.json",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/AdetiumArmorItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_armor_leggings.json",
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_armor_boots.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "ArmorsTab",
+      "type": "tab",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armors_tab",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Gameplay/Creative Tab"
+    },
+    {
+      "name": "CraftAdetiumHelmet",
+      "type": "recipe",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_adetium_helmet",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/skyzeradventure/recipes/craft_adetium_helmet.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "CraftAdetiumChestplate",
+      "type": "recipe",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_adetium_chestplate",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/skyzeradventure/recipes/craft_adetium_chestplate.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "CraftAdetiumLeggings",
+      "type": "recipe",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_adetium_leggings",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/skyzeradventure/recipes/craft_adetium_leggings.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "CraftAdetiumBoots",
+      "type": "recipe",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_adetium_boots",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/skyzeradventure/recipes/craft_adetium_boots.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "AdetiumSword",
+      "type": "tool",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adetium_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/AdetiumSwordItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_sword.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "AdetiumPickaxe",
+      "type": "tool",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adetium_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/AdetiumPickaxeItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_pickaxe.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "ToolsTab",
+      "type": "tab",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tools_tab",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Gameplay/Creative Tab"
+    },
+    {
+      "name": "AdetiumShovel",
+      "type": "tool",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adetium_shovel",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/AdetiumShovelItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_shovel.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "AdetiumAxe",
+      "type": "tool",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adetium_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_axe.json",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/AdetiumAxeItem.java"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "AdetiumHoe",
+      "type": "tool",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adetium_hoe",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/AdetiumHoeItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/adetium_hoe.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "CraftAdetiumSword",
+      "type": "recipe",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_adetium_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/skyzeradventure/recipes/craft_adetium_sword.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "CraftAdetiumPickaxe",
+      "type": "recipe",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_adetium_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/skyzeradventure/recipes/craft_adetium_pickaxe.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "CraftAdetiumShovel",
+      "type": "recipe",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_adetium_shovel",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/skyzeradventure/recipes/craft_adetium_shovel.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "CraftAdetiumAxe",
+      "type": "recipe",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_adetium_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/skyzeradventure/recipes/craft_adetium_axe.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "CraftAdetiumHoe",
+      "type": "recipe",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_adetium_hoe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/skyzeradventure/recipes/craft_adetium_hoe.json"
+        ]
+      },
+      "path": "~/Gameplay/Adetium"
+    },
+    {
+      "name": "SkyzerAdventureMainNetwork",
+      "type": "code",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "skyzer_adventure_main_network",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/SkyzerAdventureMainNetwork.java"
+        ]
+      },
+      "path": "~/Networking"
+    },
+    {
+      "name": "ShopConfig",
+      "type": "config",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shop_config",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/configuration/ShopConfigConfiguration.java"
+        ]
+      },
+      "path": "~/ShopSystem/Config"
+    },
+    {
+      "name": "ShopListing",
+      "type": "config",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shop_listing",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/configuration/ShopListingConfiguration.java"
+        ]
+      },
+      "path": "~/ShopSystem/Config"
+    },
+    {
+      "name": "ShopMainGui",
+      "type": "gui",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shop_main_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/ShopMainGuiButtonMessage.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/ShopMainGuiScreen.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/ShopMainGuiMenu.java"
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "ShopBuy",
+      "type": "gui",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "shop_buy",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/ShopBuyScreen.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/ShopBuyButtonMessage.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/ShopBuyMenu.java"
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "OpenShopMain",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_shop_main",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenShopMainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "ShopSell",
+      "type": "gui",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "shop_sell",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/ShopSellMenu.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/ShopSellButtonMessage.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/ShopSellScreen.java"
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "BuySearch",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_search",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/BuySearchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "SellSearch",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sell_search",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/SellSearchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "ReturnMoneyText",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_money_text",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnMoneyTextProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "ShopScrollList",
+      "type": "code",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "shop_scroll_list",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/ShopScrollList.java"
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "OpenBuy",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_buy",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenBuyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "OpenSell",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_sell",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenSellProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "SellingPage",
+      "type": "gui",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "selling_page",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/SellingPageScreen.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/SellingPageButtonMessage.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/SellingPageMenu.java"
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "HaveItem",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "have_item",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/HaveItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "item",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "SellingPageWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "selling_page_while_this_gui_is_open_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/SellingPageWhileThisGUIIsOpenTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "SellingSell",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "selling_sell",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/SellingSellProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "SellingSellAll",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "selling_sell_all",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/SellingSellAllProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "ReturnItemAndPrice",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_item_and_price",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnItemAndPriceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "BuyPage",
+      "type": "gui",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "buy_page",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/BuyPageMenu.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/BuyPageButtonMessage.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/BuyPageScreen.java"
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "ReturnTotalPrice",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_total_price",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ReturnTotalPriceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "MaxButton",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_button",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/MaxButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "BuyButton",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_button",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/BuyButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "OpenBuyPage",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_buy_page",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenBuyPageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    },
+    {
+      "name": "OpenSellingPage",
+      "type": "procedure",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_selling_page",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OpenSellingPageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Gui"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "RPGHealth",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "20.0"
+    },
+    {
+      "name": "RPGHealthMax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "20.0"
+    },
+    {
+      "name": "RPGLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RPGXp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "OnDamage",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "OnDamageTick",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "RPGMaxXp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "500.0"
+    },
+    {
+      "name": "regentick",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "LevelOverlayX",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "LevelOverlayY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "overlayConfigTarget",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "OverlayConfigPrecision",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.01"
+    },
+    {
+      "name": "earningNotifTick",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "earning_text1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "earning_text2",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "earning_text3",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "earningNotifX",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "earningNotifY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "stats_scale",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "earning_lastvalue",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "serverxpmultiplier",
+      "type": "number",
+      "scope": "map",
+      "value": "1.0"
+    },
+    {
+      "name": "playerxpmultiplier",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "EarningWikiTarget",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "buysearch",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "sellsearch",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "shop_money",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1500.0"
+    },
+    {
+      "name": "tempitem",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "tempitemprice",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "tempshopactiontype",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.skyzeradventure.adetium_hoe": "Adetium Hoe",
+      "gui.skyzeradventure.selling_page.label_how_much_you_want_to_sell": "How much you want to sell ? ",
+      "config.skyzeradventure.misc": "SkyzerAdventure/Rank/Misc",
+      "gui.skyzeradventure.configurator.button_save": "Save",
+      "item.skyzeradventure.adetium_shovel": "Adetium Shovel",
+      "gui.skyzeradventure.stats_scale_config.button_empty": "+",
+      "gui.skyzeradventure.configurator.button_r": "R",
+      "gui.skyzeradventure.selling_page.amount": "Put amount like : 10",
+      "block.skyzeradventure.adetium_ore": "Adetium Ore",
+      "key.skyzeradventure.open_earning_wiki": "Open Earning Wiki",
+      "gui.skyzeradventure.configurator.button_01": "0.1",
+      "item.skyzeradventure.adetium_armor_boots": "Adetium Boots",
+      "itemGroup.tabarmors_tab": "Skyzer\u0027s Adventure Armors",
+      "config.skyzeradventure.shop_listing": "SkyzerAdventure/Shop/ShopListing",
+      "gui.skyzeradventure.shop_sell.button_return": "Return",
+      "config.skyzeradventure.earning": "SkyzerAdventure/Rank/Earning",
+      "gui.skyzeradventure.buy_page.label_total_price": "TOTAL PRICE",
+      "gui.skyzeradventure.selling_page.button_sell": "Sell",
+      "item.skyzeradventure.adetium_armor_leggings": "Adetium Leggings",
+      "gui.skyzeradventure.selling_page.button_back": "Back",
+      "gui.skyzeradventure.configurator.button_10": "10",
+      "gamerule.rPGModeGamerule": "RPG Mode",
+      "key.categories.skyzeradventure": "§aSkyzer Adventure mod",
+      "gui.skyzeradventure.stats_scale_config.button_r": "R",
+      "gui.skyzeradventure.configurator.button_empty": "+",
+      "gui.skyzeradventure.buy_page.button_buy": "Buy",
+      "gui.skyzeradventure.shop_main_gui.button_buy": "Buy",
+      "gui.skyzeradventure.stats_scale_config.button_empty1": "-",
+      "gui.skyzeradventure.configurator.button_001": "0.01",
+      "config.skyzeradventure.shop_config": "SkyzerAdventure/Shop/ShopConfig",
+      "gui.skyzeradventure.buy_page.button_sell": "Sell",
+      "itemGroup.tabingots_tab": "Skyzer\u0027s Adventure Ingots",
+      "gui.skyzeradventure.configurator.xVal": "",
+      "item.skyzeradventure.adetium_sword": "Adetium Sword",
+      "gui.skyzeradventure.shop_sell.label_shop_gui": "Shop Sell",
+      "item.skyzeradventure.adetium_pickaxe": "Adetium Pickaxe",
+      "item.skyzeradventure.adetium_armor_chestplate": "Adetium Chestplate",
+      "item.skyzeradventure.adetium_axe": "Adetium Axe",
+      "gui.skyzeradventure.buy_page.button_max": "MAX",
+      "gui.skyzeradventure.configurator.button_1": "1",
+      "gui.skyzeradventure.buy_page.amount": "Put amount like : 10",
+      "gui.skyzeradventure.configurator.label_y": "y : ",
+      "item.skyzeradventure.adetium_armor_helmet": "Adetium Helmet",
+      "gui.skyzeradventure.shop_buy.button_return": "Return",
+      "gui.skyzeradventure.buy_page.label_how_much_you_want_to_sell": "How much you want to buy ? ",
+      "gamerule.rPGModeGamerule.description": "Enable RPG mode from JLSkyzer Adventure\u0027s mod",
+      "gui.skyzeradventure.configurator.yVal": "",
+      "gui.skyzeradventure.shop_sell.search": "mod:id or object name",
+      "gui.skyzeradventure.configurator.label_x": "X : ",
+      "gui.skyzeradventure.shop_buy.search": "mod:id or object name",
+      "gui.skyzeradventure.configurator.button_empty1": "-",
+      "gui.skyzeradventure.buy_page.button_back": "Back",
+      "item.skyzeradventure.adetium_ingot": "Adetium Ingot",
+      "gui.skyzeradventure.shop_sell.button_search": "Search",
+      "gui.skyzeradventure.shop_buy.label_shop_gui": "Shop Buy",
+      "gui.skyzeradventure.buy_page.button_sell_all": "Sell All",
+      "gui.skyzeradventure.configurator.button_empty2": "+",
+      "gui.skyzeradventure.configurator.button_empty3": "-",
+      "itemGroup.tabtools_tab": "Skyzer\u0027s Adventure Tools",
+      "gui.skyzeradventure.shop_buy.button_search": "Search",
+      "gui.skyzeradventure.multiplier_overlay.label_ff": "ff",
+      "gui.skyzeradventure.earning_wiki_home_page.label_choose_type": "Choose type",
+      "itemGroup.tabore_tab": "Skyzer\u0027s Adventure Ores",
+      "gui.skyzeradventure.selling_page.button_sell_all": "Sell All",
+      "gui.skyzeradventure.shop_main_gui.button_sell": "Sell"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "RPG mode",
+        "children": [
+          {
+            "name": "HealthSystem",
+            "children": [
+              {
+                "name": "Damage",
+                "children": []
+              },
+              {
+                "name": "Overlay",
+                "children": []
+              },
+              {
+                "name": "Return",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Level",
+            "children": [
+              {
+                "name": "Config",
+                "children": []
+              },
+              {
+                "name": "earning",
+                "children": []
+              },
+              {
+                "name": "Overlay",
+                "children": []
+              },
+              {
+                "name": "Return",
+                "children": []
+              },
+              {
+                "name": "Command",
+                "children": []
+              },
+              {
+                "name": "Level Wiki",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "OverlayConfig",
+        "children": [
+          {
+            "name": "Btn",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Return",
+        "children": []
+      },
+      {
+        "name": "KeyBinding",
+        "children": []
+      },
+      {
+        "name": "Gameplay",
+        "children": [
+          {
+            "name": "Adetium",
+            "children": []
+          },
+          {
+            "name": "Creative Tab",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Networking",
+        "children": []
+      },
+      {
+        "name": "ShopSystem",
+        "children": [
+          {
+            "name": "Config",
+            "children": []
+          },
+          {
+            "name": "Gui",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "skyzeradventure",
+    "modName": "SkyzerAdventure",
+    "version": "1.0.0",
+    "author": "killi, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "smoothboot",
+      "hugestructureblock"
+    ],
+    "currentGenerator": "forge-1.18.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "fr.eriniumgroup.skyzeradventure",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300336712
+}

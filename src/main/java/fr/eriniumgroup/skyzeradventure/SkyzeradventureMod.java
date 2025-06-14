@@ -42,6 +42,12 @@ import java.lang.reflect.Field;
 import java.io.StringWriter;
 import java.io.PrintWriter;
 
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModTabs;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModItems;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModFeatures;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlocks;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlockEntities;
+
 @Mod("skyzeradventure")
 public class SkyzeradventureMod {
 	public static final Logger LOGGER = LogManager.getLogger(SkyzeradventureMod.class);
@@ -51,8 +57,13 @@ public class SkyzeradventureMod {
 	private static int messageID = 0;
 
 	public SkyzeradventureMod() {
-
+		SkyzeradventureModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		SkyzeradventureModBlocks.REGISTRY.register(bus);
+		SkyzeradventureModItems.REGISTRY.register(bus);
+
+		SkyzeradventureModBlockEntities.REGISTRY.register(bus);
+		SkyzeradventureModFeatures.REGISTRY.register(bus);
 
 	}
 

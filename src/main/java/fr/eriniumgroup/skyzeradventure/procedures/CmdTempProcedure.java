@@ -20,8 +20,7 @@ import java.io.File;
 
 import io.netty.buffer.Unpooled;
 
-import fr.eriniumgroup.skyzeradventure.world.inventory.EarningWikiMenu;
-import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
+import fr.eriniumgroup.skyzeradventure.world.inventory.ShopMainGuiMenu;
 
 import com.google.gson.JsonObject;
 
@@ -33,24 +32,17 @@ public class CmdTempProcedure {
 		com.google.gson.JsonObject JsonObject = new com.google.gson.JsonObject();
 		java.util.Map<String, Double> hashmap = new HashMap<>();
 		{
-			String _setval = "killing";
-			entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.EarningWikiTarget = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = new BlockPos(x, y, z);
 				NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return new TextComponent("EarningWiki");
+						return new TextComponent("ShopMainGui");
 					}
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new EarningWikiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new ShopMainGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

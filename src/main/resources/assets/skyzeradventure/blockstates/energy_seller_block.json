@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "skyzeradventure:block/energy_seller_block"
+    }
+  }
+}

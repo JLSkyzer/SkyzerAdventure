@@ -25,4 +25,10 @@ authors="killi, MCreator"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.skyzeradventure]]
+    modId="hugestructureblock"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

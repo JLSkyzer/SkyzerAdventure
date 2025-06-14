@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructeur ShopListing.toml</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1a1b21; color: #eee; margin: 0; }
+        h1 { margin: 20px; }
+        .tabs { margin: 18px 20px; }
+        .tab-btn {
+            background: #23272e; color: #bbb; border: 1px solid #444;
+            padding: 10px 32px; border-radius: 8px 8px 0 0; font-size: 18px;
+            cursor: pointer; margin-right: 10px;
+        }
+        .tab-btn.selected { background: #14b3f1; color: #fff; }
+        .container { margin: 20px; max-width: 700px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 32px; }
+        th, td { border-bottom: 1px solid #31343b; padding: 7px 2px; font-weight: 500; }
+        th { background: #23272e; font-size: 16px; font-weight: 700; color: #e3e3e3; }
+        tr.item-row { background: #23272e; transition: background 0.18s; }
+        tr.item-row:hover { background: #29313d; }
+        .add-btn { background: #30d963; color: #222; border: none; padding: 7px 20px; border-radius: 7px; font-size: 18px; cursor: pointer; font-weight: bold; margin: 12px 0;}
+        .save-btn { margin: 20px 0; background: #34e89e; color: #222; border: none; padding: 11px 32px; border-radius: 8px; font-size: 21px; cursor: pointer; font-weight: bold; }
+        .delete-btn { background: none; color: #ff4a4a; border: none; cursor: pointer; font-size: 19px; margin-left: 12px; }
+        input[type="text"], input[type="number"] { width: 80px; border-radius: 4px; border: 1px solid #555; padding: 4px 7px; background: #222; color: #eee; }
+        input.invalid { border: 1.5px solid #e96d6d; background: #2b171a; }
+        .hidden { display: none; }
+        input[type="file"] { margin: 14px 0; }
+        .copy-btn { background: none; color: #68d6ff; border: none; cursor: pointer; font-size: 17px; margin-left: 7px; }
+        .copy-btn:hover { color: #fff; }
+    </style>
+</head>
+<body>
+<h1>Constructeur ShopListing.toml</h1>
+<input type="file" id="fileInput" accept=".toml,.txt">
+<div class="tabs">
+    <button class="tab-btn selected" id="buyTab" onclick="switchTab('buy')">🛒 Buy Listing</button>
+    <button class="tab-btn" id="sellTab" onclick="switchTab('sell')">💰 Sell Listing</button>
+</div>
+<div class="container" id="itemsContainer"></div>
+<button class="add-btn" onclick="addItem()">+ Ajouter un item</button>
+<button class="save-btn" id="saveBtn" disabled>💾 Sauvegarder le fichier</button>
+<a id="downloadLink" class="hidden"></a>
+
+<script>
+let data = { buy: [], sell: [] };
+let activeTab = "buy";
+let tomlHeader = "[Listing]";
+let buyComment = '';
+let sellComment = '';
+
+function parseToml(text) {
+    data = { buy: [], sell: [] };
+    buyComment = ''; sellComment = '';
+    let lines = text.split(/\r?\n/);
+    for (let i=0; i < lines.length; ++i) {
+        let l = lines[i].trim();
+        if (l.startsWith("#") && (lines[i+1]||"").includes('Buy Listing')) buyComment += l+"\n";
+        if (l.startsWith("#") && (lines[i+1]||"").includes('Sell Listing')) sellComment += l+"\n";
+        if (l.startsWith('"Buy Listing"')) {
+            let match = l.match(/"Buy Listing"\s*=\s*"(.*)"/);
+            if (match && match[1].trim()) {
+                data.buy = match[1].split(";").map(x => x.trim()).filter(Boolean).map(row => {
+                    let [modid, id, price] = row.split(":");
+                    return {modid, id, price};
+                });
+            }
+        }
+        if (l.startsWith('"Sell Listing"')) {
+            let match = l.match(/"Sell Listing"\s*=\s*"(.*)"/);
+            if (match && match[1].trim()) {
+                data.sell = match[1].split(";").map(x => x.trim()).filter(Boolean).map(row => {
+                    let [modid, id, price] = row.split(":");
+                    return {modid, id, price};
+                });
+            }
+        }
+    }
+}
+function switchTab(tab) {
+    activeTab = tab;
+    document.getElementById('buyTab').classList.toggle('selected', tab === 'buy');
+    document.getElementById('sellTab').classList.toggle('selected', tab === 'sell');
+    showItems();
+}
+function showItems() {
+    const arr = (activeTab === "buy") ? data.buy : data.sell;
+    let html = `<h2>${activeTab === "buy" ? "Buy Listing" : "Sell Listing"}</h2>
+    <table>
+        <tr>
+            <th>modid</th>
+            <th>id</th>
+            <th>prix</th>
+            <th>Action</th>
+        </tr>`;
+    arr.forEach((item, idx) => {
+        html += `<tr class="item-row">
+            <td><input type="text" value="${item.modid || ''}" onchange="editItem(${idx},'modid',this.value)" class="${!item.modid?'invalid':''}"></td>
+            <td><input type="text" value="${item.id || ''}" onchange="editItem(${idx}, 'id', this.value)" class="${!item.id?'invalid':''}"></td>
+            <td><input type="number" step="0.0001" value="${item.price || ''}" onchange="editItem(${idx}, 'price', this.value)" class="${item.price===''||item.price===undefined||isNaN(Number(item.price))?'invalid':''}"></td>
+            <td>
+                <button class="delete-btn" onclick="deleteItem(${idx})">🗑️</button>
+                <button class="copy-btn" onclick="copyItem(${idx})" title="Dupliquer">📋</button>
+            </td>
+        </tr>`;
+    });
+    html += `</table>`;
+    document.getElementById("itemsContainer").innerHTML = html;
+}
+
+window.editItem = function(idx, key, val) {
+    let arr = (activeTab === "buy") ? data.buy : data.sell;
+    arr[idx][key] = val;
+    showItems();
+};
+window.deleteItem = function(idx) {
+    let arr = (activeTab === "buy") ? data.buy : data.sell;
+    arr.splice(idx, 1);
+    showItems();
+};
+window.copyItem = function(idx) {
+    let arr = (activeTab === "buy") ? data.buy : data.sell;
+    arr.push({...arr[idx]});
+    showItems();
+};
+window.addItem = function() {
+    let arr = (activeTab === "buy") ? data.buy : data.sell;
+    arr.push({ modid: '', id: '', price: '' });
+    showItems();
+};
+
+document.getElementById('fileInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        parseToml(e.target.result);
+        switchTab('buy');
+        document.getElementById('saveBtn').disabled = false;
+    };
+    reader.readAsText(file);
+});
+
+document.getElementById('saveBtn').addEventListener('click', function() {
+    let lines = [tomlHeader];
+    if (buyComment) lines.push(buyComment.trim());
+    lines.push(`\t"Buy Listing" = "${data.buy.map(item => [item.modid, item.id, item.price].join(":")).join("; ")}"`);
+    if (sellComment) lines.push(sellComment.trim());
+    lines.push(`\t"Sell Listing" = "${data.sell.map(item => [item.modid, item.id, item.price].join(":")).join("; ")}"`);
+    lines.push("");
+    const out = lines.join('\n');
+    const blob = new Blob([out], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.getElementById('downloadLink');
+    a.href = url;
+    a.download = "ShopListing.toml";
+    a.classList.remove('hidden');
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+});
+</script>
+</body>
+</html>

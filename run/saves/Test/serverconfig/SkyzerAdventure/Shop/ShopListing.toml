@@ -1,0 +1,7 @@
+
+[Listing]
+	#Follow this format : "modid:id:price; modid:id:price"
+	"Buy Listing" = "minecraft:diamond:1200; minecraft:tnt:500; minecraft:apple:10; minecraft:golden_apple:200; minecraft:nether_star:7500; minecraft:ender_pearl:70; minecraft:iron_ingot:12; minecraft:bread:6; minecraft:beef:8; minecraft:totem_of_undying:2500; minecraft:oak_sapling:2; minecraft:obsidian:30; minecraft:elytra:4000; minecraft:trident:3500; minecraft:shulker_shell:200"
+	#Follow this format : "modid:id:price; modid:id:price"
+	"Sell Listing" = "minecraft:emerald:2500; minecraft:iron_ingot:12; minecraft:gold_nugget:4; minecraft:blaze_rod:80; minecraft:gunpowder:13; minecraft:slime_ball:19; minecraft:feather:3; minecraft:spider_eye:7; minecraft:lapis_lazuli:16; minecraft:prismarine_crystals:30; minecraft:nether_quartz:14; minecraft:coal:9; minecraft:book:8; minecraft:rabbit_hide:20; minecraft:carrot:6"
+

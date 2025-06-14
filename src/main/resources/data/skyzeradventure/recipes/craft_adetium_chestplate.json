@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "2": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "3": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "4": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "5": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "6": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "7": {
+      "item": "skyzeradventure:adetium_ingot"
+    },
+    "8": {
+      "item": "skyzeradventure:adetium_ingot"
+    }
+  },
+  "result": {
+    "item": "skyzeradventure:adetium_armor_chestplate",
+    "count": 1
+  }
+}

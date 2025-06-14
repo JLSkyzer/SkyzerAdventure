@@ -1,0 +1,51 @@
+{
+  "_fv": 47,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "Listing",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "modid:id1:0; modid:id2:120",
+            "comment": "Follow this format : \\\"modid:id:price; modid:id:price\\\"",
+            "vardisplay": "Buy Listing",
+            "varname": "buy_listing",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 2,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "modid:id1:0; modid:id2:120",
+            "comment": "Follow this format : \\\"modid:id:price; modid:id:price\\\"",
+            "vardisplay": "Sell Listing",
+            "varname": "sell_listing",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "EntityAgeable"
+          }
+        ]
+      }
+    ],
+    "file": "SkyzerAdventure/Shop/ShopListing",
+    "configType": 1
+  }
+}
