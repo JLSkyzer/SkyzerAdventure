@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "skyzeradventure:blocks/energy_seller",
-    "up": "skyzeradventure:blocks/energy_seller",
-    "north": "skyzeradventure:blocks/energy_seller",
-    "east": "skyzeradventure:blocks/energy_seller",
-    "south": "skyzeradventure:blocks/energy_seller",
-    "west": "skyzeradventure:blocks/energy_seller",
-    "particle": "skyzeradventure:blocks/energy_seller"
+    "down": "skyzeradventure:block/energy_seller",
+    "up": "skyzeradventure:block/energy_seller",
+    "north": "skyzeradventure:block/energy_seller",
+    "east": "skyzeradventure:block/energy_seller",
+    "south": "skyzeradventure:block/energy_seller",
+    "west": "skyzeradventure:block/energy_seller",
+    "particle": "skyzeradventure:block/energy_seller"
   }
 }

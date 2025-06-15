@@ -1,4 +1,3 @@
-
 package fr.eriniumgroup.skyzeradventure.network;
 
 import net.minecraftforge.network.NetworkEvent;

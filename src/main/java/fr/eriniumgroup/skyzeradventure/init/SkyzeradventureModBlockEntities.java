@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -18,6 +17,8 @@ public class SkyzeradventureModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, SkyzeradventureMod.MODID);
 	public static final RegistryObject<BlockEntityType<?>> ENERGY_SELLER_BLOCK = register("energy_seller_block", SkyzeradventureModBlocks.ENERGY_SELLER_BLOCK, EnergySellerBlockBlockEntity::new);
 
+	// Start of user code block custom block entities
+	// End of user code block custom block entities
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
 	}

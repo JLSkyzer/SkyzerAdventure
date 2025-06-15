@@ -1,4 +1,3 @@
-
 package fr.eriniumgroup.skyzeradventure.world.features.ores;
 
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -21,9 +20,7 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.Level;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.core.Registry;
@@ -52,17 +49,15 @@ public class AdetiumOreFeature extends OreFeature {
 		return PLACED_FEATURE;
 	}
 
-	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
-	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
+	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("is_overworld"));
 
 	public AdetiumOreFeature() {
 		super(OreConfiguration.CODEC);
 	}
 
+	@Override
 	public boolean place(FeaturePlaceContext<OreConfiguration> context) {
 		WorldGenLevel world = context.level();
-		if (!generate_dimensions.contains(world.getLevel().dimension()))
-			return false;
 		return super.place(context);
 	}
 

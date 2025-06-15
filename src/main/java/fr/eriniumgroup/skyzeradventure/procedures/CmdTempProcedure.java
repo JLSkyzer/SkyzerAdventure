@@ -22,8 +22,6 @@ import io.netty.buffer.Unpooled;
 
 import fr.eriniumgroup.skyzeradventure.world.inventory.ShopMainGuiMenu;
 
-import com.google.gson.JsonObject;
-
 public class CmdTempProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -31,21 +29,19 @@ public class CmdTempProcedure {
 		File file = new File("");
 		com.google.gson.JsonObject JsonObject = new com.google.gson.JsonObject();
 		java.util.Map<String, Double> hashmap = new HashMap<>();
-		{
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = new BlockPos(x, y, z);
-				NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return new TextComponent("ShopMainGui");
-					}
+		if (entity instanceof ServerPlayer _ent) {
+			BlockPos _bpos = new BlockPos(x, y, z);
+			NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+				@Override
+				public Component getDisplayName() {
+					return new TextComponent("ShopMainGui");
+				}
 
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new ShopMainGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
-			}
+				@Override
+				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+					return new ShopMainGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+				}
+			}, _bpos);
 		}
 	}
 }

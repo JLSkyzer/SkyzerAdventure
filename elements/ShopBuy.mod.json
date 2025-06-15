@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "shop_background.png",
           "use1Xscale": false,
           "x": 0,
-          "y": 0
+          "y": 0,
+          "locked": false
         }
       },
       {
@@ -24,13 +25,15 @@
         "data": {
           "name": "button_return",
           "text": "Return",
+          "isUndecorated": false,
           "onClick": {
             "name": "OpenShopMain"
           },
           "width": 56,
           "height": 20,
           "x": 3,
-          "y": 3
+          "y": 3,
+          "locked": false
         }
       },
       {
@@ -45,7 +48,8 @@
             "falpha": 0.0
           },
           "x": 59,
-          "y": 8
+          "y": 8,
+          "locked": false
         }
       },
       {
@@ -53,13 +57,15 @@
         "data": {
           "name": "button_search",
           "text": "Search",
+          "isUndecorated": false,
           "onClick": {
             "name": "BuySearch"
           },
           "width": 56,
           "height": 20,
           "x": 369,
-          "y": 3
+          "y": 3,
+          "locked": false
         }
       },
       {
@@ -70,7 +76,8 @@
           "width": 144,
           "height": 20,
           "x": 225,
-          "y": 3
+          "y": 3,
+          "locked": false
         }
       },
       {
@@ -86,7 +93,8 @@
             "falpha": 0.0
           },
           "x": 102,
-          "y": 9
+          "y": 9,
+          "locked": false
         }
       }
     ],

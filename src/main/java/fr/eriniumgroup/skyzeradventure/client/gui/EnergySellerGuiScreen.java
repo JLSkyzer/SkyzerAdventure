@@ -1,4 +1,3 @@
-
 package fr.eriniumgroup.skyzeradventure.client.gui;
 
 import net.minecraft.world.level.Level;
@@ -8,7 +7,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.Minecraft;
 
 import java.util.HashMap;
 
@@ -16,17 +14,17 @@ import fr.eriniumgroup.skyzeradventure.world.inventory.EnergySellerGuiMenu;
 import fr.eriniumgroup.skyzeradventure.procedures.ReturnTargetLabelProcedure;
 import fr.eriniumgroup.skyzeradventure.procedures.ReturnPriceLabelProcedure;
 import fr.eriniumgroup.skyzeradventure.procedures.ReturnEnergyLabelProcedure;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens.WidgetScreen;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class EnergySellerGuiScreen extends AbstractContainerScreen<EnergySellerGuiMenu> {
+public class EnergySellerGuiScreen extends AbstractContainerScreen<EnergySellerGuiMenu> implements WidgetScreen {
 	private final static HashMap<String, Object> guistate = EnergySellerGuiMenu.guistate;
-	private final static HashMap<String, String> textstate = new HashMap<>();
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private final static HashMap<String, String> textstate = new HashMap<>();
 
 	public EnergySellerGuiScreen(EnergySellerGuiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -57,9 +55,13 @@ public class EnergySellerGuiScreen extends AbstractContainerScreen<EnergySellerG
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("skyzeradventure:textures/screens/gui_background.png"));
-		this.blit(ms, this.leftPos + -125, this.topPos + -37, 0, 0, 428, 240, 428, 240);
+		this.blit(ms, this.leftPos + -126, this.topPos + -37, 0, 0, 428, 240, 428, 240);
 
 		RenderSystem.disableBlend();
+	}
+
+	public HashMap<String, Object> getWidgets() {
+		return guistate;
 	}
 
 	@Override
@@ -69,11 +71,6 @@ public class EnergySellerGuiScreen extends AbstractContainerScreen<EnergySellerG
 			return true;
 		}
 		return super.keyPressed(key, b, c);
-	}
-
-	@Override
-	public void containerTick() {
-		super.containerTick();
 	}
 
 	@Override
@@ -91,14 +88,7 @@ public class EnergySellerGuiScreen extends AbstractContainerScreen<EnergySellerG
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
-	}
-
-	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 	}
 }

@@ -1,24 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "01",
-    "23",
-    "4 "
+    "aa",
+    "ba",
+    "b "
   ],
   "key": {
-    "0": {
+    "a": {
       "item": "skyzeradventure:adetium_ingot"
     },
-    "1": {
-      "item": "skyzeradventure:adetium_ingot"
-    },
-    "2": {
-      "item": "minecraft:stick"
-    },
-    "3": {
-      "item": "skyzeradventure:adetium_ingot"
-    },
-    "4": {
+    "b": {
       "item": "minecraft:stick"
     }
   },

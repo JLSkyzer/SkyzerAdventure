@@ -28,7 +28,7 @@ public class EarningWikiMenu extends AbstractContainerMenu implements Supplier<M
 	private boolean bound = false;
 
 	public EarningWikiMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(SkyzeradventureModMenus.EARNING_WIKI, id);
+		super(SkyzeradventureModMenus.EARNING_WIKI.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);

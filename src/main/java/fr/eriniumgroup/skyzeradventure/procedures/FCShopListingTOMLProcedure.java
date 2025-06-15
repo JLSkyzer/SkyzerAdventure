@@ -45,7 +45,7 @@ public class FCShopListingTOMLProcedure {
 					String[] resultTxt = (text).split(separator);
 					return resultTxt.length;
 				}
-			}.returnSize(ShopListingConfiguration.BUY_LISTING.get(), ";"); index0++) {
+			}.returnSize((ShopListingConfiguration.BUY_LISTING.get()), ";"); index0++) {
 				if (!(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
 					private String returnValue(String string, int Index, String sep) {
 						try {
@@ -68,7 +68,7 @@ public class FCShopListingTOMLProcedure {
 							return "";
 						}
 					}
-				}.returnValue(ShopListingConfiguration.BUY_LISTING.get(), (int) index, ";"), 0, ":") + ":" + new Object() {
+				}.returnValue((ShopListingConfiguration.BUY_LISTING.get()), (int) index, ";"), 0, ":") + ":" + new Object() {
 					private String returnValue(String string, int Index, String sep) {
 						try {
 							return ((string).split(sep)[Index]);
@@ -90,7 +90,7 @@ public class FCShopListingTOMLProcedure {
 							return "";
 						}
 					}
-				}.returnValue(ShopListingConfiguration.BUY_LISTING.get(), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == ItemStack.EMPTY.getItem())
+				}.returnValue((ShopListingConfiguration.BUY_LISTING.get()), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == ItemStack.EMPTY.getItem())
 						&& !(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
 							private String returnValue(String string, int Index, String sep) {
 								try {
@@ -113,7 +113,7 @@ public class FCShopListingTOMLProcedure {
 									return "";
 								}
 							}
-						}.returnValue(ShopListingConfiguration.BUY_LISTING.get(), (int) index, ";"), 0, ":") + ":" + new Object() {
+						}.returnValue((ShopListingConfiguration.BUY_LISTING.get()), (int) index, ";"), 0, ":") + ":" + new Object() {
 							private String returnValue(String string, int Index, String sep) {
 								try {
 									return ((string).split(sep)[Index]);
@@ -135,7 +135,7 @@ public class FCShopListingTOMLProcedure {
 									return "";
 								}
 							}
-						}.returnValue(ShopListingConfiguration.BUY_LISTING.get(), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
+						}.returnValue((ShopListingConfiguration.BUY_LISTING.get()), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
 					temptext = temptext + "" + new Object() {
 						private String returnValue(String string, int Index, String sep) {
 							try {
@@ -147,7 +147,7 @@ public class FCShopListingTOMLProcedure {
 								return "";
 							}
 						}
-					}.returnValue(ShopListingConfiguration.BUY_LISTING.get(), (int) index, ";") + "; ";
+					}.returnValue((ShopListingConfiguration.BUY_LISTING.get()), (int) index, ";") + "; ";
 				}
 				index = index + 1;
 			}
@@ -162,7 +162,7 @@ public class FCShopListingTOMLProcedure {
 					String[] resultTxt = (text).split(separator);
 					return resultTxt.length;
 				}
-			}.returnSize(ShopListingConfiguration.SELL_LISTING.get(), ";"); index1++) {
+			}.returnSize((ShopListingConfiguration.SELL_LISTING.get()), ";"); index1++) {
 				if (!(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
 					private String returnValue(String string, int Index, String sep) {
 						try {
@@ -185,7 +185,7 @@ public class FCShopListingTOMLProcedure {
 							return "";
 						}
 					}
-				}.returnValue(ShopListingConfiguration.SELL_LISTING.get(), (int) index, ";"), 0, ":") + ":" + new Object() {
+				}.returnValue((ShopListingConfiguration.SELL_LISTING.get()), (int) index, ";"), 0, ":") + ":" + new Object() {
 					private String returnValue(String string, int Index, String sep) {
 						try {
 							return ((string).split(sep)[Index]);
@@ -207,7 +207,7 @@ public class FCShopListingTOMLProcedure {
 							return "";
 						}
 					}
-				}.returnValue(ShopListingConfiguration.SELL_LISTING.get(), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == ItemStack.EMPTY.getItem())
+				}.returnValue((ShopListingConfiguration.SELL_LISTING.get()), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == ItemStack.EMPTY.getItem())
 						&& !(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
 							private String returnValue(String string, int Index, String sep) {
 								try {
@@ -230,7 +230,7 @@ public class FCShopListingTOMLProcedure {
 									return "";
 								}
 							}
-						}.returnValue(ShopListingConfiguration.SELL_LISTING.get(), (int) index, ";"), 0, ":") + ":" + new Object() {
+						}.returnValue((ShopListingConfiguration.SELL_LISTING.get()), (int) index, ";"), 0, ":") + ":" + new Object() {
 							private String returnValue(String string, int Index, String sep) {
 								try {
 									return ((string).split(sep)[Index]);
@@ -252,7 +252,7 @@ public class FCShopListingTOMLProcedure {
 									return "";
 								}
 							}
-						}.returnValue(ShopListingConfiguration.SELL_LISTING.get(), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
+						}.returnValue((ShopListingConfiguration.SELL_LISTING.get()), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
 					temptext = temptext + "" + new Object() {
 						private String returnValue(String string, int Index, String sep) {
 							try {
@@ -264,7 +264,7 @@ public class FCShopListingTOMLProcedure {
 								return "";
 							}
 						}
-					}.returnValue(ShopListingConfiguration.SELL_LISTING.get(), (int) index, ";") + "; ";
+					}.returnValue((ShopListingConfiguration.SELL_LISTING.get()), (int) index, ";") + "; ";
 				}
 				index = index + 1;
 			}

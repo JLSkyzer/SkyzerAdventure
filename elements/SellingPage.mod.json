@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 141,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -33,7 +34,8 @@
           "width": 144,
           "height": 20,
           "x": 141,
-          "y": 98
+          "y": 98,
+          "locked": false
         }
       },
       {
@@ -41,13 +43,15 @@
         "data": {
           "name": "button_sell",
           "text": "Sell",
+          "isUndecorated": false,
           "onClick": {
             "name": "SellingSell"
           },
           "width": 46,
           "height": 20,
           "x": 186,
-          "y": 125
+          "y": 125,
+          "locked": false
         }
       },
       {
@@ -55,13 +59,15 @@
         "data": {
           "name": "button_back",
           "text": "Back",
+          "isUndecorated": false,
           "onClick": {
             "name": "SellSearch"
           },
           "width": 46,
           "height": 20,
           "x": 186,
-          "y": 179
+          "y": 179,
+          "locked": false
         }
       },
       {
@@ -69,13 +75,15 @@
         "data": {
           "name": "button_sell_all",
           "text": "Sell All",
+          "isUndecorated": false,
           "onClick": {
             "name": "SellingSellAll"
           },
           "width": 63,
           "height": 20,
           "x": 177,
-          "y": 152
+          "y": 152,
+          "locked": false
         }
       },
       {
@@ -91,7 +99,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -107,7 +116,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       }
     ],

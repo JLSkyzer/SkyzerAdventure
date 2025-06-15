@@ -30,21 +30,19 @@ public class OverlayConfigLevelProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		{
-			if (entity instanceof ServerPlayer _ent) {
-				BlockPos _bpos = new BlockPos(x, y, z);
-				NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
-					@Override
-					public Component getDisplayName() {
-						return new TextComponent("Configurator");
-					}
+		if (entity instanceof ServerPlayer _ent) {
+			BlockPos _bpos = new BlockPos(x, y, z);
+			NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+				@Override
+				public Component getDisplayName() {
+					return new TextComponent("Configurator");
+				}
 
-					@Override
-					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new ConfiguratorMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-					}
-				}, _bpos);
-			}
+				@Override
+				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+					return new ConfiguratorMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+				}
+			}, _bpos);
 		}
 	}
 }

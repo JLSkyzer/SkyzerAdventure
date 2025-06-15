@@ -1,4 +1,3 @@
-
 package fr.eriniumgroup.skyzeradventure.client.gui;
 
 import net.minecraft.world.level.Level;
@@ -18,19 +17,19 @@ import fr.eriniumgroup.skyzeradventure.world.inventory.SellingPageMenu;
 import fr.eriniumgroup.skyzeradventure.procedures.ReturnMoneyTextProcedure;
 import fr.eriniumgroup.skyzeradventure.procedures.ReturnItemAndPriceProcedure;
 import fr.eriniumgroup.skyzeradventure.network.SellingPageButtonMessage;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens.WidgetScreen;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> {
+public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> implements WidgetScreen {
 	private final static HashMap<String, Object> guistate = SellingPageMenu.guistate;
-	private final static HashMap<String, String> textstate = new HashMap<>();
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	public static EditBox amount;
+	private final static HashMap<String, String> textstate = new HashMap<>();
+	EditBox amount;
 	Button button_sell;
 	Button button_back;
 	Button button_sell_all;
@@ -52,8 +51,8 @@ public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> 
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
-		this.renderTooltip(ms, mouseX, mouseY);
 		amount.render(ms, mouseX, mouseY, partialTicks);
+		this.renderTooltip(ms, mouseX, mouseY);
 	}
 
 	@Override
@@ -64,6 +63,10 @@ public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> 
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		RenderSystem.disableBlend();
+	}
+
+	public HashMap<String, Object> getWidgets() {
+		return guistate;
 	}
 
 	@Override
@@ -87,6 +90,13 @@ public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> 
 	}
 
 	@Override
+	public void resize(Minecraft minecraft, int width, int height) {
+		String amountValue = amount.getValue();
+		super.resize(minecraft, width, height);
+		amount.setValue(amountValue);
+	}
+
+	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, new TranslatableComponent("gui.skyzeradventure.selling_page.label_how_much_you_want_to_sell"), 15, 7, -16777216);
 		this.font.draw(poseStack,
@@ -98,20 +108,9 @@ public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> 
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
-	}
-
-	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		amount = new EditBox(this.font, this.leftPos + 15, this.topPos + 61, 144, 20, new TranslatableComponent("gui.skyzeradventure.selling_page.amount")) {
-			{
-				setSuggestion(new TranslatableComponent("gui.skyzeradventure.selling_page.amount").getString());
-			}
-
+		amount = new EditBox(this.font, this.leftPos + 16, this.topPos + 62, 142, 18, new TranslatableComponent("gui.skyzeradventure.selling_page.amount")) {
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
@@ -130,6 +129,7 @@ public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> 
 					setSuggestion(null);
 			}
 		};
+		amount.setSuggestion(new TranslatableComponent("gui.skyzeradventure.selling_page.amount").getString());
 		amount.setMaxLength(32767);
 		guistate.put("text:amount", amount);
 		this.addWidget(this.amount);

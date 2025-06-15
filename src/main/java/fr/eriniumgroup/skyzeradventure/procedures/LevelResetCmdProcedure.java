@@ -18,57 +18,30 @@ public class LevelResetCmdProcedure {
 		if (HaveStaffPermProcedure.execute(entity)) {
 			{
 				double _setval = 0;
-				(new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "player");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
-					}
-				}.getEntity()).getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				(commandParameterEntity(arguments, "player")).getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.RPGLevel = _setval;
-					capability.syncPlayerVariables((new Object() {
-						public Entity getEntity() {
-							try {
-								return EntityArgument.getEntity(arguments, "player");
-							} catch (CommandSyntaxException e) {
-								e.printStackTrace();
-								return null;
-							}
-						}
-					}.getEntity()));
+					capability.syncPlayerVariables((commandParameterEntity(arguments, "player")));
 				});
 			}
 			{
 				double _setval = 0;
-				(new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "player");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
-					}
-				}.getEntity()).getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				(commandParameterEntity(arguments, "player")).getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.RPGXp = _setval;
-					capability.syncPlayerVariables((new Object() {
-						public Entity getEntity() {
-							try {
-								return EntityArgument.getEntity(arguments, "player");
-							} catch (CommandSyntaxException e) {
-								e.printStackTrace();
-								return null;
-							}
-						}
-					}.getEntity()));
+					capability.syncPlayerVariables((commandParameterEntity(arguments, "player")));
 				});
 			}
 			UpdateRpgStatsPlayerCommandProcedure.execute(arguments);
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(new TextComponent("\u00A7aDone !"), false);
+		}
+	}
+
+	private static Entity commandParameterEntity(CommandContext<CommandSourceStack> arguments, String parameter) {
+		try {
+			return EntityArgument.getEntity(arguments, parameter);
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

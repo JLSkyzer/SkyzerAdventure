@@ -22,7 +22,7 @@ public class AdetiumHoeItem extends HoeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 5f;
+				return 6f;
 			}
 
 			public int getLevel() {

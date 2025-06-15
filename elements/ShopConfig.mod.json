@@ -1,33 +1,10 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "config",
   "definition": {
-    "pools": [
-      {
-        "category": "Global Config",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 1,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.0012,
-            "textDefault": "",
-            "comment": "The price for 1 FE into the energy seller",
-            "vardisplay": "One FE price",
-            "varname": "feprice",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "EntityAgeable"
-          }
-        ]
-      }
-    ],
     "file": "SkyzerAdventure/Shop/ShopConfig",
-    "configType": 1
+    "configType": 1,
+    "config": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"config_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"config_category\"><field name=\"name\">Global Config</field><statement name=\"write\"><block type=\"config_variable\"><field name=\"name\">feprice</field><field name=\"comment\">The price for 1 FE into the energy seller</field><value name=\"value\"><block type=\"config_number_variable\"><field name=\"name\">One FE price</field><field name=\"value\">0.0012</field></block></value></block></statement></block></next></block></xml>",
+    "defining": false
   }
 }

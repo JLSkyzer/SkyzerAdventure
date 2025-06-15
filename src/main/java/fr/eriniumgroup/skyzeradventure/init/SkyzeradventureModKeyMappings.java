@@ -1,6 +1,6 @@
 
 /*
- *	MCreator note: This file will be REGENERATED on each build.
+ *    MCreator note: This file will be REGENERATED on each build.
  */
 package fr.eriniumgroup.skyzeradventure.init;
 
@@ -9,7 +9,7 @@ import org.lwjgl.glfw.GLFW;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.ClientRegistry;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -21,19 +21,7 @@ import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class SkyzeradventureModKeyMappings {
-	public static final KeyMapping OPEN_EARNING_WIKI = new KeyMapping("key.skyzeradventure.open_earning_wiki", GLFW.GLFW_KEY_O, "key.categories.skyzeradventure") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new OpenEarningWikiMessage(0, 0));
-				OpenEarningWikiMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-			}
-			isDownOld = isDown;
-		}
-	};
+	public static final KeyMapping OPEN_EARNING_WIKI = new KeyMapping("key.skyzeradventure.open_earning_wiki", GLFW.GLFW_KEY_O, "key.categories.skyzeradventure");
 
 	@SubscribeEvent
 	public static void registerKeyBindings(FMLClientSetupEvent event) {
@@ -43,9 +31,14 @@ public class SkyzeradventureModKeyMappings {
 	@Mod.EventBusSubscriber({Dist.CLIENT})
 	public static class KeyEventListener {
 		@SubscribeEvent
-		public static void onClientTick(TickEvent.ClientTickEvent event) {
+		public static void onKeyInput(InputEvent.KeyInputEvent event) {
 			if (Minecraft.getInstance().screen == null) {
-				OPEN_EARNING_WIKI.consumeClick();
+				if (event.getKey() == OPEN_EARNING_WIKI.getKey().getValue()) {
+					if (event.getAction() == GLFW.GLFW_PRESS) {
+						SkyzeradventureMod.PACKET_HANDLER.sendToServer(new OpenEarningWikiMessage(0, 0));
+						OpenEarningWikiMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+					}
+				}
 			}
 		}
 	}

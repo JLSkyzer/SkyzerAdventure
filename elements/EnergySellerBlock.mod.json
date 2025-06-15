@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "block",
   "definition": {
     "texture": "energy_seller",
@@ -33,15 +33,20 @@
         "subtract": false
       }
     ],
+    "customProperties": [],
     "name": "Energy Seller Block",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 3.0,
     "resistance": 3.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTab": {
-      "value": "REDSTONE"
-    },
+    "creativeTabs": [
+      {
+        "value": "REDSTONE"
+      }
+    ],
     "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
@@ -98,7 +103,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 0,
+    "vanillaToolTier": "NONE",
     "isBonemealable": false,
     "hasInventory": true,
     "guiBoundTo": "EnergySellerGui",
@@ -123,7 +128,7 @@
     "onBlockPlayedBy": {
       "name": "EnergySellerBlockBlockAdded"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [],
     "generationShape": "UNIFORM",

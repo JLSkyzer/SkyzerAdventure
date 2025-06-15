@@ -5,6 +5,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
 public class ShopConfigConfiguration {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec SPEC;
+
 	public static final ForgeConfigSpec.ConfigValue<Double> FEPRICE;
 	static {
 		BUILDER.push("Global Config");

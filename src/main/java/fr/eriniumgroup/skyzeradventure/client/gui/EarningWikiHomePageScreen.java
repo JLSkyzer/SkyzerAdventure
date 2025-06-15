@@ -1,4 +1,3 @@
-
 package fr.eriniumgroup.skyzeradventure.client.gui;
 
 import net.minecraft.world.level.Level;
@@ -9,24 +8,23 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.Minecraft;
 
 import java.util.HashMap;
 
 import fr.eriniumgroup.skyzeradventure.world.inventory.EarningWikiHomePageMenu;
 import fr.eriniumgroup.skyzeradventure.network.EarningWikiHomePageButtonMessage;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens.WidgetScreen;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class EarningWikiHomePageScreen extends AbstractContainerScreen<EarningWikiHomePageMenu> {
+public class EarningWikiHomePageScreen extends AbstractContainerScreen<EarningWikiHomePageMenu> implements WidgetScreen {
 	private final static HashMap<String, Object> guistate = EarningWikiHomePageMenu.guistate;
-	private final static HashMap<String, String> textstate = new HashMap<>();
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private final static HashMap<String, String> textstate = new HashMap<>();
 	ImageButton imagebutton_crafting;
 	ImageButton imagebutton_smelting;
 	ImageButton imagebutton_sword;
@@ -66,6 +64,10 @@ public class EarningWikiHomePageScreen extends AbstractContainerScreen<EarningWi
 		RenderSystem.disableBlend();
 	}
 
+	public HashMap<String, Object> getWidgets() {
+		return guistate;
+	}
+
 	@Override
 	public boolean keyPressed(int key, int b, int c) {
 		if (key == 256) {
@@ -76,25 +78,13 @@ public class EarningWikiHomePageScreen extends AbstractContainerScreen<EarningWi
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, new TranslatableComponent("gui.skyzeradventure.earning_wiki_home_page.label_choose_type"), 2, 2, -3407872);
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
-	}
-
-	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		imagebutton_crafting = new ImageButton(this.leftPos + 6, this.topPos + 17, 64, 64, 0, 0, 64, new ResourceLocation("skyzeradventure:textures/screens/atlas/imagebutton_crafting.png"), 64, 128, e -> {
 			if (true) {
 				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new EarningWikiHomePageButtonMessage(0, x, y, z, textstate));

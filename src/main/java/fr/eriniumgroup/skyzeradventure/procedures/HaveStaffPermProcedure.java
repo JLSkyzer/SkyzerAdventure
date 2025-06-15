@@ -10,7 +10,7 @@ public class HaveStaffPermProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if (MiscConfiguration.STAFFPERM.get().contains(entity.getDisplayName().getString())) {
+		if ((MiscConfiguration.STAFFPERM.get()).contains(entity.getDisplayName().getString())) {
 			return true;
 		}
 		if (entity instanceof Player _player && !_player.level.isClientSide())

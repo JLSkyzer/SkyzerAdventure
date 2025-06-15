@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -22,7 +22,8 @@
             "falpha": 0.0
           },
           "x": 141,
-          "y": 44
+          "y": 44,
+          "locked": false
         }
       },
       {
@@ -33,7 +34,8 @@
           "width": 108,
           "height": 20,
           "x": 132,
-          "y": 125
+          "y": 125,
+          "locked": false
         }
       },
       {
@@ -41,13 +43,15 @@
         "data": {
           "name": "button_back",
           "text": "Back",
+          "isUndecorated": false,
           "onClick": {
             "name": "BuySearch"
           },
           "width": 46,
           "height": 20,
           "x": 186,
-          "y": 179
+          "y": 179,
+          "locked": false
         }
       },
       {
@@ -63,7 +67,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 62
+          "y": 62,
+          "locked": false
         }
       },
       {
@@ -79,7 +84,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -87,13 +93,15 @@
         "data": {
           "name": "button_buy",
           "text": "Buy",
+          "isUndecorated": false,
           "onClick": {
             "name": "BuyButton"
           },
           "width": 45,
           "height": 20,
           "x": 186,
-          "y": 152
+          "y": 152,
+          "locked": false
         }
       },
       {
@@ -101,13 +109,15 @@
         "data": {
           "name": "button_max",
           "text": "MAX",
+          "isUndecorated": false,
           "onClick": {
             "name": "MaxButton"
           },
           "width": 36,
           "height": 20,
           "x": 249,
-          "y": 125
+          "y": 125,
+          "locked": false
         }
       },
       {
@@ -123,7 +133,8 @@
             "falpha": 0.0
           },
           "x": 132,
-          "y": 107
+          "y": 107,
+          "locked": false
         }
       }
     ],

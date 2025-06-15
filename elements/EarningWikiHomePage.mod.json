@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "gui_background.png",
           "use1Xscale": false,
           "x": 0,
-          "y": 0
+          "y": 0,
+          "locked": false
         }
       },
       {
@@ -29,7 +30,8 @@
             "name": "OpenCrafting"
           },
           "x": 6,
-          "y": 17
+          "y": 17,
+          "locked": false
         }
       },
       {
@@ -44,7 +46,8 @@
             "falpha": 0.0
           },
           "x": 2,
-          "y": 2
+          "y": 2,
+          "locked": false
         }
       },
       {
@@ -57,7 +60,8 @@
             "name": "OpenSmelting"
           },
           "x": 78,
-          "y": 17
+          "y": 17,
+          "locked": false
         }
       },
       {
@@ -70,7 +74,8 @@
             "name": "OpenKilling"
           },
           "x": 150,
-          "y": 17
+          "y": 17,
+          "locked": false
         }
       },
       {
@@ -83,7 +88,8 @@
             "name": "OpenMining"
           },
           "x": 222,
-          "y": 17
+          "y": 17,
+          "locked": false
         }
       }
     ],

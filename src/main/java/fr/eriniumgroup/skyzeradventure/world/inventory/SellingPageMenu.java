@@ -8,11 +8,15 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
@@ -24,18 +28,21 @@ import fr.eriniumgroup.skyzeradventure.procedures.SellingPageWhileThisGUIIsOpenT
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMenus;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
-@Mod.EventBusSubscriber
 public class SellingPageMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
 	public int x, y, z;
+	private ContainerLevelAccess access = ContainerLevelAccess.NULL;
 	private IItemHandler internal;
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
+	private Supplier<Boolean> boundItemMatcher = null;
+	private Entity boundEntity = null;
+	private BlockEntity boundBlockEntity = null;
 
 	public SellingPageMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(SkyzeradventureModMenus.SELLING_PAGE, id);
+		super(SkyzeradventureModMenus.SELLING_PAGE.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);
@@ -45,12 +52,26 @@ public class SellingPageMenu extends AbstractContainerMenu implements Supplier<M
 			this.x = pos.getX();
 			this.y = pos.getY();
 			this.z = pos.getZ();
+			access = ContainerLevelAccess.create(world, pos);
 		}
 	}
 
 	@Override
 	public boolean stillValid(Player player) {
+		if (this.bound) {
+			if (this.boundItemMatcher != null)
+				return this.boundItemMatcher.get();
+			else if (this.boundBlockEntity != null)
+				return AbstractContainerMenu.stillValid(this.access, player, this.boundBlockEntity.getBlockState().getBlock());
+			else if (this.boundEntity != null)
+				return this.boundEntity.isAlive();
+		}
 		return true;
+	}
+
+	@Override
+	public ItemStack quickMoveStack(Player playerIn, int index) {
+		return ItemStack.EMPTY;
 	}
 
 	public Map<Integer, Slot> get() {
@@ -112,7 +133,6 @@ public class SellingPageMenu extends AbstractContainerMenu implements Supplier<M
 			if (!world.hasChunkAt(new BlockPos(x, y, z)))
 				return;
 			if (mode == 0) {
-
 				SellingPageWhileThisGUIIsOpenTickProcedure.execute(world, entity, guistate);
 			}
 		}
@@ -134,8 +154,8 @@ public class SellingPageMenu extends AbstractContainerMenu implements Supplier<M
 			int size = buffer.readInt();
 			HashMap<String, String> map = new HashMap<>();
 			for (int i = 0; i < size; i++) {
-				String key = buffer.readUtf();
-				String value = buffer.readUtf();
+				String key = buffer.readComponent().getString();
+				String value = buffer.readComponent().getString();
 				map.put(key, value);
 			}
 			return map;

@@ -5,6 +5,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
 public class MiscConfiguration {
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 	public static final ForgeConfigSpec SPEC;
+
 	public static final ForgeConfigSpec.ConfigValue<String> STAFFPERM;
 	static {
 		BUILDER.push("Permissions");

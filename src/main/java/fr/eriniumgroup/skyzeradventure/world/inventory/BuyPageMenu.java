@@ -28,7 +28,7 @@ public class BuyPageMenu extends AbstractContainerMenu implements Supplier<Map<I
 	private boolean bound = false;
 
 	public BuyPageMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(SkyzeradventureModMenus.BUY_PAGE, id);
+		super(SkyzeradventureModMenus.BUY_PAGE.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);

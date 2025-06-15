@@ -29,7 +29,7 @@ public class BuyButtonProcedure {
 		}.convert(guistate.containsKey("textin:amount") ? (String) guistate.get("textin:amount") : "")
 				* (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitemprice) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = ((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitem);
+				ItemStack _setstack = ((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitem).copy();
 				_setstack.setCount((int) new Object() {
 					double convert(String s) {
 						try {

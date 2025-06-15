@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "overlay",
   "definition": {
     "priority": "NORMAL",
@@ -9,8 +9,10 @@
         "data": {
           "image": "rank_overlay.png",
           "use1Xscale": false,
+          "anchorPoint": "CENTER",
           "x": 267,
-          "y": 0
+          "y": 0,
+          "locked": false
         }
       },
       {
@@ -18,8 +20,10 @@
         "data": {
           "image": "rank_overlay_bar.png",
           "use1Xscale": false,
+          "anchorPoint": "CENTER",
           "x": 267,
-          "y": 50
+          "y": 50,
+          "locked": false
         }
       }
     ],

@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -16,18 +16,28 @@
     "onBodyTick": {
       "name": "AdetiumArmorChestplateTickEvent"
     },
-    "creativeTab": {
-      "value": "CUSTOM:ArmorsTab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:ArmorsTab"
+      }
+    ],
     "armorTextureFile": "adetium_armor",
     "helmetName": "Adetium Helmet",
     "bodyName": "Adetium Chestplate",
     "leggingsName": "Adetium Leggings",
     "bootsName": "Adetium Boots",
-    "helmetSpecialInfo": [],
-    "bodySpecialInfo": [],
-    "leggingsSpecialInfo": [],
-    "bootsSpecialInfo": [],
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",

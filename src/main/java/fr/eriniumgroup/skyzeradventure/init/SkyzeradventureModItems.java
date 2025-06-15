@@ -24,8 +24,8 @@ import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 public class SkyzeradventureModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, SkyzeradventureMod.MODID);
-	public static final RegistryObject<Item> ADETIUM_INGOT = REGISTRY.register("adetium_ingot", () -> new AdetiumIngotItem());
 	public static final RegistryObject<Item> ADETIUM_ORE = block(SkyzeradventureModBlocks.ADETIUM_ORE, SkyzeradventureModTabs.TAB_ORE_TAB);
+	public static final RegistryObject<Item> ADETIUM_INGOT = REGISTRY.register("adetium_ingot", () -> new AdetiumIngotItem());
 	public static final RegistryObject<Item> ADETIUM_ARMOR_HELMET = REGISTRY.register("adetium_armor_helmet", () -> new AdetiumArmorItem.Helmet());
 	public static final RegistryObject<Item> ADETIUM_ARMOR_CHESTPLATE = REGISTRY.register("adetium_armor_chestplate", () -> new AdetiumArmorItem.Chestplate());
 	public static final RegistryObject<Item> ADETIUM_ARMOR_LEGGINGS = REGISTRY.register("adetium_armor_leggings", () -> new AdetiumArmorItem.Leggings());
@@ -37,6 +37,8 @@ public class SkyzeradventureModItems {
 	public static final RegistryObject<Item> ADETIUM_HOE = REGISTRY.register("adetium_hoe", () -> new AdetiumHoeItem());
 	public static final RegistryObject<Item> ENERGY_SELLER_BLOCK = block(SkyzeradventureModBlocks.ENERGY_SELLER_BLOCK, CreativeModeTab.TAB_REDSTONE);
 
+	// Start of user code block custom items
+	// End of user code block custom items
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
 	}

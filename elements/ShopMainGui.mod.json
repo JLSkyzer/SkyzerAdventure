@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "gui_background.png",
           "use1Xscale": false,
           "x": 0,
-          "y": 0
+          "y": 0,
+          "locked": false
         }
       },
       {
@@ -29,7 +30,8 @@
             "name": "OpenBuy"
           },
           "x": 132,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       },
       {
@@ -42,7 +44,8 @@
             "name": "OpenSell"
           },
           "x": 231,
-          "y": 80
+          "y": 80,
+          "locked": false
         }
       }
     ],

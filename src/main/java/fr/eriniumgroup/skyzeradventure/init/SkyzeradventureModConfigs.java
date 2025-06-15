@@ -17,8 +17,8 @@ public class SkyzeradventureModConfigs {
 	@SubscribeEvent
 	public static void register(FMLConstructModEvent event) {
 		event.enqueueWork(() -> {
-			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MiscConfiguration.SPEC, "SkyzerAdventure/Rank/Misc.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EarningConfiguration.SPEC, "SkyzerAdventure/Rank/Earning.toml");
+			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, MiscConfiguration.SPEC, "SkyzerAdventure/Rank/Misc.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ShopConfigConfiguration.SPEC, "SkyzerAdventure/Shop/ShopConfig.toml");
 			ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ShopListingConfiguration.SPEC, "SkyzerAdventure/Shop/ShopListing.toml");
 		});

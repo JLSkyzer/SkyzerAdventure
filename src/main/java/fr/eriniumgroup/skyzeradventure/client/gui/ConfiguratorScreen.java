@@ -1,7 +1,5 @@
-
 package fr.eriniumgroup.skyzeradventure.client.gui;
 
-import fr.eriniumgroup.skyzeradventure.procedures.OverlayConfigTickProcedure;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -16,20 +14,20 @@ import java.util.HashMap;
 
 import fr.eriniumgroup.skyzeradventure.world.inventory.ConfiguratorMenu;
 import fr.eriniumgroup.skyzeradventure.network.ConfiguratorButtonMessage;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens.WidgetScreen;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class ConfiguratorScreen extends AbstractContainerScreen<ConfiguratorMenu> {
+public class ConfiguratorScreen extends AbstractContainerScreen<ConfiguratorMenu> implements WidgetScreen {
 	private final static HashMap<String, Object> guistate = ConfiguratorMenu.guistate;
-	private final static HashMap<String, String> textstate = new HashMap<>();
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	public static EditBox xVal;
-	public static EditBox yVal;
+	private final static HashMap<String, String> textstate = new HashMap<>();
+	EditBox xVal;
+	EditBox yVal;
 	Button button_empty;
 	Button button_r;
 	Button button_empty1;
@@ -54,19 +52,23 @@ public class ConfiguratorScreen extends AbstractContainerScreen<ConfiguratorMenu
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
-		/*this.renderBackground(ms);*/
+		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
-		this.renderTooltip(ms, mouseX, mouseY);
 		xVal.render(ms, mouseX, mouseY, partialTicks);
 		yVal.render(ms, mouseX, mouseY, partialTicks);
+		this.renderTooltip(ms, mouseX, mouseY);
 	}
 
 	@Override
 	protected void renderBg(PoseStack ms, float partialTicks, int gx, int gy) {
-		/*RenderSystem.setShaderColor(1, 1, 1, 1);
+		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		RenderSystem.disableBlend();*/
+		RenderSystem.disableBlend();
+	}
+
+	public HashMap<String, Object> getWidgets() {
+		return guistate;
 	}
 
 	@Override
@@ -90,26 +92,28 @@ public class ConfiguratorScreen extends AbstractContainerScreen<ConfiguratorMenu
 	}
 
 	@Override
+	public void resize(Minecraft minecraft, int width, int height) {
+		String xValValue = xVal.getValue();
+		String yValValue = yVal.getValue();
+		super.resize(minecraft, width, height);
+		xVal.setValue(xValValue);
+		yVal.setValue(yValValue);
+	}
+
+	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, new TranslatableComponent("gui.skyzeradventure.configurator.label_x"), 100, 151, -1);
 		this.font.draw(poseStack, new TranslatableComponent("gui.skyzeradventure.configurator.label_y"), 100, 191, -1);
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-		Minecraft.getInstance().keyboardHandler.setSendRepeatsToGui(false);
-	}
-
-	@Override
 	public void init() {
 		super.init();
-		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		xVal = new EditBox(this.font, this.leftPos + 120, this.topPos + 141, 40, 20, new TranslatableComponent("gui.skyzeradventure.configurator.xVal"));
+		xVal = new EditBox(this.font, this.leftPos + 121, this.topPos + 142, 38, 18, new TranslatableComponent("gui.skyzeradventure.configurator.xVal"));
 		xVal.setMaxLength(32767);
 		guistate.put("text:xVal", xVal);
 		this.addWidget(this.xVal);
-		yVal = new EditBox(this.font, this.leftPos + 120, this.topPos + 181, 40, 20, new TranslatableComponent("gui.skyzeradventure.configurator.yVal"));
+		yVal = new EditBox(this.font, this.leftPos + 121, this.topPos + 182, 38, 18, new TranslatableComponent("gui.skyzeradventure.configurator.yVal"));
 		yVal.setMaxLength(32767);
 		guistate.put("text:yVal", yVal);
 		this.addWidget(this.yVal);
@@ -163,7 +167,7 @@ public class ConfiguratorScreen extends AbstractContainerScreen<ConfiguratorMenu
 		});
 		guistate.put("button:button_empty3", button_empty3);
 		this.addRenderableWidget(button_empty3);
-		button_001 = new Button(this.leftPos + -9, this.topPos + 181, 30, 20, new TranslatableComponent("gui.skyzeradventure.configurator.button_001"), e -> {
+		button_001 = new Button(this.leftPos + -10, this.topPos + 181, 30, 20, new TranslatableComponent("gui.skyzeradventure.configurator.button_001"), e -> {
 			if (true) {
 				textstate.put("textin:xVal", xVal.getValue());
 				textstate.put("textin:yVal", yVal.getValue());

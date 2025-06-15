@@ -1,51 +1,10 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "config",
   "definition": {
-    "pools": [
-      {
-        "category": "Listing",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 2,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.0,
-            "textDefault": "modid:id1:0; modid:id2:120",
-            "comment": "Follow this format : \\\"modid:id:price; modid:id:price\\\"",
-            "vardisplay": "Buy Listing",
-            "varname": "buy_listing",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "EntityAgeable"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 2,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.0,
-            "textDefault": "modid:id1:0; modid:id2:120",
-            "comment": "Follow this format : \\\"modid:id:price; modid:id:price\\\"",
-            "vardisplay": "Sell Listing",
-            "varname": "sell_listing",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "EntityAgeable"
-          }
-        ]
-      }
-    ],
     "file": "SkyzerAdventure/Shop/ShopListing",
-    "configType": 1
+    "configType": 1,
+    "config": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"config_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"config_category\"><field name=\"name\">Listing</field><statement name=\"write\"><block type=\"config_variable\"><field name=\"name\">buy_listing</field><field name=\"comment\">Follow this format : \\\"modid:id:price; modid:id:price\\\"</field><value name=\"value\"><block type=\"config_text_variable\"><field name=\"name\">Buy Listing</field><field name=\"value\">modid:id1:0; modid:id2:120</field></block></value><next><block type=\"config_variable\"><field name=\"name\">sell_listing</field><field name=\"comment\">Follow this format : \\\"modid:id:price; modid:id:price\\\"</field><value name=\"value\"><block type=\"config_text_variable\"><field name=\"name\">Sell Listing</field><field name=\"value\">modid:id1:0; modid:id2:120</field></block></value></block></next></block></statement></block></next></block></xml>",
+    "defining": false
   }
 }

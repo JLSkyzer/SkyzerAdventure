@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -18,4 +17,6 @@ public class SkyzeradventureModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, SkyzeradventureMod.MODID);
 	public static final RegistryObject<Block> ADETIUM_ORE = REGISTRY.register("adetium_ore", () -> new AdetiumOreBlock());
 	public static final RegistryObject<Block> ENERGY_SELLER_BLOCK = REGISTRY.register("energy_seller_block", () -> new EnergySellerBlockBlock());
+	// Start of user code block custom blocks
+	// End of user code block custom blocks
 }

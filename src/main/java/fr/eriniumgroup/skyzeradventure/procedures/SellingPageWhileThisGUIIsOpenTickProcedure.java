@@ -2,7 +2,6 @@ package fr.eriniumgroup.skyzeradventure.procedures;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 
@@ -15,7 +14,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.HashMap;
 
 import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
-import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMenus;
 
 public class SellingPageWhileThisGUIIsOpenTickProcedure {
 	public static void execute(LevelAccessor world, Entity entity, HashMap guistate) {
@@ -49,7 +48,7 @@ public class SellingPageWhileThisGUIIsOpenTickProcedure {
 			}
 		}.returnItemNumber(((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitem), entity)) {
 			if (entity instanceof ServerPlayer _player && !world.isClientSide())
-				SkyzeradventureMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> _player), new SkyzeradventureMod.TextboxSetMessage("amount", (new java.text.DecimalFormat("##").format(new Object() {
+				SkyzeradventureModMenus.setText("amount", (new java.text.DecimalFormat("##").format(new Object() {
 					private int returnItemNumber(ItemStack item, Entity entity) {
 						ItemStack tempItem = item;
 						double count = 0;
@@ -67,7 +66,7 @@ public class SellingPageWhileThisGUIIsOpenTickProcedure {
 						}
 						return (int) count;
 					}
-				}.returnItemNumber(((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitem), entity)))));
+				}.returnItemNumber(((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitem), entity))), _player);
 		}
 	}
 }

@@ -1,87 +1,10 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "config",
   "definition": {
-    "pools": [
-      {
-        "category": "Main",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 2,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.0,
-            "textDefault": "modid:blockid:120:0:0",
-            "comment": "List of items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc...\\\" put 0 for maxlevel to disable limit",
-            "vardisplay": "Mining earning",
-            "varname": "mining",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "EntityAgeable"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 2,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.0,
-            "textDefault": "modid:blockid:120:0:0",
-            "comment": "List of items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc...\\\" put 0 for maxlevel to disable limit",
-            "vardisplay": "Crafting earning",
-            "varname": "crafting",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "EntityAgeable"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 2,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.0,
-            "textDefault": "modid:blockid:120:0:0",
-            "comment": "List of items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc...\\\" put 0 for maxlevel to disable limit",
-            "vardisplay": "Smelting Earning",
-            "varname": "smelting",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "EntityAgeable"
-          },
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 2,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.0,
-            "textDefault": "modid:blockid:120:0:0",
-            "comment": "List of items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc...\\\" put 0 for maxlevel to disable limit",
-            "vardisplay": "Killing Earning",
-            "varname": "killing",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "EntityAgeable"
-          }
-        ]
-      }
-    ],
     "file": "SkyzerAdventure/Rank/Earning",
-    "configType": 0
+    "configType": 0,
+    "config": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"config_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"config_category\"><field name=\"name\">Main</field><statement name=\"write\"><block type=\"config_variable\"><field name=\"name\">mining</field><field name=\"comment\">List of items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc...\\\" put 0 for maxlevel to disable limit</field><value name=\"value\"><block type=\"config_text_variable\"><field name=\"name\">Mining earning</field><field name=\"value\">modid:blockid:120:0:0</field></block></value><next><block type=\"config_variable\"><field name=\"name\">crafting</field><field name=\"comment\">List of items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc...\\\" put 0 for maxlevel to disable limit</field><value name=\"value\"><block type=\"config_text_variable\"><field name=\"name\">Crafting earning</field><field name=\"value\">modid:blockid:120:0:0</field></block></value><next><block type=\"config_variable\"><field name=\"name\">smelting</field><field name=\"comment\">List of items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc...\\\" put 0 for maxlevel to disable limit</field><value name=\"value\"><block type=\"config_text_variable\"><field name=\"name\">Smelting Earning</field><field name=\"value\">modid:blockid:120:0:0</field></block></value><next><block type=\"config_variable\"><field name=\"name\">killing</field><field name=\"comment\">List of items to won xp with mining ex : \\\"modid:blockid:xpearn:minlevel:maxlevel:{JsonFormat}; etc...\\\" put 0 for maxlevel to disable limit</field><value name=\"value\"><block type=\"config_text_variable\"><field name=\"name\">Killing Earning</field><field name=\"value\">modid:blockid:120:0:0</field></block></value></block></next></block></next></block></next></block></statement></block></next></block></xml>",
+    "defining": false
   }
 }

@@ -28,7 +28,7 @@ public class ShopSellMenu extends AbstractContainerMenu implements Supplier<Map<
 	private boolean bound = false;
 
 	public ShopSellMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(SkyzeradventureModMenus.SHOP_SELL, id);
+		super(SkyzeradventureModMenus.SHOP_SELL.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);

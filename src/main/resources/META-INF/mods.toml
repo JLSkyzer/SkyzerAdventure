@@ -6,17 +6,34 @@ license="Academic Free License v3.0"
 modId="skyzeradventure"
 version="1.0.0"
 displayName="SkyzerAdventure"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
 authors="killi, MCreator"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
 
 [[dependencies.skyzeradventure]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.2]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+[[dependencies.skyzeradventure]]
+    modId="smoothboot"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.skyzeradventure]]
+    modId="hugestructureblock"
+    mandatory=false
+    versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
 
-
-
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

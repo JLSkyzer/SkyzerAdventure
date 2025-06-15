@@ -45,7 +45,7 @@ public class FCEarningTOMLProcedure {
 					String[] resultTxt = (text).split(separator);
 					return resultTxt.length;
 				}
-			}.returnSize(EarningConfiguration.MINING.get(), ";"); index0++) {
+			}.returnSize((EarningConfiguration.MINING.get()), ";"); index0++) {
 				if (!(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
 					private String returnValue(String string, int Index, String sep) {
 						try {
@@ -68,7 +68,7 @@ public class FCEarningTOMLProcedure {
 							return "";
 						}
 					}
-				}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 0, ":") + ":" + new Object() {
+				}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 0, ":") + ":" + new Object() {
 					private String returnValue(String string, int Index, String sep) {
 						try {
 							return ((string).split(sep)[Index]);
@@ -90,7 +90,7 @@ public class FCEarningTOMLProcedure {
 							return "";
 						}
 					}
-				}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == ItemStack.EMPTY.getItem())
+				}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == ItemStack.EMPTY.getItem())
 						&& !(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
 							private String returnValue(String string, int Index, String sep) {
 								try {
@@ -113,7 +113,7 @@ public class FCEarningTOMLProcedure {
 									return "";
 								}
 							}
-						}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 0, ":") + ":" + new Object() {
+						}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 0, ":") + ":" + new Object() {
 							private String returnValue(String string, int Index, String sep) {
 								try {
 									return ((string).split(sep)[Index]);
@@ -135,7 +135,7 @@ public class FCEarningTOMLProcedure {
 									return "";
 								}
 							}
-						}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
+						}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
 					temptext = temptext + "" + new Object() {
 						private String returnValue(String string, int Index, String sep) {
 							try {
@@ -147,7 +147,7 @@ public class FCEarningTOMLProcedure {
 								return "";
 							}
 						}
-					}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";") + "; ";
+					}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";") + "; ";
 				}
 				index = index + 1;
 			}
@@ -162,7 +162,7 @@ public class FCEarningTOMLProcedure {
 					String[] resultTxt = (text).split(separator);
 					return resultTxt.length;
 				}
-			}.returnSize(EarningConfiguration.CRAFTING.get(), ";"); index1++) {
+			}.returnSize((EarningConfiguration.CRAFTING.get()), ";"); index1++) {
 				if (!(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
 					private String returnValue(String string, int Index, String sep) {
 						try {
@@ -185,7 +185,7 @@ public class FCEarningTOMLProcedure {
 							return "";
 						}
 					}
-				}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 0, ":") + ":" + new Object() {
+				}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 0, ":") + ":" + new Object() {
 					private String returnValue(String string, int Index, String sep) {
 						try {
 							return ((string).split(sep)[Index]);
@@ -207,7 +207,7 @@ public class FCEarningTOMLProcedure {
 							return "";
 						}
 					}
-				}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == ItemStack.EMPTY.getItem())
+				}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == ItemStack.EMPTY.getItem())
 						&& !(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
 							private String returnValue(String string, int Index, String sep) {
 								try {
@@ -230,7 +230,7 @@ public class FCEarningTOMLProcedure {
 									return "";
 								}
 							}
-						}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 0, ":") + ":" + new Object() {
+						}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 0, ":") + ":" + new Object() {
 							private String returnValue(String string, int Index, String sep) {
 								try {
 									return ((string).split(sep)[Index]);
@@ -252,7 +252,7 @@ public class FCEarningTOMLProcedure {
 									return "";
 								}
 							}
-						}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
+						}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
 					temptext = temptext + "" + new Object() {
 						private String returnValue(String string, int Index, String sep) {
 							try {
@@ -264,7 +264,7 @@ public class FCEarningTOMLProcedure {
 								return "";
 							}
 						}
-					}.returnValue(EarningConfiguration.CRAFTING.get(), (int) index, ";") + "; ";
+					}.returnValue((EarningConfiguration.CRAFTING.get()), (int) index, ";") + "; ";
 				}
 				index = index + 1;
 			}
@@ -279,7 +279,7 @@ public class FCEarningTOMLProcedure {
 					String[] resultTxt = (text).split(separator);
 					return resultTxt.length;
 				}
-			}.returnSize(EarningConfiguration.SMELTING.get(), ";"); index2++) {
+			}.returnSize((EarningConfiguration.SMELTING.get()), ";"); index2++) {
 				if (!(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
 					private String returnValue(String string, int Index, String sep) {
 						try {
@@ -302,7 +302,7 @@ public class FCEarningTOMLProcedure {
 							return "";
 						}
 					}
-				}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 0, ":") + ":" + new Object() {
+				}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 0, ":") + ":" + new Object() {
 					private String returnValue(String string, int Index, String sep) {
 						try {
 							return ((string).split(sep)[Index]);
@@ -324,7 +324,7 @@ public class FCEarningTOMLProcedure {
 							return "";
 						}
 					}
-				}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == ItemStack.EMPTY.getItem())
+				}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == ItemStack.EMPTY.getItem())
 						&& !(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
 							private String returnValue(String string, int Index, String sep) {
 								try {
@@ -347,7 +347,7 @@ public class FCEarningTOMLProcedure {
 									return "";
 								}
 							}
-						}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 0, ":") + ":" + new Object() {
+						}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 0, ":") + ":" + new Object() {
 							private String returnValue(String string, int Index, String sep) {
 								try {
 									return ((string).split(sep)[Index]);
@@ -369,7 +369,7 @@ public class FCEarningTOMLProcedure {
 									return "";
 								}
 							}
-						}.returnValue(EarningConfiguration.MINING.get(), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
+						}.returnValue((EarningConfiguration.MINING.get()), (int) index, ";"), 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))) == Blocks.AIR.asItem())) {
 					temptext = temptext + "" + new Object() {
 						private String returnValue(String string, int Index, String sep) {
 							try {
@@ -381,7 +381,7 @@ public class FCEarningTOMLProcedure {
 								return "";
 							}
 						}
-					}.returnValue(EarningConfiguration.SMELTING.get(), (int) index, ";") + "; ";
+					}.returnValue((EarningConfiguration.SMELTING.get()), (int) index, ";") + "; ";
 				}
 				index = index + 1;
 			}

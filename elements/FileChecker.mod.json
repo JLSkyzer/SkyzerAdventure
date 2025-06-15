@@ -1,8 +1,9 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "command",
   "definition": {
     "commandName": "filechecker",
+    "type": "STANDARD",
     "permissionLevel": "No requirement",
     "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">initialise</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">FCInitialise</field></block></statement><next><block type=\"literal\"><field name=\"name\">earningTOML</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">FCEarningTOML</field></block></statement><next><block type=\"literal\"><field name=\"name\">ShopListingTOML</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">FCShopListingTOML</field></block></statement></block></next></block></next></block></next></block></xml>"
   }

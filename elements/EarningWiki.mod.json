@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -16,7 +16,8 @@
           "image": "earningWikiBackground.png",
           "use1Xscale": false,
           "x": 0,
-          "y": 0
+          "y": 0,
+          "locked": false
         }
       }
     ],

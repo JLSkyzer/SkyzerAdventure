@@ -1,33 +1,10 @@
 {
-  "_fv": 47,
+  "_fv": 77,
   "_type": "config",
   "definition": {
-    "pools": [
-      {
-        "category": "Permissions",
-        "entries": [
-          {
-            "item": {
-              "value": ""
-            },
-            "silkTouchMode": 2,
-            "block": {
-              "value": ""
-            },
-            "logicField": 0,
-            "numberField": 0.0,
-            "textDefault": "",
-            "comment": "To have access to Staff's command about the mod, Put player's name separated by space",
-            "vardisplay": "Staff Permissions",
-            "varname": "staffperm",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "EntityAgeable"
-          }
-        ]
-      }
-    ],
     "file": "SkyzerAdventure/Rank/Misc",
-    "configType": 0
+    "configType": 0,
+    "config": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"config_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"config_category\"><field name=\"name\">Permissions</field><statement name=\"write\"><block type=\"config_variable\"><field name=\"name\">staffperm</field><field name=\"comment\">To have access to Staff's command about the mod, Put player's name separated by space</field><value name=\"value\"><block type=\"config_text_variable\"><field name=\"name\">Staff Permissions</field><field name=\"value\"></field></block></value></block></statement></block></next></block></xml>",
+    "defining": false
   }
 }
