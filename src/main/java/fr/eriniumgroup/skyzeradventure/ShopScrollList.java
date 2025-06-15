@@ -33,6 +33,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -121,7 +122,34 @@ public class ShopScrollList extends AbstractSelectionList<ShopScrollList.Entry> 
 					this.addEntry(new Entry(secondtemp));
 				}
 			} else {
-				this.addEntry(new Entry(secondtemp));
+				ItemStack tempItem = new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation((((new Object() {
+					private String returnValue(String string, int Index, String sep) {
+						try {
+							return ((string).split(sep)[Index]);
+							// Utilisez account ici
+						} catch (ArrayIndexOutOfBoundsException e) {
+							// Gérer l'erreur ici, par exemple :
+							System.out.println("Valeur null !");
+							return "";
+						}
+					}
+				}.returnValue(secondtemp, 0, ":") + ":" + new Object() {
+					private String returnValue(String string, int Index, String sep) {
+						try {
+							return ((string).split(sep)[Index]);
+							// Utilisez account ici
+						} catch (ArrayIndexOutOfBoundsException e) {
+							// Gérer l'erreur ici, par exemple :
+							System.out.println("Valeur null !");
+							return "";
+						}
+					}
+				}.returnValue(secondtemp, 1, ":")).replace(" ", ""))).toLowerCase(java.util.Locale.ENGLISH))));
+
+				if (!tempItem.isEmpty() || tempItem.getItem() != Items.AIR) {
+					// Air ou vide
+					this.addEntry(new Entry(secondtemp));
+				}
 			}
 			tempindex = tempindex + 1;
 		}

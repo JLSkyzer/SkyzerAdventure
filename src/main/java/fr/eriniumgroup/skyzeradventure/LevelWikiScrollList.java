@@ -142,7 +142,33 @@ public class LevelWikiScrollList extends AbstractSelectionList<LevelWikiScrollLi
 			// Affiche le résultat trié
 			for (Map.Entry<String, Double> stringDoubleEntry : entries) {
 				// Executor... stringDoubleEntry.getKey() (String) and stringDoubleEntry.getValue() (Double)
-				this.addEntry(new Entry(stringDoubleEntry.getKey()));
+				ItemStack item = Objects.requireNonNull(ForgeRegistries.ITEMS.getValue(new ResourceLocation(((new Object() {
+					private String returnValue(String string, int Index, String sep) {
+						try {
+							return ((string).split(sep)[Index]);
+							// Utilisez account ici
+						} catch (ArrayIndexOutOfBoundsException e) {
+							// Gérer l'erreur ici, par exemple :
+							System.out.println("Valeur null !");
+							return "";
+						}
+					}
+				}.returnValue(stringDoubleEntry.getKey(), 0, ":") + ":" + new Object() {
+					private String returnValue(String string, int Index, String sep) {
+						try {
+							return ((string).split(sep)[Index]);
+							// Utilisez account ici
+						} catch (ArrayIndexOutOfBoundsException e) {
+							// Gérer l'erreur ici, par exemple :
+							System.out.println("Valeur null !");
+							return "";
+						}
+					}
+				}.returnValue(stringDoubleEntry.getKey(), 1, ":")).replace(" ", "")).toLowerCase(Locale.ENGLISH)))).getDefaultInstance();
+				if (!item.isEmpty() && item.getItem() != Items.AIR || playercap.EarningWikiTarget.equals("killing")) {
+					// Air ou vide
+					this.addEntry(new Entry(stringDoubleEntry.getKey()));
+				}
 			}
 		}
 	}
@@ -438,9 +464,15 @@ public class LevelWikiScrollList extends AbstractSelectionList<LevelWikiScrollLi
 					}
 				}
 
-				RenderSystem.enableDepthTest();
-				minecraft.getItemRenderer().renderAndDecorateItem(item, x + 3, y + 3);
-				RenderSystem.disableDepthTest();
+				if (!item.isEmpty() && item.getItem() != Items.AIR) {
+					// Air ou vide
+					RenderSystem.enableDepthTest();
+					minecraft.getItemRenderer().renderAndDecorateItem(item, x + 3, y + 3);
+					RenderSystem.disableDepthTest();
+				}else {
+					// Min level
+					Minecraft.getInstance().font.draw(poseStack, id, x + 3, y + 1 + 10 - 3, text);
+				}
 			}
 
 

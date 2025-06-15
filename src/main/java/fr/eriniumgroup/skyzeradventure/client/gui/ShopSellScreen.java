@@ -156,4 +156,17 @@ public class ShopSellScreen extends AbstractContainerScreen<ShopSellMenu> {
 		ShopScrollList scrollableList = new ShopScrollList(this.minecraft, this.leftPos + 2, this.topPos + 24, 424, 214, entity);
 		this.addRenderableWidget(scrollableList);
 	}
+
+	@Override
+	public boolean mouseDragged(double mouseX, double mouseY, int button, double dragX, double dragY) {
+		// Si tu as plusieurs scrolls, répète la ligne pour chaque (ex : shopScrollList2, etc.)
+		for (var widget : this.renderables) {
+			if (widget instanceof ShopScrollList scrollList) {
+				if (scrollList.mouseDragged(mouseX, mouseY, button, dragX, dragY)) {
+					return true;
+				}
+			}
+		}
+		return super.mouseDragged(mouseX, mouseY, button, dragX, dragY);
+	}
 }

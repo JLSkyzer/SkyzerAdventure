@@ -3,6 +3,7 @@ package fr.eriniumgroup.skyzeradventure.client.gui;
 
 import fr.eriniumgroup.skyzeradventure.ARGBToInt;
 import fr.eriniumgroup.skyzeradventure.LevelWikiScrollList;
+import fr.eriniumgroup.skyzeradventure.ShopScrollList;
 import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.level.Level;
@@ -118,5 +119,18 @@ public class EarningWikiScreen extends AbstractContainerScreen<EarningWikiMenu> 
 		// Ajoute une instance de la liste scrollable au GUI
 		LevelWikiScrollList scrollableList = new LevelWikiScrollList(this.minecraft, this.leftPos + 90, this.topPos + 36, 334, 200, entity);
 		this.addRenderableWidget(scrollableList);
+	}
+
+	@Override
+	public boolean mouseDragged(double mouseX, double mouseY, int button, double dragX, double dragY) {
+		// Si tu as plusieurs scrolls, répète la ligne pour chaque (ex : shopScrollList2, etc.)
+		for (var widget : this.renderables) {
+			if (widget instanceof LevelWikiScrollList scrollList) {
+				if (scrollList.mouseDragged(mouseX, mouseY, button, dragX, dragY)) {
+					return true;
+				}
+			}
+		}
+		return super.mouseDragged(mouseX, mouseY, button, dragX, dragY);
 	}
 }

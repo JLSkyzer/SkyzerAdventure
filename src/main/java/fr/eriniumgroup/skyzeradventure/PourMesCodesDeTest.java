@@ -46,6 +46,11 @@ new Thread(() -> {
 
 		java.util.List<Object> obj = new java.util.ArrayList<>();
 
+		obj.isEmpty();
+		obj.size();
+		obj.remove(obj.get(0));
+		obj.remove(0);
+
 		obj = new Object(){
 			private List<Object> parsePattern(String patternStr, String input) {
 				// Définition des sous-motifs regex pour chaque placeholder
@@ -137,5 +142,11 @@ new Thread(() -> {
 				return 0.0F; // ou autre valeur si ce n'est pas une armure
 			}
 		}.getArmorToughness(Items.DIAMOND_CHESTPLATE.getDefaultInstance());
+
+		class Test {
+			private static void executing(){
+
+			}
+		}
 	}
 }

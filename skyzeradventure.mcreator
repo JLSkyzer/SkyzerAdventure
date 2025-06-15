@@ -53,9 +53,6 @@
       "locked_code": false,
       "registry_name": "player_tick",
       "metadata": {
-        "files": [
-          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/PlayerTickProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -86,7 +83,7 @@
       "name": "PourMesCodesDeTest",
       "type": "code",
       "sortid": 4,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "pour_mes_codes_de_test",
       "metadata": {
@@ -2823,6 +2820,104 @@
         ]
       },
       "path": "~/ShopSystem/Block/Energy Seller"
+    },
+    {
+      "name": "FileChecker",
+      "type": "command",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "file_checker",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/command/FileCheckerCommand.java"
+        ]
+      },
+      "path": "~/FileChecker"
+    },
+    {
+      "name": "FCInitialise",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fc_initialise",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/FCInitialiseProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/FileChecker"
+    },
+    {
+      "name": "FCEarningTOML",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fc_earning_toml",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/FCEarningTOMLProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/FileChecker"
+    },
+    {
+      "name": "FCShopListingTOML",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fc_shop_listing_toml",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/FCShopListingTOMLProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/FileChecker"
+    },
+    {
+      "name": "ProcedurePoubelle",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "procedure_poubelle",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ProcedurePoubelleProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "RightClickWithItem",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "right_click_with_item",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/RightClickWithItemProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Scripting"
     }
   ],
   "variable_elements": [
@@ -3189,6 +3284,14 @@
             ]
           }
         ]
+      },
+      {
+        "name": "FileChecker",
+        "children": []
+      },
+      {
+        "name": "Scripting",
+        "children": []
       }
     ]
   },
