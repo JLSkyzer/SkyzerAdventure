@@ -53,6 +53,9 @@
       "locked_code": false,
       "registry_name": "player_tick",
       "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/PlayerTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -83,7 +86,7 @@
       "name": "PourMesCodesDeTest",
       "type": "code",
       "sortid": 4,
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "pour_mes_codes_de_test",
       "metadata": {
@@ -3110,8 +3113,8 @@
       "gui.skyzeradventure.configurator.button_r": "R",
       "gui.skyzeradventure.selling_page.amount": "Put amount like : 10",
       "block.skyzeradventure.adetium_ore": "Adetium Ore",
-      "gui.skyzeradventure.configurator.button_01": "0.1",
       "key.skyzeradventure.open_earning_wiki": "Open Earning Wiki",
+      "gui.skyzeradventure.configurator.button_01": "0.1",
       "item.skyzeradventure.adetium_armor_boots": "Adetium Boots",
       "itemGroup.tabarmors_tab": "Skyzer\u0027s Adventure Armors",
       "config.skyzeradventure.shop_listing": "SkyzerAdventure/Shop/ShopListing",
@@ -3307,10 +3310,7 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [
-      "smoothboot",
-      "hugestructureblock"
-    ],
+    "mcreatorDependencies": [],
     "currentGenerator": "forge-1.18.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "fr.eriniumgroup.skyzeradventure",
