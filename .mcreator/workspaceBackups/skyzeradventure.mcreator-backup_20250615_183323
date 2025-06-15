@@ -83,7 +83,7 @@
       "name": "PourMesCodesDeTest",
       "type": "code",
       "sortid": 4,
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "pour_mes_codes_de_test",
       "metadata": {
@@ -2891,15 +2891,33 @@
       "path": "~/FileChecker"
     },
     {
-      "name": "Qfq",
+      "name": "ProcedurePoubelle",
       "type": "procedure",
       "sortid": 144,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "qfq",
+      "registry_name": "procedure_poubelle",
       "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ProcedurePoubelleProcedure.java"
+        ],
         "dependencies": []
       }
+    },
+    {
+      "name": "RightClickWithItem",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "right_click_with_item",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/RightClickWithItemProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Scripting"
     }
   ],
   "variable_elements": [
@@ -3092,8 +3110,8 @@
       "gui.skyzeradventure.configurator.button_r": "R",
       "gui.skyzeradventure.selling_page.amount": "Put amount like : 10",
       "block.skyzeradventure.adetium_ore": "Adetium Ore",
-      "key.skyzeradventure.open_earning_wiki": "Open Earning Wiki",
       "gui.skyzeradventure.configurator.button_01": "0.1",
+      "key.skyzeradventure.open_earning_wiki": "Open Earning Wiki",
       "item.skyzeradventure.adetium_armor_boots": "Adetium Boots",
       "itemGroup.tabarmors_tab": "Skyzer\u0027s Adventure Armors",
       "config.skyzeradventure.shop_listing": "SkyzerAdventure/Shop/ShopListing",
