@@ -21,24 +21,6 @@ authors="killi, MCreator"
     side="BOTH"
 
 
-[[dependencies.skyzeradventure]]
-    modId="smoothboot"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.skyzeradventure]]
-    modId="hugestructureblock"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.skyzeradventure]]
-    modId="cursemaven"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
 
 # Start of user code block dependencies configuration

@@ -1,42 +1,63 @@
 plugins {
     id 'eclipse'
-    id 'net.neoforged.moddev.legacyforge' version '2.0.89'
+    id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = '1.0'
-base.archivesName = "modid"
+group = 'com.yourname.modid'
+archivesBaseName = 'skyzeradventure'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-legacyForge {
-    version = "1.18.2-40.3.10"
+minecraft {
+    mappings channel: 'official', version: '1.18.2'
+
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    copyIdeResources = true
 
     runs {
         client {
-            client()
-
             def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS')
             if (mcreatorJvmOptions) {
-                mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.each { arg ->
-                    jvmArgument(arg)
-                }
+                jvmArgs += mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.toList()
             }
         }
+
         server {
-            server()
         }
 
         configureEach {
-            systemProperty 'forge.logging.markers', 'REGISTRIES'
-            logLevel = org.slf4j.event.Level.DEBUG
-        }
-    }
+            workingDirectory project.file('run')
 
-    mods {
-        mcreator {
-            sourceSet sourceSets.main
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                examplemod {
+                    source sourceSets.main
+                }
+            }
         }
     }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.18.2-40.3.10'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
+
+mixin {
+    add sourceSets.main, 'mixins.skyzeradventure.refmap.json'
+
+    config 'mixins.skyzeradventure.json'
+
+    debug.verbose = true
+    debug.export = true
+    dumpTargetOnFailure = true
+
+    quiet
 }
 
 tasks.withType(JavaCompile).configureEach {

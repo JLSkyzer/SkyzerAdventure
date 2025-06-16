@@ -61,10 +61,10 @@ public class ConfiguratorScreen extends AbstractContainerScreen<ConfiguratorMenu
 
 	@Override
 	protected void renderBg(PoseStack ms, float partialTicks, int gx, int gy) {
-		RenderSystem.setShaderColor(1, 1, 1, 1);
+		/*RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		RenderSystem.disableBlend();
+		RenderSystem.disableBlend();*/
 	}
 
 	public HashMap<String, Object> getWidgets() {
