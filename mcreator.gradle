@@ -1,3 +1,25 @@
+dependencies {
+	jarJar(implementation("curse.maven:smooth-boot-reloaded-633412:5016275")) {
+        version {
+            // The version range your mod is actually compatible with.
+            // Note that you may receive a *lower* version than your preferred if another
+            // Mod is only compatible up to 1.7.24, for example, your mod might get 1.7.24 at runtime.
+        }
+    }
+}
+
+
+dependencies {
+	jarJar(implementation("curse.maven:huge-structure-blocks-474114:4688533")) {
+        version {
+            // The version range your mod is actually compatible with.
+            // Note that you may receive a *lower* version than your preferred if another
+            // Mod is only compatible up to 1.7.24, for example, your mod might get 1.7.24 at runtime.
+        }
+    }
+}
+
+
 repositories {
     exclusiveContent {
         forRepository {
@@ -9,28 +31,6 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-}
-
-dependencies {
-    implementation "curse.maven:smooth-boot-reloaded-633412:5016275"
-}
-
-
-repositories {
-    exclusiveContent {
-        forRepository {
-            maven {
-                url "https://cursemaven.com"
-            }
-        }
-        filter {
-            includeGroup "curse.maven"
-        }
-    }
-}
-
-dependencies {
-    implementation "curse.maven:huge-structure-blocks-474114:4688533"
 }
 
 

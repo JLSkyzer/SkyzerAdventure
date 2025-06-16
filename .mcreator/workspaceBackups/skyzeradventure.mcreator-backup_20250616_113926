@@ -2989,8 +2989,8 @@
       "item.skyzeradventure.adetium_hoe": "Adetium Hoe",
       "gui.skyzeradventure.selling_page.label_how_much_you_want_to_sell": "How much you want to sell ? ",
       "gui.skyzeradventure.energy_seller_gui.label_target": "TARGET",
-      "config.skyzeradventure.misc": "SkyzerAdventure/Rank/Misc",
       "itemGroup.skyzeradventure.tools_tab": "Skyzer\u0027s Adventure Tools",
+      "config.skyzeradventure.misc": "SkyzerAdventure/Rank/Misc",
       "gui.skyzeradventure.configurator.button_save": "Save",
       "item.skyzeradventure.adetium_shovel": "Adetium Shovel",
       "gui.skyzeradventure.energy_seller_gui.label_energy_seller": "Energy Seller",
@@ -2998,8 +2998,8 @@
       "gui.skyzeradventure.configurator.button_r": "R",
       "gui.skyzeradventure.selling_page.amount": "Put amount like : 10",
       "block.skyzeradventure.adetium_ore": "Adetium Ore",
-      "gui.skyzeradventure.configurator.button_01": "0.1",
       "key.skyzeradventure.open_earning_wiki": "Open Earning Wiki",
+      "gui.skyzeradventure.configurator.button_01": "0.1",
       "item.skyzeradventure.adetium_armor_boots": "Adetium Boots",
       "itemGroup.tabarmors_tab": "Skyzer\u0027s Adventure Armors",
       "config.skyzeradventure.shop_listing": "SkyzerAdventure/Shop/ShopListing",
@@ -3197,7 +3197,11 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "smoothboot",
+      "hugestructureblock",
+      "cursemaven"
+    ],
     "currentGenerator": "forge-1.18.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "fr.eriniumgroup.skyzeradventure"

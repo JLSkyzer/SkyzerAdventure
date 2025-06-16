@@ -1882,7 +1882,7 @@
     {
       "name": "ShopBuy",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "shop_buy",
       "metadata": {
@@ -1932,7 +1932,7 @@
     {
       "name": "ShopSell",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "shop_sell",
       "metadata": {
@@ -2128,7 +2128,7 @@
     {
       "name": "SellingPage",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "selling_page",
       "metadata": {
@@ -2256,7 +2256,7 @@
     {
       "name": "BuyPage",
       "type": "gui",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "buy_page",
       "metadata": {
@@ -3197,7 +3197,11 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "smoothboot",
+      "hugestructureblock",
+      "cursemaven"
+    ],
     "currentGenerator": "forge-1.18.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "fr.eriniumgroup.skyzeradventure"
