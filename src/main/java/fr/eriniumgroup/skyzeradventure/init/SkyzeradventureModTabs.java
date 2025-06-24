@@ -14,6 +14,8 @@ public class SkyzeradventureModTabs {
 	public static CreativeModeTab TAB_INGOTS_TAB;
 	public static CreativeModeTab TAB_ARMORS_TAB;
 	public static CreativeModeTab TAB_TOOLS_TAB;
+	public static CreativeModeTab TAB_ITEMS_TAB;
+	public static CreativeModeTab TAB_BLOCKS_TAB;
 
 	public static void load() {
 		TAB_ORE_TAB = new CreativeModeTab("skyzeradventure.ore_tab") {
@@ -60,6 +62,32 @@ public class SkyzeradventureModTabs {
 			@OnlyIn(Dist.CLIENT)
 			public ItemStack makeIcon() {
 				return new ItemStack(SkyzeradventureModItems.ADETIUM_SWORD.get());
+			}
+
+			@Override
+			@OnlyIn(Dist.CLIENT)
+			public boolean hasSearchBar() {
+				return false;
+			}
+		};
+		TAB_ITEMS_TAB = new CreativeModeTab("skyzeradventure.items_tab") {
+			@Override
+			@OnlyIn(Dist.CLIENT)
+			public ItemStack makeIcon() {
+				return new ItemStack(SkyzeradventureModItems.BOSS_SPAWNER_ITEM.get());
+			}
+
+			@Override
+			@OnlyIn(Dist.CLIENT)
+			public boolean hasSearchBar() {
+				return false;
+			}
+		};
+		TAB_BLOCKS_TAB = new CreativeModeTab("skyzeradventure.blocks_tab") {
+			@Override
+			@OnlyIn(Dist.CLIENT)
+			public ItemStack makeIcon() {
+				return new ItemStack(SkyzeradventureModBlocks.CASTLE_BOSS_SPAWNER.get());
 			}
 
 			@Override

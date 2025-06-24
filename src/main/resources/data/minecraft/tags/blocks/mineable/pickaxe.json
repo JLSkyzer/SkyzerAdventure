@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "skyzeradventure:basic_lucky_block",
     "skyzeradventure:energy_seller_block"
   ]
 }

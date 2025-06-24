@@ -8,6 +8,7 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.components.Button;
 
 import java.util.HashMap;
 
@@ -25,6 +26,7 @@ public class EarningWikiHomePageScreen extends AbstractContainerScreen<EarningWi
 	private final int x, y, z;
 	private final Player entity;
 	private final static HashMap<String, String> textstate = new HashMap<>();
+	Button button_unlocked;
 	ImageButton imagebutton_crafting;
 	ImageButton imagebutton_smelting;
 	ImageButton imagebutton_sword;
@@ -85,34 +87,38 @@ public class EarningWikiHomePageScreen extends AbstractContainerScreen<EarningWi
 	@Override
 	public void init() {
 		super.init();
+		button_unlocked = new Button(this.leftPos + 357, this.topPos + 8, 63, 20, new TranslatableComponent("gui.skyzeradventure.earning_wiki_home_page.button_unlocked"), e -> {
+		});
+		guistate.put("button:button_unlocked", button_unlocked);
+		this.addRenderableWidget(button_unlocked);
 		imagebutton_crafting = new ImageButton(this.leftPos + 6, this.topPos + 17, 64, 64, 0, 0, 64, new ResourceLocation("skyzeradventure:textures/screens/atlas/imagebutton_crafting.png"), 64, 128, e -> {
 			if (true) {
-				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new EarningWikiHomePageButtonMessage(0, x, y, z, textstate));
-				EarningWikiHomePageButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
+				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new EarningWikiHomePageButtonMessage(1, x, y, z, textstate));
+				EarningWikiHomePageButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_crafting", imagebutton_crafting);
 		this.addRenderableWidget(imagebutton_crafting);
 		imagebutton_smelting = new ImageButton(this.leftPos + 78, this.topPos + 17, 64, 64, 0, 0, 64, new ResourceLocation("skyzeradventure:textures/screens/atlas/imagebutton_smelting.png"), 64, 128, e -> {
 			if (true) {
-				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new EarningWikiHomePageButtonMessage(1, x, y, z, textstate));
-				EarningWikiHomePageButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
+				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new EarningWikiHomePageButtonMessage(2, x, y, z, textstate));
+				EarningWikiHomePageButtonMessage.handleButtonAction(entity, 2, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_smelting", imagebutton_smelting);
 		this.addRenderableWidget(imagebutton_smelting);
 		imagebutton_sword = new ImageButton(this.leftPos + 150, this.topPos + 17, 64, 64, 0, 0, 64, new ResourceLocation("skyzeradventure:textures/screens/atlas/imagebutton_sword.png"), 64, 128, e -> {
 			if (true) {
-				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new EarningWikiHomePageButtonMessage(2, x, y, z, textstate));
-				EarningWikiHomePageButtonMessage.handleButtonAction(entity, 2, x, y, z, textstate);
+				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new EarningWikiHomePageButtonMessage(3, x, y, z, textstate));
+				EarningWikiHomePageButtonMessage.handleButtonAction(entity, 3, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_sword", imagebutton_sword);
 		this.addRenderableWidget(imagebutton_sword);
 		imagebutton_pickaxe = new ImageButton(this.leftPos + 222, this.topPos + 17, 64, 64, 0, 0, 64, new ResourceLocation("skyzeradventure:textures/screens/atlas/imagebutton_pickaxe.png"), 64, 128, e -> {
 			if (true) {
-				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new EarningWikiHomePageButtonMessage(3, x, y, z, textstate));
-				EarningWikiHomePageButtonMessage.handleButtonAction(entity, 3, x, y, z, textstate);
+				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new EarningWikiHomePageButtonMessage(4, x, y, z, textstate));
+				EarningWikiHomePageButtonMessage.handleButtonAction(entity, 4, x, y, z, textstate);
 			}
 		});
 		guistate.put("button:imagebutton_pickaxe", imagebutton_pickaxe);

@@ -91,6 +91,19 @@
           "y": 17,
           "locked": false
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_unlocked",
+          "text": "Unlocked",
+          "isUndecorated": false,
+          "width": 63,
+          "height": 20,
+          "x": 357,
+          "y": 8,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

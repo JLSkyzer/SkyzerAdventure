@@ -76,19 +76,19 @@ public class EarningWikiHomePageButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
+		if (buttonID == 1) {
 
 			OpenCraftingProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 1) {
+		if (buttonID == 2) {
 
 			OpenSmeltingProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 2) {
+		if (buttonID == 3) {
 
 			OpenKillingProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 3) {
+		if (buttonID == 4) {
 
 			OpenMiningProcedure.execute(world, x, y, z, entity);
 		}

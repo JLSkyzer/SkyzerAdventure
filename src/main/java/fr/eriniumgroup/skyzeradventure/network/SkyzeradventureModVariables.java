@@ -96,6 +96,7 @@ public class SkyzeradventureModVariables {
 			clone.buysearch = original.buysearch;
 			clone.sellsearch = original.sellsearch;
 			clone.shop_money = original.shop_money;
+			clone.pvpenabled = original.pvpenabled;
 			if (!event.isWasDeath()) {
 				clone.OnDamageTick = original.OnDamageTick;
 				clone.EarningWikiTarget = original.EarningWikiTarget;
@@ -298,6 +299,7 @@ public class SkyzeradventureModVariables {
 		public ItemStack tempitem = ItemStack.EMPTY;
 		public double tempitemprice = 0;
 		public String tempshopactiontype = "\"\"";
+		public boolean pvpenabled = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -334,6 +336,7 @@ public class SkyzeradventureModVariables {
 			nbt.put("tempitem", tempitem.save(new CompoundTag()));
 			nbt.putDouble("tempitemprice", tempitemprice);
 			nbt.putString("tempshopactiontype", tempshopactiontype);
+			nbt.putBoolean("pvpenabled", pvpenabled);
 			return nbt;
 		}
 
@@ -367,6 +370,7 @@ public class SkyzeradventureModVariables {
 			tempitem = ItemStack.of(nbt.getCompound("tempitem"));
 			tempitemprice = nbt.getDouble("tempitemprice");
 			tempshopactiontype = nbt.getString("tempshopactiontype");
+			pvpenabled = nbt.getBoolean("pvpenabled");
 		}
 	}
 
@@ -419,6 +423,7 @@ public class SkyzeradventureModVariables {
 					variables.tempitem = message.data.tempitem;
 					variables.tempitemprice = message.data.tempitemprice;
 					variables.tempshopactiontype = message.data.tempshopactiontype;
+					variables.pvpenabled = message.data.pvpenabled;
 				}
 			});
 			context.setPacketHandled(true);

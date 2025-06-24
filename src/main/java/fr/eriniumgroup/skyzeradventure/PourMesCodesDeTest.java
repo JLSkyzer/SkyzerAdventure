@@ -15,12 +15,15 @@
 package fr.eriniumgroup.skyzeradventure;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -44,12 +47,13 @@ new Thread(() -> {
 
 }).start();
 
-		java.util.List<Object> obj = new java.util.ArrayList<>();
+		List<Object> obj = new ArrayList<>();
 
 		obj.isEmpty();
 		obj.size();
 		obj.remove(obj.get(0));
 		obj.remove(0);
+
 
 		obj = new Object(){
 			private List<Object> parsePattern(String patternStr, String input) {
