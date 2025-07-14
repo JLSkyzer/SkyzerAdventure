@@ -30,17 +30,18 @@ import java.util.Objects;
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class HealthOverlayOverlay {
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
-	public static void eventHandler(RenderGameOverlayEvent.Pre event) {
+	public static void eventHandler(RenderGameOverlayEvent.Post event) {
 		if (event.getType() == RenderGameOverlayEvent.ElementType.ALL) {
 			int w = event.getWindow().getGuiScaledWidth();
 			int h = event.getWindow().getGuiScaledHeight();
 			Player entity = Minecraft.getInstance().player;
 			if (entity == null) return;
 
-			Level world = entity.level;
-			if (!IsRPGModeEnabledProcedure.execute(world) || entity.isCreative() || entity.isSpectator()) return;
-
 			SkyzeradventureModVariables.PlayerVariables playercap = entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables());
+
+			Level world = entity.level;
+			if (!IsRPGModeEnabledProcedure.execute(world) || entity.isSpectator() || !playercap.HealthOverlayShow) return;
+
 			float scale = (float) playercap.stats_scale;
 
 			PoseStack pose = event.getMatrixStack();
@@ -77,6 +78,10 @@ public class HealthOverlayOverlay {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("skyzeradventure:textures/screens/health_bar.png"));
 			GuiComponent.blit(pose, drawX + 15, drawY + 40, 0, 0, (int) ReturnHealthValueProcedure.execute(entity), 9, 164, 9);
 			GuiComponent.drawCenteredString(pose, Minecraft.getInstance().font, ReturnHealthValueTextProcedure.execute(entity), centeredTextX, drawY + 41, ARGBToInt.ARGBToInt(255, 255, 255, 255));
+
+			if (playercap.desc_tick > 0){
+				GuiComponent.drawCenteredString(pose, Minecraft.getInstance().font, playercap.desc_val, drawX, drawY - 10, ARGBToInt.ARGBToInt(255, 255, 255, 255));
+			}
 
 			pose.popPose();
 

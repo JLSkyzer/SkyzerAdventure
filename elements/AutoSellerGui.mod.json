@@ -1,0 +1,84 @@
+{
+  "_fv": 77,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 428,
+    "height": 240,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 40,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "auto_seller_background.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0,
+          "locked": false
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 204,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_item_seller",
+          "text": {
+            "fixedValue": "Item seller"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 186,
+          "y": 8,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_auto_seller_return_target",
+          "text": {
+            "fixedValue": "",
+            "name": "AutoSellerReturnTarget"
+          },
+          "color": {
+            "value": -16711885,
+            "falpha": 0.0
+          },
+          "x": 186,
+          "y": 26,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

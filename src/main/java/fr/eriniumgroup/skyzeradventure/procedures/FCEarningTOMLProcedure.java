@@ -34,7 +34,7 @@ public class FCEarningTOMLProcedure {
 			}
 		}
 		try {
-			FileWriter filewriter = new FileWriter(file);
+			FileWriter filewriter = new FileWriter(file, true);
 			BufferedWriter filebw = new BufferedWriter(filewriter);
 			{
 				filebw.write("Remove last dot comma");

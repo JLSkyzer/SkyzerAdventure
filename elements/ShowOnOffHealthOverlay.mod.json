@@ -1,0 +1,12 @@
+{
+  "_fv": 77,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "P",
+    "keyBindingName": "Show On Off Health Overlay",
+    "keyBindingCategoryKey": "skyzeradventure",
+    "onKeyPressed": {
+      "name": "ShowOnOffHealthOverlayOnKeyPressed"
+    }
+  }
+}

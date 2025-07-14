@@ -73,5 +73,11 @@ public class JoinTheWorldProcedure {
 			_player.displayClientMessage(new TextComponent("\u00A76=====[ Skyze Adventure ]====="), false);
 		if (entity instanceof Player _player && !_player.level.isClientSide())
 			_player.displayClientMessage(new TextComponent("\u00A7e/level \u00A7r| To know about /level command \u00A7avery usefull !"), false);
+		if (entity instanceof Player _player && !_player.level.isClientSide())
+			_player.displayClientMessage(new TextComponent("\u00A7e/overlayconfig \u00A7r| To configure some overlay of the mod ! very usefull"), false);
+		if (entity instanceof Player _player && !_player.level.isClientSide())
+			_player.displayClientMessage(new TextComponent("\u00A7e/money \u00A7r| Show your balance !"), false);
+		if (entity instanceof Player _player && !_player.level.isClientSide())
+			_player.displayClientMessage(new TextComponent("\u00A7e/adminshop \u00A7r| Open the admin shop !"), false);
 	}
 }

@@ -97,12 +97,16 @@ public class SkyzeradventureModVariables {
 			clone.sellsearch = original.sellsearch;
 			clone.shop_money = original.shop_money;
 			clone.pvpenabled = original.pvpenabled;
+			clone.HealthOverlayShow = original.HealthOverlayShow;
 			if (!event.isWasDeath()) {
 				clone.OnDamageTick = original.OnDamageTick;
 				clone.EarningWikiTarget = original.EarningWikiTarget;
 				clone.tempitem = original.tempitem;
 				clone.tempitemprice = original.tempitemprice;
 				clone.tempshopactiontype = original.tempshopactiontype;
+				clone.desc_tick = original.desc_tick;
+				clone.desc_val = original.desc_val;
+				clone.lastitemhand = original.lastitemhand;
 			}
 		}
 
@@ -300,6 +304,10 @@ public class SkyzeradventureModVariables {
 		public double tempitemprice = 0;
 		public String tempshopactiontype = "\"\"";
 		public boolean pvpenabled = false;
+		public double desc_tick = 0;
+		public String desc_val = "\"\"";
+		public ItemStack lastitemhand = ItemStack.EMPTY;
+		public boolean HealthOverlayShow = true;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -337,6 +345,10 @@ public class SkyzeradventureModVariables {
 			nbt.putDouble("tempitemprice", tempitemprice);
 			nbt.putString("tempshopactiontype", tempshopactiontype);
 			nbt.putBoolean("pvpenabled", pvpenabled);
+			nbt.putDouble("desc_tick", desc_tick);
+			nbt.putString("desc_val", desc_val);
+			nbt.put("lastitemhand", lastitemhand.save(new CompoundTag()));
+			nbt.putBoolean("HealthOverlayShow", HealthOverlayShow);
 			return nbt;
 		}
 
@@ -371,6 +383,10 @@ public class SkyzeradventureModVariables {
 			tempitemprice = nbt.getDouble("tempitemprice");
 			tempshopactiontype = nbt.getString("tempshopactiontype");
 			pvpenabled = nbt.getBoolean("pvpenabled");
+			desc_tick = nbt.getDouble("desc_tick");
+			desc_val = nbt.getString("desc_val");
+			lastitemhand = ItemStack.of(nbt.getCompound("lastitemhand"));
+			HealthOverlayShow = nbt.getBoolean("HealthOverlayShow");
 		}
 	}
 
@@ -424,6 +440,10 @@ public class SkyzeradventureModVariables {
 					variables.tempitemprice = message.data.tempitemprice;
 					variables.tempshopactiontype = message.data.tempshopactiontype;
 					variables.pvpenabled = message.data.pvpenabled;
+					variables.desc_tick = message.data.desc_tick;
+					variables.desc_val = message.data.desc_val;
+					variables.lastitemhand = message.data.lastitemhand;
+					variables.HealthOverlayShow = message.data.HealthOverlayShow;
 				}
 			});
 			context.setPacketHandled(true);

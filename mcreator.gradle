@@ -1,0 +1,6 @@
+dependencies {
+    implementation fileTree(dir: 'libs', include: '*.jar')
+    runtimeOnly fileTree(dir: 'libs', include: '*.jar')
+}
+
+

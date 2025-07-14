@@ -27,6 +27,7 @@ import fr.eriniumgroup.skyzeradventure.client.gui.EarningWikiScreen;
 import fr.eriniumgroup.skyzeradventure.client.gui.EarningWikiHomePageScreen;
 import fr.eriniumgroup.skyzeradventure.client.gui.ConfiguratorScreen;
 import fr.eriniumgroup.skyzeradventure.client.gui.BuyPageScreen;
+import fr.eriniumgroup.skyzeradventure.client.gui.AutoSellerGuiScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class SkyzeradventureModScreens {
@@ -43,6 +44,7 @@ public class SkyzeradventureModScreens {
 			MenuScreens.register(SkyzeradventureModMenus.SELLING_PAGE.get(), SellingPageScreen::new);
 			MenuScreens.register(SkyzeradventureModMenus.BUY_PAGE.get(), BuyPageScreen::new);
 			MenuScreens.register(SkyzeradventureModMenus.ENERGY_SELLER_GUI.get(), EnergySellerGuiScreen::new);
+			MenuScreens.register(SkyzeradventureModMenus.AUTO_SELLER_GUI.get(), AutoSellerGuiScreen::new);
 		});
 	}
 
@@ -52,7 +54,7 @@ public class SkyzeradventureModScreens {
 		Screen currentScreen = Minecraft.getInstance().screen;
 		if (currentScreen instanceof WidgetScreen sc) {
 			HashMap<String, Object> widgets = sc.getWidgets();
-			Object obj = widgets.get("text:" + editbox);
+			Object obj = widgets.get("textin:" + editbox);
 			if (obj instanceof EditBox box) {
 				box.setValue(value);
 			}

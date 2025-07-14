@@ -11,11 +11,13 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
 import fr.eriniumgroup.skyzeradventure.block.entity.EnergySellerBlockBlockEntity;
+import fr.eriniumgroup.skyzeradventure.block.entity.AutoSellerBlockEntity;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 public class SkyzeradventureModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, SkyzeradventureMod.MODID);
 	public static final RegistryObject<BlockEntityType<?>> ENERGY_SELLER_BLOCK = register("energy_seller_block", SkyzeradventureModBlocks.ENERGY_SELLER_BLOCK, EnergySellerBlockBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> AUTO_SELLER = register("auto_seller", SkyzeradventureModBlocks.AUTO_SELLER, AutoSellerBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities

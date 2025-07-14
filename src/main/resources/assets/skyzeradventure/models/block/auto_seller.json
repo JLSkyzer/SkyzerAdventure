@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "skyzeradventure:block/auto_seller",
+    "up": "skyzeradventure:block/auto_seller",
+    "north": "skyzeradventure:block/auto_seller",
+    "east": "skyzeradventure:block/auto_seller",
+    "south": "skyzeradventure:block/auto_seller",
+    "west": "skyzeradventure:block/auto_seller",
+    "particle": "skyzeradventure:block/auto_seller"
+  }
+}

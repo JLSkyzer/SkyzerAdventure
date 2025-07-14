@@ -26,6 +26,7 @@ public class RemoveBarsOverlay {
 				|| overlay == ForgeIngameGui.FOOD_LEVEL_ELEMENT       // nourriture
 				|| overlay == ForgeIngameGui.AIR_LEVEL_ELEMENT        // oxygène (souffle)
 				|| overlay == ForgeIngameGui.MOUNT_HEALTH_ELEMENT     // vie de la monture
+				|| overlay == ForgeIngameGui.ITEM_NAME_ELEMENT     // texte description
 				|| overlay == ForgeIngameGui.EXPERIENCE_BAR_ELEMENT)  // barre d’expérience
 		{
 			event.setCanceled(true); // Empêche le rendu de cet overlay spécifique

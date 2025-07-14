@@ -32,6 +32,7 @@ import fr.eriniumgroup.skyzeradventure.world.inventory.EarningWikiMenu;
 import fr.eriniumgroup.skyzeradventure.world.inventory.EarningWikiHomePageMenu;
 import fr.eriniumgroup.skyzeradventure.world.inventory.ConfiguratorMenu;
 import fr.eriniumgroup.skyzeradventure.world.inventory.BuyPageMenu;
+import fr.eriniumgroup.skyzeradventure.world.inventory.AutoSellerGuiMenu;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -47,6 +48,7 @@ public class SkyzeradventureModMenus {
 	public static final RegistryObject<MenuType<SellingPageMenu>> SELLING_PAGE = REGISTRY.register("selling_page", () -> IForgeMenuType.create(SellingPageMenu::new));
 	public static final RegistryObject<MenuType<BuyPageMenu>> BUY_PAGE = REGISTRY.register("buy_page", () -> IForgeMenuType.create(BuyPageMenu::new));
 	public static final RegistryObject<MenuType<EnergySellerGuiMenu>> ENERGY_SELLER_GUI = REGISTRY.register("energy_seller_gui", () -> IForgeMenuType.create(EnergySellerGuiMenu::new));
+	public static final RegistryObject<MenuType<AutoSellerGuiMenu>> AUTO_SELLER_GUI = REGISTRY.register("auto_seller_gui", () -> IForgeMenuType.create(AutoSellerGuiMenu::new));
 
 	public static void setText(String boxname, String value, @Nullable ServerPlayer player) {
 		if (player != null) {

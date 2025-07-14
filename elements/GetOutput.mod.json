@@ -1,0 +1,10 @@
+{
+  "_fv": 77,
+  "_type": "command",
+  "definition": {
+    "commandName": "getoutput",
+    "type": "STANDARD",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">item</field><statement name=\"args\"><block type=\"string\"><field name=\"type\">string</field><field name=\"name\">containID</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">ItemOutput</field></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">entity</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">EntityOutput</field></block></statement></block></next></block></next></block></xml>"
+  }
+}

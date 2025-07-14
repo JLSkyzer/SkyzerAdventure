@@ -3051,6 +3051,264 @@
         ]
       },
       "path": "~/Gameplay/LuckyBlock/BasicExecutor"
+    },
+    {
+      "name": "GetOutput",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_output",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/command/GetOutputCommand.java"
+        ]
+      },
+      "path": "~/Outputer"
+    },
+    {
+      "name": "WriteOutput",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "write_output",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/WriteOutputProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "value",
+            "type": "string"
+          }
+        ]
+      },
+      "path": "~/Outputer"
+    },
+    {
+      "name": "ItemOutput",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "item_output",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ItemOutputProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Outputer"
+    },
+    {
+      "name": "EntityOutput",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "entity_output",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/EntityOutputProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Outputer"
+    },
+    {
+      "name": "AutoSeller",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_seller",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/block/AutoSellerBlock.java",
+          "src/main/resources/assets/skyzeradventure/blockstates/auto_seller.json",
+          "src/main/resources/assets/skyzeradventure/models/item/auto_seller.json",
+          "src/main/resources/assets/skyzeradventure/models/block/auto_seller.json",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/block/entity/AutoSellerBlockEntity.java",
+          "src/main/resources/data/skyzeradventure/loot_tables/blocks/auto_seller.json"
+        ]
+      },
+      "path": "~/ShopSystem/Block/Auto Seller"
+    },
+    {
+      "name": "AutoSellerGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_seller_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/world/inventory/AutoSellerGuiMenu.java",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/client/gui/AutoSellerGuiScreen.java"
+        ]
+      },
+      "path": "~/ShopSystem/Block/Auto Seller"
+    },
+    {
+      "name": "AutoSellerReturnTarget",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_seller_return_target",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/AutoSellerReturnTargetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Block/Auto Seller"
+    },
+    {
+      "name": "AutoSellerOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_seller_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/AutoSellerOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Block/Auto Seller"
+    },
+    {
+      "name": "AutoSellerBlockIsPlacedBy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_seller_block_is_placed_by",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/AutoSellerBlockIsPlacedByProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShopSystem/Block/Auto Seller"
+    },
+    {
+      "name": "ShowOnOffHealthOverlayOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_on_off_health_overlay_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/ShowOnOffHealthOverlayOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/KeyBinding"
+    },
+    {
+      "name": "ShowOnOffHealthOverlay",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_on_off_health_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/ShowOnOffHealthOverlayMessage.java"
+        ]
+      },
+      "path": "~/KeyBinding"
+    },
+    {
+      "name": "KeyOpenAdminShop",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "key_open_admin_shop",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/network/KeyOpenAdminShopMessage.java"
+        ]
+      },
+      "path": "~/KeyBinding"
+    },
+    {
+      "name": "FinishUseItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "finish_use_item",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/FinishUseItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -3233,6 +3491,30 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "desc_tick",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "desc_val",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "lastitemhand",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "HealthOverlayShow",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
     }
   ],
   "sound_elements": [],
@@ -3263,6 +3545,7 @@
       "Blocks.CRIMSON_FUNGUS"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:AutoSeller",
       "~CUSTOM:BasicLuckyBlock",
       "~CUSTOM:EnergySellerBlock"
     ],
@@ -3289,9 +3572,9 @@
       "gui.skyzeradventure.selling_page.label_how_much_you_want_to_sell": "How much you want to sell ? ",
       "gui.skyzeradventure.energy_seller_gui.label_target": "TARGET",
       "block.skyzeradventure.castle_boss_spawner": "Castle Boss Spawner",
-      "itemGroup.skyzeradventure.tools_tab": "Skyzer\u0027s Adventure Tools",
-      "config.skyzeradventure.misc": "SkyzerAdventure/Rank/Misc",
       "itemGroup.skyzeradventure.blocks_tab": "Skyzer\u0027s Adventure Blocks",
+      "config.skyzeradventure.misc": "SkyzerAdventure/Rank/Misc",
+      "itemGroup.skyzeradventure.tools_tab": "Skyzer\u0027s Adventure Tools",
       "gui.skyzeradventure.configurator.button_save": "Save",
       "item.skyzeradventure.adetium_shovel": "Adetium Shovel",
       "gui.skyzeradventure.energy_seller_gui.label_energy_seller": "Energy Seller",
@@ -3344,9 +3627,11 @@
       "item.skyzeradventure.adetium_armor_helmet": "Adetium Helmet",
       "gui.skyzeradventure.shop_buy.button_return": "Return",
       "gui.skyzeradventure.buy_page.label_how_much_you_want_to_sell": "How much you want to buy ? ",
+      "gui.skyzeradventure.auto_seller_gui.label_item_seller": "Item seller",
       "gamerule.rPGModeGamerule.description": "Enable RPG mode from JLSkyzer Adventure\u0027s mod",
       "gui.skyzeradventure.configurator.yVal": "",
       "block.skyzeradventure.energy_seller_block": "Energy Seller Block",
+      "key.skyzeradventure.key_open_admin_shop": "Open Admin Shop",
       "gui.skyzeradventure.shop_sell.search": "mod:id or object name",
       "gui.skyzeradventure.configurator.label_x": "X : ",
       "gui.skyzeradventure.shop_buy.search": "mod:id or object name",
@@ -3356,12 +3641,14 @@
       "gui.skyzeradventure.energy_seller_gui.label_price": "PRICE",
       "gui.skyzeradventure.shop_sell.button_search": "Search",
       "gui.skyzeradventure.shop_buy.label_shop_gui": "Shop Buy",
+      "block.skyzeradventure.auto_seller": "Auto Seller",
       "gui.skyzeradventure.buy_page.button_sell_all": "Sell All",
       "gui.skyzeradventure.configurator.button_empty2": "+",
       "gui.skyzeradventure.configurator.button_empty3": "-",
       "itemGroup.tabtools_tab": "Skyzer\u0027s Adventure Tools",
       "gui.skyzeradventure.shop_buy.button_search": "Search",
       "gui.skyzeradventure.multiplier_overlay.label_ff": "ff",
+      "key.skyzeradventure.show_on_off_health_overlay": "Show On Off Health Overlay",
       "itemGroup.skyzeradventure.ingots_tab": "Skyzer\u0027s Adventure Ingots",
       "gui.skyzeradventure.earning_wiki_home_page.label_choose_type": "Choose type",
       "itemGroup.tabore_tab": "Skyzer\u0027s Adventure Ores",
@@ -3499,6 +3786,10 @@
               {
                 "name": "Energy Seller",
                 "children": []
+              },
+              {
+                "name": "Auto Seller",
+                "children": []
               }
             ]
           }
@@ -3506,6 +3797,10 @@
       },
       {
         "name": "FileChecker",
+        "children": []
+      },
+      {
+        "name": "Outputer",
         "children": []
       }
     ]
@@ -3521,7 +3816,9 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "cursemaven"
+    ],
     "currentGenerator": "forge-1.18.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "fr.eriniumgroup.skyzeradventure"

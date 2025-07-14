@@ -1,5 +1,7 @@
 package fr.eriniumgroup.skyzeradventure.client.gui;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -131,7 +133,10 @@ public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> 
 		};
 		amount.setSuggestion(new TranslatableComponent("gui.skyzeradventure.selling_page.amount").getString());
 		amount.setMaxLength(32767);
-		guistate.put("text:amount", amount);
+		//guistate.put("text:amount", amount);
+		amount.setResponder(s -> {
+			guistate.put("textin:amount", s); // Mets la valeur à jour en temps réel
+		});
 		this.addWidget(this.amount);
 		button_sell = new Button(this.leftPos + 60, this.topPos + 88, 46, 20, new TranslatableComponent("gui.skyzeradventure.selling_page.button_sell"), e -> {
 			if (true) {

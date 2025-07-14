@@ -1,0 +1,12 @@
+{
+  "_fv": 77,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "U",
+    "keyBindingName": "Open Admin Shop",
+    "keyBindingCategoryKey": "skyzeradventure",
+    "onKeyPressed": {
+      "name": "OpenAdminShop"
+    }
+  }
+}

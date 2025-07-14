@@ -1,0 +1,62 @@
+package fr.eriniumgroup.skyzeradventure.network;
+
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.FriendlyByteBuf;
+
+import java.util.function.Supplier;
+
+import fr.eriniumgroup.skyzeradventure.procedures.OpenAdminShopProcedure;
+import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
+
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+public class KeyOpenAdminShopMessage {
+	int type, pressedms;
+
+	public KeyOpenAdminShopMessage(int type, int pressedms) {
+		this.type = type;
+		this.pressedms = pressedms;
+	}
+
+	public KeyOpenAdminShopMessage(FriendlyByteBuf buffer) {
+		this.type = buffer.readInt();
+		this.pressedms = buffer.readInt();
+	}
+
+	public static void buffer(KeyOpenAdminShopMessage message, FriendlyByteBuf buffer) {
+		buffer.writeInt(message.type);
+		buffer.writeInt(message.pressedms);
+	}
+
+	public static void handler(KeyOpenAdminShopMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+		NetworkEvent.Context context = contextSupplier.get();
+		context.enqueueWork(() -> {
+			pressAction(context.getSender(), message.type, message.pressedms);
+		});
+		context.setPacketHandled(true);
+	}
+
+	public static void pressAction(Player entity, int type, int pressedms) {
+		Level world = entity.level;
+		double x = entity.getX();
+		double y = entity.getY();
+		double z = entity.getZ();
+		// security measure to prevent arbitrary chunk generation
+		if (!world.hasChunkAt(entity.blockPosition()))
+			return;
+		if (type == 0) {
+
+			OpenAdminShopProcedure.execute(world, x, y, z, entity);
+		}
+	}
+
+	@SubscribeEvent
+	public static void registerMessage(FMLCommonSetupEvent event) {
+		SkyzeradventureMod.addNetworkMessage(KeyOpenAdminShopMessage.class, KeyOpenAdminShopMessage::buffer, KeyOpenAdminShopMessage::new, KeyOpenAdminShopMessage::handler);
+	}
+}

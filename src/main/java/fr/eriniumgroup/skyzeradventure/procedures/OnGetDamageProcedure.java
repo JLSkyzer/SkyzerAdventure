@@ -39,7 +39,7 @@ public class OnGetDamageProcedure {
 			return;
 		double FinalDamage = 0;
 		double damageReduction = 0;
-		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) || !(entity instanceof LivingEntity _livEnt1 && _livEnt1.isBlocking())) {
 			if (entity instanceof ServerPlayer && entity.isAlive()) {
 				if (world.getLevelData().getGameRules().getBoolean(SkyzeradventureModGameRules.RPG_MODE_GAMERULE)) {
 					if (entity instanceof LivingEntity _entity)

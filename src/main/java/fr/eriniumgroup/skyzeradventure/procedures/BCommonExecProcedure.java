@@ -10,9 +10,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Zombie;
-import net.minecraft.world.entity.monster.Silverfish;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.animal.SnowGolem;
 import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
@@ -26,7 +24,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.TextComponent;
-import net.minecraft.core.BlockPos;
 
 import java.util.Random;
 
@@ -122,77 +119,6 @@ public class BCommonExecProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3600, 0));
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(new TextComponent("\u00A7bDEJA VU"), false);
-		} else if ((temp).equals("drought")) {
-			{
-				int startX = Math.min((int) (entity.getX() - 4), (int) (entity.getX() + 4));
-				int startZ = Math.min((int) (entity.getZ() - 4), (int) (entity.getZ() + 4));
-				int endX = Math.max((int) (entity.getX() - 4), (int) (entity.getX() + 4));
-				int endZ = Math.max((int) (entity.getZ() - 4), (int) (entity.getZ() + 4));
-				for (int forx = startX; forx <= endX; forx++) {
-					for (int forz = startZ; forz <= endZ; forz++) {
-						int fory = (int) (entity.getY() - 1);
-						// Code here
-						if ((world.getBlockState(new BlockPos(forx, fory, forz))).getBlock() == Blocks.WATER) {
-							world.setBlock(new BlockPos(forx, fory, forz), Blocks.DIRT.defaultBlockState(), 3);
-						}
-					}
-				}
-			}
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("\u00A7aC'est l'\u00E9t\u00E9 ont dirait..."), false);
-		} else if ((temp).equals("slowness_affliction")) {
-			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 2400, 3));
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("\u00A7eVa plus vite nan ?"), false);
-		} else if ((temp).equals("nausea_trip")) {
-			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 900, 0));
-			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 900, 0));
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("\u00A79Ont dirait un very bad trip"), false);
-		} else if ((temp).equals("silverfish_summon")) {
-			for (int index5 = 0; index5 < Mth.nextInt(new Random(), 10, 25); index5++) {
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new Silverfish(EntityType.SILVERFISH, _level);
-					entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					world.addFreshEntity(entityToSpawn);
-				}
-			}
-		} else if ((temp).equals("xp_drain")) {
-			if (entity instanceof Player _player)
-				_player.giveExperiencePoints(-(Mth.nextInt(new Random(), 5, 15)));
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("\u00A79Ont t'a pris quelques xp d'enchantement xD"), false);
-		} else if ((temp).equals("meteorite_gift")) {
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("\u00A7cEvent pas coder donc voici un stack d'obsi en attendant"), false);
-			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(Blocks.OBSIDIAN).copy();
-				_setstack.setCount(64);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-			}
-		} else if ((temp).equals("regeneration_gum")) {
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("\u00A7cEvent pas coder donc voici des pommes d'or pour l'instant"), false);
-			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(Items.ENCHANTED_GOLDEN_APPLE).copy();
-				_setstack.setCount(4);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-			}
-		} else if ((temp).equals("body_gard")) {
-			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = new SnowGolem(EntityType.SNOW_GOLEM, _level);
-				entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-				if (entityToSpawn instanceof Mob _mobToSpawn)
-					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-				world.addFreshEntity(entityToSpawn);
-			}
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("\u00A75Vous \u00EAtes un peu trop connnu je crois"), false);
 		}
 	}
 }
