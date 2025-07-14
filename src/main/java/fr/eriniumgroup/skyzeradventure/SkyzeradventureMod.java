@@ -27,10 +27,12 @@ import java.util.ArrayList;
 import java.util.AbstractMap;
 
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModTabs;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMobEffects;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMenus;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModItems;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModFeatures;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModEntities;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModEnchantments;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlocks;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlockEntities;
 
@@ -51,6 +53,9 @@ public class SkyzeradventureMod {
 		SkyzeradventureModEntities.REGISTRY.register(bus);
 		SkyzeradventureModBlockEntities.REGISTRY.register(bus);
 		SkyzeradventureModFeatures.REGISTRY.register(bus);
+
+		SkyzeradventureModEnchantments.REGISTRY.register(bus);
+		SkyzeradventureModMobEffects.REGISTRY.register(bus);
 
 		SkyzeradventureModMenus.REGISTRY.register(bus);
 

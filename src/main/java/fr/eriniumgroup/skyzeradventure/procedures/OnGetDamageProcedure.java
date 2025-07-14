@@ -13,12 +13,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerPlayer;
 
 import javax.annotation.Nullable;
 
 import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMobEffects;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModGameRules;
 
 @Mod.EventBusSubscriber
@@ -65,6 +67,14 @@ public class OnGetDamageProcedure {
 					}
 					if (damageReduction > 0) {
 						FinalDamage = FinalDamage / (1 + damageReduction);
+					}
+					if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(SkyzeradventureModMobEffects.DAMAGEOFDEATH.get()) : false) {
+						FinalDamage = (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).RPGHealthMax;
+					}
+					if (damagesource == DamageSource.CRAMMING || damagesource == DamageSource.IN_FIRE || damagesource == DamageSource.LAVA || damagesource == DamageSource.ON_FIRE) {
+						if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.FIRE_RESISTANCE) : false) {
+							FinalDamage = 0;
+						}
 					}
 					{
 						double _setval = (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).RPGHealth - FinalDamage;

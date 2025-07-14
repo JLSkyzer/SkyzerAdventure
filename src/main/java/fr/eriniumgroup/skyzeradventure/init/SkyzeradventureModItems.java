@@ -14,6 +14,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import fr.eriniumgroup.skyzeradventure.item.RegenerationGumItem;
+import fr.eriniumgroup.skyzeradventure.item.ExponiaMeteoriteGemItem;
 import fr.eriniumgroup.skyzeradventure.item.BossSpawnerItemItem;
 import fr.eriniumgroup.skyzeradventure.item.AdetiumSwordItem;
 import fr.eriniumgroup.skyzeradventure.item.AdetiumShovelItem;
@@ -38,12 +40,15 @@ public class SkyzeradventureModItems {
 	public static final RegistryObject<Item> ADETIUM_AXE = REGISTRY.register("adetium_axe", () -> new AdetiumAxeItem());
 	public static final RegistryObject<Item> ADETIUM_HOE = REGISTRY.register("adetium_hoe", () -> new AdetiumHoeItem());
 	public static final RegistryObject<Item> BOSS_SPAWNER_ITEM = REGISTRY.register("boss_spawner_item", () -> new BossSpawnerItemItem());
+	public static final RegistryObject<Item> REGENERATION_GUM = REGISTRY.register("regeneration_gum", () -> new RegenerationGumItem());
 	public static final RegistryObject<Item> CASTLE_BOSS_SPAWNER = block(SkyzeradventureModBlocks.CASTLE_BOSS_SPAWNER, SkyzeradventureModTabs.TAB_BLOCKS_TAB);
 	public static final RegistryObject<Item> BASIC_LUCKY_BLOCK = block(SkyzeradventureModBlocks.BASIC_LUCKY_BLOCK, SkyzeradventureModTabs.TAB_BLOCKS_TAB);
 	public static final RegistryObject<Item> AUTO_SELLER = block(SkyzeradventureModBlocks.AUTO_SELLER, SkyzeradventureModTabs.TAB_BLOCKS_TAB);
+	public static final RegistryObject<Item> EXPONIA_METEORITE = block(SkyzeradventureModBlocks.EXPONIA_METEORITE, SkyzeradventureModTabs.TAB_BLOCKS_TAB);
 	public static final RegistryObject<Item> ENERGY_SELLER_BLOCK = block(SkyzeradventureModBlocks.ENERGY_SELLER_BLOCK, CreativeModeTab.TAB_REDSTONE);
 	public static final RegistryObject<Item> CASTLE_BOSS_SPAWN_EGG = REGISTRY.register("castle_boss_spawn_egg",
 			() -> new ForgeSpawnEggItem(SkyzeradventureModEntities.CASTLE_BOSS, -6710887, -3355393, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> EXPONIA_METEORITE_GEM = REGISTRY.register("exponia_meteorite_gem", () -> new ExponiaMeteoriteGemItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

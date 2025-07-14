@@ -1,0 +1,27 @@
+{
+  "_fv": 77,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Player Xp Multiplier",
+    "icon": "xpmultiplier",
+    "color": {
+      "value": -6684928,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onActiveTick": {
+      "name": "PlayerXpMultiplierOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "PlayerXpMultiplierEffectExpires"
+    }
+  }
+}

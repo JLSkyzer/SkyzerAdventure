@@ -45,8 +45,8 @@ public class MultiplierOverlayOverlay {
 			SkyzeradventureModVariables.PlayerVariables playercap = (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables()));
 			PoseStack pose = event.getMatrixStack();
 
-			String playerMulti = "Player bonus : x" + new DecimalFormat("##.#").format(playercap.playerxpmultiplier);
-			String serverMulti = "Server bonus : x" + new DecimalFormat("##.#").format(SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier);
+			String playerMulti = "Player bonus : x" + new DecimalFormat("##.##").format(playercap.playerxpmultiplier);
+			String serverMulti = "Server bonus : x" + new DecimalFormat("##.##").format(SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier);
 
 			if (true) {
 				GuiComponent.drawString(event.getMatrixStack(), Minecraft.getInstance().font, playerMulti, (int) w - Minecraft.getInstance().font.width(playerMulti), posY - 8, ARGBToInt.ARGBToInt(255, 255, 255, 255));

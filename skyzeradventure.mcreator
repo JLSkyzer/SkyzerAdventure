@@ -3293,14 +3293,58 @@
       "path": "~/KeyBinding"
     },
     {
-      "name": "FinishUseItem",
+      "name": "HealthRegen",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "health_regen",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/enchantment/HealthRegenEnchantment.java"
+        ]
+      },
+      "path": "~/RPG mode/Enchant"
+    },
+    {
+      "name": "ExponiaMeteorite",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exponia_meteorite",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/skyzeradventure/models/block/exponia_meteorite.json",
+          "src/main/resources/data/skyzeradventure/loot_tables/blocks/exponia_meteorite.json",
+          "src/main/java/fr/eriniumgroup/skyzeradventure/block/ExponiaMeteoriteBlock.java",
+          "src/main/resources/assets/skyzeradventure/blockstates/exponia_meteorite.json",
+          "src/main/resources/assets/skyzeradventure/models/item/exponia_meteorite.json"
+        ]
+      },
+      "path": "~/Gameplay/Exponia/Block"
+    },
+    {
+      "name": "ExponiaMeteoriteGem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exponia_meteorite_gem",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/ExponiaMeteoriteGemItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/exponia_meteorite_gem.json"
+        ]
+      },
+      "path": "~/Gameplay/Exponia/Item"
+    },
+    {
+      "name": "RegenerationGumPlayerFinishesUsingItem",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "finish_use_item",
+      "registry_name": "regeneration_gum_player_finishes_using_item",
       "metadata": {
         "files": [
-          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/FinishUseItemProcedure.java"
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/RegenerationGumPlayerFinishesUsingItemProcedure.java"
         ],
         "dependencies": [
           {
@@ -3308,7 +3352,246 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Gameplay/Items"
+    },
+    {
+      "name": "RegenerationGum",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regeneration_gum",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/RegenerationGumItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/regeneration_gum.json"
+        ]
+      },
+      "path": "~/Gameplay/Items"
+    },
+    {
+      "name": "BUncommonExec",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_uncommon_exec",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/BUncommonExecProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "arg",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gameplay/LuckyBlock/BasicExecutor"
+    },
+    {
+      "name": "PlayerXpMultiplierEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_xp_multiplier_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/PlayerXpMultiplierEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Potion"
+    },
+    {
+      "name": "PlayerXpMultiplierOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_xp_multiplier_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/PlayerXpMultiplierOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/RPG mode/Level/Potion"
+    },
+    {
+      "name": "PlayerXpMultiplier",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_xp_multiplier",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/potion/PlayerXpMultiplierMobEffect.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/Potion"
+    },
+    {
+      "name": "BRareExec",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_rare_exec",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/BRareExecProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "arg",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gameplay/LuckyBlock/BasicExecutor"
+    },
+    {
+      "name": "Damageofdeath",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damageofdeath",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/potion/DamageofdeathMobEffect.java"
+        ]
+      },
+      "path": "~/Gameplay/LuckyBlock/Effect"
+    },
+    {
+      "name": "BEpicExec",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_epic_exec",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/BEpicExecProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "arg",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gameplay/LuckyBlock/BasicExecutor"
+    },
+    {
+      "name": "BLegendaryExec",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_legendary_exec",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/BLegendaryExecProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "arg",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gameplay/LuckyBlock/BasicExecutor"
     }
   ],
   "variable_elements": [
@@ -3545,6 +3828,7 @@
       "Blocks.CRIMSON_FUNGUS"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:ExponiaMeteorite",
       "~CUSTOM:AutoSeller",
       "~CUSTOM:BasicLuckyBlock",
       "~CUSTOM:EnergySellerBlock"
@@ -3587,6 +3871,7 @@
       "item.skyzeradventure.adetium_armor_boots": "Adetium Boots",
       "itemGroup.tabarmors_tab": "Skyzer\u0027s Adventure Armors",
       "item.skyzeradventure.castle_boss_spawn_egg": "Castle Boss Spawn Egg",
+      "item.skyzeradventure.exponia_meteorite_gem": "§6Exponia Meteorite Gem",
       "config.skyzeradventure.shop_listing": "SkyzerAdventure/Shop/ShopListing",
       "gui.skyzeradventure.shop_sell.button_return": "Return",
       "config.skyzeradventure.earning": "SkyzerAdventure/Rank/Earning",
@@ -3603,6 +3888,7 @@
       "gui.skyzeradventure.configurator.button_empty": "+",
       "gui.skyzeradventure.buy_page.button_buy": "Buy",
       "gui.skyzeradventure.shop_main_gui.button_buy": "Buy",
+      "block.skyzeradventure.exponia_meteorite": "Exponia Meteorite",
       "gui.skyzeradventure.stats_scale_config.button_empty1": "-",
       "gui.skyzeradventure.configurator.button_001": "0.01",
       "config.skyzeradventure.shop_config": "SkyzerAdventure/Shop/ShopConfig",
@@ -3635,6 +3921,7 @@
       "gui.skyzeradventure.shop_sell.search": "mod:id or object name",
       "gui.skyzeradventure.configurator.label_x": "X : ",
       "gui.skyzeradventure.shop_buy.search": "mod:id or object name",
+      "enchantment.skyzeradventure.health_regen": "Health Regen",
       "gui.skyzeradventure.configurator.button_empty1": "-",
       "gui.skyzeradventure.buy_page.button_back": "Back",
       "item.skyzeradventure.adetium_ingot": "Adetium Ingot",
@@ -3644,11 +3931,14 @@
       "block.skyzeradventure.auto_seller": "Auto Seller",
       "gui.skyzeradventure.buy_page.button_sell_all": "Sell All",
       "gui.skyzeradventure.configurator.button_empty2": "+",
+      "effect.skyzeradventure.player_xp_multiplier": "Player Xp Multiplier",
       "gui.skyzeradventure.configurator.button_empty3": "-",
       "itemGroup.tabtools_tab": "Skyzer\u0027s Adventure Tools",
       "gui.skyzeradventure.shop_buy.button_search": "Search",
       "gui.skyzeradventure.multiplier_overlay.label_ff": "ff",
+      "effect.skyzeradventure.damageofdeath": "Damageofdeath",
       "key.skyzeradventure.show_on_off_health_overlay": "Show On Off Health Overlay",
+      "item.skyzeradventure.regeneration_gum": "§aRegeneration Gum",
       "itemGroup.skyzeradventure.ingots_tab": "Skyzer\u0027s Adventure Ingots",
       "gui.skyzeradventure.earning_wiki_home_page.label_choose_type": "Choose type",
       "itemGroup.tabore_tab": "Skyzer\u0027s Adventure Ores",
@@ -3705,8 +3995,16 @@
               {
                 "name": "Level Wiki",
                 "children": []
+              },
+              {
+                "name": "Potion",
+                "children": []
               }
             ]
+          },
+          {
+            "name": "Enchant",
+            "children": []
           }
         ]
       },
@@ -3756,8 +4054,29 @@
               {
                 "name": "BasicExecutor",
                 "children": []
+              },
+              {
+                "name": "Effect",
+                "children": []
               }
             ]
+          },
+          {
+            "name": "Exponia",
+            "children": [
+              {
+                "name": "Block",
+                "children": []
+              },
+              {
+                "name": "Item",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Items",
+            "children": []
           }
         ]
       },

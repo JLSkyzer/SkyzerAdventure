@@ -209,7 +209,8 @@ public class OnKillingProcedure {
 													return "";
 												}
 											}
-										}.returnValue(temp, 0, ":"));
+										}.returnValue(temp, 0, ":")) * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
+												* (sourceentity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).playerxpmultiplier;
 										sourceentity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.earning_lastvalue = _setval;
 											capability.syncPlayerVariables(sourceentity);
@@ -243,7 +244,8 @@ public class OnKillingProcedure {
 													return "";
 												}
 											}
-										}.returnValue(temp, 0, ":"));
+										}.returnValue(temp, 0, ":")) * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
+												* (sourceentity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).playerxpmultiplier;
 										sourceentity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.earning_lastvalue = _setval;
 											capability.syncPlayerVariables(sourceentity);
@@ -269,7 +271,8 @@ public class OnKillingProcedure {
 													return "";
 												}
 											}
-										}.returnValue(temp, 0, ":")) + " xp";
+										}.returnValue(temp, 0, ":")) * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
+												* (sourceentity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).playerxpmultiplier + " xp";
 										sourceentity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.earning_text2 = _setval;
 											capability.syncPlayerVariables(sourceentity);

@@ -6,9 +6,14 @@ package fr.eriniumgroup.skyzeradventure.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
+import fr.eriniumgroup.skyzeradventure.block.ExponiaMeteoriteBlock;
 import fr.eriniumgroup.skyzeradventure.block.EnergySellerBlockBlock;
 import fr.eriniumgroup.skyzeradventure.block.CastleBossSpawnerBlock;
 import fr.eriniumgroup.skyzeradventure.block.BasicLuckyBlockBlock;
@@ -23,6 +28,15 @@ public class SkyzeradventureModBlocks {
 	public static final RegistryObject<Block> CASTLE_BOSS_SPAWNER = REGISTRY.register("castle_boss_spawner", () -> new CastleBossSpawnerBlock());
 	public static final RegistryObject<Block> BASIC_LUCKY_BLOCK = REGISTRY.register("basic_lucky_block", () -> new BasicLuckyBlockBlock());
 	public static final RegistryObject<Block> AUTO_SELLER = REGISTRY.register("auto_seller", () -> new AutoSellerBlock());
+	public static final RegistryObject<Block> EXPONIA_METEORITE = REGISTRY.register("exponia_meteorite", () -> new ExponiaMeteoriteBlock());
+
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
+	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	public static class BlocksClientSideHandler {
+		@SubscribeEvent
+		public static void clientSetup(FMLClientSetupEvent event) {
+			ExponiaMeteoriteBlock.registerRenderLayer();
+		}
+	}
 }

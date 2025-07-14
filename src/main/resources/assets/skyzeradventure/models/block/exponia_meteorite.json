@@ -1,0 +1,8 @@
+{
+  "parent": "skyzeradventure:custom/rock_volcano",
+  "textures": {
+    "all": "skyzeradventure:block/volcano_rock",
+    "particle": "skyzeradventure:block/volcano_rock",
+    "0": "skyzeradventure:block/volcano_rock"
+  }
+}

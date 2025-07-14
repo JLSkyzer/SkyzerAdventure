@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "skyzeradventure:exponia_meteorite",
     "skyzeradventure:auto_seller",
     "skyzeradventure:basic_lucky_block",
     "skyzeradventure:energy_seller_block"

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "skyzeradventure:item/regeneration_gum"
+  }
+}
