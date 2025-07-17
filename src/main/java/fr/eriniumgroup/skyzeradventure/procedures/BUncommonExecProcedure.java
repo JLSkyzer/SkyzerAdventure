@@ -133,15 +133,15 @@ public class BUncommonExecProcedure {
 				_player.displayClientMessage(new TextComponent("ta peur ou pas ? "), false);
 		} else if ((temp).equals("hot_feet")) {
 			{
-				int startX = Math.min((entity.getX() - 2), (entity.getX() + 2));
-				int startZ = Math.min((entity.getZ() - 2), (entity.getZ() + 2));
-				int endX = Math.max((entity.getX() - 2), (entity.getX() + 2));
-				int endZ = Math.max((entity.getZ() - 2), (entity.getZ() + 2));
+				int startX = Math.min((int) (entity.getX() - 2), (int) (entity.getX() + 2));
+				int startZ = Math.min((int) (entity.getZ() - 2), (int) (entity.getZ() + 2));
+				int endX = Math.max((int) (entity.getX() - 2), (int) (entity.getX() + 2));
+				int endZ = Math.max((int) (entity.getZ() - 2), (int) (entity.getZ() + 2));
 				for (int forx = startX; forx <= endX; forx++) {
 					for (int forz = startZ; forz <= endZ; forz++) {
-						int fory = (entity.getY() - 1);
+						int fory = (int) (entity.getY() - 1);
 						// Code here
-						if (!(world.getBlockState(new BlockPos(forx, fory, forz))).defaultBlockState().hasBlockEntity()) {
+						if (!((world.getBlockState(new BlockPos(forx, fory, forz)))).getBlock().defaultBlockState().hasBlockEntity()) {
 							world.setBlock(new BlockPos(forx, fory, forz), Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
 						}
 					}

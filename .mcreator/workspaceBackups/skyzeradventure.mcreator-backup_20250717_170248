@@ -3462,6 +3462,136 @@
         ]
       },
       "path": "~/RPG mode/Level/Potion"
+    },
+    {
+      "name": "BRareExec",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_rare_exec",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/BRareExecProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "arg",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gameplay/LuckyBlock/BasicExecutor"
+    },
+    {
+      "name": "Damageofdeath",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damageofdeath",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/potion/DamageofdeathMobEffect.java"
+        ]
+      },
+      "path": "~/Gameplay/LuckyBlock/Effect"
+    },
+    {
+      "name": "BEpicExec",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_epic_exec",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/BEpicExecProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "arg",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gameplay/LuckyBlock/BasicExecutor"
+    },
+    {
+      "name": "BLegendaryExec",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_legendary_exec",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/BLegendaryExecProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "arg",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gameplay/LuckyBlock/BasicExecutor"
     }
   ],
   "variable_elements": [
@@ -3726,9 +3856,9 @@
       "gui.skyzeradventure.selling_page.label_how_much_you_want_to_sell": "How much you want to sell ? ",
       "gui.skyzeradventure.energy_seller_gui.label_target": "TARGET",
       "block.skyzeradventure.castle_boss_spawner": "Castle Boss Spawner",
-      "itemGroup.skyzeradventure.blocks_tab": "Skyzer\u0027s Adventure Blocks",
-      "config.skyzeradventure.misc": "SkyzerAdventure/Rank/Misc",
       "itemGroup.skyzeradventure.tools_tab": "Skyzer\u0027s Adventure Tools",
+      "config.skyzeradventure.misc": "SkyzerAdventure/Rank/Misc",
+      "itemGroup.skyzeradventure.blocks_tab": "Skyzer\u0027s Adventure Blocks",
       "gui.skyzeradventure.configurator.button_save": "Save",
       "item.skyzeradventure.adetium_shovel": "Adetium Shovel",
       "gui.skyzeradventure.energy_seller_gui.label_energy_seller": "Energy Seller",
@@ -3806,6 +3936,7 @@
       "itemGroup.tabtools_tab": "Skyzer\u0027s Adventure Tools",
       "gui.skyzeradventure.shop_buy.button_search": "Search",
       "gui.skyzeradventure.multiplier_overlay.label_ff": "ff",
+      "effect.skyzeradventure.damageofdeath": "Damageofdeath",
       "key.skyzeradventure.show_on_off_health_overlay": "Show On Off Health Overlay",
       "item.skyzeradventure.regeneration_gum": "§aRegeneration Gum",
       "itemGroup.skyzeradventure.ingots_tab": "Skyzer\u0027s Adventure Ingots",
@@ -3922,6 +4053,10 @@
               },
               {
                 "name": "BasicExecutor",
+                "children": []
+              },
+              {
+                "name": "Effect",
                 "children": []
               }
             ]
