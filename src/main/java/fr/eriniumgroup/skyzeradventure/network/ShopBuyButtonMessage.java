@@ -80,7 +80,7 @@ public class ShopBuyButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			BuySearchProcedure.execute(world, x, y, z, entity, guistate);
+			BuySearchProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

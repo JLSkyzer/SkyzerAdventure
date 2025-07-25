@@ -15,6 +15,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import fr.eriniumgroup.skyzeradventure.entity.EplosiveOrbAmmoEntity;
 import fr.eriniumgroup.skyzeradventure.entity.CastleBossEntity;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
@@ -23,6 +24,8 @@ public class SkyzeradventureModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, SkyzeradventureMod.MODID);
 	public static final RegistryObject<EntityType<CastleBossEntity>> CASTLE_BOSS = register("castle_boss", EntityType.Builder.<CastleBossEntity>of(CastleBossEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(CastleBossEntity::new).fireImmune().sized(3f, 4.8125f));
+	public static final RegistryObject<EntityType<EplosiveOrbAmmoEntity>> EPLOSIVE_ORB_AMMO = register("eplosive_orb_ammo", EntityType.Builder.<EplosiveOrbAmmoEntity>of(EplosiveOrbAmmoEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(EplosiveOrbAmmoEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

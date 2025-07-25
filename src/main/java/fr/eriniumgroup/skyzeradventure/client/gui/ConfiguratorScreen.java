@@ -14,13 +14,12 @@ import java.util.HashMap;
 
 import fr.eriniumgroup.skyzeradventure.world.inventory.ConfiguratorMenu;
 import fr.eriniumgroup.skyzeradventure.network.ConfiguratorButtonMessage;
-import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens.WidgetScreen;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class ConfiguratorScreen extends AbstractContainerScreen<ConfiguratorMenu> implements WidgetScreen {
+public class ConfiguratorScreen extends AbstractContainerScreen<ConfiguratorMenu>{
 	private final static HashMap<String, Object> guistate = ConfiguratorMenu.guistate;
 	private final Level world;
 	private final int x, y, z;

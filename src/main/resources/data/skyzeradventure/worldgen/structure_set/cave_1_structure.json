@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "skyzeradventure:cave_1_structure",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 128,
+    "separation": 64,
+    "salt": 1966336820
+  }
+}

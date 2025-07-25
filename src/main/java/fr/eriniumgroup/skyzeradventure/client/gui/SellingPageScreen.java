@@ -1,7 +1,5 @@
 package fr.eriniumgroup.skyzeradventure.client.gui;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,24 +11,21 @@ import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
-import java.util.HashMap;
-
 import fr.eriniumgroup.skyzeradventure.world.inventory.SellingPageMenu;
 import fr.eriniumgroup.skyzeradventure.procedures.ReturnMoneyTextProcedure;
 import fr.eriniumgroup.skyzeradventure.procedures.ReturnItemAndPriceProcedure;
 import fr.eriniumgroup.skyzeradventure.network.SellingPageButtonMessage;
-import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens.WidgetScreen;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> implements WidgetScreen {
-	private final static HashMap<String, Object> guistate = SellingPageMenu.guistate;
+public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> implements SkyzeradventureModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	private final static HashMap<String, String> textstate = new HashMap<>();
+	private boolean menuStateUpdateActive = false;
 	EditBox amount;
 	Button button_sell;
 	Button button_back;
@@ -47,6 +42,16 @@ public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> 
 		this.imageHeight = 166;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		if (elementType == 0 && elementState instanceof String stringState) {
+			if (name.equals("amount"))
+				amount.setValue(stringState);
+		}
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = new ResourceLocation("skyzeradventure:textures/screens/selling_page.png");
 
 	@Override
@@ -58,17 +63,13 @@ public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> 
 	}
 
 	@Override
-	protected void renderBg(PoseStack ms, float partialTicks, int gx, int gy) {
+	protected void renderBg(PoseStack ms, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		RenderSystem.disableBlend();
-	}
-
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
 	}
 
 	@Override
@@ -83,15 +84,6 @@ public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> 
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-		amount.tick();
-		textstate.put("textin:amount", amount.getValue());
-		SkyzeradventureMod.PACKET_HANDLER.sendToServer(new SellingPageMenu.SellingPageOtherMessage(0, x, y, z, textstate));
-		SellingPageMenu.SellingPageOtherMessage.handleOtherAction(entity, 0, x, y, z, textstate);
-	}
-
-	@Override
 	public void resize(Minecraft minecraft, int width, int height) {
 		String amountValue = amount.getValue();
 		super.resize(minecraft, width, height);
@@ -99,71 +91,55 @@ public class SellingPageScreen extends AbstractContainerScreen<SellingPageMenu> 
 	}
 
 	@Override
-	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, new TranslatableComponent("gui.skyzeradventure.selling_page.label_how_much_you_want_to_sell"), 15, 7, -16777216);
-		this.font.draw(poseStack,
-
-				ReturnItemAndPriceProcedure.execute(entity), 6, 25, -12829636);
-		this.font.draw(poseStack,
-
-				ReturnMoneyTextProcedure.execute(entity), 6, 43, -12829636);
+	protected void renderLabels(PoseStack ms, int mouseX, int mouseY) {
+		this.font.draw(ms, new TranslatableComponent("gui.skyzeradventure.selling_page.label_how_much_you_want_to_sell"), 15, 7, -16777216);
+		this.font.draw(ms, ReturnItemAndPriceProcedure.execute(entity), 6, 25, -12829636);
+		this.font.draw(ms, ReturnMoneyTextProcedure.execute(entity), 6, 43, -12829636);
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		amount = new EditBox(this.font, this.leftPos + 16, this.topPos + 62, 142, 18, new TranslatableComponent("gui.skyzeradventure.selling_page.amount")) {
-			@Override
-			public void insertText(String text) {
-				super.insertText(text);
-				if (getValue().isEmpty())
-					setSuggestion(new TranslatableComponent("gui.skyzeradventure.selling_page.amount").getString());
-				else
-					setSuggestion(null);
-			}
-
-			@Override
-			public void moveCursorTo(int pos) {
-				super.moveCursorTo(pos);
-				if (getValue().isEmpty())
-					setSuggestion(new TranslatableComponent("gui.skyzeradventure.selling_page.amount").getString());
-				else
-					setSuggestion(null);
-			}
-		};
-		amount.setSuggestion(new TranslatableComponent("gui.skyzeradventure.selling_page.amount").getString());
-		amount.setMaxLength(32767);
-		//guistate.put("text:amount", amount);
-		amount.setResponder(s -> {
-			guistate.put("textin:amount", s); // Mets la valeur à jour en temps réel
+		amount = new EditBox(this.font, this.leftPos + 16, this.topPos + 62, 142, 18, new TranslatableComponent("gui.skyzeradventure.selling_page.amount"));
+		amount.setMaxLength(8192);
+		amount.setResponder(content -> {
+			if (!menuStateUpdateActive)
+				menu.sendMenuStateUpdate(entity, 0, "amount", content, false);
 		});
+		amount.setSuggestion(new TranslatableComponent("gui.skyzeradventure.selling_page.amount").getString());
 		this.addWidget(this.amount);
 		button_sell = new Button(this.leftPos + 60, this.topPos + 88, 46, 20, new TranslatableComponent("gui.skyzeradventure.selling_page.button_sell"), e -> {
+			int x = SellingPageScreen.this.x;
+			int y = SellingPageScreen.this.y;
 			if (true) {
-				textstate.put("textin:amount", amount.getValue());
-				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new SellingPageButtonMessage(0, x, y, z, textstate));
-				SellingPageButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
+				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new SellingPageButtonMessage(0, x, y, z));
+				SellingPageButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-		guistate.put("button:button_sell", button_sell);
 		this.addRenderableWidget(button_sell);
 		button_back = new Button(this.leftPos + 60, this.topPos + 142, 46, 20, new TranslatableComponent("gui.skyzeradventure.selling_page.button_back"), e -> {
+			int x = SellingPageScreen.this.x;
+			int y = SellingPageScreen.this.y;
 			if (true) {
-				textstate.put("textin:amount", amount.getValue());
-				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new SellingPageButtonMessage(1, x, y, z, textstate));
-				SellingPageButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
+				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new SellingPageButtonMessage(1, x, y, z));
+				SellingPageButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
-		guistate.put("button:button_back", button_back);
 		this.addRenderableWidget(button_back);
 		button_sell_all = new Button(this.leftPos + 51, this.topPos + 115, 63, 20, new TranslatableComponent("gui.skyzeradventure.selling_page.button_sell_all"), e -> {
+			int x = SellingPageScreen.this.x;
+			int y = SellingPageScreen.this.y;
 			if (true) {
-				textstate.put("textin:amount", amount.getValue());
-				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new SellingPageButtonMessage(2, x, y, z, textstate));
-				SellingPageButtonMessage.handleButtonAction(entity, 2, x, y, z, textstate);
+				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new SellingPageButtonMessage(2, x, y, z));
+				SellingPageButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
-		guistate.put("button:button_sell_all", button_sell_all);
 		this.addRenderableWidget(button_sell_all);
+	}
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		amount.tick();
 	}
 }

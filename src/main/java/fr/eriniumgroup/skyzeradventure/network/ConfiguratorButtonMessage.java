@@ -84,43 +84,43 @@ public class ConfiguratorButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			YPlusProcedure.execute(world, entity);
+			YPlusProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			ResetBtnProcedure.execute(world, entity);
+			ResetBtnProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			YMinusProcedure.execute(world, entity);
+			YMinusProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
-			XPlusProcedure.execute(world, entity);
+			XPlusProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			XMinusProcedure.execute(world, entity);
+			XMinusProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			Precision001Procedure.execute(world, entity);
+			Precision001Procedure.execute(entity);
 		}
 		if (buttonID == 6) {
 
-			Precision01Procedure.execute(world, entity);
+			Precision01Procedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Precision1Procedure.execute(world, entity);
+			Precision1Procedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			Precision10Procedure.execute(world, entity);
+			Precision10Procedure.execute(entity);
 		}
 		if (buttonID == 9) {
 
-			OverlaySaveProcedure.execute(world, entity, guistate);
+			OverlaySaveProcedure.execute(entity);
 		}
 	}
 

@@ -35,7 +35,7 @@ import fr.eriniumgroup.skyzeradventure.world.inventory.EnergySellerGuiMenu;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlockEntities;
 
 public class EnergySellerBlockBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(0, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public EnergySellerBlockBlockEntity(BlockPos position, BlockState state) {

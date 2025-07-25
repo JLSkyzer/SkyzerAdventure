@@ -77,15 +77,15 @@ public class BuyPageButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			BuySearchProcedure.execute(world, x, y, z, entity, guistate);
+			BuySearchProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			BuyButtonProcedure.execute(entity, guistate);
+			BuyButtonProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			MaxButtonProcedure.execute(world, entity);
+			MaxButtonProcedure.execute(entity);
 		}
 	}
 

@@ -8,23 +8,20 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 
-import java.util.HashMap;
-
 import fr.eriniumgroup.skyzeradventure.world.inventory.EnergySellerGuiMenu;
 import fr.eriniumgroup.skyzeradventure.procedures.ReturnTargetLabelProcedure;
 import fr.eriniumgroup.skyzeradventure.procedures.ReturnPriceLabelProcedure;
 import fr.eriniumgroup.skyzeradventure.procedures.ReturnEnergyLabelProcedure;
-import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens.WidgetScreen;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class EnergySellerGuiScreen extends AbstractContainerScreen<EnergySellerGuiMenu> implements WidgetScreen {
-	private final static HashMap<String, Object> guistate = EnergySellerGuiMenu.guistate;
+public class EnergySellerGuiScreen extends AbstractContainerScreen<EnergySellerGuiMenu> implements SkyzeradventureModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	private final static HashMap<String, String> textstate = new HashMap<>();
+	private boolean menuStateUpdateActive = false;
 
 	public EnergySellerGuiScreen(EnergySellerGuiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -37,6 +34,12 @@ public class EnergySellerGuiScreen extends AbstractContainerScreen<EnergySellerG
 		this.imageHeight = 166;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = new ResourceLocation("skyzeradventure:textures/screens/energy_seller_gui.png");
 
 	@Override
@@ -47,21 +50,15 @@ public class EnergySellerGuiScreen extends AbstractContainerScreen<EnergySellerG
 	}
 
 	@Override
-	protected void renderBg(PoseStack ms, float partialTicks, int gx, int gy) {
+	protected void renderBg(PoseStack ms, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.setShaderTexture(0, new ResourceLocation("skyzeradventure:textures/screens/gui_background.png"));
 		this.blit(ms, this.leftPos + -126, this.topPos + -37, 0, 0, 428, 240, 428, 240);
-
 		RenderSystem.disableBlend();
-	}
-
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
 	}
 
 	@Override
@@ -74,17 +71,11 @@ public class EnergySellerGuiScreen extends AbstractContainerScreen<EnergySellerG
 	}
 
 	@Override
-	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, new TranslatableComponent("gui.skyzeradventure.energy_seller_gui.label_energy_seller"), 51, -29, -1);
-		this.font.draw(poseStack,
-
-				ReturnTargetLabelProcedure.execute(world, x, y, z), 24, -2, -1);
-		this.font.draw(poseStack,
-
-				ReturnEnergyLabelProcedure.execute(world, x, y, z), 24, 16, -1);
-		this.font.draw(poseStack,
-
-				ReturnPriceLabelProcedure.execute(), 24, 34, -1);
+	protected void renderLabels(PoseStack ms, int mouseX, int mouseY) {
+		this.font.draw(ms, new TranslatableComponent("gui.skyzeradventure.energy_seller_gui.label_energy_seller"), 51, -29, -1);
+		this.font.draw(ms, ReturnTargetLabelProcedure.execute(world, x, y, z), 24, -2, -1);
+		this.font.draw(ms, ReturnEnergyLabelProcedure.execute(world, x, y, z), 24, 16, -1);
+		this.font.draw(ms, ReturnPriceLabelProcedure.execute(), 24, 34, -1);
 	}
 
 	@Override

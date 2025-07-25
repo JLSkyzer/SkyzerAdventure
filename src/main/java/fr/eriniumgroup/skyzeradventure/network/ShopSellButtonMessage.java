@@ -80,7 +80,7 @@ public class ShopSellButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			SellSearchProcedure.execute(world, x, y, z, entity, guistate);
+			SellSearchProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

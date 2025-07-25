@@ -1,12 +1,11 @@
 package fr.eriniumgroup.skyzeradventure.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
 
 public class Precision001Procedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		{
@@ -16,6 +15,6 @@ public class Precision001Procedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		ConfiguratorThisGUIIsOpenedProcedure.execute(world, entity);
+		ConfiguratorThisGUIIsOpenedProcedure.execute(entity);
 	}
 }

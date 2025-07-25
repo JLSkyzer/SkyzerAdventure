@@ -8,21 +8,18 @@ import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 
-import java.util.HashMap;
-
 import fr.eriniumgroup.skyzeradventure.world.inventory.AutoSellerGuiMenu;
 import fr.eriniumgroup.skyzeradventure.procedures.AutoSellerReturnTargetProcedure;
-import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens.WidgetScreen;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class AutoSellerGuiScreen extends AbstractContainerScreen<AutoSellerGuiMenu> implements WidgetScreen {
-	private final static HashMap<String, Object> guistate = AutoSellerGuiMenu.guistate;
+public class AutoSellerGuiScreen extends AbstractContainerScreen<AutoSellerGuiMenu> implements SkyzeradventureModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	private final static HashMap<String, String> textstate = new HashMap<>();
+	private boolean menuStateUpdateActive = false;
 
 	public AutoSellerGuiScreen(AutoSellerGuiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -35,6 +32,12 @@ public class AutoSellerGuiScreen extends AbstractContainerScreen<AutoSellerGuiMe
 		this.imageHeight = 240;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = new ResourceLocation("skyzeradventure:textures/screens/auto_seller_gui.png");
 
 	@Override
@@ -45,21 +48,15 @@ public class AutoSellerGuiScreen extends AbstractContainerScreen<AutoSellerGuiMe
 	}
 
 	@Override
-	protected void renderBg(PoseStack ms, float partialTicks, int gx, int gy) {
+	protected void renderBg(PoseStack ms, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.setShaderTexture(0, new ResourceLocation("skyzeradventure:textures/screens/auto_seller_background.png"));
 		this.blit(ms, this.leftPos + 0, this.topPos + 0, 0, 0, 428, 240, 428, 240);
-
 		RenderSystem.disableBlend();
-	}
-
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
 	}
 
 	@Override
@@ -72,11 +69,9 @@ public class AutoSellerGuiScreen extends AbstractContainerScreen<AutoSellerGuiMe
 	}
 
 	@Override
-	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, new TranslatableComponent("gui.skyzeradventure.auto_seller_gui.label_item_seller"), 186, 8, -1);
-		this.font.draw(poseStack,
-
-				AutoSellerReturnTargetProcedure.execute(world, x, y, z), 186, 26, -16711885);
+	protected void renderLabels(PoseStack ms, int mouseX, int mouseY) {
+		this.font.draw(ms, new TranslatableComponent("gui.skyzeradventure.auto_seller_gui.label_item_seller"), 186, 8, -1);
+		this.font.draw(ms, AutoSellerReturnTargetProcedure.execute(world, x, y, z), 186, 26, -16711885);
 	}
 
 	@Override

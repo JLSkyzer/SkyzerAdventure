@@ -37,11 +37,11 @@ public class OnGetDamageProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world, DamageSource damagesource, Entity entity, double amount) {
-		if (entity == null)
+		if (damagesource == null || entity == null)
 			return;
 		double FinalDamage = 0;
 		double damageReduction = 0;
-		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) || !(entity instanceof LivingEntity _livEnt1 && _livEnt1.isBlocking())) {
+		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) && !(entity instanceof LivingEntity _livEnt1 && _livEnt1.isBlocking())) {
 			if (entity instanceof ServerPlayer && entity.isAlive()) {
 				if (world.getLevelData().getGameRules().getBoolean(SkyzeradventureModGameRules.RPG_MODE_GAMERULE)) {
 					if (entity instanceof LivingEntity _entity)
@@ -68,11 +68,11 @@ public class OnGetDamageProcedure {
 					if (damageReduction > 0) {
 						FinalDamage = FinalDamage / (1 + damageReduction);
 					}
-					if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(SkyzeradventureModMobEffects.DAMAGEOFDEATH.get()) : false) {
+					if (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(SkyzeradventureModMobEffects.DAMAGEOFDEATH.get())) {
 						FinalDamage = (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).RPGHealthMax;
 					}
 					if (damagesource == DamageSource.CRAMMING || damagesource == DamageSource.IN_FIRE || damagesource == DamageSource.LAVA || damagesource == DamageSource.ON_FIRE) {
-						if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.FIRE_RESISTANCE) : false) {
+						if (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.FIRE_RESISTANCE)) {
 							FinalDamage = 0;
 						}
 					}

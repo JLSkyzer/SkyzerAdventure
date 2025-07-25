@@ -20,7 +20,9 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.Level;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.core.Registry;
@@ -32,10 +34,16 @@ import java.util.List;
 
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlocks;
 
+import com.mojang.serialization.Codec;
+
 public class AdetiumOreFeature extends OreFeature {
-	public static AdetiumOreFeature FEATURE = null;
+	private static AdetiumOreFeature FEATURE = null;
 	public static Holder<ConfiguredFeature<OreConfiguration, ?>> CONFIGURED_FEATURE = null;
-	public static Holder<PlacedFeature> PLACED_FEATURE = null;
+	private static Holder<PlacedFeature> PLACED_FEATURE = null;
+
+	public AdetiumOreFeature() {
+		super(OreConfiguration.CODEC);
+	}
 
 	public static Feature<?> feature() {
 		FEATURE = new AdetiumOreFeature();
@@ -49,22 +57,21 @@ public class AdetiumOreFeature extends OreFeature {
 		return PLACED_FEATURE;
 	}
 
-	public static final Set<ResourceLocation> GENERATE_BIOMES = Set.of(new ResourceLocation("is_overworld"));
-
-	public AdetiumOreFeature() {
-		super(OreConfiguration.CODEC);
-	}
+	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
+	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
 	@Override
 	public boolean place(FeaturePlaceContext<OreConfiguration> context) {
 		WorldGenLevel world = context.level();
+		if (!generate_dimensions.contains(world.getLevel().dimension()))
+			return false;
 		return super.place(context);
 	}
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 	private static class AdetiumOreFeatureRuleTest extends RuleTest {
 		static final AdetiumOreFeatureRuleTest INSTANCE = new AdetiumOreFeatureRuleTest();
-		private static final com.mojang.serialization.Codec<AdetiumOreFeatureRuleTest> CODEC = com.mojang.serialization.Codec.unit(() -> INSTANCE);
+		private static final Codec<AdetiumOreFeatureRuleTest> CODEC = Codec.unit(() -> INSTANCE);
 		private static final RuleTestType<AdetiumOreFeatureRuleTest> CUSTOM_MATCH = () -> CODEC;
 
 		@SubscribeEvent
@@ -72,10 +79,12 @@ public class AdetiumOreFeature extends OreFeature {
 			Registry.register(Registry.RULE_TEST, new ResourceLocation("skyzeradventure:adetium_ore_match"), CUSTOM_MATCH);
 		}
 
+		@Override
 		public boolean test(BlockState blockstate, Random random) {
 			return List.of(Blocks.STONE, Blocks.GRANITE, Blocks.DIORITE, Blocks.ANDESITE, Blocks.DEEPSLATE).contains(blockstate.getBlock());
 		}
 
+		@Override
 		protected RuleTestType<?> getType() {
 			return CUSTOM_MATCH;
 		}

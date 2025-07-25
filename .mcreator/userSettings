@@ -2,11 +2,12 @@
   "workspacePanelIconSize": "TILES",
   "workspacePanelSortType": "CREATED",
   "workspacePanelSortAscending": true,
-  "projectBrowserSplitPos": 0,
+  "projectBrowserSplitPos": 457,
   "projectBrowserState": {
     "expandedPaths": [
       "[, SkyzerAdventure]",
-      "[, SkyzerAdventure, Resources (Gradle)]"
+      "[, SkyzerAdventure, Source (Gradle)]",
+      "[, SkyzerAdventure, Source (Gradle), D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr]"
     ]
   }
 }

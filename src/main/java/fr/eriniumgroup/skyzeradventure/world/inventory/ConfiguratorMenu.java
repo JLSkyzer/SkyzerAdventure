@@ -49,7 +49,7 @@ public class ConfiguratorMenu extends AbstractContainerMenu implements Supplier<
 			this.z = pos.getZ();
 			access = ContainerLevelAccess.create(world, pos);
 		}
-		ConfiguratorThisGUIIsOpenedProcedure.execute(world, entity);
+		ConfiguratorThisGUIIsOpenedProcedure.execute(entity);
 	}
 
 	@Override

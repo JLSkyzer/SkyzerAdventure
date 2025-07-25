@@ -79,8 +79,11 @@ public class HealthOverlayOverlay {
 			GuiComponent.blit(pose, drawX + 15, drawY + 40, 0, 0, (int) ReturnHealthValueProcedure.execute(entity), 9, 164, 9);
 			GuiComponent.drawCenteredString(pose, Minecraft.getInstance().font, ReturnHealthValueTextProcedure.execute(entity), centeredTextX, drawY + 41, ARGBToInt.ARGBToInt(255, 255, 255, 255));
 
+			pose.popPose();
+			pose.pushPose();
+
 			if (playercap.desc_tick > 0){
-				GuiComponent.drawCenteredString(pose, Minecraft.getInstance().font, playercap.desc_val, drawX, drawY - 10, ARGBToInt.ARGBToInt(255, 255, 255, 255));
+				GuiComponent.drawCenteredString(pose, Minecraft.getInstance().font, playercap.desc_val, centerX, drawY - 10, ARGBToInt.ARGBToInt(255, 255, 255, 255));
 			}
 
 			pose.popPose();

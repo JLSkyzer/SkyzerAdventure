@@ -1,4 +1,3 @@
-
 package fr.eriniumgroup.skyzeradventure.block;
 
 import net.minecraft.world.level.material.MaterialColor;

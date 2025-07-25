@@ -95,7 +95,7 @@ public class BuyPageScreen extends AbstractContainerScreen<BuyPageMenu> {
 				ReturnMoneyTextProcedure.execute(entity), 6, 43, -12829636);
 		this.font.draw(poseStack,
 
-				ReturnTotalPriceProcedure.execute(entity, guistate), 6, 70, -12829636);
+				ReturnTotalPriceProcedure.execute(entity), 6, 70, -12829636);
 	}
 
 	@Override

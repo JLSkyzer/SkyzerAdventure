@@ -1,4 +1,3 @@
-
 package fr.eriniumgroup.skyzeradventure.item;
 
 import net.minecraftforge.registries.ForgeRegistries;

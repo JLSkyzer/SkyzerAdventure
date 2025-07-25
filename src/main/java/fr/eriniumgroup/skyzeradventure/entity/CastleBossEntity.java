@@ -4,7 +4,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
@@ -31,6 +30,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.chat.TextComponent;
 
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModEntities;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlocks;
 
 public class CastleBossEntity extends Monster {
 	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.BLUE, ServerBossEvent.BossBarOverlay.PROGRESS);
@@ -81,7 +81,7 @@ public class CastleBossEntity extends Monster {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(Blocks.DIAMOND_BLOCK));
+		this.spawnAtLocation(new ItemStack(SkyzeradventureModBlocks.BASIC_LUCKY_BLOCK.get()));
 	}
 
 	@Override

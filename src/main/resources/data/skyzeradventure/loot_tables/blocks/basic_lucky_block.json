@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "skyzeradventure:basic_lucky_block"
+          "name": "minecraft:air"
         }
       ]
     }

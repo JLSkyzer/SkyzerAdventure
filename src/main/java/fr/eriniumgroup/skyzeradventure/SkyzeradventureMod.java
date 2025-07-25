@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.AbstractMap;
 
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModTabs;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModStructures;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMobEffects;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMenus;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModItems;
@@ -58,6 +59,8 @@ public class SkyzeradventureMod {
 		SkyzeradventureModMobEffects.REGISTRY.register(bus);
 
 		SkyzeradventureModMenus.REGISTRY.register(bus);
+
+		SkyzeradventureModStructures.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

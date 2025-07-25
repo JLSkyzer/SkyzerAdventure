@@ -1,4 +1,3 @@
-
 /*
  *	MCreator note: This file will be REGENERATED on each build.
  */
@@ -8,19 +7,15 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.network.PacketDistributor;
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.client.Minecraft;
 
-import javax.annotation.Nullable;
-
-import java.util.function.Supplier;
+import java.util.Map;
 
 import fr.eriniumgroup.skyzeradventure.world.inventory.StatsScaleConfigMenu;
 import fr.eriniumgroup.skyzeradventure.world.inventory.ShopSellMenu;
@@ -33,9 +28,9 @@ import fr.eriniumgroup.skyzeradventure.world.inventory.EarningWikiHomePageMenu;
 import fr.eriniumgroup.skyzeradventure.world.inventory.ConfiguratorMenu;
 import fr.eriniumgroup.skyzeradventure.world.inventory.BuyPageMenu;
 import fr.eriniumgroup.skyzeradventure.world.inventory.AutoSellerGuiMenu;
+import fr.eriniumgroup.skyzeradventure.network.MenuStateUpdateMessage;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SkyzeradventureModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.CONTAINERS, SkyzeradventureMod.MODID);
 	public static final RegistryObject<MenuType<ConfiguratorMenu>> CONFIGURATOR = REGISTRY.register("configurator", () -> IForgeMenuType.create(ConfiguratorMenu::new));
@@ -50,54 +45,28 @@ public class SkyzeradventureModMenus {
 	public static final RegistryObject<MenuType<EnergySellerGuiMenu>> ENERGY_SELLER_GUI = REGISTRY.register("energy_seller_gui", () -> IForgeMenuType.create(EnergySellerGuiMenu::new));
 	public static final RegistryObject<MenuType<AutoSellerGuiMenu>> AUTO_SELLER_GUI = REGISTRY.register("auto_seller_gui", () -> IForgeMenuType.create(AutoSellerGuiMenu::new));
 
-	public static void setText(String boxname, String value, @Nullable ServerPlayer player) {
-		if (player != null) {
-			SkyzeradventureMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> player), new GuiSyncMessage(boxname, value));
-		} else {
-			SkyzeradventureMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new GuiSyncMessage(boxname, value));
-		}
-	}
+	public interface MenuAccessor {
+		Map<String, Object> getMenuState();
 
-	public static class GuiSyncMessage {
-		private final String textboxid;
-		private final String data;
+		Map<Integer, Slot> getSlots();
 
-		public GuiSyncMessage(FriendlyByteBuf buffer) {
-			this.textboxid = buffer.readComponent().getString();
-			this.data = buffer.readComponent().getString();
-		}
-
-		public GuiSyncMessage(String textboxid, String data) {
-			this.textboxid = textboxid;
-			this.data = data;
+		default void sendMenuStateUpdate(Player player, int elementType, String name, Object elementState, boolean needClientUpdate) {
+			getMenuState().put(elementType + ":" + name, elementState);
+			if (player instanceof ServerPlayer serverPlayer) {
+				SkyzeradventureMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> serverPlayer), new MenuStateUpdateMessage(elementType, name, elementState));
+			} else if (player.level.isClientSide) {
+				if (Minecraft.getInstance().screen instanceof SkyzeradventureModScreens.ScreenAccessor accessor && needClientUpdate)
+					accessor.updateMenuState(elementType, name, elementState);
+				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new MenuStateUpdateMessage(elementType, name, elementState));
+			}
 		}
 
-		public static void buffer(GuiSyncMessage message, FriendlyByteBuf buffer) {
-			buffer.writeUtf(message.textboxid);
-			buffer.writeUtf(message.data);
+		default <T> T getMenuState(int elementType, String name, T defaultValue) {
+			try {
+				return (T) getMenuState().getOrDefault(elementType + ":" + name, defaultValue);
+			} catch (ClassCastException e) {
+				return defaultValue;
+			}
 		}
-
-		public static void handleData(GuiSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-			NetworkEvent.Context context = contextSupplier.get();
-			context.enqueueWork(() -> {
-				if (!context.getDirection().getReceptionSide().isServer()) {
-					SkyzeradventureModScreens.handleTextBoxMessage(message);
-				}
-			});
-			context.setPacketHandled(true);
-		}
-
-		String editbox() {
-			return this.textboxid;
-		}
-
-		String value() {
-			return this.data;
-		}
-	}
-
-	@SubscribeEvent
-	public static void init(FMLCommonSetupEvent event) {
-		SkyzeradventureMod.addNetworkMessage(GuiSyncMessage.class, GuiSyncMessage::buffer, GuiSyncMessage::new, GuiSyncMessage::handleData);
 	}
 }

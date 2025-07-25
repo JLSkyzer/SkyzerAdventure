@@ -8,22 +8,19 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
 
-import java.util.HashMap;
-
 import fr.eriniumgroup.skyzeradventure.world.inventory.ShopMainGuiMenu;
 import fr.eriniumgroup.skyzeradventure.network.ShopMainGuiButtonMessage;
-import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens.WidgetScreen;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class ShopMainGuiScreen extends AbstractContainerScreen<ShopMainGuiMenu> implements WidgetScreen {
-	private final static HashMap<String, Object> guistate = ShopMainGuiMenu.guistate;
+public class ShopMainGuiScreen extends AbstractContainerScreen<ShopMainGuiMenu> implements SkyzeradventureModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	private final static HashMap<String, String> textstate = new HashMap<>();
+	private boolean menuStateUpdateActive = false;
 	ImageButton imagebutton_buy_button;
 	ImageButton imagebutton_sell_button;
 
@@ -38,6 +35,12 @@ public class ShopMainGuiScreen extends AbstractContainerScreen<ShopMainGuiMenu> 
 		this.imageHeight = 166;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = new ResourceLocation("skyzeradventure:textures/screens/shop_main_gui.png");
 
 	@Override
@@ -48,21 +51,15 @@ public class ShopMainGuiScreen extends AbstractContainerScreen<ShopMainGuiMenu> 
 	}
 
 	@Override
-	protected void renderBg(PoseStack ms, float partialTicks, int gx, int gy) {
+	protected void renderBg(PoseStack ms, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.setShaderTexture(0, new ResourceLocation("skyzeradventure:textures/screens/gui_background.png"));
 		this.blit(ms, this.leftPos + -126, this.topPos + -37, 0, 0, 428, 240, 428, 240);
-
 		RenderSystem.disableBlend();
-	}
-
-	public HashMap<String, Object> getWidgets() {
-		return guistate;
 	}
 
 	@Override
@@ -75,27 +72,29 @@ public class ShopMainGuiScreen extends AbstractContainerScreen<ShopMainGuiMenu> 
 	}
 
 	@Override
-	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
+	protected void renderLabels(PoseStack ms, int mouseX, int mouseY) {
 	}
 
 	@Override
 	public void init() {
 		super.init();
 		imagebutton_buy_button = new ImageButton(this.leftPos + 6, this.topPos + 43, 64, 64, 0, 0, 64, new ResourceLocation("skyzeradventure:textures/screens/atlas/imagebutton_buy_button.png"), 64, 128, e -> {
+			int x = ShopMainGuiScreen.this.x;
+			int y = ShopMainGuiScreen.this.y;
 			if (true) {
-				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new ShopMainGuiButtonMessage(0, x, y, z, textstate));
-				ShopMainGuiButtonMessage.handleButtonAction(entity, 0, x, y, z, textstate);
+				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new ShopMainGuiButtonMessage(0, x, y, z));
+				ShopMainGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_buy_button", imagebutton_buy_button);
 		this.addRenderableWidget(imagebutton_buy_button);
 		imagebutton_sell_button = new ImageButton(this.leftPos + 105, this.topPos + 43, 64, 64, 0, 0, 64, new ResourceLocation("skyzeradventure:textures/screens/atlas/imagebutton_sell_button.png"), 64, 128, e -> {
+			int x = ShopMainGuiScreen.this.x;
+			int y = ShopMainGuiScreen.this.y;
 			if (true) {
-				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new ShopMainGuiButtonMessage(1, x, y, z, textstate));
-				ShopMainGuiButtonMessage.handleButtonAction(entity, 1, x, y, z, textstate);
+				SkyzeradventureMod.PACKET_HANDLER.sendToServer(new ShopMainGuiButtonMessage(1, x, y, z));
+				ShopMainGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_sell_button", imagebutton_sell_button);
 		this.addRenderableWidget(imagebutton_sell_button);
 	}
 }

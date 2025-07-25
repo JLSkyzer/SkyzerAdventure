@@ -27,7 +27,7 @@ public class EntityDieProcedure {
 	}
 
 	private static void execute(@Nullable Event event, DamageSource damagesource, Entity entity) {
-		if (entity == null)
+		if (damagesource == null || entity == null)
 			return;
 		if (entity instanceof ServerPlayer) {
 			if (!(damagesource == DamageSource.OUT_OF_WORLD)) {

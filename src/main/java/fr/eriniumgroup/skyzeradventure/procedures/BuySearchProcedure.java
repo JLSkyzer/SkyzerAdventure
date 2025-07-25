@@ -14,19 +14,18 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import java.util.HashMap;
-
 import io.netty.buffer.Unpooled;
 
 import fr.eriniumgroup.skyzeradventure.world.inventory.ShopBuyMenu;
 import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMenus;
 
 public class BuySearchProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
 		{
-			String _setval = guistate.containsKey("textin:search") ? (String) guistate.get("textin:search") : "";
+			String _setval = (entity instanceof Player _entity0 && _entity0.containerMenu instanceof SkyzeradventureModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "search", "") : "";
 			entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.buysearch = _setval;
 				capability.syncPlayerVariables(entity);

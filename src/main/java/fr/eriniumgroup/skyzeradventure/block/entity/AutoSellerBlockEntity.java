@@ -32,7 +32,7 @@ import fr.eriniumgroup.skyzeradventure.world.inventory.AutoSellerGuiMenu;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlockEntities;
 
 public class AutoSellerBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(1, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(1, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public AutoSellerBlockEntity(BlockPos position, BlockState state) {

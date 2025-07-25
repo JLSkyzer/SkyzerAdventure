@@ -1,7 +1,7 @@
 package fr.eriniumgroup.skyzeradventure.procedures;
 
 public class BUncommonListProcedure {
-	public static void execute() {
+	public static java.util.List<Object> execute() {
 		java.util.List<Object> common = new java.util.ArrayList<>();
 		common.add("kaboom");
 		common.add("adetium_party");
@@ -13,5 +13,6 @@ public class BUncommonListProcedure {
 		common.add("nightmare_phantoms");
 		common.add("web_trap");
 		common.add("hot_feet");
+		return common;
 	}
 }

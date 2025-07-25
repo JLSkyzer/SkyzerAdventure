@@ -1,8 +1,6 @@
-
 package fr.eriniumgroup.skyzeradventure.item;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
@@ -13,7 +11,7 @@ import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModTabs;
 
 public class RegenerationGumItem extends Item {
 	public RegenerationGumItem() {
-		super(new Item.Properties().tab(SkyzeradventureModTabs.TAB_ITEMS_TAB).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(1).saturationMod(0.3f).alwaysEat().build()));
+		super(new Item.Properties().tab(SkyzeradventureModTabs.TAB_ITEMS_TAB).food((new FoodProperties.Builder()).nutrition(1).saturationMod(0.3f).alwaysEat().build()));
 	}
 
 	@Override

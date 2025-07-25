@@ -1,12 +1,11 @@
 package fr.eriniumgroup.skyzeradventure.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
 
 public class ResetBtnProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		if (((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).overlayConfigTarget).equals("level")) {
@@ -40,6 +39,6 @@ public class ResetBtnProcedure {
 				});
 			}
 		}
-		ConfiguratorThisGUIIsOpenedProcedure.execute(world, entity);
+		ConfiguratorThisGUIIsOpenedProcedure.execute(entity);
 	}
 }

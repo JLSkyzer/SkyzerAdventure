@@ -1,7 +1,7 @@
 package fr.eriniumgroup.skyzeradventure.procedures;
 
 public class BCommoListProcedure {
-	public static void execute() {
+	public static java.util.List<Object> execute() {
 		java.util.List<Object> common = new java.util.ArrayList<>();
 		common.add("infestation");
 		common.add("petit_cadeau");
@@ -19,5 +19,6 @@ public class BCommoListProcedure {
 		common.add("meteorite_gift");
 		common.add("regeneration_gum");
 		common.add("body_gard");
+		return common;
 	}
 }

@@ -1,4 +1,3 @@
-
 /*
  *	MCreator note: This file will be REGENERATED on each build.
  */
@@ -9,14 +8,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.client.Minecraft;
 
-import java.util.HashMap;
-
-import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMenus.GuiSyncMessage;
 import fr.eriniumgroup.skyzeradventure.client.gui.StatsScaleConfigScreen;
 import fr.eriniumgroup.skyzeradventure.client.gui.ShopSellScreen;
 import fr.eriniumgroup.skyzeradventure.client.gui.ShopMainGuiScreen;
@@ -48,20 +41,7 @@ public class SkyzeradventureModScreens {
 		});
 	}
 
-	static void handleTextBoxMessage(GuiSyncMessage message) {
-		String editbox = message.editbox();
-		String value = message.value();
-		Screen currentScreen = Minecraft.getInstance().screen;
-		if (currentScreen instanceof WidgetScreen sc) {
-			HashMap<String, Object> widgets = sc.getWidgets();
-			Object obj = widgets.get("textin:" + editbox);
-			if (obj instanceof EditBox box) {
-				box.setValue(value);
-			}
-		}
-	}
-
-	public interface WidgetScreen {
-		HashMap<String, Object> getWidgets();
+	public interface ScreenAccessor {
+		void updateMenuState(int elementType, String name, Object elementState);
 	}
 }

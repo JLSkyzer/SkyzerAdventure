@@ -5,20 +5,18 @@ import org.checkerframework.checker.units.qual.s;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
 
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.HashMap;
 
 import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMenus;
 
 public class SellingPageWhileThisGUIIsOpenTickProcedure {
-	public static void execute(LevelAccessor world, Entity entity, HashMap guistate) {
-		if (entity == null || guistate == null)
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
 		if (new Object() {
 			double convert(String s) {
@@ -28,7 +26,7 @@ public class SellingPageWhileThisGUIIsOpenTickProcedure {
 				}
 				return 0;
 			}
-		}.convert(guistate.containsKey("textin:amount") ? (String) guistate.get("textin:amount") : "") > new Object() {
+		}.convert((entity instanceof Player _entity0 && _entity0.containerMenu instanceof SkyzeradventureModMenus.MenuAccessor _menu0) ? _menu0.getMenuState(0, "amount", "") : "") > new Object() {
 			private int returnItemNumber(ItemStack item, Entity entity) {
 				ItemStack tempItem = item;
 				double count = 0;
@@ -47,8 +45,8 @@ public class SellingPageWhileThisGUIIsOpenTickProcedure {
 				return (int) count;
 			}
 		}.returnItemNumber(((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitem), entity)) {
-			if (entity instanceof ServerPlayer _player && !world.isClientSide())
-				SkyzeradventureModMenus.setText("amount", (new java.text.DecimalFormat("##").format(new Object() {
+			if (entity instanceof Player _player && _player.containerMenu instanceof SkyzeradventureModMenus.MenuAccessor _menu)
+				_menu.sendMenuStateUpdate(_player, 0, "amount", (new java.text.DecimalFormat("##").format(new Object() {
 					private int returnItemNumber(ItemStack item, Entity entity) {
 						ItemStack tempItem = item;
 						double count = 0;
@@ -66,7 +64,7 @@ public class SellingPageWhileThisGUIIsOpenTickProcedure {
 						}
 						return (int) count;
 					}
-				}.returnItemNumber(((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitem), entity))), _player);
+				}.returnItemNumber(((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitem), entity))), true);
 		}
 	}
 }

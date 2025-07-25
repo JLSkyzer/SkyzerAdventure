@@ -1,0 +1,30 @@
+{
+  "_fv": 79,
+  "_type": "structure",
+  "definition": {
+    "structure": "cave1remix",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      }
+    ],
+    "spacing": 128,
+    "separation": 64,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Corrupted"
+      }
+    ],
+    "terrainAdaptation": "encapsulate",
+    "generationStep": "UNDERGROUND_ORES",
+    "surfaceDetectionType": "OCEAN_FLOOR",
+    "useStartHeight": true,
+    "startHeightProviderType": "BIASED_TO_BOTTOM",
+    "startHeightMin": -64,
+    "startHeightMax": 32,
+    "size": 1,
+    "maxDistanceFromCenter": 64,
+    "jigsawPools": []
+  }
+}

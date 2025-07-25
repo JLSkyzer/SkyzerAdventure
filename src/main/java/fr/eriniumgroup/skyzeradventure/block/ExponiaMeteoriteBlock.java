@@ -1,4 +1,3 @@
-
 package fr.eriniumgroup.skyzeradventure.block;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -11,7 +10,6 @@ import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.core.BlockPos;
@@ -22,7 +20,7 @@ import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlocks;
 
 public class ExponiaMeteoriteBlock extends Block {
 	public ExponiaMeteoriteBlock() {
-		super(BlockBehaviour.Properties.of((new Material.Builder(MaterialColor.NONE)).build()).sound(SoundType.STONE).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of((new Material.Builder(MaterialColor.NONE)).build()).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 	}
 
 	@Override

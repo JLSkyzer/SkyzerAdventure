@@ -1,9 +1,9 @@
-
 package fr.eriniumgroup.skyzeradventure.block;
 
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -39,7 +39,7 @@ import fr.eriniumgroup.skyzeradventure.block.entity.EnergySellerBlockBlockEntity
 
 public class EnergySellerBlockBlock extends Block implements EntityBlock {
 	public EnergySellerBlockBlock() {
-		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.METAL).strength(3f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of((new Material.Builder(MaterialColor.NONE)).build()).sound(SoundType.METAL).strength(3f).requiresCorrectToolForDrops());
 	}
 
 	@Override
@@ -103,7 +103,7 @@ public class EnergySellerBlockBlock extends Block implements EntityBlock {
 	public boolean triggerEvent(BlockState state, Level world, BlockPos pos, int eventID, int eventParam) {
 		super.triggerEvent(state, world, pos, eventID, eventParam);
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		return blockEntity == null ? false : blockEntity.triggerEvent(eventID, eventParam);
+		return blockEntity != null && blockEntity.triggerEvent(eventID, eventParam);
 	}
 
 	@Override
