@@ -3759,6 +3759,50 @@
         ]
       },
       "path": "~/admintool"
+    },
+    {
+      "name": "EplosiveOrbAmmoProjectileHitsBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eplosive_orb_ammo_projectile_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/EplosiveOrbAmmoProjectileHitsBlockProcedure.java"
+        ]
+      },
+      "path": "~/admintool"
+    },
+    {
+      "name": "EplosiveOrbAmmo",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eplosive_orb_ammo",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/entity/EplosiveOrbAmmoEntity.java"
+        ]
+      },
+      "path": "~/admintool"
     }
   ],
   "variable_elements": [

@@ -636,10 +636,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -648,7 +644,7 @@
     {
       "name": "OverlaySave",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "overlay_save",
       "metadata": {
@@ -659,10 +655,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -682,10 +674,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -705,10 +693,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -728,10 +712,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -751,10 +731,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -774,10 +750,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -797,10 +769,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -820,10 +788,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -843,10 +807,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -866,10 +826,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -2073,7 +2029,7 @@
     {
       "name": "SellingPageWhileThisGUIIsOpenTick",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "selling_page_while_this_gui_is_open_tick",
       "metadata": {
@@ -2092,7 +2048,7 @@
     {
       "name": "SellingSell",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "selling_sell",
       "metadata": {
@@ -2165,7 +2121,7 @@
     {
       "name": "ReturnTotalPrice",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "return_total_price",
       "metadata": {
@@ -2185,7 +2141,7 @@
     {
       "name": "MaxButton",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "max_button",
       "metadata": {
@@ -2204,7 +2160,7 @@
     {
       "name": "BuyButton",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "buy_button",
       "metadata": {
@@ -3721,20 +3677,6 @@
       "path": "~/Gameplay/CorruptedBiomes/Cave1"
     },
     {
-      "name": "TestStructureFeatures",
-      "type": "feature",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test_structure_features",
-      "metadata": {
-        "files": [
-          "src/main/java/fr/eriniumgroup/skyzeradventure/world/features/TestStructureFeaturesFeature.java"
-        ],
-        "has_nbt_structure": true
-      },
-      "path": "~/Gameplay"
-    },
-    {
       "name": "BuySearch",
       "type": "procedure",
       "compiles": true,
@@ -3745,10 +3687,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "x",
@@ -3770,7 +3708,8 @@
         "files": [
           "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/BuySearchProcedure.java"
         ]
-      }
+      },
+      "path": "~/ShopSystem"
     },
     {
       "name": "SellSearch",
@@ -3783,10 +3722,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
           },
           {
             "name": "x",
@@ -3808,7 +3743,66 @@
         "files": [
           "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/SellSearchProcedure.java"
         ]
-      }
+      },
+      "path": "~/ShopSystem"
+    },
+    {
+      "name": "ExplosiveOrb",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosive_orb",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/ExplosiveOrbItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/explosive_orb.json"
+        ]
+      },
+      "path": "~/admintool"
+    },
+    {
+      "name": "EplosiveOrbAmmoProjectileHitsBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eplosive_orb_ammo_projectile_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/EplosiveOrbAmmoProjectileHitsBlockProcedure.java"
+        ]
+      },
+      "path": "~/admintool"
+    },
+    {
+      "name": "EplosiveOrbAmmo",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eplosive_orb_ammo",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/entity/EplosiveOrbAmmoEntity.java"
+        ]
+      },
+      "path": "~/admintool"
     }
   ],
   "variable_elements": [
@@ -4171,7 +4165,8 @@
       "key.skyzeradventure.show_on_off_health_overlay": "Show On Off Health Overlay",
       "item.skyzeradventure.regeneration_gum": "§aRegeneration Gum",
       "itemGroup.skyzeradventure.ingots_tab": "Skyzer\u0027s Adventure Ingots",
-      "gui.skyzeradventure.selling_page.button_sell_all": "Sell All"
+      "gui.skyzeradventure.selling_page.button_sell_all": "Sell All",
+      "item.skyzeradventure.explosive_orb": "Explosive Orb"
     }
   },
   "metadata": {
@@ -4189,8 +4184,6 @@
       "src/main/java/fr/eriniumgroup/skyzeradventure/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModConfigs.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModEnchantments.java",
-      "src/main/java/fr/eriniumgroup/skyzeradventure/world/features/configurations/StructureModFeatureConfiguration.java",
-      "src/main/java/fr/eriniumgroup/skyzeradventure/world/features/StructureModFeature.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModMenus.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModScreens.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/network/MenuStateUpdateMessage.java",
@@ -4402,6 +4395,10 @@
       },
       {
         "name": "Outputer",
+        "children": []
+      },
+      {
+        "name": "admintool",
         "children": []
       }
     ]

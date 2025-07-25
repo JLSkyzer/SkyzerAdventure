@@ -111,8 +111,8 @@ key_key.hotbar.9:key.keyboard.9
 key_key.skyzeradventure.open_earning_wiki:key.keyboard.o
 key_key.skyzeradventure.show_on_off_health_overlay:key.keyboard.p
 key_key.skyzeradventure.key_open_admin_shop:key.keyboard.u
-soundCategory_master:0.36490065
-soundCategory_music:0.0
+soundCategory_master:1.0
+soundCategory_music:1.0
 soundCategory_record:1.0
 soundCategory_weather:1.0
 soundCategory_block:1.0
