@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "skyzeradventure:block/exponia_portal_block",
+    "up": "skyzeradventure:block/exponia_portal_block",
+    "north": "skyzeradventure:block/exponia_portal_block",
+    "east": "skyzeradventure:block/exponia_portal_block",
+    "south": "skyzeradventure:block/exponia_portal_block",
+    "west": "skyzeradventure:block/exponia_portal_block",
+    "particle": "skyzeradventure:block/exponia_portal_block"
+  }
+}

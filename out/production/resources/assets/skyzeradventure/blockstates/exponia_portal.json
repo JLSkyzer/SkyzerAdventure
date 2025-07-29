@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "skyzeradventure:block/exponia_portal_ew"
+    },
+    "axis=x": {
+      "model": "skyzeradventure:block/exponia_portal_ns"
+    }
+  }
+}

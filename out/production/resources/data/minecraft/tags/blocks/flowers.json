@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:red_tulip",
+    "minecraft:orange_tulip",
+    "minecraft:cornflower",
+    "minecraft:lily_of_the_valley",
+    "minecraft:allium",
+    "minecraft:azure_bluet",
+    "minecraft:oxeye_daisy",
+    "minecraft:white_tulip",
+    "minecraft:red_mushroom",
+    "minecraft:pink_tulip",
+    "minecraft:crimson_fungus",
+    "minecraft:warped_fungus",
+    "minecraft:dandelion",
+    "minecraft:wither_rose",
+    "minecraft:lilac",
+    "minecraft:sunflower",
+    "minecraft:poppy",
+    "minecraft:large_fern",
+    "minecraft:blue_orchid",
+    "minecraft:tall_grass",
+    "minecraft:peony",
+    "minecraft:rose_bush",
+    "minecraft:brown_mushroom"
+  ]
+}

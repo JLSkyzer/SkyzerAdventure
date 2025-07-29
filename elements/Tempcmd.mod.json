@@ -5,6 +5,6 @@
     "commandName": "tempcmd",
     "type": "STANDARD",
     "permissionLevel": "No requirement",
-    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"number_min\"><field name=\"name\">temp</field><field name=\"min\">0</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">CmdTemp</field></block></statement></block></next></block></xml>"
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"call_procedure\"><field name=\"procedure\">CmdTemp</field></block></next></block><block type=\"number_min\" x=\"339\" y=\"87\"><field name=\"name\">temp</field><field name=\"min\">0</field></block></xml>"
   }
 }

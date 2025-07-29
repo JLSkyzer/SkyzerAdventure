@@ -1,421 +1,387 @@
-[25Jul2025 17:37:54.081] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\killi\.mcreator\gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.2.17, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --username, Dev, --mixin.config, skyzeradventure.mixins.json]
-[25Jul2025 17:37:54.085] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.16 by Eclipse Adoptium
-[25Jul2025 17:37:54.093] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [fmlclientdev,forgeclient,minecraft,forgegametestserverdev,fmlserveruserdev,fmlclient,fmldatauserdev,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev,fmlserver,fmlclientuserdev,fmlserverdev,forgedatauserdev,testharness,forgegametestserveruserdev]
-[25Jul2025 17:37:54.101] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
-[25Jul2025 17:37:54.108] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
-[25Jul2025 17:37:54.116] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
-[25Jul2025 17:37:54.122] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: java.util.stream.ReferencePipeline$3@56bca85b
-[25Jul2025 17:37:54.130] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
-[25Jul2025 17:37:54.130] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
-[25Jul2025 17:37:54.131] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
-[25Jul2025 17:37:54.131] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
-[25Jul2025 17:37:54.131] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
-[25Jul2025 17:37:54.133] [main/DEBUG] [net.minecraftforge.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 1.0
-[25Jul2025 17:37:54.133] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML 1.0 loading
-[25Jul2025 17:37:54.133] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 9.1.3+9.1.3+main.9b69c82a
-[25Jul2025 17:37:54.133] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 8.0.4+66+master.c09db6d7
-[25Jul2025 17:37:54.134] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found EventBus version : 5.0.7+5.0.7+master.6d3407cc
-[25Jul2025 17:37:54.134] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
-[25Jul2025 17:37:54.135] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 5.0.3+5.0.3+master.611f2781
-[25Jul2025 17:37:54.135] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 4.0.15-4.x+4.0.15-4.x+4.x.038e91c0
-[25Jul2025 17:37:54.136] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 4
-[25Jul2025 17:37:54.137] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
-[25Jul2025 17:37:54.137] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
-[25Jul2025 17:37:54.142] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
-[25Jul2025 17:37:54.142] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
-[25Jul2025 17:37:54.153] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@3b69e7d1
-[25Jul2025 17:37:54.164] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/killi/.mcreator/gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2329!/ Service=ModLauncher Env=CLIENT
-[25Jul2025 17:37:54.191] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
-[25Jul2025 17:37:54.191] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[25Jul2025 17:37:54.192] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[25Jul2025 17:37:54.192] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[25Jul2025 17:37:54.192] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[25Jul2025 17:37:54.193] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[25Jul2025 17:37:54.195] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
-[25Jul2025 17:37:54.195] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
-[25Jul2025 17:37:54.195] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
-[25Jul2025 17:37:54.196] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing GAMEDIR directory : D:\Mods Minecraft\SkyzerAdventure\run
-[25Jul2025 17:37:54.196] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path GAMEDIR is D:\Mods Minecraft\SkyzerAdventure\run
-[25Jul2025 17:37:54.196] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing MODSDIR directory : D:\Mods Minecraft\SkyzerAdventure\run\mods
-[25Jul2025 17:37:54.196] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path MODSDIR is D:\Mods Minecraft\SkyzerAdventure\run\mods
-[25Jul2025 17:37:54.196] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing CONFIGDIR directory : D:\Mods Minecraft\SkyzerAdventure\run\config
-[25Jul2025 17:37:54.197] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is D:\Mods Minecraft\SkyzerAdventure\run\config
-[25Jul2025 17:37:54.197] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is D:\Mods Minecraft\SkyzerAdventure\run\config\fml.toml
-[25Jul2025 17:37:54.197] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading configuration
-[25Jul2025 17:37:54.224] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing default config directory directory : D:\Mods Minecraft\SkyzerAdventure\run\defaultconfigs
-[25Jul2025 17:37:54.224] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing ModFile
-[25Jul2025 17:37:54.226] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
-[25Jul2025 17:37:54.226] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Using forgeclientuserdev as launch service
-[25Jul2025 17:37:54.237] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Received command line version data  : VersionInfo[forgeVersion=40.2.17, mcVersion=1.18.2, mcpVersion=20220404.173914, forgeGroup=net.minecraftforge]
-[25Jul2025 17:37:54.239] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
-[25Jul2025 17:37:54.239] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
-[25Jul2025 17:37:54.239] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
-[25Jul2025 17:37:54.239] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
-[25Jul2025 17:37:54.240] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
-[25Jul2025 17:37:54.240] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
-[25Jul2025 17:37:54.240] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
-[25Jul2025 17:37:54.240] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
-[25Jul2025 17:37:54.253] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
-[25Jul2025 17:37:54.255] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null),(userdev classpath:null),(JarInJar:null)
-[25Jul2025 17:37:54.260] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Got mod coordinates modid%%D:\Mods Minecraft\SkyzerAdventure\build\resources\main;modid%%D:\Mods Minecraft\SkyzerAdventure\build\classes\java\main from env
-[25Jul2025 17:37:54.261] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{modid=[D:\Mods Minecraft\SkyzerAdventure\build\resources\main, D:\Mods Minecraft\SkyzerAdventure\build\classes\java\main]}]
-[25Jul2025 17:37:54.460] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.18.2-40.2.17_mapped_official_1.18.2-recomp.jar with {minecraft} mods - versions {1.18.2}
-[25Jul2025 17:37:54.465] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.18.2-40.2.17\73cb4e30d7e55cf35a68b2ed112653aff913a58c\javafmllanguage-1.18.2-40.2.17.jar
-[25Jul2025 17:37:54.466] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.18.2-40.2.17\73cb4e30d7e55cf35a68b2ed112653aff913a58c\javafmllanguage-1.18.2-40.2.17.jar is missing mods.toml file
-[25Jul2025 17:37:54.469] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.18.2-40.2.17\8693e97e0581c0f5aaabb09e7fa319d5685ce194\lowcodelanguage-1.18.2-40.2.17.jar
-[25Jul2025 17:37:54.469] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.18.2-40.2.17\8693e97e0581c0f5aaabb09e7fa319d5685ce194\lowcodelanguage-1.18.2-40.2.17.jar is missing mods.toml file
-[25Jul2025 17:37:54.472] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.18.2-40.2.17\902814f818aebf3928966206f56835dece033e2a\mclanguage-1.18.2-40.2.17.jar
-[25Jul2025 17:37:54.472] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.18.2-40.2.17\902814f818aebf3928966206f56835dece033e2a\mclanguage-1.18.2-40.2.17.jar is missing mods.toml file
-[25Jul2025 17:37:54.476] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.18.2-40.2.17\fcb8a7063c3a86af22acb4a9eded5e9667f65a3c\fmlcore-1.18.2-40.2.17.jar
-[25Jul2025 17:37:54.476] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.18.2-40.2.17\fcb8a7063c3a86af22acb4a9eded5e9667f65a3c\fmlcore-1.18.2-40.2.17.jar is missing mods.toml file
-[25Jul2025 17:37:54.480] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate D:\Mods Minecraft\SkyzerAdventure\build\resources\main
-[25Jul2025 17:37:54.484] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file main with {skyzeradventure} mods - versions {1.0.0}
-[25Jul2025 17:37:54.486] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /
-[25Jul2025 17:37:54.488] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {40.2.17}
-[25Jul2025 17:37:54.500] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.4.1\5c35573a7b76103724799ca1174a69699b8a9aec\mixinextras-forge-0.4.1.jar
-[25Jul2025 17:37:54.501] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file mixinextras-forge-0.4.1.jar with {mixinextras} mods - versions {0.4.1}
-[25Jul2025 17:37:54.508] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.4.1\5c35573a7b76103724799ca1174a69699b8a9aec\mixinextras-forge-0.4.1.jar
-[25Jul2025 17:37:54.509] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file mixinextras-forge-0.4.1.jar with {mixinextras} mods - versions {0.4.1}
-[25Jul2025 17:37:54.512] [main/DEBUG] [net.minecraftforge.fml.loading.UniqueModListBuilder/]: Found 2 mods for first modid mixinextras, selecting most recent based on version data
-[25Jul2025 17:37:54.514] [main/DEBUG] [net.minecraftforge.fml.loading.UniqueModListBuilder/]: Selected file mixinextras-forge-0.4.1.jar for modid mixinextras with version 0.4.1
-[25Jul2025 17:37:54.528] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from main, it does not contain dependency information.
-[25Jul2025 17:37:54.529] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from forge-1.18.2-40.2.17_mapped_official_1.18.2-recomp.jar, it does not contain dependency information.
-[25Jul2025 17:37:54.529] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from , it does not contain dependency information.
-[25Jul2025 17:37:54.529] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from mclanguage-1.18.2-40.2.17.jar, it does not contain dependency information.
-[25Jul2025 17:37:54.530] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from javafmllanguage-1.18.2-40.2.17.jar, it does not contain dependency information.
-[25Jul2025 17:37:54.530] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from fmlcore-1.18.2-40.2.17.jar, it does not contain dependency information.
-[25Jul2025 17:37:54.530] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from lowcodelanguage-1.18.2-40.2.17.jar, it does not contain dependency information.
-[25Jul2025 17:37:54.614] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from MixinExtras-0.4.1.jar, it does not contain dependency information.
-[25Jul2025 17:37:54.635] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[25Jul2025 17:37:54.637] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.18.2-40.2.17_mapped_official_1.18.2-recomp.jar with {minecraft} mods - versions {1.18.2}
-[25Jul2025 17:37:54.639] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file D:\Mods Minecraft\SkyzerAdventure\build\fg_cache\net\minecraftforge\forge\1.18.2-40.2.17_mapped_official_1.18.2\forge-1.18.2-40.2.17_mapped_official_1.18.2-recomp.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
-[25Jul2025 17:37:54.639] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate D:\Mods Minecraft\SkyzerAdventure\build\resources\main
-[25Jul2025 17:37:54.640] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file main with {skyzeradventure} mods - versions {1.0.0}
-[25Jul2025 17:37:54.640] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file D:\Mods Minecraft\SkyzerAdventure\build\resources\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[40,)]]
-[25Jul2025 17:37:54.641] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /
-[25Jul2025 17:37:54.641] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {40.2.17}
-[25Jul2025 17:37:54.641] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
-[25Jul2025 17:37:54.643] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
-[25Jul2025 17:37:54.643] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
-[25Jul2025 17:37:54.643] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
-[25Jul2025 17:37:54.643] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod registry_object_binary_compat with Javascript path coremods/registry_object_binary_compat.js
-[25Jul2025 17:37:54.644] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_method.js
-[25Jul2025 17:37:54.644] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_instanceof.js
-[25Jul2025 17:37:54.644] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/add_bouncer_method.js
-[25Jul2025 17:37:54.644] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/registry_object_binary_compat.js
-[25Jul2025 17:37:54.644] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file  with languages []
-[25Jul2025 17:37:54.644] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.4.1\5c35573a7b76103724799ca1174a69699b8a9aec\mixinextras-forge-0.4.1.jar
-[25Jul2025 17:37:54.644] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file mixinextras-forge-0.4.1.jar with {mixinextras} mods - versions {0.4.1}
-[25Jul2025 17:37:54.644] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.4.1\5c35573a7b76103724799ca1174a69699b8a9aec\mixinextras-forge-0.4.1.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=*]]
-[25Jul2025 17:37:54.647] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
-[25Jul2025 17:37:54.660] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found 3 language providers
-[25Jul2025 17:37:54.661] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
-[25Jul2025 17:37:54.664] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider lowcodefml, version 40
-[25Jul2025 17:37:54.664] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 40
-[25Jul2025 17:37:54.668] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Configured system mods: [minecraft, forge]
-[25Jul2025 17:37:54.670] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: minecraft
-[25Jul2025 17:37:54.670] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: forge
-[25Jul2025 17:37:54.672] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 2 mod requirements (1 mandatory, 1 optional)
-[25Jul2025 17:37:54.673] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
-[25Jul2025 17:37:54.984] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 28190 method mappings from methods.csv
-[25Jul2025 17:37:55.007] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 27073 field mappings from fields.csv
-[25Jul2025 17:37:55.061] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
-[25Jul2025 17:37:55.062] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
-[25Jul2025 17:37:55.063] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
-[25Jul2025 17:37:55.063] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
-[25Jul2025 17:37:55.063] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading coremod transformers
-[25Jul2025 17:37:55.064] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_method.js
-[25Jul2025 17:37:55.249] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[25Jul2025 17:37:55.249] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_instanceof.js
-[25Jul2025 17:37:55.295] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[25Jul2025 17:37:55.295] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/add_bouncer_method.js
-[25Jul2025 17:37:55.324] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[25Jul2025 17:37:55.324] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/registry_object_binary_compat.js
-[25Jul2025 17:37:55.338] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[25Jul2025 17:37:55.346] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@4c2af006 to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
-[25Jul2025 17:37:55.347] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@77049094 to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
-[25Jul2025 17:37:55.347] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@f88bfbe to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
-[25Jul2025 17:37:55.347] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@59bbe88a to Target : CLASS {Lnet/minecraft/world/level/block/StairBlock;} {} {V}
-[25Jul2025 17:37:55.347] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@5d8ab698 to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
-[25Jul2025 17:37:55.348] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@ed91d8d to Target : CLASS {Lnet/minecraft/world/item/ItemStack;} {} {V}
-[25Jul2025 17:37:55.348] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@446626a7 to Target : CLASS {Lnet/minecraft/network/play/client/CClientSettingsPacket;} {} {V}
-[25Jul2025 17:37:55.348] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@429f7919 to Target : CLASS {Lnet/minecraftforge/registries/RegistryObject;} {} {V}
-[25Jul2025 17:37:55.348] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
-[25Jul2025 17:37:55.816] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[25Jul2025 17:37:55.816] [main/DEBUG] [mixin/]: Registering mixin config: skyzeradventure.mixins.json
-[25Jul2025 17:37:55.832] [main/DEBUG] [mixin/]: Compatibility level JAVA_17 specified by skyzeradventure.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
-[25Jul2025 17:37:55.833] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[25Jul2025 17:37:55.833] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[25Jul2025 17:37:55.833] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
-[25Jul2025 17:37:55.833] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
-[25Jul2025 17:37:55.833] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
-[25Jul2025 17:37:55.833] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
-[25Jul2025 17:37:55.833] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
-[25Jul2025 17:37:55.833] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(skyzeradventure)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(skyzeradventure)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(skyzeradventure)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(skyzeradventure)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(skyzeradventure)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(skyzeradventure)]
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(forge)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(forge)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(forge)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(forge)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(forge)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(MixinExtras)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(MixinExtras)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(MixinExtras)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(MixinExtras)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(MixinExtras)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(MixinExtras)]
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(mixinextras)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(mixinextras)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(mixinextras)
-[25Jul2025 17:37:55.834] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(mixinextras)
-[25Jul2025 17:37:55.835] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(mixinextras)
-[25Jul2025 17:37:55.835] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(mixinextras)]
-[25Jul2025 17:37:55.835] [main/DEBUG] [mixin/]: Registering mixin config: mixinextras.init.mixins.json
-[25Jul2025 17:37:55.837] [main/DEBUG] [mixin/]: inject() running with 6 agents
-[25Jul2025 17:37:55.837] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[25Jul2025 17:37:55.837] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
-[25Jul2025 17:37:55.837] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(skyzeradventure)]
-[25Jul2025 17:37:55.837] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
-[25Jul2025 17:37:55.837] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(MixinExtras)]
-[25Jul2025 17:37:55.837] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(mixinextras)]
-[25Jul2025 17:37:55.838] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\killi\.mcreator\gradle\caches\forge_gradle\assets, --assetIndex, 1.18, --username, Dev]
-[25Jul2025 17:37:55.864] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
-[25Jul2025 17:37:55.865] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
-[25Jul2025 17:37:55.869] [main/DEBUG] [mixin/]: Error cleaning class output directory: .mixin.out\class
-[25Jul2025 17:37:55.870] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
-[25Jul2025 17:37:55.870] [main/DEBUG] [mixin/]: Selecting config skyzeradventure.mixins.json
-[25Jul2025 17:37:55.874] [main/DEBUG] [mixin/]: Selecting config mixinextras.init.mixins.json
-[25Jul2025 17:37:55.914] [main/DEBUG] [MixinExtras|Service/]: com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1) is taking over from null
-[25Jul2025 17:37:55.947] [main/DEBUG] [mixin/]: Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
-[25Jul2025 17:37:55.948] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
-[25Jul2025 17:37:55.949] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
-[25Jul2025 17:37:55.950] [main/DEBUG] [mixin/]: Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
-[25Jul2025 17:37:55.951] [main/DEBUG] [mixin/]: Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
-[25Jul2025 17:37:55.952] [main/DEBUG] [mixin/]: Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
-[25Jul2025 17:37:55.961] [main/DEBUG] [mixin/]: Preparing skyzeradventure.mixins.json (1)
-[25Jul2025 17:37:56.003] [main/DEBUG] [mixin/]: Preparing mixinextras.init.mixins.json (0)
-[25Jul2025 17:37:56.022] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
-[25Jul2025 17:37:56.024] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
-[25Jul2025 17:37:56.024] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
-[25Jul2025 17:37:56.313] [main/DEBUG] [oshi.util.FileUtil/]: No oshi.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@7bab5898
-[25Jul2025 17:37:56.516] [main/DEBUG] [oshi.util.FileUtil/]: No oshi.architecture.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@7bab5898
-[25Jul2025 17:37:56.772] [pool-3-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[25Jul2025 17:37:56.773] [pool-3-thread-1/DEBUG] [mixin/]: Registering new injector for @SugarWrapper with com.llamalad7.mixinextras.sugar.impl.SugarWrapperInjectionInfo
-[25Jul2025 17:37:56.773] [pool-3-thread-1/DEBUG] [mixin/]: Registering new injector for @FactoryRedirectWrapper with com.llamalad7.mixinextras.wrapper.factory.FactoryRedirectWrapperInjectionInfo
-[25Jul2025 17:37:56.776] [pool-3-thread-1/DEBUG] [mixin/]: Mixing NoiseGeneratorSettingsMixin from skyzeradventure.mixins.json into net.minecraft.world.level.levelgen.NoiseGeneratorSettings
-[25Jul2025 17:37:56.894] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
-[25Jul2025 17:37:56.920] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/StairBlock
-[25Jul2025 17:37:56.967] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
-[25Jul2025 17:37:57.289] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraftforge/registries/RegistryObject
-[25Jul2025 17:37:57.532] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/ItemStack
-[25Jul2025 17:37:59.557] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/BucketItem
-[25Jul2025 17:37:59.669] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/effect/MobEffectInstance
-[25Jul2025 17:38:00.599] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/D:/Mods%20Minecraft/SkyzerAdventure/build/fg_cache/net/minecraftforge/forge/1.18.2-40.2.17_mapped_official_1.18.2/forge-1.18.2-40.2.17_mapped_official_1.18.2-recomp.jar%2380!/assets/.mcassetsroot' uses unexpected schema
-[25Jul2025 17:38:00.600] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/D:/Mods%20Minecraft/SkyzerAdventure/build/fg_cache/net/minecraftforge/forge/1.18.2-40.2.17_mapped_official_1.18.2/forge-1.18.2-40.2.17_mapped_official_1.18.2-recomp.jar%2380!/data/.mcassetsroot' uses unexpected schema
-[25Jul2025 17:38:00.616] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[25Jul2025 17:38:00.626] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[25Jul2025 17:38:00.778] [Render thread/WARN] [net.minecraft.client.Options/]: Skipping bad option: 
-[25Jul2025 17:38:00.844] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 SNAPSHOT
-[25Jul2025 17:38:02.311] [Render thread/DEBUG] [net.minecraftforge.common.ForgeI18n/CORE]: Loading I18N data entries: 5364
-[25Jul2025 17:38:02.366] [Render thread/DEBUG] [net.minecraftforge.fml.ModWorkManager/LOADING]: Using 16 threads for parallel mod-loading
-[25Jul2025 17:38:02.386] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@7bab5898 - got cpw.mods.cl.ModuleClassLoader@56781d96
-[25Jul2025 17:38:02.387] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for fr.eriniumgroup.skyzeradventure.SkyzeradventureMod
-[25Jul2025 17:38:02.402] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@7bab5898 - got cpw.mods.cl.ModuleClassLoader@56781d96
-[25Jul2025 17:38:02.407] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for com.llamalad7.mixinextras.platform.forge.MixinExtrasMod
-[25Jul2025 17:38:02.410] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@7bab5898 - got cpw.mods.cl.ModuleClassLoader@56781d96
-[25Jul2025 17:38:02.411] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
-[25Jul2025 17:38:02.479] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for mixinextras
-[25Jul2025 17:38:02.485] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Forge Version package package net.minecraftforge.versions.forge, Forge, version 40.2 from cpw.mods.modlauncher.TransformingClassLoader@7bab5898
-[25Jul2025 17:38:02.485] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge version 40.2.17
-[25Jul2025 17:38:02.485] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge spec 40.2
-[25Jul2025 17:38:02.486] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge group net.minecraftforge
-[25Jul2025 17:38:02.486] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: MCP Version package package net.minecraftforge.versions.mcp, Minecraft, version 1.18.2 from cpw.mods.modlauncher.TransformingClassLoader@7bab5898
-[25Jul2025 17:38:02.486] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MC version information 1.18.2
-[25Jul2025 17:38:02.487] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MCP version information 20220404.173914
-[25Jul2025 17:38:02.487] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.2.17, for MC 1.18.2 with MCP 20220404.173914
-[25Jul2025 17:38:02.488] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.2.17 Initialized
-[25Jul2025 17:38:02.572] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
-[25Jul2025 17:38:02.572] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 17
-[25Jul2025 17:38:02.577] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
-[25Jul2025 17:38:02.578] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
-[25Jul2025 17:38:02.578] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Buffer.address: available
-[25Jul2025 17:38:02.579] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: direct buffer constructor: unavailable
+[26Jul2025 16:25:07.619] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\\Users\\killi\\.mcreator\\gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.forgeVersion, 40.3.11, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --mixin.config, skyzeradventure.mixins.json]
+[26Jul2025 16:25:07.622] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.16 by Eclipse Adoptium
+[26Jul2025 16:25:07.629] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [fmlclientdev,forgeclient,minecraft,forgegametestserverdev,fmlserveruserdev,fmlclient,fmldatauserdev,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev,fmlserver,fmlclientuserdev,fmlserverdev,forgedatauserdev,testharness,forgegametestserveruserdev]
+[26Jul2025 16:25:07.636] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
+[26Jul2025 16:25:07.648] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
+[26Jul2025 16:25:07.656] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
+[26Jul2025 16:25:07.664] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: java.util.stream.ReferencePipeline$3@79145d5a
+[26Jul2025 16:25:07.673] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
+[26Jul2025 16:25:07.674] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
+[26Jul2025 16:25:07.674] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
+[26Jul2025 16:25:07.674] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
+[26Jul2025 16:25:07.674] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
+[26Jul2025 16:25:07.675] [main/DEBUG] [net.minecraftforge.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 1.0
+[26Jul2025 16:25:07.675] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML 1.0 loading
+[26Jul2025 16:25:07.676] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 9.1.3+9.1.3+main.9b69c82a
+[26Jul2025 16:25:07.676] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Requesting CoreMods to not apply the fix for ASMAPI.findFirstInstructionBefore by default
+[26Jul2025 16:25:07.676] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 8.0.4+66+master.c09db6d7
+[26Jul2025 16:25:07.676] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found EventBus version : 5.0.7+5.0.7+master.6d3407cc
+[26Jul2025 16:25:07.676] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
+[26Jul2025 16:25:07.677] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/]: CoreMods will preserve legacy behavior of ASMAPI.findFirstInstructionBefore for backwards-compatibility
+[26Jul2025 16:25:07.677] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 5.2.5
+[26Jul2025 16:25:07.678] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 4.0.15-4.x+4.0.15-4.x+4.x.038e91c0
+[26Jul2025 16:25:07.678] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 4
+[26Jul2025 16:25:07.679] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
+[26Jul2025 16:25:07.680] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
+[26Jul2025 16:25:07.684] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
+[26Jul2025 16:25:07.684] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
+[26Jul2025 16:25:07.693] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@702657cc
+[26Jul2025 16:25:07.703] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/killi/.mcreator/gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2373!/ Service=ModLauncher Env=CLIENT
+[26Jul2025 16:25:07.705] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
+[26Jul2025 16:25:07.705] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[26Jul2025 16:25:07.706] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[26Jul2025 16:25:07.706] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[26Jul2025 16:25:07.706] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[26Jul2025 16:25:07.706] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[26Jul2025 16:25:07.708] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
+[26Jul2025 16:25:07.708] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
+[26Jul2025 16:25:07.708] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
+[26Jul2025 16:25:07.709] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing GAMEDIR directory : D:\Mods Minecraft\SkyzerAdventure\run
+[26Jul2025 16:25:07.709] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path GAMEDIR is D:\Mods Minecraft\SkyzerAdventure\run
+[26Jul2025 16:25:07.709] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing MODSDIR directory : D:\Mods Minecraft\SkyzerAdventure\run\mods
+[26Jul2025 16:25:07.709] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path MODSDIR is D:\Mods Minecraft\SkyzerAdventure\run\mods
+[26Jul2025 16:25:07.709] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing CONFIGDIR directory : D:\Mods Minecraft\SkyzerAdventure\run\config
+[26Jul2025 16:25:07.709] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is D:\Mods Minecraft\SkyzerAdventure\run\config
+[26Jul2025 16:25:07.709] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is D:\Mods Minecraft\SkyzerAdventure\run\config\fml.toml
+[26Jul2025 16:25:07.710] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading configuration
+[26Jul2025 16:25:07.733] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing default config directory directory : D:\Mods Minecraft\SkyzerAdventure\run\defaultconfigs
+[26Jul2025 16:25:07.733] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing ModFile
+[26Jul2025 16:25:07.735] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
+[26Jul2025 16:25:07.735] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Using forgeclientuserdev as launch service
+[26Jul2025 16:25:07.746] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Received command line version data  : VersionInfo[forgeVersion=40.3.11, mcVersion=1.18.2, mcpVersion=20220404.173914, forgeGroup=net.minecraftforge]
+[26Jul2025 16:25:07.746] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
+[26Jul2025 16:25:07.747] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
+[26Jul2025 16:25:07.747] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
+[26Jul2025 16:25:07.747] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
+[26Jul2025 16:25:07.748] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
+[26Jul2025 16:25:07.748] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
+[26Jul2025 16:25:07.748] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
+[26Jul2025 16:25:07.748] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
+[26Jul2025 16:25:07.756] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
+[26Jul2025 16:25:07.757] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null),(userdev classpath:null),(JarInJar:null)
+[26Jul2025 16:25:07.762] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Got mod coordinates mcreator%%D:\Mods Minecraft\SkyzerAdventure\build\classes\java\main;mcreator%%D:\Mods Minecraft\SkyzerAdventure\build\resources\main from env
+[26Jul2025 16:25:07.763] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{mcreator=[D:\Mods Minecraft\SkyzerAdventure\build\classes\java\main, D:\Mods Minecraft\SkyzerAdventure\build\resources\main]}]
+[26Jul2025 16:25:07.847] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.18.2-40.3.11.jar with {minecraft} mods - versions {1.18.2}
+[26Jul2025 16:25:07.850] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.18.2-40.3.11\e372dae85d1a6958d76390ac88259fe67af3fa70\fmlcore-1.18.2-40.3.11.jar
+[26Jul2025 16:25:07.851] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.18.2-40.3.11\e372dae85d1a6958d76390ac88259fe67af3fa70\fmlcore-1.18.2-40.3.11.jar is missing mods.toml file
+[26Jul2025 16:25:07.853] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.18.2-40.3.11\d77ffadc44f31424dcd263b18ba07589d89ffe41\javafmllanguage-1.18.2-40.3.11.jar
+[26Jul2025 16:25:07.853] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.18.2-40.3.11\d77ffadc44f31424dcd263b18ba07589d89ffe41\javafmllanguage-1.18.2-40.3.11.jar is missing mods.toml file
+[26Jul2025 16:25:07.855] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.18.2-40.3.11\e9acfab5174506fb2b38fe0588b990df94e1e099\lowcodelanguage-1.18.2-40.3.11.jar
+[26Jul2025 16:25:07.855] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.18.2-40.3.11\e9acfab5174506fb2b38fe0588b990df94e1e099\lowcodelanguage-1.18.2-40.3.11.jar is missing mods.toml file
+[26Jul2025 16:25:07.858] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.18.2-40.3.11\8c474c22c753568ef81630f4eb529f403b41b20f\mclanguage-1.18.2-40.3.11.jar
+[26Jul2025 16:25:07.858] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.18.2-40.3.11\8c474c22c753568ef81630f4eb529f403b41b20f\mclanguage-1.18.2-40.3.11.jar is missing mods.toml file
+[26Jul2025 16:25:07.859] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate D:\Mods Minecraft\SkyzerAdventure\build\classes\java\main
+[26Jul2025 16:25:07.862] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file main with {skyzeradventure} mods - versions {1.0.0}
+[26Jul2025 16:25:07.865] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /
+[26Jul2025 16:25:07.866] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {40.3.11}
+[26Jul2025 16:25:07.899] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from main, it does not contain dependency information.
+[26Jul2025 16:25:07.899] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from forge-1.18.2-40.3.11.jar, it does not contain dependency information.
+[26Jul2025 16:25:07.899] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from mixinextras-neoforge-0.4.1.jar, it does not contain dependency information.
+[26Jul2025 16:25:07.899] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from , it does not contain dependency information.
+[26Jul2025 16:25:07.899] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from mclanguage-1.18.2-40.3.11.jar, it does not contain dependency information.
+[26Jul2025 16:25:07.899] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from javafmllanguage-1.18.2-40.3.11.jar, it does not contain dependency information.
+[26Jul2025 16:25:07.899] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from fmlcore-1.18.2-40.3.11.jar, it does not contain dependency information.
+[26Jul2025 16:25:07.900] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from lowcodelanguage-1.18.2-40.3.11.jar, it does not contain dependency information.
+[26Jul2025 16:25:07.927] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[26Jul2025 16:25:07.928] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.18.2-40.3.11.jar with {minecraft} mods - versions {1.18.2}
+[26Jul2025 16:25:07.930] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file D:\Mods Minecraft\SkyzerAdventure\build\moddev\artifacts\forge-1.18.2-40.3.11.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
+[26Jul2025 16:25:07.931] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate D:\Mods Minecraft\SkyzerAdventure\build\classes\java\main
+[26Jul2025 16:25:07.931] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file main with {skyzeradventure} mods - versions {1.0.0}
+[26Jul2025 16:25:07.932] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file D:\Mods Minecraft\SkyzerAdventure\build\classes\java\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[40,)]]
+[26Jul2025 16:25:07.932] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /
+[26Jul2025 16:25:07.932] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {40.3.11}
+[26Jul2025 16:25:07.932] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
+[26Jul2025 16:25:07.952] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
+[26Jul2025 16:25:07.953] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
+[26Jul2025 16:25:07.953] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
+[26Jul2025 16:25:07.953] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod registry_object_binary_compat with Javascript path coremods/registry_object_binary_compat.js
+[26Jul2025 16:25:07.953] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_method.js
+[26Jul2025 16:25:07.953] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_instanceof.js
+[26Jul2025 16:25:07.953] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/add_bouncer_method.js
+[26Jul2025 16:25:07.953] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/registry_object_binary_compat.js
+[26Jul2025 16:25:07.953] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-neoforge\0.4.1\eff97772ecd0dcf8e52cdbafd3b3ccec425f8314\mixinextras-neoforge-0.4.1.jar with languages []
+[26Jul2025 16:25:07.954] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
+[26Jul2025 16:25:07.962] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found 3 language providers
+[26Jul2025 16:25:07.963] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
+[26Jul2025 16:25:07.963] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider lowcodefml, version 40
+[26Jul2025 16:25:07.963] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 40
+[26Jul2025 16:25:07.967] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Configured system mods: [minecraft, forge]
+[26Jul2025 16:25:07.967] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: minecraft
+[26Jul2025 16:25:07.967] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: forge
+[26Jul2025 16:25:07.970] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 2 mod requirements (1 mandatory, 1 optional)
+[26Jul2025 16:25:07.970] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
+[26Jul2025 16:25:08.257] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 28190 method mappings from methods.csv
+[26Jul2025 16:25:08.283] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 27073 field mappings from fields.csv
+[26Jul2025 16:25:08.334] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
+[26Jul2025 16:25:08.335] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
+[26Jul2025 16:25:08.336] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
+[26Jul2025 16:25:08.336] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
+[26Jul2025 16:25:08.336] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading coremod transformers
+[26Jul2025 16:25:08.336] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_method.js
+[26Jul2025 16:25:08.520] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[26Jul2025 16:25:08.520] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_instanceof.js
+[26Jul2025 16:25:08.573] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[26Jul2025 16:25:08.574] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/add_bouncer_method.js
+[26Jul2025 16:25:08.604] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[26Jul2025 16:25:08.604] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/registry_object_binary_compat.js
+[26Jul2025 16:25:08.619] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[26Jul2025 16:25:08.627] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@2eeb0f9b to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
+[26Jul2025 16:25:08.629] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7b4a0aef to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
+[26Jul2025 16:25:08.629] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@45cec376 to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
+[26Jul2025 16:25:08.629] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@26d41711 to Target : CLASS {Lnet/minecraft/world/level/block/StairBlock;} {} {V}
+[26Jul2025 16:25:08.629] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@298f0a0b to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
+[26Jul2025 16:25:08.629] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@2b960a7 to Target : CLASS {Lnet/minecraft/world/item/ItemStack;} {} {V}
+[26Jul2025 16:25:08.629] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@31dfc6f5 to Target : CLASS {Lnet/minecraft/network/play/client/CClientSettingsPacket;} {} {V}
+[26Jul2025 16:25:08.629] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@37b52340 to Target : CLASS {Lnet/minecraftforge/registries/RegistryObject;} {} {V}
+[26Jul2025 16:25:08.629] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
+[26Jul2025 16:25:09.091] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[26Jul2025 16:25:09.091] [main/DEBUG] [mixin/]: Registering mixin config: skyzeradventure.mixins.json
+[26Jul2025 16:25:09.110] [main/DEBUG] [mixin/]: Compatibility level JAVA_17 specified by skyzeradventure.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[26Jul2025 16:25:09.114] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[26Jul2025 16:25:09.114] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[26Jul2025 16:25:09.114] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(skyzeradventure)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(skyzeradventure)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(skyzeradventure)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(skyzeradventure)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(skyzeradventure)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(skyzeradventure)]
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(forge)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(forge)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(forge)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(forge)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(forge)
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[26Jul2025 16:25:09.115] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(mixinextras.neoforge)
+[26Jul2025 16:25:09.116] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(mixinextras.neoforge)
+[26Jul2025 16:25:09.116] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(mixinextras.neoforge)
+[26Jul2025 16:25:09.116] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(mixinextras.neoforge)
+[26Jul2025 16:25:09.116] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(mixinextras.neoforge)
+[26Jul2025 16:25:09.116] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(mixinextras.neoforge)]
+[26Jul2025 16:25:09.116] [main/DEBUG] [mixin/]: Registering mixin config: mixinextras.init.mixins.json
+[26Jul2025 16:25:09.117] [main/DEBUG] [mixin/]: inject() running with 5 agents
+[26Jul2025 16:25:09.117] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[26Jul2025 16:25:09.117] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[26Jul2025 16:25:09.117] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(skyzeradventure)]
+[26Jul2025 16:25:09.117] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[26Jul2025 16:25:09.117] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(mixinextras.neoforge)]
+[26Jul2025 16:25:09.117] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\killi\.mcreator\gradle\caches\neoformruntime\assets, --assetIndex, 1.18]
+[26Jul2025 16:25:09.162] [main/DEBUG] [mixin/]: Error cleaning class output directory: .mixin.out\class
+[26Jul2025 16:25:09.164] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[26Jul2025 16:25:09.164] [main/DEBUG] [mixin/]: Selecting config skyzeradventure.mixins.json
+[26Jul2025 16:25:09.168] [main/DEBUG] [mixin/]: Selecting config mixinextras.init.mixins.json
+[26Jul2025 16:25:09.203] [main/DEBUG] [MixinExtras|Service/]: com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1) is taking over from null
+[26Jul2025 16:25:09.237] [main/DEBUG] [mixin/]: Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
+[26Jul2025 16:25:09.238] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
+[26Jul2025 16:25:09.239] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
+[26Jul2025 16:25:09.241] [main/DEBUG] [mixin/]: Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
+[26Jul2025 16:25:09.242] [main/DEBUG] [mixin/]: Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
+[26Jul2025 16:25:09.242] [main/DEBUG] [mixin/]: Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
+[26Jul2025 16:25:09.251] [main/DEBUG] [mixin/]: Preparing skyzeradventure.mixins.json (1)
+[26Jul2025 16:25:09.283] [main/DEBUG] [mixin/]: Preparing mixinextras.init.mixins.json (0)
+[26Jul2025 16:25:09.311] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
+[26Jul2025 16:25:09.315] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
+[26Jul2025 16:25:09.315] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
+[26Jul2025 16:25:09.505] [main/DEBUG] [oshi.util.FileUtil/]: No oshi.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@6fa0450e
+[26Jul2025 16:25:09.707] [main/DEBUG] [oshi.util.FileUtil/]: No oshi.architecture.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@6fa0450e
+[26Jul2025 16:25:09.944] [pool-3-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[26Jul2025 16:25:09.945] [pool-3-thread-1/DEBUG] [mixin/]: Registering new injector for @SugarWrapper with com.llamalad7.mixinextras.sugar.impl.SugarWrapperInjectionInfo
+[26Jul2025 16:25:09.946] [pool-3-thread-1/DEBUG] [mixin/]: Registering new injector for @FactoryRedirectWrapper with com.llamalad7.mixinextras.wrapper.factory.FactoryRedirectWrapperInjectionInfo
+[26Jul2025 16:25:09.949] [pool-3-thread-1/DEBUG] [mixin/]: Mixing NoiseGeneratorSettingsMixin from skyzeradventure.mixins.json into net.minecraft.world.level.levelgen.NoiseGeneratorSettings
+[26Jul2025 16:25:10.071] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
+[26Jul2025 16:25:10.093] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/StairBlock
+[26Jul2025 16:25:10.133] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
+[26Jul2025 16:25:10.436] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraftforge/registries/RegistryObject
+[26Jul2025 16:25:10.667] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/ItemStack
+[26Jul2025 16:25:12.597] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/BucketItem
+[26Jul2025 16:25:12.691] [pool-3-thread-1/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/effect/MobEffectInstance
+[26Jul2025 16:25:13.144] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
+[26Jul2025 16:25:13.144] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 17
+[26Jul2025 16:25:13.145] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
+[26Jul2025 16:25:13.145] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
+[26Jul2025 16:25:13.146] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Buffer.address: available
+[26Jul2025 16:25:13.146] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent0/]: direct buffer constructor: unavailable
 java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
-	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:253) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:253) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
 	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
-	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:247) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.ConstantPool.<init>(ConstantPool.java:34) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.AttributeKey$1.<init>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.AttributeKey.<clinit>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at net.minecraftforge.network.NetworkConstants.<clinit>(NetworkConstants.java:33) ~[forge-1.18.2-40.2.17_mapped_official_1.18.2-recomp.jar%2379%2386!/:?]
-	at net.minecraftforge.common.ForgeMod.<init>(ForgeMod.java:151) ~[forge-1.18.2-40.2.17_mapped_official_1.18.2-recomp.jar%2379%2386!/:?]
-	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
-	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
-	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:67) ~[javafmllanguage-1.18.2-40.2.17.jar%2381!/:?]
-	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:122) ~[fmlcore-1.18.2-40.2.17.jar%2384!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) [?:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) [?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?]
-	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?]
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
-[25Jul2025 17:38:02.582] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
-[25Jul2025 17:38:02.583] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:247) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.ConstantPool.<init>(ConstantPool.java:34) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.AttributeKey$1.<init>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.AttributeKey.<clinit>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at net.minecraftforge.network.NetworkConstants.<clinit>(NetworkConstants.java:33) ~[forge-1.18.2-40.3.11.jar%2375%2382!/:?]
+	at net.minecraftforge.network.NetworkHooks.init(NetworkHooks.java:52) ~[forge-1.18.2-40.3.11.jar%2375%2382!/:?]
+	at net.minecraft.server.Bootstrap.bootStrap(Bootstrap.java:63) ~[forge-1.18.2-40.3.11.jar%2376!/:?]
+	at net.minecraft.client.main.Main.lambda$main$0(Main.java:138) ~[forge-1.18.2-40.3.11.jar%2376!/:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:840) [?:?]
+[26Jul2025 16:25:13.147] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
+[26Jul2025 16:25:13.148] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
 java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 (in module io.netty.all) cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to module io.netty.all
 	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392) ~[?:?]
 	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?]
 	at java.lang.reflect.Method.invoke(Method.java:561) ~[?:?]
-	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:375) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:375) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
 	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
-	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:366) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.ConstantPool.<init>(ConstantPool.java:34) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.AttributeKey$1.<init>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at io.netty.util.AttributeKey.<clinit>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2340!/:4.1.68.Final]
-	at net.minecraftforge.network.NetworkConstants.<clinit>(NetworkConstants.java:33) ~[forge-1.18.2-40.2.17_mapped_official_1.18.2-recomp.jar%2379%2386!/:?]
-	at net.minecraftforge.common.ForgeMod.<init>(ForgeMod.java:151) ~[forge-1.18.2-40.2.17_mapped_official_1.18.2-recomp.jar%2379%2386!/:?]
-	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
-	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[?:?]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[?:?]
-	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:67) ~[javafmllanguage-1.18.2-40.2.17.jar%2381!/:?]
-	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:122) ~[fmlcore-1.18.2-40.2.17.jar%2384!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) [?:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) [?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?]
-	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?]
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
-	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
-[25Jul2025 17:38:02.584] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, int): unavailable
-[25Jul2025 17:38:02.584] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: sun.misc.Unsafe: available
-[25Jul2025 17:38:02.585] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: maxDirectMemory: 8568963072 bytes (maybe)
-[25Jul2025 17:38:02.585] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\killi\AppData\Local\Temp (java.io.tmpdir)
-[25Jul2025 17:38:02.585] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
-[25Jul2025 17:38:02.587] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: Platform: Windows
-[25Jul2025 17:38:02.588] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
-[25Jul2025 17:38:02.588] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
-[25Jul2025 17:38:02.589] [modloading-worker-0/DEBUG] [io.netty.util.internal.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
-[25Jul2025 17:38:02.589] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.noPreferDirect: false
-[25Jul2025 17:38:02.640] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Loading Network data for FML net version: FML3
-[25Jul2025 17:38:02.699] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
-[25Jul2025 17:38:02.699] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
-[25Jul2025 17:38:02.699] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-common.toml for forge tracking
-[25Jul2025 17:38:02.702] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for skyzeradventure
-[25Jul2025 17:38:02.710] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.ARGBToInt to MOD
-[25Jul2025 17:38:02.714] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.client.gui.EarningOverlayOverlay to FORGE
-[25Jul2025 17:38:02.727] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.client.gui.HealthOverlayOverlay to FORGE
-[25Jul2025 17:38:02.737] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.client.gui.LevelOverlayOverlay to FORGE
-[25Jul2025 17:38:02.742] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.client.gui.MultiplierOverlayOverlay to FORGE
-[25Jul2025 17:38:02.748] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.client.gui.RemoveBarsOverlay to FORGE
-[25Jul2025 17:38:02.757] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.AdminShopCommand to FORGE
-[25Jul2025 17:38:02.770] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.FileCheckerCommand to FORGE
-[25Jul2025 17:38:02.776] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.GetOutputCommand to FORGE
-[25Jul2025 17:38:02.777] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.LevelCommand to FORGE
-[25Jul2025 17:38:02.780] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.MoneyCommand to FORGE
-[25Jul2025 17:38:02.781] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.OverlayConfigCommand to FORGE
-[25Jul2025 17:38:02.784] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.SetWritePaperIDCommand to FORGE
-[25Jul2025 17:38:02.786] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.TempcmdCommand to FORGE
-[25Jul2025 17:38:02.790] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBiomes to FORGE
-[25Jul2025 17:38:02.793] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for forge
-[25Jul2025 17:38:02.793] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlocks$BlocksClientSideHandler to MOD
-[25Jul2025 17:38:02.793] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler to MOD
-[25Jul2025 17:38:02.794] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlocks to FORGE
-[25Jul2025 17:38:02.794] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$ColorRegisterHandler to MOD
-[25Jul2025 17:38:02.795] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModConfigs to MOD
-[25Jul2025 17:38:02.798] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModEntities to MOD
-[25Jul2025 17:38:02.804] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModEntityRenderers to MOD
-[25Jul2025 17:38:02.804] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.model.ModelDataManager to FORGE
-[25Jul2025 17:38:02.808] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModFeatures to FORGE
-[25Jul2025 17:38:02.810] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.ForgeHooksClient$ClientEvents to MOD
-[25Jul2025 17:38:02.821] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModGameRules to MOD
-[25Jul2025 17:38:02.848] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModKeyMappings$KeyEventListener to FORGE
-[25Jul2025 17:38:02.856] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModKeyMappings to MOD
-[25Jul2025 17:38:02.858] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModModels to MOD
-[25Jul2025 17:38:02.859] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens to MOD
-[25Jul2025 17:38:02.860] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.BuyPageButtonMessage to MOD
-[25Jul2025 17:38:02.863] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.ConfiguratorButtonMessage to MOD
-[25Jul2025 17:38:02.864] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.EarningWikiHomePageButtonMessage to MOD
-[25Jul2025 17:38:02.865] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.KeyOpenAdminShopMessage to MOD
-[25Jul2025 17:38:02.866] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.MenuStateUpdateMessage to MOD
-[25Jul2025 17:38:02.871] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.OpenEarningWikiMessage to MOD
-[25Jul2025 17:38:02.872] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.SellingPageButtonMessage to MOD
-[25Jul2025 17:38:02.874] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.ShopBuyButtonMessage to MOD
-[25Jul2025 17:38:02.875] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.ShopMainGuiButtonMessage to MOD
-[25Jul2025 17:38:02.880] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.ShopSellButtonMessage to MOD
-[25Jul2025 17:38:02.887] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.ShowOnOffHealthOverlayMessage to MOD
-[25Jul2025 17:38:02.890] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables$EventBusVariableHandlers to FORGE
-[25Jul2025 17:38:02.900] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables$PlayerVariablesProvider to FORGE
-[25Jul2025 17:38:02.904] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables to MOD
-[25Jul2025 17:38:02.910] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.StatsScaleConfigButtonMessage to MOD
-[25Jul2025 17:38:02.913] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.PourMesCodesDeTest to MOD
-[25Jul2025 17:38:02.914] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.EntityDieProcedure to FORGE
-[25Jul2025 17:38:02.919] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.JoinTheWorldProcedure to FORGE
-[25Jul2025 17:38:02.922] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.OnCraftingProcedure to FORGE
-[25Jul2025 17:38:02.929] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.OnGetDamageProcedure to FORGE
-[25Jul2025 17:38:02.934] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.OnKillingProcedure to FORGE
-[25Jul2025 17:38:02.938] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.OnMiningProcedure to FORGE
-[25Jul2025 17:38:02.940] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.OnSmeltingProcedure to FORGE
-[25Jul2025 17:38:02.944] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.PlayerTickProcedure to FORGE
-[25Jul2025 17:38:02.949] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.RightClickWithItemProcedure to FORGE
-[25Jul2025 17:38:02.957] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.SkyzerAdventureMainNetwork to MOD
-[25Jul2025 17:38:02.958] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.world.features.ores.AdetiumOreFeature$AdetiumOreFeatureRuleTest to MOD
-[25Jul2025 17:38:02.961] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.world.inventory.SellingPageMenu to FORGE
-[25Jul2025 17:38:02.967] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Dispatching synchronous work for work queue CONSTRUCT: 1 jobs
-[25Jul2025 17:38:02.970] [Render thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file SkyzerAdventure/Rank/Earning.toml for skyzeradventure tracking
-[25Jul2025 17:38:02.971] [Render thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file SkyzerAdventure/Rank/Misc.toml for skyzeradventure tracking
-[25Jul2025 17:38:02.971] [Render thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file SkyzerAdventure/Shop/ShopConfig.toml for skyzeradventure tracking
-[25Jul2025 17:38:02.972] [Render thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file SkyzerAdventure/Shop/ShopListing.toml for skyzeradventure tracking
-[25Jul2025 17:38:02.973] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Synchronous work queue completed in 4.675 ms
-[25Jul2025 17:38:03.237] [Render thread/DEBUG] [net.minecraftforge.client.loading.ClientModLoader/CORE]: Generating PackInfo named mod:skyzeradventure for mod file D:\Mods Minecraft\SkyzerAdventure\build\resources\main
-[25Jul2025 17:38:03.238] [Render thread/DEBUG] [net.minecraftforge.client.loading.ClientModLoader/CORE]: Generating PackInfo named mod:mixinextras for mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.4.1\5c35573a7b76103724799ca1174a69699b8a9aec\mixinextras-forge-0.4.1.jar
-[25Jul2025 17:38:03.238] [Render thread/DEBUG] [net.minecraftforge.client.loading.ClientModLoader/CORE]: Generating PackInfo named mod:forge for mod file /
-[25Jul2025 17:38:03.966] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-[25Jul2025 17:38:03.967] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-[25Jul2025 17:38:03.967] [Render thread/DEBUG] [io.netty.util.internal.ThreadLocalRandom/]: -Dio.netty.initialSeedUniquifier: 0xf103da84057695a7
-[25Jul2025 17:38:04.184] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[25Jul2025 17:38:04.216] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
-[25Jul2025 17:38:04.543] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[25Jul2025 17:38:04.558] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type CLIENT
-[25Jul2025 17:38:04.559] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for D:\Mods Minecraft\SkyzerAdventure\run\config\forge-client.toml
-[25Jul2025 17:38:04.559] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\forge-client.toml
-[25Jul2025 17:38:04.560] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\forge-client.toml for changes
-[25Jul2025 17:38:04.561] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file D:\Mods Minecraft\SkyzerAdventure\run\config\forge-client.toml is not correct. Correcting
-[25Jul2025 17:38:04.562] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.allowMipmapLowering was corrected from false to its default, null. 
-[25Jul2025 17:38:04.564] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-client.toml
-[25Jul2025 17:38:04.564] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type COMMON
-[25Jul2025 17:38:04.565] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for D:\Mods Minecraft\SkyzerAdventure\run\config\forge-common.toml
-[25Jul2025 17:38:04.565] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\forge-common.toml
-[25Jul2025 17:38:04.566] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\forge-common.toml for changes
-[25Jul2025 17:38:04.566] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-common.toml
-[25Jul2025 17:38:04.566] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Earning.toml
-[25Jul2025 17:38:04.567] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Earning.toml
-[25Jul2025 17:38:04.570] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Earning.toml for changes
-[25Jul2025 17:38:04.571] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Misc.toml
-[25Jul2025 17:38:04.571] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Misc.toml
-[25Jul2025 17:38:04.571] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Misc.toml for changes
-[25Jul2025 17:38:04.572] [Thread-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Config file SkyzerAdventure/Rank/Earning.toml changed, sending notifies
-[25Jul2025 17:38:04.717] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Dispatching synchronous work for work queue COMMON_SETUP: 1 jobs
-[25Jul2025 17:38:04.722] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Synchronous work queue completed in 37.70 μs
-[25Jul2025 17:38:06.091] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Dispatching synchronous work for work queue SIDED_SETUP: 1 jobs
-[25Jul2025 17:38:06.271] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Synchronous work queue completed in 179.0 ms
-[25Jul2025 17:38:06.519] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[25Jul2025 17:38:08.940] [Forge Version Check/DEBUG] [net.minecraftforge.fml.VersionChecker/]: [forge] Received version check data:
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:366) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.ConstantPool.<init>(ConstantPool.java:34) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.AttributeKey$1.<init>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at io.netty.util.AttributeKey.<clinit>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2325!/:4.1.68.Final]
+	at net.minecraftforge.network.NetworkConstants.<clinit>(NetworkConstants.java:33) ~[forge-1.18.2-40.3.11.jar%2375%2382!/:?]
+	at net.minecraftforge.network.NetworkHooks.init(NetworkHooks.java:52) ~[forge-1.18.2-40.3.11.jar%2375%2382!/:?]
+	at net.minecraft.server.Bootstrap.bootStrap(Bootstrap.java:63) ~[forge-1.18.2-40.3.11.jar%2376!/:?]
+	at net.minecraft.client.main.Main.lambda$main$0(Main.java:138) ~[forge-1.18.2-40.3.11.jar%2376!/:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:840) [?:?]
+[26Jul2025 16:25:13.149] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[26Jul2025 16:25:13.149] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent/]: sun.misc.Unsafe: available
+[26Jul2025 16:25:13.150] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent/]: maxDirectMemory: 8568963072 bytes (maybe)
+[26Jul2025 16:25:13.150] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\killi\AppData\Local\Temp (java.io.tmpdir)
+[26Jul2025 16:25:13.150] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[26Jul2025 16:25:13.151] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent/]: Platform: Windows
+[26Jul2025 16:25:13.151] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
+[26Jul2025 16:25:13.151] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[26Jul2025 16:25:13.152] [pool-3-thread-1/DEBUG] [io.netty.util.internal.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
+[26Jul2025 16:25:13.152] [pool-3-thread-1/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.noPreferDirect: false
+[26Jul2025 16:25:13.212] [pool-3-thread-1/DEBUG] [net.minecraftforge.network.NetworkHooks/]: Loading Network data for FML net version: FML3
+[26Jul2025 16:25:13.440] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/D:/Mods%20Minecraft/SkyzerAdventure/build/moddev/artifacts/forge-1.18.2-40.3.11.jar%2376!/assets/.mcassetsroot' uses unexpected schema
+[26Jul2025 16:25:13.440] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/D:/Mods%20Minecraft/SkyzerAdventure/build/moddev/artifacts/forge-1.18.2-40.3.11.jar%2376!/data/.mcassetsroot' uses unexpected schema
+[26Jul2025 16:25:13.465] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[26Jul2025 16:25:13.472] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[26Jul2025 16:25:13.651] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[26Jul2025 16:25:15.354] [Render thread/DEBUG] [net.minecraftforge.common.ForgeI18n/CORE]: Loading I18N data entries: 5368
+[26Jul2025 16:25:15.385] [Render thread/DEBUG] [net.minecraftforge.fml.ModWorkManager/LOADING]: Using 16 threads for parallel mod-loading
+[26Jul2025 16:25:15.392] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@6fa0450e - got cpw.mods.cl.ModuleClassLoader@27ead29e
+[26Jul2025 16:25:15.392] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for fr.eriniumgroup.skyzeradventure.SkyzeradventureMod
+[26Jul2025 16:25:15.396] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@6fa0450e - got cpw.mods.cl.ModuleClassLoader@27ead29e
+[26Jul2025 16:25:15.396] [Render thread/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
+[26Jul2025 16:25:15.496] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Forge Version package package net.minecraftforge.versions.forge, Forge, version 40.3 from cpw.mods.modlauncher.TransformingClassLoader@6fa0450e
+[26Jul2025 16:25:15.496] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge version 40.3.11
+[26Jul2025 16:25:15.496] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge spec 40.3
+[26Jul2025 16:25:15.496] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge group net.minecraftforge
+[26Jul2025 16:25:15.497] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: MCP Version package package net.minecraftforge.versions.mcp, Minecraft, version 1.18.2 from cpw.mods.modlauncher.TransformingClassLoader@6fa0450e
+[26Jul2025 16:25:15.497] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MC version information 1.18.2
+[26Jul2025 16:25:15.497] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MCP version information 20220404.173914
+[26Jul2025 16:25:15.497] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.3.11, for MC 1.18.2 with MCP 20220404.173914
+[26Jul2025 16:25:15.498] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.3.11 Initialized
+[26Jul2025 16:25:15.557] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
+[26Jul2025 16:25:15.558] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
+[26Jul2025 16:25:15.558] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-common.toml for forge tracking
+[26Jul2025 16:25:15.572] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for skyzeradventure
+[26Jul2025 16:25:15.582] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.ARGBToInt to MOD
+[26Jul2025 16:25:15.583] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.client.gui.EarningOverlayOverlay to FORGE
+[26Jul2025 16:25:15.585] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.client.gui.HealthOverlayOverlay to FORGE
+[26Jul2025 16:25:15.586] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.client.gui.LevelOverlayOverlay to FORGE
+[26Jul2025 16:25:15.587] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.client.gui.MultiplierOverlayOverlay to FORGE
+[26Jul2025 16:25:15.588] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.client.gui.RemoveBarsOverlay to FORGE
+[26Jul2025 16:25:15.589] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.AdminShopCommand to FORGE
+[26Jul2025 16:25:15.590] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.FileCheckerCommand to FORGE
+[26Jul2025 16:25:15.592] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.GetOutputCommand to FORGE
+[26Jul2025 16:25:15.593] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.LevelCommand to FORGE
+[26Jul2025 16:25:15.594] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.MoneyCommand to FORGE
+[26Jul2025 16:25:15.595] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.OverlayConfigCommand to FORGE
+[26Jul2025 16:25:15.596] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.SetWritePaperIDCommand to FORGE
+[26Jul2025 16:25:15.597] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.command.TempcmdCommand to FORGE
+[26Jul2025 16:25:15.598] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBiomes to FORGE
+[26Jul2025 16:25:15.599] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlocks$BlocksClientSideHandler to MOD
+[26Jul2025 16:25:15.600] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlocks to FORGE
+[26Jul2025 16:25:15.600] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModConfigs to MOD
+[26Jul2025 16:25:15.601] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModEntities to MOD
+[26Jul2025 16:25:15.603] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModEntityRenderers to MOD
+[26Jul2025 16:25:15.604] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModFeatures to FORGE
+[26Jul2025 16:25:15.604] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for forge
+[26Jul2025 16:25:15.604] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.ForgeHooksClient$ClientEvents to MOD
+[26Jul2025 16:25:15.618] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModGameRules to MOD
+[26Jul2025 16:25:15.624] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.model.ModelDataManager to FORGE
+[26Jul2025 16:25:15.626] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$ColorRegisterHandler to MOD
+[26Jul2025 16:25:15.628] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModKeyMappings$KeyEventListener to FORGE
+[26Jul2025 16:25:15.630] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler to MOD
+[26Jul2025 16:25:15.631] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModKeyMappings to MOD
+[26Jul2025 16:25:15.632] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModModels to MOD
+[26Jul2025 16:25:15.633] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModScreens to MOD
+[26Jul2025 16:25:15.634] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.BuyPageButtonMessage to MOD
+[26Jul2025 16:25:15.636] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.ConfiguratorButtonMessage to MOD
+[26Jul2025 16:25:15.638] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.EarningWikiHomePageButtonMessage to MOD
+[26Jul2025 16:25:15.639] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.KeyOpenAdminShopMessage to MOD
+[26Jul2025 16:25:15.640] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.MenuStateUpdateMessage to MOD
+[26Jul2025 16:25:15.642] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.OpenEarningWikiMessage to MOD
+[26Jul2025 16:25:15.642] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.SellingPageButtonMessage to MOD
+[26Jul2025 16:25:15.644] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.ShopBuyButtonMessage to MOD
+[26Jul2025 16:25:15.645] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.ShopMainGuiButtonMessage to MOD
+[26Jul2025 16:25:15.645] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.ShopSellButtonMessage to MOD
+[26Jul2025 16:25:15.647] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.ShowOnOffHealthOverlayMessage to MOD
+[26Jul2025 16:25:15.647] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables$EventBusVariableHandlers to FORGE
+[26Jul2025 16:25:15.652] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables$PlayerVariablesProvider to FORGE
+[26Jul2025 16:25:15.656] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables to MOD
+[26Jul2025 16:25:15.679] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.network.StatsScaleConfigButtonMessage to MOD
+[26Jul2025 16:25:15.681] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.PourMesCodesDeTest to MOD
+[26Jul2025 16:25:15.682] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.EntityDieProcedure to FORGE
+[26Jul2025 16:25:15.686] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.JoinTheWorldProcedure to FORGE
+[26Jul2025 16:25:15.687] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.OnCraftingProcedure to FORGE
+[26Jul2025 16:25:15.689] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.OnGetDamageProcedure to FORGE
+[26Jul2025 16:25:15.691] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.OnKillingProcedure to FORGE
+[26Jul2025 16:25:15.692] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.OnMiningProcedure to FORGE
+[26Jul2025 16:25:15.696] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.OnSmeltingProcedure to FORGE
+[26Jul2025 16:25:15.698] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.PlayerTickProcedure to FORGE
+[26Jul2025 16:25:15.701] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.procedures.RightClickWithItemProcedure to FORGE
+[26Jul2025 16:25:15.702] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.SkyzerAdventureMainNetwork to MOD
+[26Jul2025 16:25:15.703] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.world.dimension.ExponiaDimension$ExponiaSpecialEffectsHandler to MOD
+[26Jul2025 16:25:15.707] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.world.dimension.ExponiaDimension to FORGE
+[26Jul2025 16:25:15.707] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.world.features.ores.AdetiumOreFeature$AdetiumOreFeatureRuleTest to MOD
+[26Jul2025 16:25:15.708] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.world.features.StructureModFeature to FORGE
+[26Jul2025 16:25:15.708] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.world.inventory.SellingPageMenu to FORGE
+[26Jul2025 16:25:15.711] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing fr.eriniumgroup.skyzeradventure.world.teleporter.ExponiaTeleporter to MOD
+[26Jul2025 16:25:15.726] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Dispatching synchronous work for work queue CONSTRUCT: 1 jobs
+[26Jul2025 16:25:15.729] [Render thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file SkyzerAdventure/Rank/Earning.toml for skyzeradventure tracking
+[26Jul2025 16:25:15.730] [Render thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file SkyzerAdventure/Rank/Misc.toml for skyzeradventure tracking
+[26Jul2025 16:25:15.730] [Render thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file SkyzerAdventure/Shop/ShopConfig.toml for skyzeradventure tracking
+[26Jul2025 16:25:15.731] [Render thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file SkyzerAdventure/Shop/ShopListing.toml for skyzeradventure tracking
+[26Jul2025 16:25:15.732] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Synchronous work queue completed in 4.650 ms
+[26Jul2025 16:25:15.987] [Render thread/DEBUG] [net.minecraftforge.client.loading.ClientModLoader/CORE]: Generating PackInfo named mod:skyzeradventure for mod file D:\Mods Minecraft\SkyzerAdventure\build\classes\java\main
+[26Jul2025 16:25:15.987] [Render thread/DEBUG] [net.minecraftforge.client.loading.ClientModLoader/CORE]: Generating PackInfo named mod:forge for mod file /
+[26Jul2025 16:25:16.666] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[26Jul2025 16:25:16.666] [Render thread/DEBUG] [io.netty.util.internal.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[26Jul2025 16:25:16.667] [Render thread/DEBUG] [io.netty.util.internal.ThreadLocalRandom/]: -Dio.netty.initialSeedUniquifier: 0x92b16acdee5229c8
+[26Jul2025 16:25:16.853] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[26Jul2025 16:25:16.900] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
+[26Jul2025 16:25:17.247] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[26Jul2025 16:25:17.257] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type CLIENT
+[26Jul2025 16:25:17.258] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for D:\Mods Minecraft\SkyzerAdventure\run\config\forge-client.toml
+[26Jul2025 16:25:17.259] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\forge-client.toml
+[26Jul2025 16:25:17.259] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\forge-client.toml for changes
+[26Jul2025 16:25:17.261] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-client.toml
+[26Jul2025 16:25:17.262] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type COMMON
+[26Jul2025 16:25:17.262] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for D:\Mods Minecraft\SkyzerAdventure\run\config\forge-common.toml
+[26Jul2025 16:25:17.262] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\forge-common.toml
+[26Jul2025 16:25:17.263] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\forge-common.toml for changes
+[26Jul2025 16:25:17.263] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-common.toml
+[26Jul2025 16:25:17.263] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Earning.toml
+[26Jul2025 16:25:17.263] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Earning.toml
+[26Jul2025 16:25:17.264] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Earning.toml for changes
+[26Jul2025 16:25:17.265] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Misc.toml
+[26Jul2025 16:25:17.266] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Misc.toml
+[26Jul2025 16:25:17.266] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file D:\Mods Minecraft\SkyzerAdventure\run\config\SkyzerAdventure\Rank\Misc.toml for changes
+[26Jul2025 16:25:17.565] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[26Jul2025 16:25:17.591] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Dispatching synchronous work for work queue COMMON_SETUP: 2 jobs
+[26Jul2025 16:25:17.592] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Synchronous work queue completed in 134.6 μs
+[26Jul2025 16:25:17.624] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Dispatching synchronous work for work queue SIDED_SETUP: 2 jobs
+[26Jul2025 16:25:17.674] [Render thread/DEBUG] [net.minecraftforge.fml.DeferredWorkQueue/LOADING]: Synchronous work queue completed in 48.37 ms
+[26Jul2025 16:25:18.754] [Forge Version Check/DEBUG] [net.minecraftforge.fml.VersionChecker/]: [forge] Received version check data:
 {
   "homepage": "https://files.minecraftforge.net/net/minecraftforge/forge/",
   "promos": {
@@ -517,200 +483,190 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
     "1.21.1-recommended": "52.1.0",
     "1.21.3-latest": "53.1.1",
     "1.21.3-recommended": "53.1.0",
-    "1.21.4-latest": "54.1.3",
+    "1.21.4-latest": "54.1.4",
     "1.21.4-recommended": "54.1.0",
-    "1.21.5-latest": "55.0.23",
+    "1.21.5-latest": "55.0.24",
     "1.21.6-latest": "56.0.9",
     "1.21.7-latest": "57.0.3",
     "1.21.8-latest": "58.0.1"
   }
 }
-[25Jul2025 17:38:08.995] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 40.2.17 Target: 40.3.0
-[25Jul2025 17:38:12.003] [Render thread/WARN] [net.minecraft.client.Options/]: Skipping bad option: 
-[25Jul2025 17:38:12.019] [Render thread/DEBUG] [net.minecraftforge.common.ForgeI18n/CORE]: Loading I18N data entries: 5694
-[25Jul2025 17:38:12.274] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Barre Son (Realtek High Definition Audio)
-[25Jul2025 17:38:12.274] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[25Jul2025 17:38:12.457] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x2 minecraft:textures/atlas/blocks.png-atlas
-[25Jul2025 17:38:12.463] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x2 minecraft:textures/atlas/signs.png-atlas
-[25Jul2025 17:38:12.463] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
-[25Jul2025 17:38:12.464] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
-[25Jul2025 17:38:12.464] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
-[25Jul2025 17:38:12.464] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
-[25Jul2025 17:38:12.464] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
-[25Jul2025 17:38:12.910] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[25Jul2025 17:38:12.911] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[25Jul2025 17:38:12.911] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/mob_effects.png-atlas
-[25Jul2025 17:38:13.362] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
-[25Jul2025 17:38:16.729] [Render thread/WARN] [net.minecraftforge.common.ForgeHooks/WP]: The following mods have version differences that were not resolved:
-forge (version 40.3.11 -> 40.2.17)
-Things may not work well.
-[25Jul2025 17:38:16.996] [Render thread/DEBUG] [net.minecraftforge.server.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:skyzeradventure for mod file D:\Mods Minecraft\SkyzerAdventure\build\resources\main
-[25Jul2025 17:38:16.996] [Render thread/DEBUG] [net.minecraftforge.server.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:mixinextras for mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\io.github.llamalad7\mixinextras-forge\0.4.1\5c35573a7b76103724799ca1174a69699b8a9aec\mixinextras-forge-0.4.1.jar
-[25Jul2025 17:38:16.996] [Render thread/DEBUG] [net.minecraftforge.server.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:forge for mod file /
-[25Jul2025 17:38:17.819] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[25Jul2025 17:38:17.820] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[25Jul2025 17:38:17.821] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[25Jul2025 17:38:17.822] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[25Jul2025 17:38:17.823] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[25Jul2025 17:38:18.491] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
-[25Jul2025 17:38:18.869] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1141 advancements
-[25Jul2025 17:38:18.888] [Render thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save Test
-[25Jul2025 17:38:18.892] [Render thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete Test
-[25Jul2025 17:38:19.087] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[25Jul2025 17:38:19.100] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.18.2
-[25Jul2025 17:38:19.100] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[25Jul2025 17:38:19.137] [Server thread/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing serverconfig directory : .\saves\Test\serverconfig
-[25Jul2025 17:38:19.137] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type SERVER
-[25Jul2025 17:38:19.137] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for .\saves\Test\serverconfig\forge-server.toml
-[25Jul2025 17:38:19.138] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file .\saves\Test\serverconfig\forge-server.toml
-[25Jul2025 17:38:19.138] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file .\saves\Test\serverconfig\forge-server.toml for changes
-[25Jul2025 17:38:19.138] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file .\saves\Test\serverconfig\forge-server.toml is not correct. Correcting
-[25Jul2025 17:38:19.138] [Server thread/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key server.useItemWithDurationZero was corrected from false to its default, null. 
-[25Jul2025 17:38:19.139] [Server thread/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-server.toml
-[25Jul2025 17:38:19.139] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopConfig.toml
-[25Jul2025 17:38:19.139] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopConfig.toml
-[25Jul2025 17:38:19.140] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopConfig.toml for changes
-[25Jul2025 17:38:19.140] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopListing.toml
-[25Jul2025 17:38:19.143] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopListing.toml
-[25Jul2025 17:38:19.143] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopListing.toml for changes
-[25Jul2025 17:38:19.150] [Thread-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Config file SkyzerAdventure/Shop/ShopListing.toml changed, sending notifies
-[25Jul2025 17:38:19.307] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[25Jul2025 17:38:19.827] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[25Jul2025 17:38:19.827] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[25Jul2025 17:38:20.341] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[25Jul2025 17:38:20.820] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 4%
-[25Jul2025 17:38:21.386] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 7%
-[25Jul2025 17:38:21.483] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 2167 ms
-[25Jul2025 17:38:21.484] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[25Jul2025 17:38:21.599] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 5, from 10
-[25Jul2025 17:38:21.601] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[25Jul2025 17:38:21.632] [Render thread/DEBUG] [io.netty.channel.MultithreadEventLoopGroup/]: -Dio.netty.eventLoopThreads: 32
-[25Jul2025 17:38:21.664] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.noKeySetOptimization: false
-[25Jul2025 17:38:21.665] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.selectorAutoRebuildThreshold: 512
-[25Jul2025 17:38:21.671] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: org.jctools-core.MpscChunkedArrayQueue: available
-[25Jul2025 17:38:21.724] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.processId: 20348 (auto-detected)
-[25Jul2025 17:38:21.727] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[25Jul2025 17:38:21.728] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv4Stack: false
-[25Jul2025 17:38:21.728] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv6Addresses: false
-[25Jul2025 17:38:21.740] [Render thread/DEBUG] [io.netty.util.NetUtilInitializations/]: Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
-[25Jul2025 17:38:21.741] [Render thread/DEBUG] [io.netty.util.NetUtil/]: Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
-[25Jul2025 17:38:21.760] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.machineId: c8:7f:54:ff:fe:02:b5:31 (auto-detected)
-[25Jul2025 17:38:21.783] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numHeapArenas: 32
-[25Jul2025 17:38:21.783] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numDirectArenas: 32
-[25Jul2025 17:38:21.783] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.pageSize: 8192
-[25Jul2025 17:38:21.783] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxOrder: 11
-[25Jul2025 17:38:21.783] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.chunkSize: 16777216
-[25Jul2025 17:38:21.783] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.smallCacheSize: 256
-[25Jul2025 17:38:21.784] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.normalCacheSize: 64
-[25Jul2025 17:38:21.784] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-[25Jul2025 17:38:21.784] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimInterval: 8192
-[25Jul2025 17:38:21.784] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-[25Jul2025 17:38:21.784] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.useCacheForAllThreads: true
-[25Jul2025 17:38:21.784] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-[25Jul2025 17:38:21.794] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.allocator.type: pooled
-[25Jul2025 17:38:21.794] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.threadLocalDirectBufferSize: 0
-[25Jul2025 17:38:21.794] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
-[25Jul2025 17:38:21.823] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Starting local connection.
-[25Jul2025 17:38:21.906] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxCapacityPerThread: 4096
-[25Jul2025 17:38:21.906] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxSharedCapacityFactor: 2
-[25Jul2025 17:38:21.906] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.linkCapacity: 16
-[25Jul2025 17:38:21.906] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.ratio: 8
-[25Jul2025 17:38:21.906] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.delayedQueue.ratio: 8
-[25Jul2025 17:38:21.917] [Netty Server IO #1/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkAccessible: true
-[25Jul2025 17:38:21.918] [Netty Server IO #1/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkBounds: true
-[25Jul2025 17:38:21.919] [Netty Server IO #1/DEBUG] [io.netty.util.ResourceLeakDetectorFactory/]: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1d6729a1
-[25Jul2025 17:38:21.922] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Starting local connection.
-[25Jul2025 17:38:22.097] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'net.minecraftforge.network.HandshakeMessages$S2CModData' to 'fml:handshake' sequence 0
-[25Jul2025 17:38:22.102] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 0
-[25Jul2025 17:38:22.153] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'net.minecraftforge.network.HandshakeMessages$S2CModList' to 'fml:handshake' sequence 1
-[25Jul2025 17:38:22.155] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 1
-[25Jul2025 17:38:22.155] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Logging into server with mod list [minecraft, skyzeradventure, mixinextras, forge]
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:loginwrapper' : Version test of 'FML3' from server : ACCEPTED
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:tier_sorting' : Version test of '1.0' from server : ACCEPTED
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:handshake' : Version test of 'FML3' from server : ACCEPTED
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'skyzeradventure:skyzeradventure' : Version test of '1' from server : ACCEPTED
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:unregister' : Version test of 'FML3' from server : ACCEPTED
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:play' : Version test of 'FML3' from server : ACCEPTED
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:register' : Version test of 'FML3' from server : ACCEPTED
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:split' : Version test of '1.1' from server : ACCEPTED
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Accepting channel list from server
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 1
-[25Jul2025 17:38:22.156] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Accepted server connection
-[25Jul2025 17:38:22.156] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 1
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 1 of type net.minecraftforge.network.HandshakeMessages$C2SModListReply
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client connection with modlist [minecraft, skyzeradventure, mixinextras, forge]
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:loginwrapper' : Version test of 'FML3' from client : ACCEPTED
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:tier_sorting' : Version test of '1.0' from client : ACCEPTED
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:handshake' : Version test of 'FML3' from client : ACCEPTED
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'skyzeradventure:skyzeradventure' : Version test of '1' from client : ACCEPTED
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:unregister' : Version test of 'FML3' from client : ACCEPTED
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:play' : Version test of 'FML3' from client : ACCEPTED
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:register' : Version test of 'FML3' from client : ACCEPTED
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:split' : Version test of '1.1' from client : ACCEPTED
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Accepting channel list from client
-[25Jul2025 17:38:22.157] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Accepted client connection mod list
-[25Jul2025 17:38:22.198] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'Config SkyzerAdventure/Shop/ShopConfig.toml' to 'fml:handshake' sequence 2
-[25Jul2025 17:38:22.198] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 2
-[25Jul2025 17:38:22.198] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received config sync from server
-[25Jul2025 17:38:22.198] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 2
-[25Jul2025 17:38:22.199] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 2
-[25Jul2025 17:38:22.199] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 2 of type net.minecraftforge.network.HandshakeMessages$C2SAcknowledge
-[25Jul2025 17:38:22.199] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received acknowledgement from client
-[25Jul2025 17:38:22.246] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'Config SkyzerAdventure/Shop/ShopListing.toml' to 'fml:handshake' sequence 3
-[25Jul2025 17:38:22.246] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 3
-[25Jul2025 17:38:22.246] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received config sync from server
-[25Jul2025 17:38:22.246] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 3
-[25Jul2025 17:38:22.246] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 3
-[25Jul2025 17:38:22.246] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 3 of type net.minecraftforge.network.HandshakeMessages$C2SAcknowledge
-[25Jul2025 17:38:22.246] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received acknowledgement from client
-[25Jul2025 17:38:22.294] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'Config forge-server.toml' to 'fml:handshake' sequence 4
-[25Jul2025 17:38:22.294] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 4
-[25Jul2025 17:38:22.294] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received config sync from server
-[25Jul2025 17:38:22.294] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 4
-[25Jul2025 17:38:22.295] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 4
-[25Jul2025 17:38:22.295] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 4 of type net.minecraftforge.network.HandshakeMessages$C2SAcknowledge
-[25Jul2025 17:38:22.295] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received acknowledgement from client
-[25Jul2025 17:38:22.343] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Handshake complete!
-[25Jul2025 17:38:22.394] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[25Jul2025 17:38:22.438] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@947f4d3
-[25Jul2025 17:38:22.453] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:67336ec7] logged in with entity id 50 at (49587.2555224566, 88.15919260893901, 49771.6670660081)
-[25Jul2025 17:38:22.479] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[25Jul2025 17:38:22.698] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] =====[ Skyze Adventure ]=====
-[25Jul2025 17:38:22.699] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /level | To know about /level command very usefull !
-[25Jul2025 17:38:22.699] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /overlayconfig | To configure some overlay of the mod ! very usefull
-[25Jul2025 17:38:22.699] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /money | Show your balance !
-[25Jul2025 17:38:22.700] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /adminshop | Open the admin shop !
-[25Jul2025 17:38:23.133] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 190 advancements
-[25Jul2025 17:38:29.784] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[25Jul2025 17:38:29.794] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
-[25Jul2025 17:38:29.806] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
-[25Jul2025 17:38:29.807] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
-[25Jul2025 17:38:29.811] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save Test
-[25Jul2025 17:38:29.814] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete Test
-[25Jul2025 17:38:31.085] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[25Jul2025 17:38:31.090] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
-[25Jul2025 17:38:31.095] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
-[25Jul2025 17:38:31.095] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
-[25Jul2025 17:38:31.098] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save Test
-[25Jul2025 17:38:31.101] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete Test
-[25Jul2025 17:38:38.750] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] The nearest skyzeradventure:broken_castle is at [50096, ~, 52128] (2411 blocks away)
-[25Jul2025 17:38:41.505] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Teleported Dev to 50096.500000, 88.159193, 52128.500000]
-[25Jul2025 17:38:41.505] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Teleported Dev to 50096.500000, 88.159193, 52128.500000
-[25Jul2025 17:38:54.636] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
-[25Jul2025 17:38:54.638] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[25Jul2025 17:38:54.638] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[25Jul2025 17:38:54.643] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[25Jul2025 17:38:54.685] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[25Jul2025 17:38:54.685] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[25Jul2025 17:38:54.685] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[25Jul2025 17:38:55.482] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
-[25Jul2025 17:38:56.255] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
-[25Jul2025 17:38:56.256] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
-[25Jul2025 17:38:56.258] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save Test
-[25Jul2025 17:38:56.260] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete Test
-[25Jul2025 17:38:56.267] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (Test): All chunks are saved
-[25Jul2025 17:38:56.267] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[25Jul2025 17:38:56.267] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[25Jul2025 17:38:56.267] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
-[25Jul2025 17:38:56.509] [Server thread/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing serverconfig directory : .\saves\Test\serverconfig
-[25Jul2025 17:38:56.509] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Unloading configs type SERVER
+[26Jul2025 16:25:18.755] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 40.3.11 Target: null
+[26Jul2025 16:25:21.364] [Render thread/DEBUG] [net.minecraftforge.common.ForgeI18n/CORE]: Loading I18N data entries: 5701
+[26Jul2025 16:25:21.806] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Barre Son (Realtek High Definition Audio)
+[26Jul2025 16:25:21.808] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[26Jul2025 16:25:22.131] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x2 minecraft:textures/atlas/blocks.png-atlas
+[26Jul2025 16:25:22.137] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x2 minecraft:textures/atlas/signs.png-atlas
+[26Jul2025 16:25:22.138] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
+[26Jul2025 16:25:22.138] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
+[26Jul2025 16:25:22.139] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
+[26Jul2025 16:25:22.140] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
+[26Jul2025 16:25:22.140] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
+[26Jul2025 16:25:23.005] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[26Jul2025 16:25:23.007] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[26Jul2025 16:25:23.008] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/mob_effects.png-atlas
+[26Jul2025 16:25:23.476] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[26Jul2025 16:31:39.076] [Render thread/DEBUG] [net.minecraftforge.server.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:skyzeradventure for mod file D:\Mods Minecraft\SkyzerAdventure\build\classes\java\main
+[26Jul2025 16:31:39.076] [Render thread/DEBUG] [net.minecraftforge.server.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:forge for mod file /
+[26Jul2025 16:31:39.892] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[26Jul2025 16:31:39.893] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[26Jul2025 16:31:39.894] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[26Jul2025 16:31:39.895] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[26Jul2025 16:31:39.895] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[26Jul2025 16:31:40.419] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
+[26Jul2025 16:31:40.816] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1141 advancements
+[26Jul2025 16:31:40.837] [Render thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save Test
+[26Jul2025 16:31:40.841] [Render thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete Test
+[26Jul2025 16:31:41.050] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[26Jul2025 16:31:41.064] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.18.2
+[26Jul2025 16:31:41.064] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[26Jul2025 16:31:41.107] [Server thread/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing serverconfig directory : .\saves\Test\serverconfig
+[26Jul2025 16:31:41.107] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Loading configs type SERVER
+[26Jul2025 16:31:41.107] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for .\saves\Test\serverconfig\forge-server.toml
+[26Jul2025 16:31:41.109] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file .\saves\Test\serverconfig\forge-server.toml
+[26Jul2025 16:31:41.109] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file .\saves\Test\serverconfig\forge-server.toml for changes
+[26Jul2025 16:31:41.109] [Server thread/DEBUG] [net.minecraftforge.common.ForgeConfig/FORGEMOD]: Loaded forge config file forge-server.toml
+[26Jul2025 16:31:41.110] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopConfig.toml
+[26Jul2025 16:31:41.110] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopConfig.toml
+[26Jul2025 16:31:41.110] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopConfig.toml for changes
+[26Jul2025 16:31:41.110] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Built TOML config for .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopListing.toml
+[26Jul2025 16:31:41.115] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopListing.toml
+[26Jul2025 16:31:41.115] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Watching TOML config file .\saves\Test\serverconfig\SkyzerAdventure\Shop\ShopListing.toml for changes
+[26Jul2025 16:31:41.121] [Thread-0/DEBUG] [net.minecraftforge.fml.config.ConfigFileTypeHandler/CONFIG]: Config file SkyzerAdventure/Shop/ShopListing.toml changed, sending notifies
+[26Jul2025 16:31:41.313] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[26Jul2025 16:31:41.789] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jul2025 16:31:41.839] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jul2025 16:31:42.337] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[26Jul2025 16:31:42.853] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 31%
+[26Jul2025 16:31:43.242] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[26Jul2025 16:31:43.253] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 1918 ms
+[26Jul2025 16:31:43.322] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 5, from 10
+[26Jul2025 16:31:43.324] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[26Jul2025 16:31:43.364] [Render thread/DEBUG] [io.netty.channel.MultithreadEventLoopGroup/]: -Dio.netty.eventLoopThreads: 32
+[26Jul2025 16:31:43.409] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.noKeySetOptimization: false
+[26Jul2025 16:31:43.410] [Render thread/DEBUG] [io.netty.channel.nio.NioEventLoop/]: -Dio.netty.selectorAutoRebuildThreshold: 512
+[26Jul2025 16:31:43.415] [Render thread/DEBUG] [io.netty.util.internal.PlatformDependent/]: org.jctools-core.MpscChunkedArrayQueue: available
+[26Jul2025 16:31:43.464] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.processId: 26152 (auto-detected)
+[26Jul2025 16:31:43.468] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[26Jul2025 16:31:43.469] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv4Stack: false
+[26Jul2025 16:31:43.469] [Render thread/DEBUG] [io.netty.util.NetUtil/]: -Djava.net.preferIPv6Addresses: false
+[26Jul2025 16:31:43.476] [Render thread/DEBUG] [io.netty.util.NetUtilInitializations/]: Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[26Jul2025 16:31:43.478] [Render thread/DEBUG] [io.netty.util.NetUtil/]: Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[26Jul2025 16:31:43.491] [Render thread/DEBUG] [io.netty.channel.DefaultChannelId/]: -Dio.netty.machineId: c8:7f:54:ff:fe:02:b5:31 (auto-detected)
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numHeapArenas: 32
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.numDirectArenas: 32
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.pageSize: 8192
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxOrder: 11
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.chunkSize: 16777216
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.smallCacheSize: 256
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.normalCacheSize: 64
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimInterval: 8192
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.useCacheForAllThreads: true
+[26Jul2025 16:31:43.535] [Render thread/DEBUG] [io.netty.buffer.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[26Jul2025 16:31:43.542] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.allocator.type: pooled
+[26Jul2025 16:31:43.542] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.threadLocalDirectBufferSize: 0
+[26Jul2025 16:31:43.542] [Render thread/DEBUG] [io.netty.buffer.ByteBufUtil/]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[26Jul2025 16:31:43.570] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Starting local connection.
+[26Jul2025 16:31:43.648] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxCapacityPerThread: 4096
+[26Jul2025 16:31:43.648] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.maxSharedCapacityFactor: 2
+[26Jul2025 16:31:43.648] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.linkCapacity: 16
+[26Jul2025 16:31:43.648] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.ratio: 8
+[26Jul2025 16:31:43.648] [Netty Local Client IO #0/DEBUG] [io.netty.util.Recycler/]: -Dio.netty.recycler.delayedQueue.ratio: 8
+[26Jul2025 16:31:43.661] [Netty Server IO #1/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkAccessible: true
+[26Jul2025 16:31:43.661] [Netty Server IO #1/DEBUG] [io.netty.buffer.AbstractByteBuf/]: -Dio.netty.buffer.checkBounds: true
+[26Jul2025 16:31:43.662] [Netty Server IO #1/DEBUG] [io.netty.util.ResourceLeakDetectorFactory/]: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@31ecd70f
+[26Jul2025 16:31:43.673] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Starting local connection.
+[26Jul2025 16:31:43.802] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'net.minecraftforge.network.HandshakeMessages$S2CModData' to 'fml:handshake' sequence 0
+[26Jul2025 16:31:43.806] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 0
+[26Jul2025 16:31:43.853] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'net.minecraftforge.network.HandshakeMessages$S2CModList' to 'fml:handshake' sequence 1
+[26Jul2025 16:31:43.853] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 1
+[26Jul2025 16:31:43.853] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Logging into server with mod list [minecraft, skyzeradventure, forge]
+[26Jul2025 16:31:43.854] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:loginwrapper' : Version test of 'FML3' from server : ACCEPTED
+[26Jul2025 16:31:43.854] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:tier_sorting' : Version test of '1.0' from server : ACCEPTED
+[26Jul2025 16:31:43.854] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:handshake' : Version test of 'FML3' from server : ACCEPTED
+[26Jul2025 16:31:43.854] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'skyzeradventure:skyzeradventure' : Version test of '1' from server : ACCEPTED
+[26Jul2025 16:31:43.854] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:unregister' : Version test of 'FML3' from server : ACCEPTED
+[26Jul2025 16:31:43.854] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:play' : Version test of 'FML3' from server : ACCEPTED
+[26Jul2025 16:31:43.854] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:register' : Version test of 'FML3' from server : ACCEPTED
+[26Jul2025 16:31:43.854] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:split' : Version test of '1.1' from server : ACCEPTED
+[26Jul2025 16:31:43.854] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Accepting channel list from server
+[26Jul2025 16:31:43.855] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 1
+[26Jul2025 16:31:43.855] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Accepted server connection
+[26Jul2025 16:31:43.855] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 1
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 1 of type net.minecraftforge.network.HandshakeMessages$C2SModListReply
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client connection with modlist [minecraft, skyzeradventure, forge]
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:loginwrapper' : Version test of 'FML3' from client : ACCEPTED
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:tier_sorting' : Version test of '1.0' from client : ACCEPTED
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:handshake' : Version test of 'FML3' from client : ACCEPTED
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'skyzeradventure:skyzeradventure' : Version test of '1' from client : ACCEPTED
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:unregister' : Version test of 'FML3' from client : ACCEPTED
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'fml:play' : Version test of 'FML3' from client : ACCEPTED
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:register' : Version test of 'FML3' from client : ACCEPTED
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Channel 'forge:split' : Version test of '1.1' from client : ACCEPTED
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.NetworkRegistry/NETREGISTRY]: Accepting channel list from client
+[26Jul2025 16:31:43.856] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Accepted client connection mod list
+[26Jul2025 16:31:43.903] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'Config SkyzerAdventure/Shop/ShopConfig.toml' to 'fml:handshake' sequence 2
+[26Jul2025 16:31:43.903] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 2
+[26Jul2025 16:31:43.903] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received config sync from server
+[26Jul2025 16:31:43.903] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 2
+[26Jul2025 16:31:43.903] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 2
+[26Jul2025 16:31:43.903] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 2 of type net.minecraftforge.network.HandshakeMessages$C2SAcknowledge
+[26Jul2025 16:31:43.904] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received acknowledgement from client
+[26Jul2025 16:31:43.953] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'Config SkyzerAdventure/Shop/ShopListing.toml' to 'fml:handshake' sequence 3
+[26Jul2025 16:31:43.953] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 3
+[26Jul2025 16:31:43.953] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received config sync from server
+[26Jul2025 16:31:43.953] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 3
+[26Jul2025 16:31:43.954] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 3
+[26Jul2025 16:31:43.954] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 3 of type net.minecraftforge.network.HandshakeMessages$C2SAcknowledge
+[26Jul2025 16:31:43.954] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received acknowledgement from client
+[26Jul2025 16:31:44.000] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Sending ticking packet info 'Config forge-server.toml' to 'fml:handshake' sequence 4
+[26Jul2025 16:31:44.000] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 4
+[26Jul2025 16:31:44.001] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received config sync from server
+[26Jul2025 16:31:44.001] [Netty Local Client IO #0/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Dispatching wrapped packet reply for channel fml:handshake with index 4
+[26Jul2025 16:31:44.001] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.LoginWrapper/FMLHANDSHAKE]: Recieved login wrapper packet event for channel fml:handshake with index 4
+[26Jul2025 16:31:44.001] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received client indexed reply 4 of type net.minecraftforge.network.HandshakeMessages$C2SAcknowledge
+[26Jul2025 16:31:44.001] [Netty Server IO #1/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Received acknowledgement from client
+[26Jul2025 16:31:44.050] [Server thread/DEBUG] [net.minecraftforge.network.HandshakeHandler/FMLHANDSHAKE]: Handshake complete!
+[26Jul2025 16:31:44.102] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[26Jul2025 16:31:44.144] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@61ca7f7c
+[26Jul2025 16:31:44.156] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:df4f8a1d] logged in with entity id 51 at (-50345.3246958436, 67.46050011295725, 50198.23936148805)
+[26Jul2025 16:31:44.175] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[26Jul2025 16:31:44.377] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] =====[ Skyze Adventure ]=====
+[26Jul2025 16:31:44.377] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /level | To know about /level command very usefull !
+[26Jul2025 16:31:44.378] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /overlayconfig | To configure some overlay of the mod ! very usefull
+[26Jul2025 16:31:44.378] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /money | Show your balance !
+[26Jul2025 16:31:44.378] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /adminshop | Open the admin shop !
+[26Jul2025 16:31:44.566] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 211 advancements
+[26Jul2025 16:31:48.496] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot0.0 (0, 120, 0)
+[26Jul2025 16:31:48.497] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot1.0 (5000, 120, 0)
+[26Jul2025 16:31:48.497] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot2.0 (3536, 120, 3536)
+[26Jul2025 16:31:48.497] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot3.0 (0, 120, 5000)
+[26Jul2025 16:31:48.497] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot4.0 (-3536, 120, 3536)
+[26Jul2025 16:31:48.497] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot5.0 (-5000, 120, 0)
+[26Jul2025 16:31:48.497] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot6.0 (-3536, 120, -3536)
+[26Jul2025 16:31:48.497] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot7.0 (0, 120, -5000)
+[26Jul2025 16:31:48.497] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot8.0 (3536, 120, -3536)
+[26Jul2025 16:31:48.497] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot9.0 (10000, 120, 0)
+[26Jul2025 16:31:48.497] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] Slot10.0 (9239, 120, 3827)
+[26Jul2025 16:32:47.334] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[26Jul2025 16:32:47.344] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[26Jul2025 16:32:47.344] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[26Jul2025 16:32:47.358] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[26Jul2025 16:32:47.405] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[26Jul2025 16:32:47.405] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[26Jul2025 16:32:47.405] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[26Jul2025 16:32:47.976] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
+[26Jul2025 16:32:48.174] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
+[26Jul2025 16:32:48.175] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
+[26Jul2025 16:32:48.175] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/skyzeradventure:exponia
+[26Jul2025 16:32:48.181] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: Gathering id map for writing to world save Test
+[26Jul2025 16:32:48.184] [Server thread/DEBUG] [net.minecraftforge.common.ForgeHooks/WP]: ID Map collection complete Test
+[26Jul2025 16:32:48.194] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (Test): All chunks are saved
+[26Jul2025 16:32:48.194] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[26Jul2025 16:32:48.194] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[26Jul2025 16:32:48.194] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (exponia): All chunks are saved
+[26Jul2025 16:32:48.194] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[26Jul2025 16:32:48.402] [Server thread/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing serverconfig directory : .\saves\Test\serverconfig
+[26Jul2025 16:32:48.402] [Server thread/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Unloading configs type SERVER

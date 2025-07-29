@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "skyzeradventure:block/basic_lb_bottom",
+    "up": "skyzeradventure:block/basic_lb_top",
+    "north": "skyzeradventure:block/basic_lb_side",
+    "east": "skyzeradventure:block/basic_lb_side",
+    "south": "skyzeradventure:block/basic_lb_side",
+    "west": "skyzeradventure:block/basic_lb_side",
+    "particle": "skyzeradventure:block/basic_lb_bottom"
+  }
+}

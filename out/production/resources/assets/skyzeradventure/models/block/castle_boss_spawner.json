@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "skyzeradventure:block/castle_boss_spawner",
+    "up": "skyzeradventure:block/castle_boss_spawner",
+    "north": "skyzeradventure:block/castle_boss_spawner",
+    "east": "skyzeradventure:block/castle_boss_spawner",
+    "south": "skyzeradventure:block/castle_boss_spawner",
+    "west": "skyzeradventure:block/castle_boss_spawner",
+    "particle": "skyzeradventure:block/castle_boss_spawner"
+  }
+}

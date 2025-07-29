@@ -17,6 +17,7 @@ import fr.eriniumgroup.skyzeradventure.item.WritedPaperItem;
 import fr.eriniumgroup.skyzeradventure.item.SacrificeKnifeItem;
 import fr.eriniumgroup.skyzeradventure.item.RegenerationGumItem;
 import fr.eriniumgroup.skyzeradventure.item.ExponiaMeteoriteGemItem;
+import fr.eriniumgroup.skyzeradventure.item.ExponiaItem;
 import fr.eriniumgroup.skyzeradventure.item.ExplosiveOrbItem;
 import fr.eriniumgroup.skyzeradventure.item.BossSpawnerItemItem;
 import fr.eriniumgroup.skyzeradventure.item.AdetiumSwordItem;
@@ -49,10 +50,12 @@ public class SkyzeradventureModItems {
 	public static final RegistryObject<Item> BASIC_LUCKY_BLOCK = blockCMT(SkyzeradventureModBlocks.BASIC_LUCKY_BLOCK, SkyzeradventureModTabs.TAB_BLOCKS_TAB);
 	public static final RegistryObject<Item> AUTO_SELLER = blockCMT(SkyzeradventureModBlocks.AUTO_SELLER, SkyzeradventureModTabs.TAB_BLOCKS_TAB);
 	public static final RegistryObject<Item> EXPONIA_METEORITE = blockCMT(SkyzeradventureModBlocks.EXPONIA_METEORITE, SkyzeradventureModTabs.TAB_BLOCKS_TAB);
+	public static final RegistryObject<Item> EXPONIA_PORTAL_FRAME = blockCMT(SkyzeradventureModBlocks.EXPONIA_PORTAL_FRAME, SkyzeradventureModTabs.TAB_BLOCKS_TAB);
 	public static final RegistryObject<Item> ENERGY_SELLER_BLOCK = blockCMT(SkyzeradventureModBlocks.ENERGY_SELLER_BLOCK, CreativeModeTab.TAB_REDSTONE);
 	public static final RegistryObject<Item> CASTLE_BOSS_SPAWN_EGG = REGISTRY.register("castle_boss_spawn_egg",
 			() -> new ForgeSpawnEggItem(SkyzeradventureModEntities.CASTLE_BOSS, -6710887, -3355393, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> EXPLOSIVE_ORB = REGISTRY.register("explosive_orb", ExplosiveOrbItem::new);
+	public static final RegistryObject<Item> EXPONIA = REGISTRY.register("exponia", ExponiaItem::new);
 	public static final RegistryObject<Item> EXPONIA_METEORITE_GEM = REGISTRY.register("exponia_meteorite_gem", ExponiaMeteoriteGemItem::new);
 
 	// Start of user code block custom items

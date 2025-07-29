@@ -15,6 +15,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.Block;
 
+import fr.eriniumgroup.skyzeradventure.block.ExponiaPortalFrameBlock;
+import fr.eriniumgroup.skyzeradventure.block.ExponiaPortalBlock;
 import fr.eriniumgroup.skyzeradventure.block.ExponiaMeteoriteBlock;
 import fr.eriniumgroup.skyzeradventure.block.EnergySellerBlockBlock;
 import fr.eriniumgroup.skyzeradventure.block.CastleBossSpawnerBlock;
@@ -32,6 +34,8 @@ public class SkyzeradventureModBlocks {
 	public static final RegistryObject<Block> BASIC_LUCKY_BLOCK = REGISTRY.register("basic_lucky_block", BasicLuckyBlockBlock::new);
 	public static final RegistryObject<Block> AUTO_SELLER = REGISTRY.register("auto_seller", AutoSellerBlock::new);
 	public static final RegistryObject<Block> EXPONIA_METEORITE = REGISTRY.register("exponia_meteorite", ExponiaMeteoriteBlock::new);
+	public static final RegistryObject<Block> EXPONIA_PORTAL_FRAME = REGISTRY.register("exponia_portal_frame", ExponiaPortalFrameBlock::new);
+	public static final RegistryObject<Block> EXPONIA_PORTAL = REGISTRY.register("exponia_portal", ExponiaPortalBlock::new);
 
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
@@ -40,6 +44,7 @@ public class SkyzeradventureModBlocks {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
 			ExponiaMeteoriteBlock.registerRenderLayer();
+			ExponiaPortalBlock.registerRenderLayer();
 		}
 	}
 

@@ -4,13 +4,23 @@
     <annotationProcessing>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
+        <option name="defaultObfuscationEnv" value="searge" />
+        <option name="mappingTypes" value="tsrg" />
+        <option name="outRefMapFile" value="D:\Mods Minecraft\SkyzerAdventure\build\mixin\skyzeradventure.refmap.json" />
+        <option name="outTsrgFile" value="D:\Mods Minecraft\SkyzerAdventure\build\mixin\skyzeradventure.refmap.json.mappings.tsrg" />
+        <option name="pluginVersion" value="0.7" />
+        <option name="reobfTsrgFile" value="D:\Mods Minecraft\SkyzerAdventure\build\moddev\artifacts\namedToIntermediate.tsrg" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-common/0.4.1/a7f425cc49de7f10d008a9a676f5f023ebac13bb/mixinextras-common-0.4.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/6d1c8bf4c28e697f472a83bd6add76ec4951734/mixin-0.8.5-processor.jar" />
         </processorPath>
         <module name="SkyzerAdventure.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SkyzerAdventure.main" options="&quot;-AreobfTsrgFile=D:\Mods Minecraft\SkyzerAdventure\build\moddev\artifacts\namedToIntermediate.tsrg&quot; &quot;-AoutTsrgFile=D:\Mods Minecraft\SkyzerAdventure\build\mixin\skyzeradventure.refmap.json.mappings.tsrg&quot; &quot;-AoutRefMapFile=D:\Mods Minecraft\SkyzerAdventure\build\mixin\skyzeradventure.refmap.json&quot; -AmappingTypes=tsrg -ApluginVersion=0.7 -AdefaultObfuscationEnv=searge" />
+    </option>
   </component>
 </project>

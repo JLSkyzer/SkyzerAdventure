@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "skyzeradventure:block/adetium_ore",
+    "up": "skyzeradventure:block/adetium_ore",
+    "north": "skyzeradventure:block/adetium_ore",
+    "east": "skyzeradventure:block/adetium_ore",
+    "south": "skyzeradventure:block/adetium_ore",
+    "west": "skyzeradventure:block/adetium_ore",
+    "particle": "skyzeradventure:block/adetium_ore"
+  }
+}

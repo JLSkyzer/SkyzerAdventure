@@ -13,15 +13,13 @@ import net.minecraft.commands.Commands;
 
 import fr.eriniumgroup.skyzeradventure.procedures.CmdTempProcedure;
 
-import com.mojang.brigadier.arguments.DoubleArgumentType;
-
 @Mod.EventBusSubscriber
 public class TempcmdCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("tempcmd")
 
-				.then(Commands.argument("temp", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
+				.executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -33,9 +31,9 @@ public class TempcmdCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					CmdTempProcedure.execute(arguments, entity);
+					CmdTempProcedure.execute(entity);
 					return 0;
-				})));
+				}));
 	}
 
 }

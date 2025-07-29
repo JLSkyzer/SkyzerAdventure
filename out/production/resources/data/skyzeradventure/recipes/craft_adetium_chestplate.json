@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "skyzeradventure:adetium_ingot"
+    }
+  },
+  "result": {
+    "item": "skyzeradventure:adetium_armor_chestplate",
+    "count": 1
+  }
+}

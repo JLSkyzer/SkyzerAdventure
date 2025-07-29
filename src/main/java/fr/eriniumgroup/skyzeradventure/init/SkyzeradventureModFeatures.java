@@ -22,12 +22,14 @@ import java.util.List;
 import java.util.ArrayList;
 
 import fr.eriniumgroup.skyzeradventure.world.features.ores.AdetiumOreFeature;
+import fr.eriniumgroup.skyzeradventure.world.features.Cave2Feature;
 import fr.eriniumgroup.skyzeradventure.SkyzeradventureMod;
 
 @Mod.EventBusSubscriber
 public class SkyzeradventureModFeatures {
 	public static final DeferredRegister<Feature<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.FEATURES, SkyzeradventureMod.MODID);
 	private static final List<FeatureRegistration> FEATURE_REGISTRATIONS = new ArrayList<>();
+	public static final RegistryObject<Feature<?>> CAVE_2 = register("cave_2", Cave2Feature::feature, new FeatureRegistration(GenerationStep.Decoration.SURFACE_STRUCTURES, Cave2Feature.GENERATE_BIOMES, Cave2Feature::placedFeature));
 	public static final RegistryObject<Feature<?>> ADETIUM_ORE = register("adetium_ore", AdetiumOreFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, AdetiumOreFeature.GENERATE_BIOMES, AdetiumOreFeature::placedFeature));
 
