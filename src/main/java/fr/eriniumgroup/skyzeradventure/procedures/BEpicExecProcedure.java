@@ -1,7 +1,10 @@
 package fr.eriniumgroup.skyzeradventure.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -15,6 +18,7 @@ import net.minecraft.network.chat.TextComponent;
 import java.util.Random;
 
 import fr.eriniumgroup.skyzeradventure.network.SkyzeradventureModVariables;
+import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModItems;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModEntities;
 import fr.eriniumgroup.skyzeradventure.entity.CastleBossEntity;
 
@@ -26,6 +30,7 @@ public class BEpicExecProcedure {
 		String temp = "";
 		double tempNumber = 0;
 		double whilecounter = 0;
+		ItemStack item = ItemStack.EMPTY;
 		temp = arg;
 		if ((temp).equals("spawn_castle_boss")) {
 			if (world instanceof ServerLevel _level) {
@@ -69,6 +74,14 @@ public class BEpicExecProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 2400, 0));
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(new TextComponent("\u00A74J'en ai vu des malchanceux mais alors la "), false);
+		} else if ((temp).equals("epic_rnd_xp_boost_item")) {
+			item = new ItemStack(SkyzeradventureModItems.RANDOM_XP_BOOST.get()).copy();
+			item.getOrCreateTag().putString("type", "epic");
+			if (world instanceof Level _level && !_level.isClientSide()) {
+				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, item);
+				entityToSpawn.setPickUpDelay(10);
+				_level.addFreshEntity(entityToSpawn);
+			}
 		}
 	}
 }

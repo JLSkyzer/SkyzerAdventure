@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><variables><variable type=\"String\" id=\"temp\">temp</variable></variables><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"entity_add_potion\"><field name=\"potion\">CUSTOM:PlayerXpMultiplier</field><value name=\"level\"><block type=\"math_dual_ops\"><field name=\"OP\">MINUS</field><value name=\"A\"><block type=\"math_singular_ops\"><field name=\"OP\">ROUND</field><value name=\"NUM\"><block type=\"math_dual_ops\"><field name=\"OP\">DIVIDE_DOUBLE</field><value name=\"A\"><block type=\"item_nbt_num_get\"><value name=\"tagName\"><block type=\"text\"><field name=\"TEXT\">boost</field></block></value><value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value></block></value><value name=\"B\"><block type=\"math_number\"><field name=\"NUM\">0.25</field></block></value></block></value></block></value><value name=\"B\"><block type=\"math_number\"><field name=\"NUM\">4</field></block></value></block></value><value name=\"duration\"><block type=\"math_number\"><field name=\"NUM\">36000</field></block></value><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

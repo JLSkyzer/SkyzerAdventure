@@ -6,6 +6,7 @@ public class BLegendListProcedure {
 		common.add("give_xp_job");
 		common.add("totem_of_undiying");
 		common.add("thunder_strike");
+		common.add("legendary_rnd_xp_boost_item");
 		return common;
 	}
 }

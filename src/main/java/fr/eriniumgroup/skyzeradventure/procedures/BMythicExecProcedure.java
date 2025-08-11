@@ -4,9 +4,11 @@ import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
@@ -18,13 +20,14 @@ import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModItems;
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModBlocks;
 
 public class BMythicExecProcedure {
-	public static void execute(LevelAccessor world, Entity entity, String arg) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, String arg) {
 		if (entity == null || arg == null)
 			return;
 		java.util.List<Object> common = new java.util.ArrayList<>();
 		String temp = "";
 		double tempNumber = 0;
 		double whilecounter = 0;
+		ItemStack item = ItemStack.EMPTY;
 		temp = arg;
 		if ((temp).equals("mythic_item_compagnon")) {
 			if (entity instanceof Player _player) {
@@ -94,6 +97,14 @@ public class BMythicExecProcedure {
 				FallingBlockEntity.fall(_level, new BlockPos(entity.getX(), entity.getY() + 9, entity.getZ()), Blocks.STONE.defaultBlockState());
 			if (world instanceof ServerLevel _level)
 				FallingBlockEntity.fall(_level, new BlockPos(entity.getX(), entity.getY() + 10, entity.getZ()), Blocks.STONE.defaultBlockState());
+		} else if ((temp).equals("mythic_rnd_xp_boost_item")) {
+			item = new ItemStack(SkyzeradventureModItems.RANDOM_XP_BOOST.get()).copy();
+			item.getOrCreateTag().putString("type", "mythic");
+			if (world instanceof Level _level && !_level.isClientSide()) {
+				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, item);
+				entityToSpawn.setPickUpDelay(10);
+				_level.addFreshEntity(entityToSpawn);
+			}
 		}
 	}
 }

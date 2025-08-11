@@ -6,6 +6,7 @@ public class BMythicListProcedure {
 		common.add("mythic_item_compagnon");
 		common.add("its_a_jackpot");
 		common.add("stone_falling");
+		common.add("mythic_rnd_xp_boost_item");
 		return common;
 	}
 }

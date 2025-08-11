@@ -7,6 +7,7 @@ public class BEpicListProcedure {
 		common.add("massive_money_reward");
 		common.add("effect_all_buffs");
 		common.add("blindfolded");
+		common.add("epic_rnd_xp_boost_item");
 		return common;
 	}
 }

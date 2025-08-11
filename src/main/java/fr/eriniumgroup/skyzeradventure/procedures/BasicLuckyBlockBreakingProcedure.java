@@ -48,7 +48,7 @@ public class BasicLuckyBlockBreakingProcedure {
 				} else if (random < 99.39) {
 					BLegendaryExecProcedure.execute(world, x, y, z, entity, arg);
 				} else {
-					BMythicExecProcedure.execute(world, entity, arg);
+					BMythicExecProcedure.execute(world, x, y, z, entity, arg);
 				}
 			} else {
 				if (world instanceof Level _level && !_level.isClientSide()) {

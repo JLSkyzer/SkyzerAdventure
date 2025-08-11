@@ -98,5 +98,9 @@
   "item.skyzeradventure.explosive_orb": "Explosive Orb",
   "biome.skyzeradventure.exp_hot": "Exponia Hot",
   "block.skyzeradventure.exponia_portal_frame": "Exponia Portal Frame",
-  "item.skyzeradventure.exponia": "Exponia Portal Igniter"
+  "item.skyzeradventure.exponia": "Exponia Portal Igniter",
+  "item.skyzeradventure.xp_boost": "Xp Boost",
+  "item.skyzeradventure.xp_boost.description_0": "Add X amount for 30 minutes",
+  "item.skyzeradventure.random_xp_boost": "Xp Boost",
+  "item.skyzeradventure.random_xp_boost.description_0": "Add X amount for 30 minutes"
 }

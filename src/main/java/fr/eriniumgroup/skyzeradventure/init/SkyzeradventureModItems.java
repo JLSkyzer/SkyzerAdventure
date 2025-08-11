@@ -13,9 +13,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import fr.eriniumgroup.skyzeradventure.item.XpBoostItem;
 import fr.eriniumgroup.skyzeradventure.item.WritedPaperItem;
 import fr.eriniumgroup.skyzeradventure.item.SacrificeKnifeItem;
 import fr.eriniumgroup.skyzeradventure.item.RegenerationGumItem;
+import fr.eriniumgroup.skyzeradventure.item.RandomXpBoostItem;
 import fr.eriniumgroup.skyzeradventure.item.ExponiaMeteoriteGemItem;
 import fr.eriniumgroup.skyzeradventure.item.ExponiaItem;
 import fr.eriniumgroup.skyzeradventure.item.ExplosiveOrbItem;
@@ -46,6 +48,8 @@ public class SkyzeradventureModItems {
 	public static final RegistryObject<Item> BOSS_SPAWNER_ITEM = REGISTRY.register("boss_spawner_item", BossSpawnerItemItem::new);
 	public static final RegistryObject<Item> REGENERATION_GUM = REGISTRY.register("regeneration_gum", RegenerationGumItem::new);
 	public static final RegistryObject<Item> WRITED_PAPER = REGISTRY.register("writed_paper", WritedPaperItem::new);
+	public static final RegistryObject<Item> XP_BOOST = REGISTRY.register("xp_boost", XpBoostItem::new);
+	public static final RegistryObject<Item> RANDOM_XP_BOOST = REGISTRY.register("random_xp_boost", RandomXpBoostItem::new);
 	public static final RegistryObject<Item> CASTLE_BOSS_SPAWNER = blockCMT(SkyzeradventureModBlocks.CASTLE_BOSS_SPAWNER, SkyzeradventureModTabs.TAB_BLOCKS_TAB);
 	public static final RegistryObject<Item> BASIC_LUCKY_BLOCK = blockCMT(SkyzeradventureModBlocks.BASIC_LUCKY_BLOCK, SkyzeradventureModTabs.TAB_BLOCKS_TAB);
 	public static final RegistryObject<Item> AUTO_SELLER = blockCMT(SkyzeradventureModBlocks.AUTO_SELLER, SkyzeradventureModTabs.TAB_BLOCKS_TAB);

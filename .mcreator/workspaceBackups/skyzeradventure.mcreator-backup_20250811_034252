@@ -369,18 +369,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -3494,6 +3482,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "arg",
             "type": "string"
           },
@@ -3895,6 +3895,168 @@
         ]
       },
       "path": "~/Gameplay/CorruptedBiomes"
+    },
+    {
+      "name": "GetSlotPosition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_slot_position",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "slot",
+            "type": "number"
+          },
+          {
+            "name": "spacing",
+            "type": "number"
+          }
+        ],
+        "return_type": "eriobject",
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/GetSlotPositionProcedure.java"
+        ]
+      },
+      "path": "~/Formule"
+    },
+    {
+      "name": "XpBoost",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_boost",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/XpBoostItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/xp_boost.json"
+        ]
+      },
+      "path": "~/RPG mode/Level/XpBoost"
+    },
+    {
+      "name": "XpBoostPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_boost_player_finishes_using_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/XpBoostPlayerFinishesUsingItemProcedure.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/XpBoost"
+    },
+    {
+      "name": "RandomXpBoost",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_xp_boost",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/item/RandomXpBoostItem.java",
+          "src/main/resources/assets/skyzeradventure/models/item/random_xp_boost.json"
+        ]
+      },
+      "path": "~/RPG mode/Level/XpBoost/LuckyBoost"
+    },
+    {
+      "name": "RandomXpBoostRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_xp_boost_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/RandomXpBoostRightclickedProcedure.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/XpBoost/LuckyBoost"
+    },
+    {
+      "name": "XpBoostItemInInventoryTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_boost_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/XpBoostItemInInventoryTickProcedure.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/XpBoost"
+    },
+    {
+      "name": "PlayerFinisheUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_finishe_using_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/PlayerFinisheUsingItemProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "RandomXpBoostTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_xp_boost_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/RandomXpBoostTickProcedure.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/XpBoost/LuckyBoost"
     }
   ],
   "variable_elements": [
@@ -4262,7 +4424,11 @@
       "item.skyzeradventure.explosive_orb": "Explosive Orb",
       "biome.skyzeradventure.exp_hot": "Exponia Hot",
       "block.skyzeradventure.exponia_portal_frame": "Exponia Portal Frame",
-      "item.skyzeradventure.exponia": "Exponia Portal Igniter"
+      "item.skyzeradventure.exponia": "Exponia Portal Igniter",
+      "item.skyzeradventure.xp_boost": "Xp Boost",
+      "item.skyzeradventure.xp_boost.description_0": "Add X amount for 30 minutes",
+      "item.skyzeradventure.random_xp_boost": "Xp Boost",
+      "item.skyzeradventure.random_xp_boost.description_0": "Add X amount for 30 minutes"
     }
   },
   "metadata": {
@@ -4351,6 +4517,15 @@
               {
                 "name": "Potion",
                 "children": []
+              },
+              {
+                "name": "XpBoost",
+                "children": [
+                  {
+                    "name": "LuckyBoost",
+                    "children": []
+                  }
+                ]
               }
             ]
           },
