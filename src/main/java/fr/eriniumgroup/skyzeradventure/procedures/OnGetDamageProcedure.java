@@ -3,7 +3,7 @@ package fr.eriniumgroup.skyzeradventure.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -30,23 +30,21 @@ import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModGameRules;
 @Mod.EventBusSubscriber
 public class OnGetDamageProcedure {
 	@SubscribeEvent
-	public static void onEntityAttacked(LivingAttackEvent event) {
+	public static void onEntityAttacked(LivingHurtEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getSource(), event.getEntity(), event.getSource().getDirectEntity(), event.getAmount());
+			execute(event, event.getEntity().level, event.getSource(), event.getEntity(), event.getSource().getEntity(), event.getAmount());
 		}
 	}
 
-	public static void execute(LevelAccessor world, DamageSource damagesource, Entity entity, Entity immediatesourceentity, double amount) {
-		execute(null, world, damagesource, entity, immediatesourceentity, amount);
+	public static void execute(LevelAccessor world, DamageSource damagesource, Entity entity, Entity sourceentity, double amount) {
+		execute(null, world, damagesource, entity, sourceentity, amount);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, DamageSource damagesource, Entity entity, Entity immediatesourceentity, double amount) {
-		if (damagesource == null || entity == null || immediatesourceentity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, DamageSource damagesource, Entity entity, Entity sourceentity, double amount) {
+		if (damagesource == null || entity == null || sourceentity == null)
 			return;
 		double FinalDamage = 0;
 		double damageReduction = 0;
-		if (entity instanceof LivingEntity _entity)
-			_entity.setHealth(20);
 		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 			if (entity instanceof ServerPlayer && entity.isAlive()) {
 				if (world.getLevelData().getGameRules().getBoolean(SkyzeradventureModGameRules.RPG_MODE_GAMERULE)) {
@@ -80,8 +78,8 @@ public class OnGetDamageProcedure {
 							FinalDamage = 0;
 						}
 					}
-					if (entity instanceof LivingEntity _livEnt41 && _livEnt41.isBlocking()) {
-						if (damagesource == DamageSource.WITHER || immediatesourceentity instanceof Arrow || immediatesourceentity instanceof PrimedTnt || immediatesourceentity instanceof MinecartTNT) {
+					if (entity instanceof LivingEntity _livEnt40 && _livEnt40.isBlocking()) {
+						if (damagesource == DamageSource.WITHER || sourceentity instanceof Arrow || sourceentity instanceof PrimedTnt || sourceentity instanceof MinecartTNT) {
 							FinalDamage = 0;
 						}
 					}
@@ -101,6 +99,8 @@ public class OnGetDamageProcedure {
 					}
 					if (entity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(new TextComponent(("" + (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).RPGHealth)), false);
+					if (entity instanceof LivingEntity _entity)
+						_entity.setHealth(20);
 				}
 			}
 		}

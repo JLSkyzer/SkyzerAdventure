@@ -32,7 +32,7 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
+            "name": "sourceentity",
             "type": "entity"
           },
           {
