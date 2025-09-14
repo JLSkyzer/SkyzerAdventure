@@ -1,0 +1,7 @@
+
+[Listing]
+	#Follow this format : "modid:id:price; modid:id:price"
+	"Buy Listing" = "modid:id1:0; modid:id2:120"
+	#Follow this format : "modid:id:price; modid:id:price"
+	"Sell Listing" = "modid:id1:0; modid:id2:120"
+

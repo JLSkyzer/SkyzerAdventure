@@ -32,6 +32,10 @@
             "type": "entity"
           },
           {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
             "name": "amount",
             "type": "number"
           },
@@ -3986,6 +3990,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
@@ -4012,6 +4020,47 @@
         ]
       },
       "path": "~/RPG mode/Level/XpBoost"
+    },
+    {
+      "name": "PlayerFinisheUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_finishe_using_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/PlayerFinisheUsingItemProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "RandomXpBoostTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_xp_boost_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/RandomXpBoostTickProcedure.java"
+        ]
+      },
+      "path": "~/RPG mode/Level/XpBoost/LuckyBoost"
     }
   ],
   "variable_elements": [

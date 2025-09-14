@@ -2,11 +2,12 @@ package fr.eriniumgroup.skyzeradventure.procedures;
 
 import net.minecraftforge.items.ItemHandlerHelper;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -27,6 +28,7 @@ import net.minecraft.core.BlockPos;
 
 import java.util.Random;
 import java.util.List;
+import java.util.Comparator;
 import java.util.ArrayList;
 
 import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModMobEffects;
@@ -41,8 +43,11 @@ public class BUncommonExecProcedure {
 		double tempNumber = 0;
 		temp = arg;
 		if ((temp).equals("kaboom")) {
-			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, x, y, z, Mth.nextInt(new Random(), 1, 2), Explosion.BlockInteraction.DESTROY);
+			if (world instanceof Level _level && !_level.isClientSide()) {
+				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Blocks.TNT));
+				entityToSpawn.setPickUpDelay(10);
+				_level.addFreshEntity(entityToSpawn);
+			}
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(new TextComponent("kaboom!"), false);
 		} else if ((temp).equals("adetium_party")) {
@@ -133,22 +138,13 @@ public class BUncommonExecProcedure {
 				_player.displayClientMessage(new TextComponent("ta peur ou pas ? "), false);
 		} else if ((temp).equals("hot_feet")) {
 			{
-				int startX = Math.min((int) (entity.getX() - 2), (int) (entity.getX() + 2));
-				int startZ = Math.min((int) (entity.getZ() - 2), (int) (entity.getZ() + 2));
-				int endX = Math.max((int) (entity.getX() - 2), (int) (entity.getX() + 2));
-				int endZ = Math.max((int) (entity.getZ() - 2), (int) (entity.getZ() + 2));
-				for (int forx = startX; forx <= endX; forx++) {
-					for (int forz = startZ; forz <= endZ; forz++) {
-						int fory = (int) (entity.getY() - 1);
-						// Code here
-						if (!((world.getBlockState(new BlockPos(forx, fory, forz)))).getBlock().defaultBlockState().hasBlockEntity()) {
-							world.setBlock(new BlockPos(forx, fory, forz), Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
-						}
-					}
+				final Vec3 _center = new Vec3(x, y, z);
+				for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
+					entityiterator.setSecondsOnFire(5);
+					if (entityiterator instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(new TextComponent("\u00A79Ta pris tes tongues ? "), false);
 				}
 			}
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("\u00A79Ta pris tes tongues ? "), false);
 		}
 	}
 }

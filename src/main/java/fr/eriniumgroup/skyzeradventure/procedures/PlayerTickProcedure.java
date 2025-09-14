@@ -205,14 +205,14 @@ public class PlayerTickProcedure {
 									Minecraft.getInstance().gameRenderer.displayItemActivation((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY));
 								if (entity instanceof Player _player) {
 									ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-									_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+									_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove == p, 1, _player.inventoryMenu.getCraftSlots());
 								}
 							} else {
 								if (world.isClientSide())
 									Minecraft.getInstance().gameRenderer.displayItemActivation((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY));
 								if (entity instanceof Player _player) {
 									ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
-									_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+									_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove == p, 1, _player.inventoryMenu.getCraftSlots());
 								}
 							}
 							{

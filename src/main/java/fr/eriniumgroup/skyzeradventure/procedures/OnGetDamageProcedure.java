@@ -9,13 +9,17 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.vehicle.MinecartTNT;
+import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.TextComponent;
 
 import javax.annotation.Nullable;
 
@@ -28,24 +32,24 @@ public class OnGetDamageProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getSource(), event.getEntity(), event.getAmount());
+			execute(event, event.getEntity().level, event.getSource(), event.getEntity(), event.getSource().getDirectEntity(), event.getAmount());
 		}
 	}
 
-	public static void execute(LevelAccessor world, DamageSource damagesource, Entity entity, double amount) {
-		execute(null, world, damagesource, entity, amount);
+	public static void execute(LevelAccessor world, DamageSource damagesource, Entity entity, Entity immediatesourceentity, double amount) {
+		execute(null, world, damagesource, entity, immediatesourceentity, amount);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, DamageSource damagesource, Entity entity, double amount) {
-		if (damagesource == null || entity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, DamageSource damagesource, Entity entity, Entity immediatesourceentity, double amount) {
+		if (damagesource == null || entity == null || immediatesourceentity == null)
 			return;
 		double FinalDamage = 0;
 		double damageReduction = 0;
-		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) && !(entity instanceof LivingEntity _livEnt1 && _livEnt1.isBlocking())) {
+		if (entity instanceof LivingEntity _entity)
+			_entity.setHealth(20);
+		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 			if (entity instanceof ServerPlayer && entity.isAlive()) {
 				if (world.getLevelData().getGameRules().getBoolean(SkyzeradventureModGameRules.RPG_MODE_GAMERULE)) {
-					if (entity instanceof LivingEntity _entity)
-						_entity.setHealth(20);
 					FinalDamage = amount;
 					damageReduction = damageReduction + (entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) * 0.02;
 					if (damagesource == DamageSource.CRAMMING || damagesource == DamageSource.IN_FIRE || damagesource == DamageSource.LAVA || damagesource == DamageSource.ON_FIRE) {
@@ -76,6 +80,11 @@ public class OnGetDamageProcedure {
 							FinalDamage = 0;
 						}
 					}
+					if (entity instanceof LivingEntity _livEnt41 && _livEnt41.isBlocking()) {
+						if (damagesource == DamageSource.WITHER || immediatesourceentity instanceof Arrow || immediatesourceentity instanceof PrimedTnt || immediatesourceentity instanceof MinecartTNT) {
+							FinalDamage = 0;
+						}
+					}
 					{
 						double _setval = (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).RPGHealth - FinalDamage;
 						entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -90,6 +99,8 @@ public class OnGetDamageProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					if (entity instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(new TextComponent(("" + (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).RPGHealth)), false);
 				}
 			}
 		}

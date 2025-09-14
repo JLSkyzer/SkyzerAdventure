@@ -20,7 +20,7 @@ public class BasicLuckyBlockBreakingProcedure {
 		double random = 0;
 		double random2 = 0;
 		if (!world.isClientSide()) {
-			if (entity.isShiftKeyDown()) {
+			if (!entity.isShiftKeyDown()) {
 				random = Math.random() * 100;
 				if (random < 62) {
 					listevent = BCommoListProcedure.execute();
