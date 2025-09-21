@@ -7,6 +7,8 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.TextComponent;
@@ -69,6 +71,8 @@ public class JoinTheWorldProcedure {
 				}
 			}
 		}
+		if (entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+			_livingEntity1.getAttribute(Attributes.MAX_HEALTH).setBaseValue(((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).RPGHealthMax));
 		if (entity instanceof Player _player && !_player.level.isClientSide())
 			_player.displayClientMessage(new TextComponent("\u00A76=====[ Skyze Adventure ]====="), false);
 		if (entity instanceof Player _player && !_player.level.isClientSide())

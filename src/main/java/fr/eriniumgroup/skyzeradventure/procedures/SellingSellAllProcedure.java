@@ -65,7 +65,7 @@ public class SellingSellAllProcedure {
 					* (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitemprice) + "$")), false);
 		if (entity instanceof Player _player) {
 			ItemStack _stktoremove = ((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitem);
-			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove == p, (int) new Object() {
+			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) new Object() {
 				private int returnItemNumber(ItemStack item, Entity entity) {
 					ItemStack tempItem = item;
 					double count = 0;

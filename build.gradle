@@ -1,10 +1,10 @@
 plugins {
     id 'eclipse'
-    id 'net.neoforged.moddev.legacyforge' version '2.0.103'
+    id 'net.neoforged.moddev.legacyforge' version '2.0.107'
 }
 
 version = '1.0'
-base.archivesName = "skyzeradventure"
+base.archivesName = "modid"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -15,12 +15,21 @@ legacyForge {
         client {
             client()
 
+            // Arguments "jeu" (équivalent de --username, etc.)
+            programArguments.addAll([
+                '--username','Dev',
+                '--uuid','11111111-1111-1111-1111-111111111111',
+                '--accessToken','0',
+                '--userType','mojang'
+            ])
+
             def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS')
             if (mcreatorJvmOptions) {
                 mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.each { arg ->
                     jvmArgument(arg)
                 }
             }
+
         }
         server {
             server()
@@ -43,40 +52,24 @@ tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
 
-
 mixin {
-    add sourceSets.main, "skyzeradventure.refmap.json"
-    config "skyzeradventure.mixins.json"
+    if (file("src/main/resources/skyzeradventure.mixins.json").exists()) {
+        add sourceSets.main, "skyzeradventure.refmap.json"
+        config "skyzeradventure.mixins.json"
+    }
 }
 
 dependencies {
-    // Annotations/processor seulement
-    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.5.0"))
-
-    // Charger à l’exécution la variante Forge (pas NeoForge)
-    runtimeOnly("io.github.llamalad7:mixinextras-forge:0.5.0")
+    implementation(jarJar("io.github.llamalad7:mixinextras-neoforge:0.5.0"))
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 jar {
-    manifest.attributes([
-        "MixinConfigs": "skyzeradventure.mixins.json"
-    ])
-}
-
-configurations.all {
-    exclude group: "io.github.llamalad7", module: "mixinextras-neoforge"
-    resolutionStrategy {
-        eachDependency { details ->
-            if (details.requested.group == "io.github.llamalad7" &&
-                    details.requested.name == "mixinextras-neoforge") {
-                details.useTarget "io.github.llamalad7:mixinextras-forge:0.5.0"
-                details.because "Évite le double export JPMS (forge + neoforge) → crash."
-            }
-        }
-        force "io.github.llamalad7:mixinextras-forge:0.5.0"
+    if (file("src/main/resources/skyzeradventure.mixins.json").exists()) {
+        manifest.attributes([
+                "MixinConfigs": "skyzeradventure.mixins.json"
+        ])
     }
 }
-
 
 apply from: 'mcreator.gradle'

@@ -4,7 +4,6 @@ import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -100,7 +99,7 @@ public class BMythicExecProcedure {
 		} else if ((temp).equals("mythic_rnd_xp_boost_item")) {
 			item = new ItemStack(SkyzeradventureModItems.RANDOM_XP_BOOST.get()).copy();
 			item.getOrCreateTag().putString("type", "mythic");
-			if (world instanceof Level _level && !_level.isClientSide()) {
+			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, item);
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);

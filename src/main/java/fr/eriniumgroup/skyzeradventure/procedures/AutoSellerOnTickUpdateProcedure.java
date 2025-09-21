@@ -59,7 +59,7 @@ public class AutoSellerOnTickUpdateProcedure {
 							}.returnValue(temptext, (int) index, ";");
 							{
 								double _setval = (entityiterator.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).shop_money
-										+ ((itemFromBlockInventory(world, new BlockPos(x, y, z), 0).copy())).getCount() * new Object() {
+										+ (itemFromBlockInventory(world, new BlockPos(x, y, z), 0).copy()).getCount() * new Object() {
 											double convert(String s) {
 												try {
 													return Double.parseDouble(s.trim());
@@ -92,7 +92,7 @@ public class AutoSellerOnTickUpdateProcedure {
 								});
 							}
 							{
-								String _setval = "\u00A7a+ " + new java.text.DecimalFormat("#,###.####").format(((itemFromBlockInventory(world, new BlockPos(x, y, z), 0).copy())).getCount() * new Object() {
+								String _setval = "\u00A7a+ " + new java.text.DecimalFormat("#,###.####").format((itemFromBlockInventory(world, new BlockPos(x, y, z), 0).copy()).getCount() * new Object() {
 									double convert(String s) {
 										try {
 											return Double.parseDouble(s.trim());

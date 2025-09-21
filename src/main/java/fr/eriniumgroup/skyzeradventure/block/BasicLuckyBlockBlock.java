@@ -1,6 +1,5 @@
 package fr.eriniumgroup.skyzeradventure.block;
 
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.BlockState;
@@ -16,7 +15,7 @@ import fr.eriniumgroup.skyzeradventure.procedures.BasicLuckyBlockBreakingProcedu
 
 public class BasicLuckyBlockBlock extends Block {
 	public BasicLuckyBlockBlock() {
-		super(BlockBehaviour.Properties.of((new Material.Builder(MaterialColor.NONE)).build()).sound(SoundType.METAL).strength(3f));
+		super(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).sound(SoundType.METAL).strength(3f));
 	}
 
 	@Override

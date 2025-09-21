@@ -6,7 +6,6 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -53,22 +52,22 @@ public class BCommonExecProcedure {
 					Entity entityToSpawn = new Zombie(EntityType.ZOMBIE, _level);
 					entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					world.addFreshEntity(entityToSpawn);
+						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					_level.addFreshEntity(entityToSpawn);
 				}
 			}
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(new TextComponent("\u00A74Une infection se propage !"), false);
 		} else if ((temp).equals("petit_cadeau")) {
 			for (int index1 = 0; index1 < Mth.nextInt(new Random(), 1, 6); index1++) {
-				if (world instanceof Level _level && !_level.isClientSide()) {
+				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.DIAMOND));
 					entityToSpawn.setPickUpDelay(10);
 					_level.addFreshEntity(entityToSpawn);
 				}
 			}
 			for (int index2 = 0; index2 < Mth.nextInt(new Random(), 1, 4); index2++) {
-				if (world instanceof Level _level && !_level.isClientSide()) {
+				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.EMERALD));
 					entityToSpawn.setPickUpDelay(10);
 					_level.addFreshEntity(entityToSpawn);
@@ -87,8 +86,8 @@ public class BCommonExecProcedure {
 					Entity entityToSpawn = new Chicken(EntityType.CHICKEN, _level);
 					entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					world.addFreshEntity(entityToSpawn);
+						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					_level.addFreshEntity(entityToSpawn);
 				}
 			}
 			if (entity instanceof Player _player && !_player.level.isClientSide())
@@ -103,7 +102,7 @@ public class BCommonExecProcedure {
 				_player.displayClientMessage(new TextComponent("\u00A7eLe d\u00E9but d'une grande \u00E8re"), false);
 		} else if ((temp).equals("flower_rain")) {
 			for (int index4 = 0; index4 < 10; index4++) {
-				if (world instanceof Level _level && !_level.isClientSide()) {
+				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z,
 							new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("minecraft:flowers"))).getRandomElement(new Random()).orElseGet(() -> Items.AIR))));
 					entityToSpawn.setPickUpDelay(10);
@@ -170,8 +169,8 @@ public class BCommonExecProcedure {
 					Entity entityToSpawn = new Silverfish(EntityType.SILVERFISH, _level);
 					entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					world.addFreshEntity(entityToSpawn);
+						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					_level.addFreshEntity(entityToSpawn);
 				}
 			}
 			if (entity instanceof Player _player && !_player.level.isClientSide())
@@ -199,8 +198,8 @@ public class BCommonExecProcedure {
 				Entity entityToSpawn = new IronGolem(EntityType.IRON_GOLEM, _level);
 				entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof Mob _mobToSpawn)
-					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-				world.addFreshEntity(entityToSpawn);
+					_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+				_level.addFreshEntity(entityToSpawn);
 			}
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(new TextComponent("okk monsieur \u00E0 de l'importance"), false);

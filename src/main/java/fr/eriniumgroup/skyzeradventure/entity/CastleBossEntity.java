@@ -110,11 +110,6 @@ public class CastleBossEntity extends Monster {
 	}
 
 	@Override
-	public boolean fireImmune() {
-		return true;
-	}
-
-	@Override
 	public boolean canCollideWith(Entity entity) {
 		return true;
 	}

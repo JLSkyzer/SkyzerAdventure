@@ -10,7 +10,7 @@ public class ReturnOverlayConfigOpenProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if (entity instanceof Player _plr && _plr.containerMenu instanceof ConfiguratorMenu) {
+		if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof ConfiguratorMenu) {
 			if (((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).overlayConfigTarget).equals("earning")) {
 				{
 					double _setval = 60;
@@ -42,6 +42,6 @@ public class ReturnOverlayConfigOpenProcedure {
 				}
 			}
 		}
-		return entity instanceof Player _plr && _plr.containerMenu instanceof ConfiguratorMenu;
+		return entity instanceof Player _plr1 && _plr1.containerMenu instanceof ConfiguratorMenu;
 	}
 }

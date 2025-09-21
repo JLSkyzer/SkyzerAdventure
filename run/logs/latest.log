@@ -1,91 +1,83 @@
-[14Sep2025 18:20:23.959] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\\Users\\killi\\.mcreator\\gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.forgeVersion, 40.3.11, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --mixin.config, skyzeradventure.mixins.json]
-[14Sep2025 18:20:23.964] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.16 by Eclipse Adoptium
-[14Sep2025 18:20:24.125] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/killi/.mcreator/gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2373!/ Service=ModLauncher Env=CLIENT
-[14Sep2025 18:20:24.502] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.18.2-40.3.11\e372dae85d1a6958d76390ac88259fe67af3fa70\fmlcore-1.18.2-40.3.11.jar is missing mods.toml file
-[14Sep2025 18:20:24.509] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.18.2-40.3.11\d77ffadc44f31424dcd263b18ba07589d89ffe41\javafmllanguage-1.18.2-40.3.11.jar is missing mods.toml file
-[14Sep2025 18:20:24.513] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.18.2-40.3.11\e9acfab5174506fb2b38fe0588b990df94e1e099\lowcodelanguage-1.18.2-40.3.11.jar is missing mods.toml file
-[14Sep2025 18:20:24.517] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.18.2-40.3.11\8c474c22c753568ef81630f4eb529f403b41b20f\mclanguage-1.18.2-40.3.11.jar is missing mods.toml file
-[14Sep2025 18:20:24.821] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[14Sep2025 18:20:27.047] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[14Sep2025 18:20:27.053] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\killi\.mcreator\gradle\caches\neoformruntime\assets, --assetIndex, 1.18]
-[14Sep2025 18:20:27.142] [main/WARN] [mixin/]: Reference map 'skyzeradventure.refmap.json' for skyzeradventure.mixins.json could not be read. If this is a development environment you can ignore this message
-[14Sep2025 18:20:28.795] [pool-3-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
-[14Sep2025 18:20:40.831] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/D:/Mods%20Minecraft/SkyzerAdventure/build/moddev/artifacts/forge-1.18.2-40.3.11.jar%2376!/assets/.mcassetsroot' uses unexpected schema
-[14Sep2025 18:20:40.832] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/D:/Mods%20Minecraft/SkyzerAdventure/build/moddev/artifacts/forge-1.18.2-40.3.11.jar%2376!/data/.mcassetsroot' uses unexpected schema
-[14Sep2025 18:20:41.021] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[14Sep2025 18:20:41.029] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[14Sep2025 18:20:41.645] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 SNAPSHOT
-[14Sep2025 18:20:44.891] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.3.11, for MC 1.18.2 with MCP 20220404.173914
-[14Sep2025 18:20:44.892] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.3.11 Initialized
-[14Sep2025 18:20:46.680] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
-[14Sep2025 18:20:46.726] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
-[14Sep2025 18:20:47.111] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[14Sep2025 18:20:48.038] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[14Sep2025 18:20:49.200] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 40.3.11 Target: null
-[14Sep2025 18:20:51.559] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Barre Son (Realtek High Definition Audio)
-[14Sep2025 18:20:51.560] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[14Sep2025 18:20:51.779] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x2 minecraft:textures/atlas/blocks.png-atlas
-[14Sep2025 18:20:51.786] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x2 minecraft:textures/atlas/signs.png-atlas
-[14Sep2025 18:20:51.786] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
-[14Sep2025 18:20:51.787] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
-[14Sep2025 18:20:51.788] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
-[14Sep2025 18:20:51.788] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
-[14Sep2025 18:20:51.788] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
-[14Sep2025 18:20:52.592] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[14Sep2025 18:20:52.593] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[14Sep2025 18:20:52.593] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/mob_effects.png-atlas
-[14Sep2025 18:20:53.053] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
-[14Sep2025 18:21:13.055] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[14Sep2025 18:21:13.056] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[14Sep2025 18:21:13.058] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[14Sep2025 18:21:13.059] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[14Sep2025 18:21:13.060] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[14Sep2025 18:21:13.896] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
-[14Sep2025 18:21:14.369] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1141 advancements
-[14Sep2025 18:21:14.633] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[14Sep2025 18:21:14.650] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.18.2
-[14Sep2025 18:21:14.651] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[14Sep2025 18:21:15.017] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[14Sep2025 18:21:15.854] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[14Sep2025 18:21:15.854] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[14Sep2025 18:21:16.044] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[14Sep2025 18:21:16.538] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[14Sep2025 18:21:17.026] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[14Sep2025 18:21:17.535] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 4%
-[14Sep2025 18:21:18.030] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 57%
-[14Sep2025 18:21:18.403] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[14Sep2025 18:21:18.412] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 3390 ms
-[14Sep2025 18:21:18.527] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 5, from 10
-[14Sep2025 18:21:18.531] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[14Sep2025 18:21:18.816] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[14Sep2025 18:21:20.418] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[14Sep2025 18:21:20.500] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@2e183fcd
-[14Sep2025 18:21:20.521] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:20db5175] logged in with entity id 157 at (-55.94963787236091, 64.0, 116.66727238377877)
-[14Sep2025 18:21:20.576] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[14Sep2025 18:21:20.951] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] =====[ Skyze Adventure ]=====
-[14Sep2025 18:21:20.952] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /level | To know about /level command very usefull !
-[14Sep2025 18:21:20.953] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /overlayconfig | To configure some overlay of the mod ! very usefull
-[14Sep2025 18:21:20.953] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /money | Show your balance !
-[14Sep2025 18:21:20.953] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /adminshop | Open the admin shop !
-[14Sep2025 18:21:21.013] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 211 advancements
-[14Sep2025 18:21:52.020] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] =====[ Skyze Adventure ]=====
-[14Sep2025 18:21:52.020] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /level | To know about /level command very usefull !
-[14Sep2025 18:21:52.020] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /overlayconfig | To configure some overlay of the mod ! very usefull
-[14Sep2025 18:21:52.020] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /money | Show your balance !
-[14Sep2025 18:21:52.021] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /adminshop | Open the admin shop !
-[14Sep2025 18:21:52.974] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
-[14Sep2025 18:21:53.009] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[14Sep2025 18:21:53.009] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[14Sep2025 18:21:53.023] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
-[14Sep2025 18:21:53.054] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[14Sep2025 18:21:53.055] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[14Sep2025 18:21:53.056] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[14Sep2025 18:21:53.571] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
-[14Sep2025 18:21:53.807] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
-[14Sep2025 18:21:53.808] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/skyzeradventure:exponia
-[14Sep2025 18:21:53.809] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
-[14Sep2025 18:21:53.827] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (Test): All chunks are saved
-[14Sep2025 18:21:53.828] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[14Sep2025 18:21:53.828] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (exponia): All chunks are saved
-[14Sep2025 18:21:53.828] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[14Sep2025 18:21:53.828] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[21Sep2025 18:09:39.360] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\\Users\\killi\\.mcreator\\gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.forgeVersion, 40.3.11, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --mixin.config, skyzeradventure.mixins.json, --username, Dev, --uuid, 11111111-1111-1111-1111-111111111111, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang]
+[21Sep2025 18:09:39.364] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.16 by Eclipse Adoptium
+[21Sep2025 18:09:39.495] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/killi/.mcreator/gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2373!/ Service=ModLauncher Env=CLIENT
+[21Sep2025 18:09:39.732] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.18.2-40.3.11\e372dae85d1a6958d76390ac88259fe67af3fa70\fmlcore-1.18.2-40.3.11.jar is missing mods.toml file
+[21Sep2025 18:09:39.736] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.18.2-40.3.11\d77ffadc44f31424dcd263b18ba07589d89ffe41\javafmllanguage-1.18.2-40.3.11.jar is missing mods.toml file
+[21Sep2025 18:09:39.739] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.18.2-40.3.11\e9acfab5174506fb2b38fe0588b990df94e1e099\lowcodelanguage-1.18.2-40.3.11.jar is missing mods.toml file
+[21Sep2025 18:09:39.742] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\killi\.mcreator\gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.18.2-40.3.11\8c474c22c753568ef81630f4eb529f403b41b20f\mclanguage-1.18.2-40.3.11.jar is missing mods.toml file
+[21Sep2025 18:09:39.879] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[21Sep2025 18:09:41.412] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[21Sep2025 18:09:41.417] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\killi\.mcreator\gradle\caches\neoformruntime\assets, --uuid, 11111111-1111-1111-1111-111111111111, --assetIndex, 1.18, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userType, mojang]
+[21Sep2025 18:09:42.350] [pool-3-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.0).
+[21Sep2025 18:09:52.249] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/D:/Mods%20Minecraft/SkyzerAdventure/build/moddev/artifacts/forge-1.18.2-40.3.11.jar%2376!/assets/.mcassetsroot' uses unexpected schema
+[21Sep2025 18:09:52.249] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/D:/Mods%20Minecraft/SkyzerAdventure/build/moddev/artifacts/forge-1.18.2-40.3.11.jar%2376!/data/.mcassetsroot' uses unexpected schema
+[21Sep2025 18:09:52.322] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[21Sep2025 18:09:52.334] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[21Sep2025 18:09:52.680] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[21Sep2025 18:09:54.112] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.3.11, for MC 1.18.2 with MCP 20220404.173914
+[21Sep2025 18:09:54.112] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.3.11 Initialized
+[21Sep2025 18:09:57.100] [Render thread/INFO] [com.mojang.text2speech.NarratorWindows/]: Narrator library for x64 successfully loaded
+[21Sep2025 18:09:57.119] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
+[21Sep2025 18:09:57.321] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[21Sep2025 18:09:57.736] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[21Sep2025 18:09:58.313] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 40.3.11 Target: null
+[21Sep2025 18:10:00.067] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Barre Son (Realtek High Definition Audio)
+[21Sep2025 18:10:00.068] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[21Sep2025 18:10:00.233] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x2 minecraft:textures/atlas/blocks.png-atlas
+[21Sep2025 18:10:00.237] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x2 minecraft:textures/atlas/signs.png-atlas
+[21Sep2025 18:10:00.238] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/banner_patterns.png-atlas
+[21Sep2025 18:10:00.238] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x2 minecraft:textures/atlas/shield_patterns.png-atlas
+[21Sep2025 18:10:00.238] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x2 minecraft:textures/atlas/chest.png-atlas
+[21Sep2025 18:10:00.238] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/beds.png-atlas
+[21Sep2025 18:10:00.238] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x2 minecraft:textures/atlas/shulker_boxes.png-atlas
+[21Sep2025 18:10:00.763] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[21Sep2025 18:10:00.764] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[21Sep2025 18:10:00.764] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/mob_effects.png-atlas
+[21Sep2025 18:10:01.182] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[21Sep2025 18:10:09.360] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21Sep2025 18:10:09.360] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21Sep2025 18:10:09.363] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[21Sep2025 18:10:09.363] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[21Sep2025 18:10:09.364] [Render thread/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21Sep2025 18:10:10.060] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
+[21Sep2025 18:10:10.534] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1141 advancements
+[21Sep2025 18:10:10.778] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[21Sep2025 18:10:10.793] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.18.2
+[21Sep2025 18:10:10.794] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[21Sep2025 18:10:11.076] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[21Sep2025 18:10:11.610] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[21Sep2025 18:10:11.638] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[21Sep2025 18:10:12.121] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[21Sep2025 18:10:12.602] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 4%
+[21Sep2025 18:10:13.102] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 45%
+[21Sep2025 18:10:13.478] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[21Sep2025 18:10:13.480] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 2382 ms
+[21Sep2025 18:10:13.632] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 5, from 10
+[21Sep2025 18:10:13.634] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[21Sep2025 18:10:13.835] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[21Sep2025 18:10:14.793] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[21Sep2025 18:10:14.877] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@47163cfb
+[21Sep2025 18:10:14.894] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:5119355e] logged in with entity id 138 at (-66.54080293895754, 70.0, 170.63506435561436)
+[21Sep2025 18:10:14.942] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[21Sep2025 18:10:15.239] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] =====[ Skyze Adventure ]=====
+[21Sep2025 18:10:15.240] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /level | To know about /level command very usefull !
+[21Sep2025 18:10:15.241] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /overlayconfig | To configure some overlay of the mod ! very usefull
+[21Sep2025 18:10:15.241] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /money | Show your balance !
+[21Sep2025 18:10:15.242] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] /adminshop | Open the admin shop !
+[21Sep2025 18:10:15.470] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 18 advancements
+[21Sep2025 18:12:03.125] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[21Sep2025 18:12:03.134] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[21Sep2025 18:12:03.135] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[21Sep2025 18:12:03.139] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[21Sep2025 18:12:03.182] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[21Sep2025 18:12:03.182] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[21Sep2025 18:12:03.182] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[21Sep2025 18:12:03.639] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:overworld
+[21Sep2025 18:12:03.891] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/skyzeradventure:exponia
+[21Sep2025 18:12:03.892] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_end
+[21Sep2025 18:12:03.892] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[Test]'/minecraft:the_nether
+[21Sep2025 18:12:03.909] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (Test): All chunks are saved
+[21Sep2025 18:12:03.909] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (exponia): All chunks are saved
+[21Sep2025 18:12:03.909] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[21Sep2025 18:12:03.909] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[21Sep2025 18:12:03.909] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved

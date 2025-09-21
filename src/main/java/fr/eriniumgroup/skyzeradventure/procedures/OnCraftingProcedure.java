@@ -173,7 +173,7 @@ public class OnCraftingProcedure {
 												return "";
 											}
 										}
-									}.returnValue(temp, 0, ":")) * (itemstack).getCount() * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
+									}.returnValue(temp, 0, ":")) * itemstack.getCount() * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
 											* (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).playerxpmultiplier;
 									entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.RPGXp = _setval;
@@ -208,7 +208,7 @@ public class OnCraftingProcedure {
 													return "";
 												}
 											}
-										}.returnValue(temp, 0, ":")) * (itemstack).getCount() * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
+										}.returnValue(temp, 0, ":")) * itemstack.getCount() * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
 												* (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).playerxpmultiplier;
 										entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.earning_lastvalue = _setval;
@@ -243,7 +243,7 @@ public class OnCraftingProcedure {
 													return "";
 												}
 											}
-										}.returnValue(temp, 0, ":")) * (itemstack).getCount() * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
+										}.returnValue(temp, 0, ":")) * itemstack.getCount() * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
 												* (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).playerxpmultiplier;
 										entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.earning_lastvalue = _setval;
@@ -270,7 +270,7 @@ public class OnCraftingProcedure {
 													return "";
 												}
 											}
-										}.returnValue(temp, 0, ":")) * (itemstack).getCount() * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
+										}.returnValue(temp, 0, ":")) * itemstack.getCount() * SkyzeradventureModVariables.MapVariables.get(world).serverxpmultiplier
 												* (entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).playerxpmultiplier + " xp";
 										entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.earning_text2 = _setval;

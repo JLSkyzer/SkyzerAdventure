@@ -7,6 +7,6 @@ import fr.eriniumgroup.skyzeradventure.init.SkyzeradventureModItems;
 
 public class WritedPaperItemInHandTickProcedure {
 	public static void execute(ItemStack itemstack) {
-		(itemstack).setHoverName(new TextComponent((new ItemStack(SkyzeradventureModItems.WRITED_PAPER.get()).getDisplayName().getString() + " \u00A7a" + itemstack.getOrCreateTag().getString("id"))));
+		itemstack.setHoverName(new TextComponent((new ItemStack(SkyzeradventureModItems.WRITED_PAPER.get()).getDisplayName().getString() + " \u00A7a" + itemstack.getOrCreateTag().getString("id"))));
 	}
 }

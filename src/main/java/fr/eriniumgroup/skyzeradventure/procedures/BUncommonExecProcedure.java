@@ -7,7 +7,6 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -43,7 +42,7 @@ public class BUncommonExecProcedure {
 		double tempNumber = 0;
 		temp = arg;
 		if ((temp).equals("kaboom")) {
-			if (world instanceof Level _level && !_level.isClientSide()) {
+			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Blocks.TNT));
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);
@@ -52,7 +51,7 @@ public class BUncommonExecProcedure {
 				_player.displayClientMessage(new TextComponent("kaboom!"), false);
 		} else if ((temp).equals("adetium_party")) {
 			for (int index0 = 0; index0 < Mth.nextInt(new Random(), 4, 10); index0++) {
-				if (world instanceof Level _level && !_level.isClientSide()) {
+				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(SkyzeradventureModItems.ADETIUM_INGOT.get()));
 					entityToSpawn.setPickUpDelay(10);
 					_level.addFreshEntity(entityToSpawn);
@@ -66,15 +65,15 @@ public class BUncommonExecProcedure {
 					Entity entityToSpawn = new Creeper(EntityType.CREEPER, _level);
 					entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					world.addFreshEntity(entityToSpawn);
+						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					_level.addFreshEntity(entityToSpawn);
 				}
 			}
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(new TextComponent("\u00A7boulaaa"), false);
 		} else if ((temp).equals("reward_emeralds")) {
 			for (int index2 = 0; index2 < Mth.nextInt(new Random(), 1, 3); index2++) {
-				if (world instanceof Level _level && !_level.isClientSide()) {
+				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.EMERALD));
 					entityToSpawn.setPickUpDelay(10);
 					_level.addFreshEntity(entityToSpawn);
@@ -106,8 +105,8 @@ public class BUncommonExecProcedure {
 					Entity entityToSpawn = new Phantom(EntityType.PHANTOM, _level);
 					entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					world.addFreshEntity(entityToSpawn);
+						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					_level.addFreshEntity(entityToSpawn);
 				}
 			}
 			if (entity instanceof Player _player && !_player.level.isClientSide())

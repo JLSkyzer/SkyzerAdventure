@@ -1,5 +1,5 @@
 version:2975
-autoJump:false
+autoJump:true
 autoSuggestions:true
 chatColors:true
 chatLinks:true
@@ -62,7 +62,7 @@ useNativeTransport:true
 mainHand:right
 attackIndicator:1
 narrator:0
-tutorialStep:none
+tutorialStep:find_tree
 mouseWheelSensitivity:1.0
 rawMouseInput:true
 glDebugVerbosity:1
@@ -88,7 +88,7 @@ key_key.inventory:key.keyboard.e
 key_key.chat:key.keyboard.t
 key_key.playerlist:key.keyboard.tab
 key_key.pickItem:key.mouse.middle
-key_key.command:key.keyboard.r
+key_key.command:key.keyboard.slash
 key_key.socialInteractions:key.keyboard.p
 key_key.screenshot:key.keyboard.f2
 key_key.togglePerspective:key.keyboard.f5
@@ -111,7 +111,7 @@ key_key.hotbar.9:key.keyboard.9
 key_key.skyzeradventure.open_earning_wiki:key.keyboard.o
 key_key.skyzeradventure.show_on_off_health_overlay:key.keyboard.p
 key_key.skyzeradventure.key_open_admin_shop:key.keyboard.u
-soundCategory_master:0.19205298
+soundCategory_master:0.14900662
 soundCategory_music:0.0
 soundCategory_record:1.0
 soundCategory_weather:1.0

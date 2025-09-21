@@ -98,6 +98,10 @@ public class SkyzeradventureModVariables {
 			clone.shop_money = original.shop_money;
 			clone.pvpenabled = original.pvpenabled;
 			clone.HealthOverlayShow = original.HealthOverlayShow;
+			clone.playerxpboostlevel = original.playerxpboostlevel;
+			clone.playerxpboosttick = original.playerxpboosttick;
+			clone.playerxpboosthadpotionbeforedeath = original.playerxpboosthadpotionbeforedeath;
+			clone.rpgmaxfood = original.rpgmaxfood;
 			if (!event.isWasDeath()) {
 				clone.OnDamageTick = original.OnDamageTick;
 				clone.EarningWikiTarget = original.EarningWikiTarget;
@@ -308,6 +312,10 @@ public class SkyzeradventureModVariables {
 		public String desc_val = "\"\"";
 		public ItemStack lastitemhand = ItemStack.EMPTY;
 		public boolean HealthOverlayShow = true;
+		public double playerxpboostlevel = 0;
+		public double playerxpboosttick = 0;
+		public boolean playerxpboosthadpotionbeforedeath = false;
+		public double rpgmaxfood = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -349,6 +357,10 @@ public class SkyzeradventureModVariables {
 			nbt.putString("desc_val", desc_val);
 			nbt.put("lastitemhand", lastitemhand.save(new CompoundTag()));
 			nbt.putBoolean("HealthOverlayShow", HealthOverlayShow);
+			nbt.putDouble("playerxpboostlevel", playerxpboostlevel);
+			nbt.putDouble("playerxpboosttick", playerxpboosttick);
+			nbt.putBoolean("playerxpboosthadpotionbeforedeath", playerxpboosthadpotionbeforedeath);
+			nbt.putDouble("rpgmaxfood", rpgmaxfood);
 			return nbt;
 		}
 
@@ -387,6 +399,10 @@ public class SkyzeradventureModVariables {
 			desc_val = nbt.getString("desc_val");
 			lastitemhand = ItemStack.of(nbt.getCompound("lastitemhand"));
 			HealthOverlayShow = nbt.getBoolean("HealthOverlayShow");
+			playerxpboostlevel = nbt.getDouble("playerxpboostlevel");
+			playerxpboosttick = nbt.getDouble("playerxpboosttick");
+			playerxpboosthadpotionbeforedeath = nbt.getBoolean("playerxpboosthadpotionbeforedeath");
+			rpgmaxfood = nbt.getDouble("rpgmaxfood");
 		}
 	}
 
@@ -444,6 +460,10 @@ public class SkyzeradventureModVariables {
 					variables.desc_val = message.data.desc_val;
 					variables.lastitemhand = message.data.lastitemhand;
 					variables.HealthOverlayShow = message.data.HealthOverlayShow;
+					variables.playerxpboostlevel = message.data.playerxpboostlevel;
+					variables.playerxpboosttick = message.data.playerxpboosttick;
+					variables.playerxpboosthadpotionbeforedeath = message.data.playerxpboosthadpotionbeforedeath;
+					variables.rpgmaxfood = message.data.rpgmaxfood;
 				}
 			});
 			context.setPacketHandled(true);

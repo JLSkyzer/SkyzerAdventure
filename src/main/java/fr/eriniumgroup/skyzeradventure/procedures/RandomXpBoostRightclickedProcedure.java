@@ -30,7 +30,7 @@ public class RandomXpBoostRightclickedProcedure {
 			}
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = itemstack;
-				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove == p, 1, _player.inventoryMenu.getCraftSlots());
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		} else if ((itemstack.getOrCreateTag().getString("type")).equals("legendary")) {
 			item = new ItemStack(SkyzeradventureModItems.XP_BOOST.get()).copy();
@@ -42,7 +42,7 @@ public class RandomXpBoostRightclickedProcedure {
 			}
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = itemstack;
-				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove == p, 1, _player.inventoryMenu.getCraftSlots());
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		} else {
 			item = new ItemStack(SkyzeradventureModItems.XP_BOOST.get()).copy();
@@ -54,7 +54,7 @@ public class RandomXpBoostRightclickedProcedure {
 			}
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = itemstack;
-				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove == p, 1, _player.inventoryMenu.getCraftSlots());
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		}
 	}

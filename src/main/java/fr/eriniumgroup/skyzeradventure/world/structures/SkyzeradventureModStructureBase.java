@@ -16,9 +16,9 @@ import java.util.Optional;
 
 import fr.eriniumgroup.skyzeradventure.world.structures.configurations.StructureConfiguration;
 
-public class BaseStructure extends StructureFeature<StructureConfiguration> {
-	public BaseStructure() {
-		super(StructureConfiguration.CODEC, BaseStructure::createPiecesGenerator);
+public class SkyzeradventureModStructureBase extends StructureFeature<StructureConfiguration> {
+	public SkyzeradventureModStructureBase() {
+		super(StructureConfiguration.CODEC, SkyzeradventureModStructureBase::createPiecesGenerator);
 	}
 
 	@Override
@@ -27,12 +27,11 @@ public class BaseStructure extends StructureFeature<StructureConfiguration> {
 	}
 
 	public static Optional<PieceGenerator<StructureConfiguration>> createPiecesGenerator(PieceGeneratorSupplier.Context<StructureConfiguration> context) {
-		BlockPos blockpos = context.chunkPos().getMiddleBlockPosition(0);
-		if (!context.config().projectStartToHeightmap().isEmpty()) {
-			int topLandY = context.chunkGenerator().getFirstFreeHeight(blockpos.getX(), blockpos.getZ(), context.config().projectStartToHeightmap().get(), context.heightAccessor());
-			blockpos = blockpos.atY(topLandY + context.config().startHeight().sample(new Random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor())));
-		} else {
-			blockpos = blockpos.atY(context.config().startHeight().sample(new Random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor())));
+		int topLandY = context.config().startHeight().sample(new Random(), new WorldGenerationContext(context.chunkGenerator(), context.heightAccessor()));
+		BlockPos blockpos = context.chunkPos().getMiddleBlockPosition(0).atY(topLandY);
+		if (context.config().projectStartToHeightmap().isPresent()) {
+			topLandY = context.chunkGenerator().getFirstFreeHeight(blockpos.getX(), blockpos.getZ(), context.config().projectStartToHeightmap().get(), context.heightAccessor());
+			blockpos = blockpos.atY(blockpos.getY() + topLandY);
 		}
 		Pools.bootstrap();
 		JigsawConfiguration jigsawConfig = new JigsawConfiguration(context.config().startPool(), context.config().maxDepth());

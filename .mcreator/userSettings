@@ -2,7 +2,7 @@
   "workspacePanelIconSize": "TILES",
   "workspacePanelSortType": "CREATED",
   "workspacePanelSortAscending": true,
-  "projectBrowserSplitPos": 0,
+  "projectBrowserSplitPos": 227,
   "projectBrowserState": {
     "expandedPaths": [
       "[, SkyzerAdventure]",
@@ -10,7 +10,9 @@
       "[, SkyzerAdventure, Source (Gradle), D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr]",
       "[, SkyzerAdventure, Source (Gradle), D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup]",
       "[, SkyzerAdventure, Source (Gradle), D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup\\skyzeradventure]",
-      "[, SkyzerAdventure, Source (Gradle), D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup\\skyzeradventure, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup\\skyzeradventure\\block]"
+      "[, SkyzerAdventure, Source (Gradle), D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup\\skyzeradventure, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup\\skyzeradventure\\block]",
+      "[, SkyzerAdventure, Source (Gradle), D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup\\skyzeradventure, D:\\Mods Minecraft\\SkyzerAdventure\\src\\main\\java\\fr\\eriniumgroup\\skyzeradventure\\mixin]",
+      "[, SkyzerAdventure, Resources (Gradle)]"
     ]
   }
 }

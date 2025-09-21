@@ -3,7 +3,6 @@ package fr.eriniumgroup.skyzeradventure.block;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -40,7 +39,7 @@ import fr.eriniumgroup.skyzeradventure.block.entity.AutoSellerBlockEntity;
 
 public class AutoSellerBlock extends Block implements EntityBlock {
 	public AutoSellerBlock() {
-		super(BlockBehaviour.Properties.of((new Material.Builder(MaterialColor.NONE)).build()).sound(SoundType.METAL).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of(Material.BUILDABLE_GLASS).sound(SoundType.METAL).strength(1f, 10f));
 	}
 
 	@Override

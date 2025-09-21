@@ -1,11 +1,11 @@
 package fr.eriniumgroup.skyzeradventure.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.Mth;
+import net.minecraft.server.level.ServerLevel;
 
 import java.util.Random;
 
@@ -51,7 +51,7 @@ public class BasicLuckyBlockBreakingProcedure {
 					BMythicExecProcedure.execute(world, x, y, z, entity, arg);
 				}
 			} else {
-				if (world instanceof Level _level && !_level.isClientSide()) {
+				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(SkyzeradventureModBlocks.BASIC_LUCKY_BLOCK.get()));
 					entityToSpawn.setPickUpDelay(0);
 					_level.addFreshEntity(entityToSpawn);

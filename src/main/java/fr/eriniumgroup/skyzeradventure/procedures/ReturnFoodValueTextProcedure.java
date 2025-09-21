@@ -7,6 +7,6 @@ public class ReturnFoodValueTextProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return (new java.text.DecimalFormat("##").format(entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0)) + " / 20";
+		return (new java.text.DecimalFormat("#,###.##").format(entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0)) + " / " + "20";
 	}
 }

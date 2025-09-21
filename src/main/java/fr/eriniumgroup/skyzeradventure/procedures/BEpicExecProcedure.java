@@ -1,7 +1,6 @@
 package fr.eriniumgroup.skyzeradventure.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -37,8 +36,8 @@ public class BEpicExecProcedure {
 				Entity entityToSpawn = new CastleBossEntity(SkyzeradventureModEntities.CASTLE_BOSS.get(), _level);
 				entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof Mob _mobToSpawn)
-					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-				world.addFreshEntity(entityToSpawn);
+					_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+				_level.addFreshEntity(entityToSpawn);
 			}
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(new TextComponent("AIE AIE AIE"), false);
@@ -77,7 +76,7 @@ public class BEpicExecProcedure {
 		} else if ((temp).equals("epic_rnd_xp_boost_item")) {
 			item = new ItemStack(SkyzeradventureModItems.RANDOM_XP_BOOST.get()).copy();
 			item.getOrCreateTag().putString("type", "epic");
-			if (world instanceof Level _level && !_level.isClientSide()) {
+			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, item);
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);

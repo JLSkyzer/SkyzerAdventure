@@ -13,41 +13,6 @@
       "path": "~/RPG mode"
     },
     {
-      "name": "OnGetDamage",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "on_get_damage",
-      "metadata": {
-        "files": [
-          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/OnGetDamageProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/RPG mode/HealthSystem/Damage"
-    },
-    {
       "name": "PlayerTick",
       "type": "procedure",
       "compiles": true,
@@ -2649,10 +2614,6 @@
         ],
         "dependencies": [
           {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
             "name": "entity",
             "type": "entity"
           }
@@ -4061,6 +4022,72 @@
         ]
       },
       "path": "~/RPG mode/Level/XpBoost/LuckyBoost"
+    },
+    {
+      "name": "EntityRespawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_respawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/procedures/EntityRespawnProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "FoodDataAccessor",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "food_data_accessor",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/mixins/FoodDataAccessorMixin.java"
+        ]
+      }
+    },
+    {
+      "name": "LivingEntity",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/mixins/LivingEntityMixin.java"
+        ]
+      }
+    },
+    {
+      "name": "MaxFoodContext",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "max_food_context",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/MaxFoodContext.java"
+        ]
+      }
+    },
+    {
+      "name": "FoodDataMixin",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "food_data_mixin",
+      "metadata": {
+        "files": [
+          "src/main/java/fr/eriniumgroup/skyzeradventure/mixins/FoodDataMixinMixin.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -4267,6 +4294,30 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "true"
+    },
+    {
+      "name": "playerxpboostlevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "playerxpboosttick",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "playerxpboosthadpotionbeforedeath",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "rpgmaxfood",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -4324,6 +4375,11 @@
     ],
     "ITEMS:minecraft:shovels": [
       "~CUSTOM:AdetiumShovel"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.STONE#0",
+      "~Blocks.DIRT#0",
+      "~Blocks.GRASS"
     ]
   },
   "tab_element_order": {},
@@ -4443,6 +4499,7 @@
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModModels.java",
       "src/main/resources/skyzeradventure.mixins.json",
       "src/main/resources/pack.mcmeta",
+      "src/main/java/fr/eriniumgroup/skyzeradventure/world/features/SkyzeradventureModFeatureUtils.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModTabs.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/network/SkyzeradventureModVariables.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/SkyzeradventureMod.java",
@@ -4459,7 +4516,7 @@
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModKeyMappings.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModMobEffects.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModStructures.java",
-      "src/main/java/fr/eriniumgroup/skyzeradventure/world/structures/BaseStructure.java",
+      "src/main/java/fr/eriniumgroup/skyzeradventure/world/structures/SkyzeradventureModStructureBase.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/world/structures/configurations/StructureConfiguration.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModBlocks.java",
       "src/main/java/fr/eriniumgroup/skyzeradventure/init/SkyzeradventureModBlockEntities.java",

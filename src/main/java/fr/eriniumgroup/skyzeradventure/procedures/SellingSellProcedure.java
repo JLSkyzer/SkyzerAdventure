@@ -56,7 +56,7 @@ public class SellingSellProcedure {
 		}.convert((entity instanceof Player _entity2 && _entity2.containerMenu instanceof SkyzeradventureModMenus.MenuAccessor _menu2) ? _menu2.getMenuState(0, "amount", "") : "") > 0) {
 			if (entity instanceof Player _player) {
 				ItemStack _stktoremove = ((entity.getCapability(SkyzeradventureModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SkyzeradventureModVariables.PlayerVariables())).tempitem);
-				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove == p, (int) new Object() {
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) new Object() {
 					double convert(String s) {
 						try {
 							return Double.parseDouble(s.trim());
